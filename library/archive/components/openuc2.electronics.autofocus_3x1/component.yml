@@ -1,0 +1,11 @@
+kind: optical_component
+id: openuc2.electronics.autofocus_3x1
+version: 0.1.0
+category: electronics
+description: Autofocus
+tags:
+  - migrated
+  - electronics
+docs: []
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record

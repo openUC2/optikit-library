@@ -1,0 +1,24 @@
+kind: optical_component
+id: openuc2.source.laser_488nm
+version: 0.1.0
+category: source
+description: 488 nm laser diode module
+tags:
+  - migrated
+  - fluorescence
+docs: []
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+# WP-47: what this source actually emits. The line list drives the panel's
+# wavelength picker and tints the rays in the schematic.
+source:
+  wavelengths_um: [0.488]
+  divergence_deg: 1.2
+optics:
+  frames:
+    optical:
+      z-mm: 0.0
+  ports:
+    out:
+      frame: optical
+      direction: +z

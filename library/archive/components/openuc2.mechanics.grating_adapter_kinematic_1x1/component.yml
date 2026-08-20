@@ -1,0 +1,12 @@
+kind: optical_component
+id: openuc2.mechanics.grating_adapter_kinematic_1x1
+version: 0.1.0
+category: mechanics
+description: Adapter for mounting rectangular gratings in Ø1" front-loading kinematic mirror mounts;
+  ideal for 20–60 mm grating heights with precision tip/tilt.
+tags:
+  - migrated
+  - optics
+docs: []
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record

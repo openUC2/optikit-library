@@ -1,0 +1,23 @@
+# WP-44: the focus-lock autofocus addon as a self-contained optical module
+# (https://docs.openuc2.com/usage/pro/frame/addons/focus-lock/): the IR probe
+# enters the objective's back focal plane via the dichroic; the returning
+# coverslip reflection passes to the focus camera. The XY adjustment stage
+# that aligns the module against the FRAME hangs off the side.
+kind: cube_group
+id: openuc2.group.focus_lock
+version: 0.1.0
+description: Focus-lock autofocus addon — IR probe + dichroic + focus camera + XY stage
+tags: [opm, focus-lock, addon]
+docs:
+  - https://docs.openuc2.com/usage/pro/frame/addons/focus-lock/
+review:
+  - arrangement authored from the docs page — verify cells against the real addon
+envelope-grid: [3, 2, 1]
+members:
+  ir_laser:  {module: openuc2.cube.laser_850nm_ir@^0.1, cell: [0, 0, 0]}
+  dichroic:  {module: openuc2.cube.filter_dichroic@^0.1, cell: [1, 0, 0]}
+  focus_cam: {module: openuc2.cube.camera_usb@^0.1,      cell: [2, 0, 0]}
+  # 3x2 footprint - parked clear of the camera 1x2 column (overhangs the 3x1 line)
+  xy_stage:  {module: openuc2.cube.xy_stage@^0.1,        cell: [0, 2, 0], overhang: true}
+interface:
+  to_objective: {member: dichroic, port: reflected}

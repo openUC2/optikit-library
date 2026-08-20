@@ -1,0 +1,37 @@
+kind: optical_component
+id: openuc2.dichroic.quadband_laser_dichroic
+version: 0.1.0
+category: dichroic
+description: Quad-edge dichroic for 405/488/532/635nm laser lines
+tags:
+  - migrated
+  - fluorescence
+docs:
+  - https://docs.openuc2.com/modules/dichroics
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+optics:
+  frames:
+    optical:
+      z-mm: 0.0
+  ports:
+    front:
+      frame: optical
+      direction: -z
+    transmitted:
+      frame: optical
+      direction: +z
+      after-surface: 0
+    reflected:
+      frame: optical
+      direction: +x
+      after-surface: 0
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: '.inf'
+        interaction_model:
+          type: refractive_reflective
+          is_reflective: true

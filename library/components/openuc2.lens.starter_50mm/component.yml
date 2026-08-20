@@ -1,0 +1,31 @@
+# The starter lens — copy this record when authoring your own (WP-68).
+# A biconvex singlet with f = 50 mm at n(N-BK7) = 1.5168: the thin-lens
+# formula R = 2·f·(n−1) gives ±51.68 mm; correcting for the 3.6 mm center
+# thickness (full lensmaker equation) lands on ±51.0593 mm, so the fragment
+# traces to EFL = 50.00 in optiland. The fragment is the truth: two
+# spherical surfaces, a REAL named glass ({type: Material, name: N-BK7} —
+# never an invented "ideal" tag, WP-63), and `back` exits after surface 1.
+kind: optical_component
+id: openuc2.lens.starter_50mm
+version: 0.1.0
+category: lens
+description: Starter biconvex lens, f = 50 mm — the exemplary lens record to copy
+tags: [starter, lens, lens/biconvex]
+effective_focal_length_mm: 50.0
+optics:
+  fragment:
+    surfaces:
+      - type: standard
+        geometry: {type: StandardGeometry, radius: 51.0593, conic: 0.0}
+        material_post: {type: Material, name: N-BK7}
+        thickness: 3.6
+        semi_aperture: 12.5
+      - type: standard
+        geometry: {type: StandardGeometry, radius: -51.0593, conic: 0.0}
+        semi_aperture: 12.5
+  frames:
+    optical: {z-mm: 0.0}
+    exit: {z-mm: 3.6}
+  ports:
+    front: {frame: optical, direction: -z}
+    back: {frame: exit, direction: +z, after-surface: 1}

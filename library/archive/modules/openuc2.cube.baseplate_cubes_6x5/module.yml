@@ -1,0 +1,20 @@
+kind: cube_module
+id: openuc2.cube.baseplate_cubes_6x5
+version: 0.1.0
+description: Baseplate for arranging 6×5 grid of cubes
+tags:
+  - migrated
+  - cube
+  - cube/mechanics
+  - cubes
+docs:
+  - https://docs.openuc2.com/modules/baseplate
+component: openuc2.mechanics.baseplate_cubes_6x5@^0.1
+template: openuc2.tpl.baseplate_cubes_6x5@^0.1
+footprint_grid:
+  - 6
+  - 5
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 80.0

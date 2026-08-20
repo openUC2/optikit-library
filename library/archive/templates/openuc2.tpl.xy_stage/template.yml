@@ -1,0 +1,21 @@
+kind: mechanical_template
+id: openuc2.tpl.xy_stage
+version: 0.1.0
+class: fixed
+description: UC2 XY Stage e.g. for microdiamonds mount (migrated)
+tags:
+  - migrated
+  - stages
+envelope:
+  x-mm: 150.0
+  y-mm: 100.0
+  z-mm: 50.0
+footprint_grid:
+  - 3
+  - 2
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+glb: ASS_-_3005_-_CUBMANXYST02DIA.glb
+glb-url: 
+  https://raw.githubusercontent.com/beniroquai/openUC2-OptiKit-Store/refs/heads/main/GLB/ASS_-_3005_-_CUBMANXYST02DIA.glb

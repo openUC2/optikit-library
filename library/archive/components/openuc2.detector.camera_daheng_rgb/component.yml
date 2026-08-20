@@ -1,0 +1,19 @@
+kind: optical_component
+id: openuc2.detector.camera_daheng_rgb
+version: 0.1.0
+category: detector
+description: Daheng Galaxy RGB color USB camera
+tags:
+  - migrated
+  - cameras
+docs: []
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+optics:
+  frames:
+    optical:
+      z-mm: 0.0
+  ports:
+    sensor:
+      frame: optical
+      direction: -z

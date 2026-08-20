@@ -1,0 +1,19 @@
+kind: cube_module
+id: openuc2.cube.led_625nm
+version: 0.1.0
+description: Red LED 625nm for fluorescence excitation
+tags:
+  - migrated
+  - cube
+  - cube/source
+  - fluorescence
+docs: []
+component: openuc2.source.led_625nm@^0.1
+template: openuc2.tpl.led_625nm@^0.1
+footprint_grid:
+  - 2
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 250.0

@@ -1,0 +1,12 @@
+kind: optical_component
+id: openuc2.electronics.raspberrypi_controller_1x1
+version: 0.1.0
+category: electronics
+description: Single‑board computer for device control and acquisition; GPIO for LEDs, motors, 
+  sensors; runs Python.
+tags:
+  - migrated
+  - electronics
+docs: []
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record

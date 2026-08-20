@@ -1,0 +1,19 @@
+kind: cube_module
+id: openuc2.cube.12v_power_supply
+version: 0.1.0
+description: Power Supply
+tags:
+  - migrated
+  - cube
+  - cube/electronics
+  - electronics
+docs: []
+component: openuc2.electronics.12v_power_supply@^0.1
+template: openuc2.tpl.12v_power_supply@^0.1
+footprint_grid:
+  - 2
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 30.0

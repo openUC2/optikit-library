@@ -1,0 +1,19 @@
+# Non-optical component (WP-30): stepper driver for the 28BYJ-48 inserts.
+kind: optical_component
+id: openuc2.electronics.motor_driver_28byj
+version: 1.0.0
+category: electronics
+description: Stepper driver board for 28BYJ-48 motorized inserts (CAN node)
+tags: [electronics, motor-driver]
+vendor:
+  name: openUC2
+  mpn: UC2E-MOT-28BYJ
+  url: https://openuc2.com
+electronics:
+  transport: can
+  axis-map:
+    dz: {can-object: "0x6040", unit: mm}
+review:
+  - carried over from the pre-reset library — the prescription has NOT been confirmed against a real
+    part. Verify it in the component editor and delete this note before using it in a design you 
+    intend to build.

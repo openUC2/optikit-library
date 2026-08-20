@@ -1,0 +1,11 @@
+kind: optical_component
+id: openuc2.electronics.uc2_controller
+version: 0.1.0
+category: electronics
+description: Controller
+tags:
+  - migrated
+  - electronics
+docs: []
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record

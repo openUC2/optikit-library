@@ -1,0 +1,16 @@
+kind: cube_module
+id: user.cube.aa
+version: 0.1.0
+description: aa in a 1x1 cube (bound)
+tags:
+  - bound
+component: user.source.aa@^0.1
+template: user.tpl.aa@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
+review:
+  - carried over from the pre-reset library — the prescription has NOT been confirmed against a real
+    part. Verify it in the component editor and delete this note before using it in a design you 
+    intend to build.

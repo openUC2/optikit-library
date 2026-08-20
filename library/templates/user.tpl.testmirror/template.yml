@@ -1,0 +1,49 @@
+kind: mechanical_template
+id: user.tpl.testmirror
+version: 0.1.0
+class: fixed
+description: mount for user.mirror.testmirror (bound from ASS_-_2004_-_CUBMIR45°TH1_-_V03.glb)
+tags:
+  - bound
+envelope:
+  x-mm: 49.8
+  y-mm: 49.8
+  z-mm: 54.4
+glb: ASS_-_2004_-_CUBMIR45°TH1_-_V03.glb
+mesh-frame: cube
+optical_ports:
+  front:
+    frame: optical
+    direction: +x
+  reflected:
+    frame: optical
+    direction: -y
+    after-surface: 0
+footprint_grid:
+  - 1
+  - 1
+  - 1
+insert-pose:
+  rotation:
+    type: grid
+    grid:
+      z: -x
+      x: +y
+  translation:
+    offset-mm: {}
+provenance: whole-module
+frames:
+  optical:
+    x-mm: 0
+    y-mm: 0
+    z-mm: 0
+mesh-pose:
+  rotation:
+    type: grid
+    grid:
+      z: +z
+      x: +x
+review:
+  - carried over from the pre-reset library — the prescription has NOT been confirmed against a real
+    part. Verify it in the component editor and delete this note before using it in a design you 
+    intend to build.

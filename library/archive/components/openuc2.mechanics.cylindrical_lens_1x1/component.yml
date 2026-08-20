@@ -1,0 +1,11 @@
+kind: optical_component
+id: openuc2.mechanics.cylindrical_lens_1x1
+version: 0.1.0
+category: mechanics
+description: Cylindrical lens for lightsheet
+tags:
+  - migrated
+  - optics
+docs: []
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record

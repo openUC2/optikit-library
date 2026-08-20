@@ -1,0 +1,19 @@
+kind: cube_module
+id: openuc2.cube.phone_holder_1x1
+version: 0.1.0
+description: Smartphone Holder
+tags:
+  - migrated
+  - cube
+  - cube/mechanics
+  - stages
+docs: []
+component: openuc2.mechanics.phone_holder_1x1@^0.1
+template: openuc2.tpl.phone_holder_1x1@^0.1
+footprint_grid:
+  - 2
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 50.0

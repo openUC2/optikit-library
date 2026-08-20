@@ -1,0 +1,19 @@
+# The starter laser — copy this record when authoring a source (WP-68).
+# Sources are fragment-less: what they declare is the `source` block
+# (WP-47) — the LINE LIST of everything the emitter can produce (a design
+# picks the active line per placement) — and an `out` port on +z, the
+# library's optical-axis convention (WP-29).
+kind: optical_component
+id: openuc2.source.laser_basic
+version: 0.1.0
+category: source
+description: Starter dual-line laser (488/635 nm) — the exemplary source record to copy
+tags: [starter, source, source/laser]
+optics:
+  frames:
+    optical: {z-mm: 0.0}
+  ports:
+    out: {frame: optical, direction: +z}
+source:
+  wavelengths_um: [0.488, 0.635]
+  divergence_deg: 1.0

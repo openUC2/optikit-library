@@ -1,0 +1,19 @@
+kind: optical_component
+id: openuc2.source.diffuser_1x1
+version: 0.1.0
+category: source
+description: Opal/glass diffuser for uniform illumination.
+tags:
+  - migrated
+  - illumination
+docs: []
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+optics:
+  frames:
+    optical:
+      z-mm: 0.0
+  ports:
+    out:
+      frame: optical
+      direction: +z

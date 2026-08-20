@@ -1,0 +1,34 @@
+kind: mechanical_template
+id: openuc2.tpl.cublend12_7f40
+version: 0.1.0
+class: adaptive
+description: Insert template from ASS - 2028 - CUBLEND12.7F40 - V04
+envelope:
+  x-mm: 50.0
+  y-mm: 50.0
+  z-mm: 55.0
+glb: ASS_-_2028_-_CUBLEND12.7F40_-_V04.glb
+footprint_grid:
+  - 1
+  - 1
+  - 1
+optical_ports:
+  front:
+    frame: optical
+    direction: -z
+  back:
+    frame: optical
+    direction: +z
+dof:
+  - name: dz
+    kind: translation
+    axis: z
+    # MASINS insert travel, set in the WP-83 review pass (the importer
+    # honestly leaves the range empty — "DOF range is unknown").
+    range: [-7.5, 7.5]
+    unit: mm
+    actuatable: false
+review:
+  - carried over from the pre-reset library — the prescription has NOT been confirmed against a real
+    part. Verify it in the component editor and delete this note before using it in a design you 
+    intend to build.

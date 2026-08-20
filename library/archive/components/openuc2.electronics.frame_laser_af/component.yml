@@ -1,0 +1,12 @@
+kind: optical_component
+id: openuc2.electronics.frame_laser_af
+version: 0.1.0
+category: electronics
+description: Laser-based hardware autofocus using astigmatic detection
+tags:
+  - migrated
+  - electronics
+docs:
+  - https://docs.openuc2.com/frame/laser-autofocus
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record

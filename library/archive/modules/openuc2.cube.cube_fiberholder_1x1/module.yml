@@ -1,0 +1,20 @@
+kind: cube_module
+id: openuc2.cube.cube_fiberholder_1x1
+version: 0.1.0
+description: Cube module with FC/PC adapter for coupling light into optical fiber.
+tags:
+  - migrated
+  - cube
+  - cube/lens
+  - lenses
+docs: []
+component: openuc2.lens.cube_fiberholder_1x1@^0.1
+template: openuc2.tpl.cube_fiberholder_1x1@^0.1
+footprint_grid:
+  - 2
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+  - lens surfaces are a thin biconvex approximation from focalLength — verify the trace
+price: 50.0

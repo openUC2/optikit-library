@@ -1,0 +1,13 @@
+# The starter laser housing — T1 fixed, beam out along +z (WP-68). No
+# glb/step is declared because none ships (the index only advertises meshes
+# that exist on disk, WP-58).
+kind: mechanical_template
+id: openuc2.tpl.laser_basic
+version: 0.1.0
+class: fixed
+description: Starter 1x1 laser housing (emission along +z)
+tags: [starter, insert/laser]
+envelope: {x-mm: 50, y-mm: 50, z-mm: 50}
+optical_ports:
+  out: {frame: optical, direction: +z}
+footprint_grid: [1, 1, 1]

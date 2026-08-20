@@ -1,0 +1,10 @@
+# WP-45: the FRAME — an xyz stage + illumination + electronics host (RPi,
+# ESP32 CANopen) whose rail system takes the miniFRAME inner cube.
+kind: optical_component
+id: openuc2.mechanics.frame
+version: 0.1.0
+category: mechanics
+description: FRAME microscope body — xyz stage, illumination, electronics host
+tags: [mechanics, carrier, frame]
+review:
+  - carrier record without bound mechanics — bind the FRAME STEP when exported

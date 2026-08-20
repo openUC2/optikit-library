@@ -1,0 +1,21 @@
+# Dual-axis galvo cube (WP-42): binds the galvo component + template and maps
+# each actuated tilt DOF to its firmware object (dof name == fx name == axis-map
+# dof, one name everywhere).
+kind: cube_module
+id: openuc2.cube.galvo
+version: 0.1.0
+description: Dual-axis galvo scanner cube (x/y beam steering, firmware-actuated)
+tags: [cube, cube/mirror, cube/galvo]
+component: openuc2.galvo.dual_axis@^0.1
+template: openuc2.tpl.galvo_dual@^0.1
+electronics:
+  pcb: "kicad:galvo_driver@1.0"
+  firmware-contract: "uc2:can:galvo_axis@1"
+  axis-map:
+    - {dof: tilt_x, can-object: 0x6070}
+    - {dof: tilt_y, can-object: 0x6071}
+footprint_grid: [1, 1, 1]
+review:
+  - carried over from the pre-reset library — the prescription has NOT been confirmed against a real
+    part. Verify it in the component editor and delete this note before using it in a design you 
+    intend to build.

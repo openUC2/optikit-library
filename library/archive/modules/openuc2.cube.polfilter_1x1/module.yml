@@ -1,0 +1,19 @@
+kind: cube_module
+id: openuc2.cube.polfilter_1x1
+version: 0.1.0
+description: Rotatable linear polarizing filter module.
+tags:
+  - migrated
+  - cube
+  - cube/filter
+  - optics
+docs: []
+component: openuc2.filter.polfilter_1x1@^0.1
+template: openuc2.tpl.polfilter_1x1@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 30.0

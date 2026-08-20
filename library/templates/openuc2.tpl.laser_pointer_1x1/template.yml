@@ -1,0 +1,24 @@
+# WP-19 placeholder: a laser-pointer housing for a 1x1 cube. The geometry is
+# schematic (model.step is the mechanical source of truth; model.glb is the
+# render-only exchange copy) but the datum contract is real: the component's
+# `emit` frame sits at the FRONT aperture, +20 mm along local z.
+kind: mechanical_template
+id: openuc2.tpl.laser_pointer_1x1
+version: 0.1.0
+class: fixed
+description: Placeholder laser-pointer housing (emission aperture at z = +20 mm)
+tags: [placeholder, insert/laser]
+envelope: {x-mm: 50, y-mm: 50, z-mm: 50}
+# WP-146: this export is y-up (the wrapper-node convention) — the file's
+# +y is the cube's +z. Declaring it makes every mesh check exact and the
+# renderers stop guessing from a node-rotation sniff.
+mesh-frame: record
+glb: model.glb
+step: model.step
+optical_ports:
+  out: {frame: emit, direction: +z}
+footprint_grid: [1, 1, 1]
+review:
+  - carried over from the pre-reset library — the prescription has NOT been confirmed against a real
+    part. Verify it in the component editor and delete this note before using it in a design you 
+    intend to build.

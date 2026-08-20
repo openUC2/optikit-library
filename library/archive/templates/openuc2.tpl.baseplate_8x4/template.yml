@@ -1,0 +1,11 @@
+kind: mechanical_template
+id: openuc2.tpl.baseplate_8x4
+version: 0.1.0
+class: fixed
+description: 8x4 baseplate — the render-only 5 mm offset becomes real geometry here
+tags: [carrier, baseplate]
+carrier: true
+envelope: {x-mm: 400, y-mm: 200, z-mm: 5}
+footprint_grid: [8, 4, 1]
+review:
+  - bind the real baseplate STEP/GLB (UC2-GIT MDK)

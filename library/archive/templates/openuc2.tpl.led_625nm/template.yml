@@ -1,0 +1,21 @@
+kind: mechanical_template
+id: openuc2.tpl.led_625nm
+version: 0.1.0
+class: fixed
+description: LED Red mount (migrated)
+tags:
+  - migrated
+  - fluorescence
+envelope:
+  x-mm: 100.0
+  y-mm: 50.0
+  z-mm: 50.0
+footprint_grid:
+  - 2
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+glb: ASS_-_2046_-_CUBLEDMTX_-_V04.glb
+glb-url: 
+  https://raw.githubusercontent.com/beniroquai/openUC2-OptiKit-Store/refs/heads/main/GLB/ASS_-_2046_-_CUBLEDMTX_-_V04.glb

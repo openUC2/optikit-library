@@ -1,0 +1,14 @@
+# The emission-filter cube — binds the 525 band-pass component to its fixed
+# 1x1 holder. Copy this trio when authoring a filter module (WP-74).
+kind: cube_module
+id: openuc2.cube.emission_525
+version: 0.1.0
+description: Band-pass emission filter (510–560 nm) in a 1x1 cube
+tags: [reference, cube, cube/filter]
+component: openuc2.filter.emission_525@^0.1
+template: openuc2.tpl.emission_525@^0.1
+footprint_grid: [1, 1, 1]
+review:
+  - carried over from the pre-reset library — the prescription has NOT been confirmed against a real
+    part. Verify it in the component editor and delete this note before using it in a design you 
+    intend to build.

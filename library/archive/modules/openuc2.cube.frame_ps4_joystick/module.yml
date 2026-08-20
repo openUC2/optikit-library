@@ -1,0 +1,20 @@
+kind: cube_module
+id: openuc2.cube.frame_ps4_joystick
+version: 0.1.0
+description: PS4 DualShock controller for intuitive stage navigation
+tags:
+  - migrated
+  - cube
+  - cube/electronics
+  - electronics
+docs:
+  - https://docs.openuc2.com/frame/ps4-joystick
+component: openuc2.electronics.frame_ps4_joystick@^0.1
+template: openuc2.tpl.frame_ps4_joystick@^0.1
+footprint_grid:
+  - 2
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 40.0

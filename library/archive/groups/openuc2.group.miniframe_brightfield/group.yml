@@ -1,0 +1,56 @@
+# WP-53: the inner cube of the FRAME — the brightfield optical module (OPM),
+# transcribed from Inventor "OPM - 0003 - Brightfield.iam": two 3x3 cube
+# layers sandwiched by aluminium plates (top plate carries the objective
+# aperture), puzzle pieces joining the layers, and a two-cube camera arm
+# hanging off the side at the lower level.
+kind: cube_group
+id: openuc2.group.miniframe_brightfield
+version: 0.1.0
+description: miniFRAME brightfield OPM — 3x3x2 cube stack, sandwich plates, camera arm
+tags: [opm, miniframe, brightfield]
+docs:
+  - https://docs.openuc2.com/usage/pro/miniframe/miniFRAME_DPC
+review:
+  - member arrangement transcribed from the OPM-0003 screenshot — verify cells + beam path
+envelope-grid: [3, 3, 2]
+members:
+  # ── optical layer (z = 1, under the top plate's objective aperture) ──
+  fold_mirror:      {module: openuc2.cube.mirror_1x1@^0.1,    cell: [1, 1, 1]}
+  tube_lens:        {module: openuc2.cube.tube_lens_1x1@^0.1, cell: [2, 1, 1]}
+  pinhole:          {module: openuc2.cube.pinhole_1x1@^0.1,   cell: [0, 1, 1]}
+  opt_00:           {module: openuc2.cube.cube_1x1@^0.1,      cell: [0, 0, 1]}
+  opt_10:           {module: openuc2.cube.cube_1x1@^0.1,      cell: [1, 0, 1]}
+  opt_20:           {module: openuc2.cube.cube_1x1@^0.1,      cell: [2, 0, 1]}
+  opt_02:           {module: openuc2.cube.cube_1x1@^0.1,      cell: [0, 2, 1]}
+  opt_12:           {module: openuc2.cube.cube_1x1@^0.1,      cell: [1, 2, 1]}
+  opt_22:           {module: openuc2.cube.cube_1x1@^0.1,      cell: [2, 2, 1]}
+  # ── electronics layer (z = 0: controllers, drivers, power) ──
+  ele_00:           {module: openuc2.cube.cube_1x1@^0.1,      cell: [0, 0, 0]}
+  ele_10:           {module: openuc2.cube.cube_1x1@^0.1,      cell: [1, 0, 0]}
+  ele_20:           {module: openuc2.cube.cube_1x1@^0.1,      cell: [2, 0, 0]}
+  ele_01:           {module: openuc2.cube.cube_1x1@^0.1,      cell: [0, 1, 0]}
+  ele_11:           {module: openuc2.cube.cube_1x1@^0.1,      cell: [1, 1, 0]}
+  ele_21:           {module: openuc2.cube.cube_1x1@^0.1,      cell: [2, 1, 0]}
+  ele_02:           {module: openuc2.cube.cube_1x1@^0.1,      cell: [0, 2, 0]}
+  ele_12:           {module: openuc2.cube.cube_1x1@^0.1,      cell: [1, 2, 0]}
+  ele_22:           {module: openuc2.cube.cube_1x1@^0.1,      cell: [2, 2, 0]}
+  # ── camera arm: two additional cubes hanging off the side ──
+  arm_relay:        {module: openuc2.cube.cube_1x1@^0.1,      cell: [3, 1, 0], overhang: true}
+  camera:           {module: openuc2.cube.camera_usb@^0.1,    cell: [4, 1, 0], overhang: true}
+structure:
+  plates:
+    top:    {module: openuc2.cube.plate_3x3@^0.1, origin: [0, 0], size: [3, 3]}
+    bottom: {module: openuc2.cube.plate_3x3@^0.1, origin: [0, 0], size: [3, 3]}
+  joints: puzzle
+  joint-cells:
+    - [0, 0, 0]
+    - [0, 1, 0]
+    - [0, 2, 0]
+    - [1, 0, 0]
+    - [1, 1, 0]
+    - [1, 2, 0]
+    - [2, 0, 0]
+    - [2, 1, 0]
+    - [2, 2, 0]
+interface:
+  camera: {member: camera, port: sensor}

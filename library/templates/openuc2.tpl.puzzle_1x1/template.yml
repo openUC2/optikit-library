@@ -1,0 +1,22 @@
+# WP-53: real Inventor geometry (PRT - 1004 - PUZ11 - V04 - A). The piece is
+# 55.6 x 55.6 x 5 mm — the noses overhang the 50 mm cell to puzzle into the
+# neighbors; between layers, one piece per cell.
+kind: mechanical_template
+id: openuc2.tpl.puzzle_1x1
+version: 0.1.0
+class: fixed
+carrier: true
+description: Layer-joint puzzle piece (1x1 cell, 5 mm, noses overhang the cell)
+tags: [carrier, miniframe, insert/mechanics]
+envelope: {x-mm: 55.6, y-mm: 55.6, z-mm: 5.0}
+# WP-146: this export is y-up (the wrapper-node convention) — the file's
+# +y is the cube's +z. Declaring it makes every mesh check exact and the
+# renderers stop guessing from a node-rotation sniff.
+mesh-frame: record
+glb: model.glb
+step: model.step
+footprint_grid: [1, 1, 1]
+review:
+  - carried over from the pre-reset library — the prescription has NOT been confirmed against a real
+    part. Verify it in the component editor and delete this note before using it in a design you 
+    intend to build.

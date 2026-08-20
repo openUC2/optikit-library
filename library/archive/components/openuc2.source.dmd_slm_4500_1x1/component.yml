@@ -1,0 +1,29 @@
+kind: optical_component
+id: openuc2.source.dmd_slm_4500_1x1
+version: 0.1.0
+# WP-47 re-classified: a DMD is a programmable surface, not a light source.
+# The CSV migration had no `slm` class to put it in, so it landed under
+# `source`. The id keeps its historical `source.` segment on purpose — ids are
+# stable identifiers and the cube module references this one.
+category: slm
+description: Digital micromirror device for structured illumination and maskless projection;
+  visible‑range window.
+tags:
+  - migrated
+  - illumination
+  - programmable
+docs: []
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+  - "WP-47 re-classified source → slm; add the `programmable` block (mode,
+    pixel-pitch-um, resolution) from the panel datasheet"
+  - ports are still the migrated single `out` — a DMD folds the beam, so author
+    front/reflected at the real mount angle once the mechanics are bound
+optics:
+  frames:
+    optical:
+      z-mm: 0.0
+  ports:
+    out:
+      frame: optical
+      direction: +z

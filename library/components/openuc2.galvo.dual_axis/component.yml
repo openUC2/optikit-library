@@ -1,0 +1,30 @@
+# Dual-axis galvo scanner: two first-surface mirrors that steer the beam in x
+# and y. WP-42: each mirror is a reflective fragment surface with its own pivot
+# frame; the template's rotation DOFs (tilt_x / tilt_y) move surface 0 / 1
+# about pivot_x / pivot_y and are firmware-actuatable.
+kind: optical_component
+id: openuc2.galvo.dual_axis
+version: 0.1.0
+category: mirror
+description: Dual-axis galvo scanner (two steering mirrors, x and y)
+tags: [mirror, mirror/galvo, actuated]
+optics:
+  fragment:
+    surfaces:
+      - type: standard
+        geometry: {type: StandardGeometry, radius: .inf}
+        interaction_model: {type: refractive_reflective, is_reflective: true}
+      - type: standard
+        geometry: {type: StandardGeometry, radius: .inf}
+        interaction_model: {type: refractive_reflective, is_reflective: true}
+  frames:
+    optical: {z-mm: 0.0}
+    pivot_x: {z-mm: 0.0}
+    pivot_y: {z-mm: 6.0}
+  ports:
+    front: {frame: pivot_x, direction: -x}
+    reflected: {frame: pivot_y, direction: -y, after-surface: 1}
+review:
+  - carried over from the pre-reset library — the prescription has NOT been confirmed against a real
+    part. Verify it in the component editor and delete this note before using it in a design you 
+    intend to build.

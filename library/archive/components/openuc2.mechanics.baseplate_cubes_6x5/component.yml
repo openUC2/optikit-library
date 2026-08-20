@@ -1,0 +1,12 @@
+kind: optical_component
+id: openuc2.mechanics.baseplate_cubes_6x5
+version: 0.1.0
+category: mechanics
+description: Baseplate for arranging 6×5 grid of cubes
+tags:
+  - migrated
+  - cubes
+docs:
+  - https://docs.openuc2.com/modules/baseplate
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record

@@ -1,0 +1,20 @@
+kind: cube_module
+id: openuc2.cube.quadband_laser_block
+version: 0.1.0
+description: Combined 4-line laser module (405/488/532/635nm)
+tags:
+  - migrated
+  - cube
+  - cube/source
+  - fluorescence
+docs:
+  - https://docs.openuc2.com/modules/laser-block
+component: openuc2.source.quadband_laser_block@^0.1
+template: openuc2.tpl.quadband_laser_block@^0.1
+footprint_grid:
+  - 4
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 8000.0

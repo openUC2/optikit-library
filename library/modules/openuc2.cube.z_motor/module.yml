@@ -1,0 +1,17 @@
+# The starter motorized z-stage cube — the WP-42 actuation exemplar (WP-68):
+# the template's actuatable `dz` DOF is bound to its firmware object here in
+# `electronics.axis-map` (same name in both records — `library validate`
+# checks the contract).
+kind: cube_module
+id: openuc2.cube.z_motor
+version: 0.1.0
+description: Starter motorized z-stage cube — the exemplary firmware-bound trio to copy
+tags: [starter, cube, cube/stage, cube/motorized]
+component: openuc2.stage.z_motor@^0.1
+template: openuc2.tpl.z_motor@^0.1
+electronics:
+  pcb: "kicad:z_stage_driver@2.1"
+  firmware-contract: "uc2:can:motor_axis@1"
+  axis-map:
+    - {dof: dz, can-object: 0x6062}
+footprint_grid: [1, 1, 1]

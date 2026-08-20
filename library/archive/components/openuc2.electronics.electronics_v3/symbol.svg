@@ -1,0 +1,27 @@
+<!-- WP-48 authored schematic symbol: the UC2 ESP32 control board.
+     Contract: viewBox centered on the part origin, 1 unit = 1 mm, beam axis
+     +x, currentColor strokes so it themes on light and dark canvases.
+     This part has no optical shape, so a derived glyph could only draw a
+     generic box — the board deserves to look like a board. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-25 -25 50 50" width="50" height="50">
+  <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round">
+    <!-- board outline -->
+    <rect x="-19" y="-13" width="38" height="26" rx="1.5" />
+    <!-- RF shield can (the ESP32 module) -->
+    <rect x="-14" y="-9" width="15" height="18" rx="0.8" />
+    <!-- antenna meander -->
+    <path d="M -14 -9 h -3 v -2 h 3 M -14 -6 h -3 v -2 h 3" stroke-width="0.9" />
+    <!-- USB-C receptacle on the -x edge -->
+    <rect x="-22" y="-3.5" width="3" height="7" rx="1.4" />
+    <!-- pin headers along both long edges -->
+    <g stroke-width="0.9">
+      <path d="M 4 -13 v 3 M 8 -13 v 3 M 12 -13 v 3 M 16 -13 v 3" />
+      <path d="M 4 13 v -3 M 8 13 v -3 M 12 13 v -3 M 16 13 v -3" />
+    </g>
+    <!-- CAN transceiver + terminal block on the +x edge -->
+    <rect x="4" y="-5" width="8" height="10" rx="0.8" stroke-width="0.9" />
+    <path d="M 19 -4 h 3 M 19 0 h 3 M 19 4 h 3" stroke-width="0.9" />
+  </g>
+  <text x="0" y="20" fill="currentColor" font-family="monospace" font-size="6"
+        text-anchor="middle">ESP32</text>
+</svg>

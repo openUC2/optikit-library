@@ -1,0 +1,11 @@
+kind: optical_component
+id: openuc2.mechanics.dev_empty_1x1
+version: 0.1.0
+category: mechanics
+description: Dev placeholder empty cube with GLB
+tags:
+  - migrated
+  - cubes
+docs: []
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record

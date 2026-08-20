@@ -1,0 +1,43 @@
+kind: mechanical_template
+id: user.tpl.testlens
+version: 0.1.0
+class: fixed
+description: mount for user.lens.testlens (bound from ASS - 2023 - CUBLEND43F-50 - V04.stp)
+tags:
+  - bound
+envelope:
+  x-mm: 49.8
+  y-mm: 49.8
+  z-mm: 53.8
+step: ASS - 2023 - CUBLEND43F-50 - V04.stp
+glb: ASS - 2023 - CUBLEND43F-50 - V04.glb
+mesh-frame: record
+optical_ports:
+  front:
+    frame: optical
+    direction: -z
+  back:
+    frame: optical
+    direction: +z
+footprint_grid:
+  - 1
+  - 1
+  - 1
+insert-pose:
+  rotation:
+    type: grid
+    grid:
+      z: +z
+      x: +x
+  translation:
+    offset-mm: {}
+provenance: whole-module
+frames:
+  optical:
+    x-mm: 0
+    y-mm: 0
+    z-mm: 0
+review:
+  - carried over from the pre-reset library — the prescription has NOT been confirmed against a real
+    part. Verify it in the component editor and delete this note before using it in a design you 
+    intend to build.

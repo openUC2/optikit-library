@@ -1,0 +1,32 @@
+kind: mechanical_template
+id: openuc2.tpl.flat_45
+version: 0.1.0
+class: fixed
+description: mount for openuc2.mirror.flat_45 (bound from ASS_-_2004_-_CUBMIR45°TH1_-_V03.glb)
+tags:
+  - bound
+envelope:
+  x-mm: 50
+  y-mm: 50
+  z-mm: 50
+step: ASS_-_2004_-_CUBMIR45°TH1_-_V03.glb
+glb: ASS_-_2004_-_CUBMIR45°TH1_-_V03.glb
+mesh-offset:
+  x-mm: 0
+  y-mm: 0
+  z-mm: 0
+  rot-deg:
+    x: 0
+    y: 0
+    z: 0
+optical_ports:
+  front-2:
+    frame: front-2
+    direction:
+      - 0.707
+      - 0
+      - -0.707
+footprint_grid:
+  - 1
+  - 1
+  - 1

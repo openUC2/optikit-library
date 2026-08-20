@@ -1,0 +1,20 @@
+kind: cube_module
+id: openuc2.cube.frame_wellplate_insert_wellplate
+version: 0.1.0
+description: Insert for standard wellplates (6/12/24/96-well) in the UC2 FRAME
+tags:
+  - migrated
+  - cube
+  - cube/sample
+  - samples
+docs:
+  - https://docs.openuc2.com/frame/wellplate-insert
+component: openuc2.sample.frame_wellplate_insert_wellplate@^0.1
+template: openuc2.tpl.frame_wellplate_insert_wellplate@^0.1
+footprint_grid:
+  - 3
+  - 2
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 100.0

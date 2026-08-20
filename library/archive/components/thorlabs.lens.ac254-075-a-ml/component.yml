@@ -1,0 +1,59 @@
+kind: optical_component
+id: thorlabs.lens.ac254-075-a-ml
+version: 0.1.0
+category: lens
+description: 'AC254-075-A AC254-075-A POSITIVE VISIBLE ACHROMATS: Infinite 75'
+tags:
+  - imported
+  - zmx
+vendor:
+  name: Thorlabs
+  mpn: AC254-075-A-ML
+optics:
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: 46.539999999999964
+          conic: 0.0
+        material_post:
+          type: Material
+          name: N-BK7
+        thickness: 7.0
+        is_stop: true
+        semi_aperture: 12.7
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: -33.910000000000046
+          conic: 0.0
+        material_post:
+          type: Material
+          name: N-SF5
+        thickness: 2.5
+        semi_aperture: 12.7
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: -95.54000000000006
+          conic: 0.0
+        semi_aperture: 12.7
+  frames:
+    optical:
+      z-mm: 0.0
+    exit:
+      z-mm: 9.5
+    mount:
+      z-mm: 5.209235
+  ports:
+    front:
+      frame: optical
+      direction: -z
+    back:
+      frame: exit
+      direction: +z
+      after-surface: 2
+review:
+  - "surface 2: glass 'SF5' normalized to database name 'N-SF5' via optiland's search — verify"
+effective_focal_length_mm: 74.896927

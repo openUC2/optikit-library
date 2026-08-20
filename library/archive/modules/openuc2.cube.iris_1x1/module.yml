@@ -1,0 +1,19 @@
+kind: cube_module
+id: openuc2.cube.iris_1x1
+version: 0.1.0
+description: Continuously adjustable aperture for intensity control.
+tags:
+  - migrated
+  - cube
+  - cube/mechanics
+  - optics
+docs: []
+component: openuc2.mechanics.iris_1x1@^0.1
+template: openuc2.tpl.iris_1x1@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 75.0

@@ -1,0 +1,19 @@
+kind: cube_module
+id: openuc2.cube.pinhole_1x1
+version: 0.1.0
+description: Precision pinhole for spatial filtering.
+tags:
+  - migrated
+  - cube
+  - cube/mechanics
+  - optics
+docs: []
+component: openuc2.mechanics.pinhole_1x1@^0.1
+template: openuc2.tpl.pinhole_1x1@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 50.0

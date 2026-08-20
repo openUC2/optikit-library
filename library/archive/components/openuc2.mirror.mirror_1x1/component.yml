@@ -1,0 +1,46 @@
+kind: optical_component
+id: openuc2.mirror.mirror_1x1
+version: 0.1.0
+category: mirror
+description: Mirror module for beam steering
+tags:
+  - migrated
+  - lenses
+docs: []
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+mount_angle_deg: 45
+mechanics:
+  template: openuc2.tpl.mirror_1x1
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  ports:
+    front:
+      frame: optical
+      direction: -z
+    reflected:
+      frame: optical
+      direction: +x
+      after-surface: 0
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0
+        interaction_model:
+          type: refractive_reflective
+          is_reflective: true
+        aperture:
+          type: RectangularAperture
+          x_min: -12.7
+          x_max: 12.7
+          y_min: -12.7
+          y_max: 12.7
+vendor:
+  name: ""
+  mpn: ""
+  url: ""

@@ -1,0 +1,16 @@
+kind: optical_component
+id: openuc2.mechanics.objective_20x_nikon_0_75na_1x1
+version: 0.1.0
+category: mechanics
+description: Nikon CFI Plan Apo 20×/0.75 objective
+tags:
+  - migrated
+  - optics
+docs:
+  - https://docs.openuc2.com/modules/objectives
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+vendor:
+  name: Nikon
+  mpn: ''
+  url: ''

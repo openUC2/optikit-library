@@ -1,0 +1,33 @@
+# Optical component: a plain 45° flat fold mirror.
+kind: optical_component
+id: openuc2.mirror.flat_45
+version: 1.0.0
+category: mirror
+description: Flat first-surface mirror mounted at 45°
+tags: [mirror, mirror/flat, mirror/single-sided]
+# WP-109: the mount angle the parts editor authors for a fold mirror. An extra
+# field (the schema is extra=allow); today only the frontend's ray sketch reads
+# it, because `derive_port_directions` needs a frame ROTATION to fold a beam
+# and this record carries none — the `reflected` port below states the fold.
+mount_angle_deg: 45
+# WP-109: the housing this optic sits in — the WP-19 placeholder plate that
+# openuc2.cube.mirror_45 binds. (A lossy write pointed this at
+# openuc2.tpl.mirror_1x1, which is a DIFFERENT module's cube.)
+mechanics:
+  template: openuc2.tpl.mirror_mount_1x1
+optics:
+  fragment:
+    surfaces:
+      - type: standard
+        geometry: {type: StandardGeometry, radius: .inf, conic: 0.0}
+        interaction_model: {type: refractive_reflective, is_reflective: true}
+        semi_aperture: 12.5
+  frames:
+    optical: {z-mm: 0.0}
+  ports:
+    front: {frame: optical, direction: -z}
+    reflected: {frame: optical, direction: +x, after-surface: 0}
+review:
+  - carried over from the pre-reset library — the prescription has NOT been confirmed against a real
+    part. Verify it in the component editor and delete this note before using it in a design you 
+    intend to build.

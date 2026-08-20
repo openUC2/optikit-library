@@ -1,0 +1,19 @@
+kind: cube_module
+id: openuc2.cube.electronics_v3
+version: 0.1.0
+description: This is the electronics to drive all kinds of actuators, sensors and indicators
+tags:
+  - migrated
+  - cube
+  - cube/electronics
+  - electronics
+docs: []
+component: openuc2.electronics.electronics_v3@^0.1
+template: openuc2.tpl.electronics_v3@^0.1
+footprint_grid:
+  - 2
+  - 2
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 150.0

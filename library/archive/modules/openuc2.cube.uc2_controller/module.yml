@@ -1,0 +1,19 @@
+kind: cube_module
+id: openuc2.cube.uc2_controller
+version: 0.1.0
+description: Controller
+tags:
+  - migrated
+  - cube
+  - cube/electronics
+  - electronics
+docs: []
+component: openuc2.electronics.uc2_controller@^0.1
+template: openuc2.tpl.uc2_controller@^0.1
+footprint_grid:
+  - 3
+  - 2
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 60.0

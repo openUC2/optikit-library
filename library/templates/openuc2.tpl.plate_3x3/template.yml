@@ -1,0 +1,19 @@
+# WP-53 T3: generated 3x3 sandwich plate (generators/plate_nxm.py).
+kind: mechanical_template
+id: openuc2.tpl.plate_3x3
+version: 0.1.0
+class: generative
+carrier: true
+description: 3x3 sandwich plate, 4 screw holes per cell on the cube hole circle
+tags: [carrier, miniframe, plate, generated]
+envelope: {x-mm: 150, y-mm: 150, z-mm: 5}
+generator:
+  script: generators/plate_nxm.py
+  params:
+    nx: 3
+    ny: 3
+footprint_grid: [3, 3, 1]
+review:
+  - carried over from the pre-reset library — the prescription has NOT been confirmed against a real
+    part. Verify it in the component editor and delete this note before using it in a design you 
+    intend to build.

@@ -1,0 +1,14 @@
+kind: optical_component
+id: openuc2.electronics.electronics_v3
+version: 0.1.0
+category: electronics
+description: This is the electronics to drive all kinds of actuators, sensors and indicators
+tags:
+  - migrated
+  - electronics
+docs: []
+# WP-48: a board has no optical shape to derive a glyph from, so it ships an
+# authored schematic symbol (1 unit = 1 mm, currentColor, beam axis +x).
+symbol: symbol.svg
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record

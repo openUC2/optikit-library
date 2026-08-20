@@ -1,0 +1,11 @@
+kind: optical_component
+id: openuc2.mechanics.lambdahalf_1x1
+version: 0.1.0
+category: mechanics
+description: Rotatable linear polarizing filter module.
+tags:
+  - migrated
+  - optics
+docs: []
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record

@@ -1,0 +1,19 @@
+kind: cube_module
+id: openuc2.cube.filter_dichroic
+version: 0.1.0
+description: Dichroic mirror for fluorescence separation
+tags:
+  - migrated
+  - cube
+  - cube/dichroic
+  - fluorescence
+docs: []
+component: openuc2.dichroic.filter_dichroic@^0.1
+template: openuc2.tpl.filter_dichroic@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 250.0
