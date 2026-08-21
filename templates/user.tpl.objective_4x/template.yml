@@ -1,0 +1,42 @@
+kind: mechanical_template
+id: user.tpl.objective_4x
+version: 0.1.0
+class: fixed
+description: housing for user.lens.objective_4x (attached from BUY - Objectiv 4x - XXX__mit Gehäuse.stp)
+tags:
+  - bound
+envelope:
+  x-mm: 61
+  y-mm: 34.989
+  z-mm: 35
+step: BUY - Objectiv 4x - XXX__mit Gehäuse.stp
+glb: BUY - Objectiv 4x - XXX__mit Gehäuse.glb
+mesh-frame: record
+mesh-pose:
+  rotation:
+    type: grid
+    grid:
+      z: -y
+      x: +z
+optical_ports:
+  front:
+    frame: optical
+    direction: +z
+  back:
+    frame: optical
+    direction: -z
+footprint_grid: null
+insert-pose:
+  rotation:
+    type: grid
+    grid:
+      z: -z
+      x: -x
+  translation:
+    offset-mm: {}
+component: user.lens.objective_4x@^0.1
+frames:
+  optical:
+    x-mm: 0
+    y-mm: 0
+    z-mm: 0

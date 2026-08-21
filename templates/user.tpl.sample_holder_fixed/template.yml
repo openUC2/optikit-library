@@ -1,0 +1,36 @@
+kind: mechanical_template
+id: user.tpl.sample_holder_fixed
+version: 0.1.0
+class: fixed
+description: mount for user.sample.sample_holder_fixed (bound from ASS - 2024 - CUBSAMHOL - V04.stp)
+tags:
+  - bound
+envelope:
+  x-mm: 50
+  y-mm: 50
+  z-mm: 55
+step: ASS - 2024 - CUBSAMHOL - V04.stp
+glb: ASS - 2024 - CUBSAMHOL - V04.glb
+mesh-frame: record
+optical_ports:
+  plane:
+    frame: optical
+    direction: +z
+footprint_grid:
+  - 1
+  - 1
+  - 1
+insert-pose:
+  rotation:
+    type: grid
+    grid:
+      z: +z
+      x: +x
+  translation:
+    offset-mm: {}
+provenance: whole-module
+frames:
+  optical:
+    x-mm: 0
+    y-mm: 0
+    z-mm: 0

@@ -1,0 +1,12 @@
+kind: cube_module
+id: user.cube.eyepiece
+version: 0.1.0
+description: eyepiece in a 1x1 cube (bound)
+tags:
+  - bound
+component: user.lens.eyepiece@^0.1
+template: user.tpl.eyepiece@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1

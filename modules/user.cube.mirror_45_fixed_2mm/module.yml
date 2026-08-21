@@ -1,0 +1,12 @@
+kind: cube_module
+id: user.cube.mirror_45_fixed_2mm
+version: 0.1.0
+description: mirror_45_fixed_2mm in a 1x1 cube (bound)
+tags:
+  - bound
+component: user.mirror.mirror_45_fixed_2mm@^0.1
+template: user.tpl.mirror_45_fixed_2mm@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
