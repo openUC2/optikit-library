@@ -1,0 +1,74 @@
+# Publish the library to GitHub Pages (R2 of optikit-core's LIBRARY-REGISTRY).
+#
+# Why, when the app can already mount this repo by URL: mounting reads through
+# raw.githubusercontent, which is rate-limited and is not a CDN. Pages gives a
+# stable, cacheable read URL for the same bytes, and it is the zero-service
+# fallback — a browser can load the whole catalogue with no optikit-core
+# running anywhere.
+#
+# This publishes ONLY what a reader needs: the index and the record tree. It
+# deliberately does not build a site.
+name: pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# One deployment at a time; a queued run supersedes a waiting one rather than
+# racing it (two pushes in a minute must not publish out of order).
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Meshes live in LFS (.gitattributes); without this the site would
+          # serve pointer files that look like a 130-byte GLB.
+          lfs: true
+
+      - name: Assemble the published tree
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+          cp library-index.json _site/
+          cp -r library _site/library
+          # A reader fetching the index needs to know it is not stale, and the
+          # index itself carries `source_commit` (optikit-core M4). Record the
+          # published ref beside it so the two can be compared.
+          printf '{"ref":"%s","sha":"%s"}\n' "${GITHUB_REF_NAME}" "${GITHUB_SHA}" \
+            > _site/published.json
+
+      - name: Refuse to publish LFS pointers
+        # A pointer file is ~130 bytes and starts with this line. Serving one
+        # gives the app a mesh that parses as garbage, which is far harder to
+        # diagnose than a missing file.
+        run: |
+          set -euo pipefail
+          bad=0
+          while IFS= read -r f; do
+            if head -c 40 "$f" | grep -q 'git-lfs.github.com/spec'; then
+              echo "::error file=$f::LFS pointer, not the real asset — check out with lfs: true"
+              bad=1
+            fi
+          done < <(find _site/library -type f \( -name '*.glb' -o -name '*.step' -o -name '*.stp' \))
+          exit $bad
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,38 @@
+# Optical component ("symbol"): a biconvex singlet standing in for a 25 mm f/50
+# achromat. Its `optics` block drops verbatim into a design's component.
+#
+# The radius is SOLVED for the declared `effective_focal_length_mm`, not picked:
+# r = ±51.146 with ct = 5.0 in N-BK7 gives f = 50.0 mm at 0.52 um. The record
+# previously carried r = ±25.8, which is f = 25.65 mm — half the focal length it
+# advertised, so every design placing this part at its nominal 50 mm conjugate
+# sat at 2f and could not be brought to focus by any insert travel.
+#
+# Semi-aperture is bounded by the edge: the two caps meet at r = 15.80 mm (zero
+# edge thickness), so the clear aperture must stay below that. 10.0 mm keeps a
+# 3.03 mm edge.
+kind: optical_component
+id: openuc2.lens.achromat_25mm_f50
+version: 2.0.0
+category: lens
+description: 25 mm biconvex singlet, f = 50 mm (achromat placeholder)
+tags: [lens, lens/convex]
+effective_focal_length_mm: 50.0
+optics:
+  fragment:
+    surfaces:
+      - type: standard
+        geometry: {type: StandardGeometry, radius: 51.146, conic: 0.0}
+        material_post: {type: Material, name: N-BK7}
+        thickness: 5.0
+        semi_aperture: 10.0
+      - type: standard
+        geometry: {type: StandardGeometry, radius: -51.146, conic: 0.0}
+        semi_aperture: 10.0
+  frames:
+    optical: {z-mm: 0.0}
+    exit: {z-mm: 5.0}
+    mount: {z-mm: 2.6}
+  ports:
+    front: {frame: optical, direction: -z}
+    back: {frame: exit, direction: +z, after-surface: 1}
+vendor: {name: Thorlabs, mpn: AC254-050-A}

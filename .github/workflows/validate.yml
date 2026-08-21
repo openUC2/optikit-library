@@ -1,0 +1,95 @@
+# Validate every record and design on push (WP-58).
+#
+# Green means the parts will load in the configurator. It does not mean the
+# optics are correct — that is what `review:` notes and a bench are for.
+name: validate
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    # Needed only by the index-commit step below.
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install optikit-core
+        run: pip install optikit-core
+
+      - name: Validate the record library
+        run: optikit-core library validate --root library
+
+      - name: Validate every design and setup bundle
+        run: |
+          shopt -s nullglob
+          fail=0
+          for design in designs/*.dsn setups/*.dsn; do
+            echo "── $design"
+            optikit-core validate "$design" || fail=1
+          done
+          exit $fail
+
+      # A setup bundle's embedded library must validate too.
+      - name: Validate embedded setup libraries
+        run: |
+          shopt -s nullglob
+          fail=0
+          for lib in setups/*.dsn/library; do
+            echo "── $lib"
+            optikit-core library validate --root "$lib" || fail=1
+          done
+          exit $fail
+
+      # A record whose only mesh reference is remote cannot be served by the
+      # registry, and a branch URL is not a source of truth. Keep assets local
+      # (git-LFS if they are large).
+      - name: Refuse remote-only assets
+        run: |
+          missing=0
+          while IFS= read -r record; do
+            dir=$(dirname "$record")
+            glb=$(grep -E '^glb:' "$record" | sed 's/^glb: *//' | tr -d '\r')
+            [ -z "$glb" ] && continue
+            if [ ! -f "$dir/$glb" ]; then
+              echo "::error file=$record::names '$glb' but does not ship it — commit the mesh next to the record (git-LFS if large)"
+              missing=1
+            fi
+          done < <(find library/templates -name 'template.yml')
+          exit $missing
+
+      # The index the configurator mounts when someone pastes this repo's URL.
+      # It has to be COMMITTED at the repo root: the app fetches it from
+      # raw.githubusercontent.com, which only serves what is in the tree.
+      - name: Build the library index
+        run: |
+          optikit-core library build --root library
+          cp library/dist/index.json library-index.json
+
+      - name: Commit the index if it changed
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          if git diff --quiet -- library-index.json; then
+            echo "index unchanged"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add library-index.json
+          git commit -m "CI: refresh library-index.json"
+          git push
+
+      # On PRs nothing is pushed — the index is attached for review instead.
+      - name: Publish the index as an artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: library-index
+          path: library-index.json

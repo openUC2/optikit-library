@@ -1,0 +1,29 @@
+# Meshes go to git-LFS. Records do not.
+#
+# Split by SIZE, not by kind. The records are what a parts library is for and
+# what a reviewer reads in a PR diff — they are small (a few hundred KB for a
+# whole catalogue) and must stay as readable text in git. The meshes are the
+# weight: in the pre-reset openUC2 library `library/templates/` was 15 MB, and
+# a single record accounted for 6.6 MB of it.
+#
+# Do this in the FIRST commit of a new library repo. Converting later rewrites
+# history, and every clone and fork made before the switch keeps the blobs.
+*.glb   filter=lfs diff=lfs merge=lfs -text
+*.gltf  filter=lfs diff=lfs merge=lfs -text
+*.step  filter=lfs diff=lfs merge=lfs -text
+*.stp   filter=lfs diff=lfs merge=lfs -text
+*.stl   filter=lfs diff=lfs merge=lfs -text
+*.3mf   filter=lfs diff=lfs merge=lfs -text
+
+# Thumbnails stay in git: they are small, and a palette with no pictures
+# because someone cloned without LFS is a worse failure than a few hundred KB.
+*.png   -filter -diff -merge text=auto
+*.svg   text eol=lf
+
+# Records and the index are text, always, with LF endings — the index is
+# byte-compared by CI, so a CRLF checkout on Windows must not rewrite it.
+*.yml            text eol=lf
+*.yaml           text eol=lf
+*.json           text eol=lf
+*.md             text eol=lf
+library-index.json text eol=lf

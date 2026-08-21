@@ -1,0 +1,4 @@
+# Generated: `optikit-core library build` writes it, CI rebuilds it, and the
+# copy that matters is `library-index.json` at the repo root (that is the file
+# the configurator fetches when someone mounts this repo).
+library/dist/

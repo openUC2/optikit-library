@@ -1,0 +1,9 @@
+kind: cube_module
+id: openuc2.cube.frame
+version: 0.1.0
+description: FRAME microscope body (carrier with the miniFRAME bay)
+tags: [carrier, frame]
+component: openuc2.mechanics.frame@^0.1
+template: openuc2.tpl.frame@^0.1
+footprint_grid: [5, 5, 3]
+price: 1500.0

@@ -1,1 +1,3293 @@
-{"schema": "optikit-library-index/v0", "count": 27, "modules": [{"id": "openuc2.cube.baseplate_4x4", "version": "0.1.0", "kind": "cube_module", "description": "4x4 UC2 baseplate", "tags": ["carrier", "baseplate"], "category": "other", "thumbnail": null, "footprint_grid": [4, 4, 1], "price": 25.0, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "openuc2.mechanics.baseplate_4x4@^0.1", "resolved": null, "vendor": null, "efl_mm": null, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "openuc2.tpl.baseplate_4x4@^0.1", "id": null, "resolved": null, "class": null, "actuatable": false, "carrier": false, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": null, "step": null, "symbol": null, "mesh_frame": "", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [], "ports_frame": "record", "electronics": null}, {"id": "openuc2.cube.baseplate_8x4", "version": "0.1.0", "kind": "cube_module", "description": "8x4 UC2 baseplate", "tags": ["carrier", "baseplate"], "category": "other", "thumbnail": null, "footprint_grid": [8, 4, 1], "price": 25.0, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "openuc2.mechanics.baseplate_8x4@^0.1", "resolved": null, "vendor": null, "efl_mm": null, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "openuc2.tpl.baseplate_8x4@^0.1", "id": null, "resolved": null, "class": null, "actuatable": false, "carrier": false, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": null, "step": null, "symbol": null, "mesh_frame": "", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [], "ports_frame": "record", "electronics": null}, {"id": "openuc2.cube.camera_basic", "version": "0.1.0", "kind": "cube_module", "description": "Starter CMOS camera in a 1x1 cube \u2014 the exemplary detector trio to copy", "tags": ["starter", "cube", "cube/detector"], "category": "detector", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": null, "review": false, "review_notes": [], "component": {"ref": "openuc2.detector.camera_basic@^0.1", "resolved": "0.1.0", "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "openuc2.tpl.camera_basic@^0.1", "id": "openuc2.tpl.camera_basic", "resolved": "0.1.0", "class": "fixed", "actuatable": false, "carrier": false, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": null, "step": null, "symbol": null, "mesh_frame": "", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [{"name": "sensor", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}], "ports_frame": "record", "electronics": null}, {"id": "openuc2.cube.camera_cs165", "version": "0.1.0", "kind": "cube_module", "description": "CS165MU camera in a 1x1 cube (placeholder housing)", "tags": ["cube", "cube/detector"], "category": "detector", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": null, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "openuc2.detector.camera_cs165@^1", "resolved": "1.1.0", "vendor": {"name": "Thorlabs", "mpn": "CS165MU", "url": ""}, "efl_mm": null, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "openuc2.tpl.camera_mount_1x1@^0.1", "id": "openuc2.tpl.camera_mount_1x1", "resolved": "0.1.0", "class": "fixed", "actuatable": false, "carrier": false, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": "/v1/library/assets/templates/openuc2.tpl.camera_mount_1x1/model.glb", "step": "/v1/library/assets/templates/openuc2.tpl.camera_mount_1x1/model.step", "symbol": null, "mesh_frame": "record", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [{"name": "sensor", "direction": "-z", "position_mm": [0.0, 0.0, -10.0], "after_surface": null, "coupling": ""}], "ports_frame": "record", "electronics": null}, {"id": "openuc2.cube.cublend12_7f40", "version": "0.1.0", "kind": "cube_module", "description": "CUBLEND12.7F40 \u2014 Inventor datum-marker cube (S4 reference)", "tags": [], "category": "lens", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": null, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "openuc2.lens.cublend12_7f40@^0.1", "resolved": "0.1.0", "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": 40.0, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "openuc2.tpl.cublend12_7f40@^0.1", "id": "openuc2.tpl.cublend12_7f40", "resolved": "0.1.0", "class": "adaptive", "actuatable": false, "carrier": false, "bays": {}, "dof": [{"name": "dz", "kind": "translation", "axis": "z", "unit": "mm", "range": [-7.5, 7.5], "actuatable": false, "pivot_frame": "", "surface": null, "can_object": null}], "states": []}, "assets": {"thumbnail": null, "glb": "/v1/library/assets/templates/openuc2.tpl.cublend12_7f40/ASS_-_2028_-_CUBLEND12.7F40_-_V04.glb", "step": null, "symbol": null, "mesh_frame": "", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, -0.0], "after_surface": null, "coupling": ""}, {"name": "back", "direction": "+z", "position_mm": [0.0, 0.0, -0.0], "after_surface": 1, "coupling": ""}], "ports_frame": "record", "electronics": null}, {"id": "openuc2.cube.dmd_45", "version": "0.1.0", "kind": "cube_module", "description": "DMD structured-illumination cube (45\u00b0, pattern over CAN)", "tags": ["cube", "cube/slm", "structured-illumination"], "category": "slm", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": 420.0, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "openuc2.slm.dmd_45@^0.1", "resolved": "0.1.0", "vendor": {"name": "Texas Instruments", "mpn": "DLP4710", "url": ""}, "efl_mm": null, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": {"mode": "reflective", "pixel-pitch-um": 5.4, "resolution": [1920, 1080], "fill-factor": 0.92}}, "template": {"ref": "openuc2.tpl.dmd_45@^0.1", "id": "openuc2.tpl.dmd_45", "resolved": "0.1.0", "class": "fixed", "actuatable": true, "carrier": false, "bays": {}, "dof": [{"name": "pattern_index", "kind": "parameter", "axis": "", "unit": "", "range": [0.0, 255], "actuatable": true, "pivot_frame": "", "surface": 0, "can_object": "0x6080:1"}], "states": []}, "assets": {"thumbnail": null, "glb": null, "step": null, "symbol": null, "mesh_frame": "", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}, {"name": "reflected", "direction": "+x", "position_mm": [0.0, 0.0, 0.0], "after_surface": 0, "coupling": ""}], "ports_frame": "record", "electronics": {"pcb": "", "firmware-contract": "uc2rest:dmd@1", "axis-map": [{"dof": "pattern_index", "can-object": "0x6080:1"}]}}, {"id": "openuc2.cube.emission_525", "version": "0.1.0", "kind": "cube_module", "description": "Band-pass emission filter (510\u2013560 nm) in a 1x1 cube", "tags": ["reference", "cube", "cube/filter"], "category": "filter", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": null, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "openuc2.filter.emission_525@^0.1", "resolved": "0.1.0", "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "openuc2.tpl.emission_525@^0.1", "id": "openuc2.tpl.emission_525", "resolved": "0.1.0", "class": "fixed", "actuatable": false, "carrier": false, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": null, "step": null, "symbol": null, "mesh_frame": "", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}, {"name": "back", "direction": "+z", "position_mm": [0.0, 0.0, 0.0], "after_surface": 0, "coupling": ""}], "ports_frame": "record", "electronics": null}, {"id": "openuc2.cube.frame", "version": "0.1.0", "kind": "cube_module", "description": "FRAME microscope body (carrier with the miniFRAME bay)", "tags": ["carrier", "frame"], "category": "other", "thumbnail": null, "footprint_grid": [5, 5, 3], "price": 1500.0, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "openuc2.mechanics.frame@^0.1", "resolved": null, "vendor": null, "efl_mm": null, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "openuc2.tpl.frame@^0.1", "id": null, "resolved": null, "class": null, "actuatable": false, "carrier": false, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": null, "step": null, "symbol": null, "mesh_frame": "", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [], "ports_frame": "record", "electronics": null}, {"id": "openuc2.cube.galvo", "version": "0.1.0", "kind": "cube_module", "description": "Dual-axis galvo scanner cube (x/y beam steering, firmware-actuated)", "tags": ["cube", "cube/mirror", "cube/galvo"], "category": "mirror", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": null, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "openuc2.galvo.dual_axis@^0.1", "resolved": "0.1.0", "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "openuc2.tpl.galvo_dual@^0.1", "id": "openuc2.tpl.galvo_dual", "resolved": "0.1.0", "class": "adaptive", "actuatable": true, "carrier": false, "bays": {}, "dof": [{"name": "tilt_x", "kind": "rotation", "axis": "x", "unit": "deg", "range": [-15.0, 15.0], "actuatable": true, "pivot_frame": "pivot_x", "surface": 0, "can_object": 24688}, {"name": "tilt_y", "kind": "rotation", "axis": "y", "unit": "deg", "range": [-15.0, 15.0], "actuatable": true, "pivot_frame": "pivot_y", "surface": 1, "can_object": 24689}], "states": []}, "assets": {"thumbnail": null, "glb": null, "step": null, "symbol": null, "mesh_frame": "", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [{"name": "front", "direction": "-x", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}, {"name": "reflected", "direction": "-y", "position_mm": [0.0, 0.0, 6.0], "after_surface": 1, "coupling": ""}], "ports_frame": "record", "electronics": {"pcb": "kicad:galvo_driver@1.0", "firmware-contract": "uc2:can:galvo_axis@1", "axis-map": [{"dof": "tilt_x", "can-object": 24688}, {"dof": "tilt_y", "can-object": 24689}]}}, {"id": "openuc2.cube.laser_488", "version": "0.1.0", "kind": "cube_module", "description": "488 nm collimated laser in a 1x1 cube (placeholder housing)", "tags": ["cube", "cube/source"], "category": "source", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": null, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "openuc2.source.laser_488@^1", "resolved": "1.2.0", "vendor": {"name": "openUC2", "mpn": "LASER-488-COL", "url": ""}, "efl_mm": null, "wavelengths_um": [0.488], "divergence_deg": 0.0, "beam_diameter_mm": 2.0, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "openuc2.tpl.laser_pointer_1x1@^0.1", "id": "openuc2.tpl.laser_pointer_1x1", "resolved": "0.1.0", "class": "fixed", "actuatable": false, "carrier": false, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": "/v1/library/assets/templates/openuc2.tpl.laser_pointer_1x1/model.glb", "step": "/v1/library/assets/templates/openuc2.tpl.laser_pointer_1x1/model.step", "symbol": null, "mesh_frame": "record", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [{"name": "out", "direction": "+z", "position_mm": [0.0, 0.0, 20.0], "after_surface": null, "coupling": ""}], "ports_frame": "record", "electronics": null}, {"id": "openuc2.cube.laser_850nm_ir", "version": "0.1.0", "kind": "cube_module", "description": "IR focus-lock probe laser (~850 nm)", "tags": ["source", "ir", "focus-lock"], "category": "other", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": 120.0, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "openuc2.source.laser_850nm_ir@^0.1", "resolved": null, "vendor": null, "efl_mm": null, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "openuc2.tpl.laser_850nm_ir@^0.1", "id": null, "resolved": null, "class": null, "actuatable": false, "carrier": false, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": null, "step": null, "symbol": null, "mesh_frame": "", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [], "ports_frame": "record", "electronics": null}, {"id": "openuc2.cube.laser_basic", "version": "0.1.0", "kind": "cube_module", "description": "Starter dual-line laser (488/635 nm) in a 1x1 cube \u2014 the exemplary source trio", "tags": ["starter", "cube", "cube/source"], "category": "source", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": null, "review": false, "review_notes": [], "component": {"ref": "openuc2.source.laser_basic@^0.1", "resolved": "0.1.0", "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "wavelengths_um": [0.488, 0.635], "divergence_deg": 1.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "openuc2.tpl.laser_basic@^0.1", "id": "openuc2.tpl.laser_basic", "resolved": "0.1.0", "class": "fixed", "actuatable": false, "carrier": false, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": null, "step": null, "symbol": null, "mesh_frame": "", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [{"name": "out", "direction": "+z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}], "ports_frame": "record", "electronics": null}, {"id": "openuc2.cube.led_basic", "version": "0.1.0", "kind": "cube_module", "description": "Starter broadband LED in a 1x1 cube \u2014 the exemplary LED trio to copy", "tags": ["starter", "cube", "cube/source"], "category": "source", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": null, "review": false, "review_notes": [], "component": {"ref": "openuc2.source.led_basic@^0.1", "resolved": "0.1.0", "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "wavelengths_um": [0.55], "divergence_deg": 60.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "openuc2.tpl.led_basic@^0.1", "id": "openuc2.tpl.led_basic", "resolved": "0.1.0", "class": "fixed", "actuatable": false, "carrier": false, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": null, "step": null, "symbol": null, "mesh_frame": "", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [{"name": "out", "direction": "+z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}], "ports_frame": "record", "electronics": null}, {"id": "openuc2.cube.lens_z", "version": "1.1.0", "kind": "cube_module", "description": "Motorizable focus lens cube (25 mm achromat on a \u00b17.5 mm z insert)", "tags": ["cube", "cube/lens", "cube/motorized"], "category": "lens", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": null, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "openuc2.lens.achromat_25mm_f50@^2", "resolved": "2.0.0", "vendor": {"name": "Thorlabs", "mpn": "AC254-050-A", "url": ""}, "efl_mm": 50.0, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "openuc2.tpl.lens_insert_25mm@^1", "id": null, "resolved": null, "class": null, "actuatable": false, "carrier": false, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": null, "step": null, "symbol": null, "mesh_frame": "", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}, {"name": "back", "direction": "+z", "position_mm": [0.0, 0.0, 5.0], "after_surface": 1, "coupling": ""}], "ports_frame": "record", "electronics": {"pcb": "kicad:z_stage_driver@2.1", "firmware-contract": "uc2:can:motor_axis@1", "axis-map": [{"dof": "dz", "can-object": 24674}]}}, {"id": "openuc2.cube.mirror_45", "version": "0.1.0", "kind": "cube_module", "description": "Flat first-surface mirror in a 1x1 cube (placeholder mount)", "tags": ["cube", "cube/mirror"], "category": "mirror", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": null, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "openuc2.mirror.flat_45@^1", "resolved": "1.0.0", "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "openuc2.tpl.mirror_mount_1x1@^0.1", "id": "openuc2.tpl.mirror_mount_1x1", "resolved": "0.1.0", "class": "fixed", "actuatable": false, "carrier": false, "bays": {}, "dof": [], "states": ["XY", "YZ"]}, "assets": {"thumbnail": null, "glb": "/v1/library/assets/templates/openuc2.tpl.mirror_mount_1x1/model.glb", "step": "/v1/library/assets/templates/openuc2.tpl.mirror_mount_1x1/model.step", "symbol": null, "mesh_frame": "record", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}, {"name": "reflected", "direction": "+x", "position_mm": [0.0, 0.0, 0.0], "after_surface": 0, "coupling": ""}], "ports_frame": "record", "electronics": null}, {"id": "openuc2.cube.plate_3x3", "version": "0.1.0", "kind": "cube_module", "description": "3x3 aluminium sandwich plate (miniFRAME)", "tags": ["carrier", "miniframe", "plate"], "category": "other", "thumbnail": null, "footprint_grid": [3, 3, 1], "price": 45.0, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "openuc2.mechanics.plate_3x3@^0.1", "resolved": null, "vendor": null, "efl_mm": null, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "openuc2.tpl.plate_3x3@^0.1", "id": "openuc2.tpl.plate_3x3", "resolved": "0.1.0", "class": "generative", "actuatable": false, "carrier": true, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": null, "step": null, "symbol": null, "mesh_frame": "", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [], "ports_frame": "record", "electronics": null}, {"id": "openuc2.cube.plate_3x4", "version": "0.1.0", "kind": "cube_module", "description": "3x4 aluminium sandwich plate (miniFRAME)", "tags": ["carrier", "miniframe", "plate"], "category": "other", "thumbnail": null, "footprint_grid": [3, 4, 1], "price": 45.0, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "openuc2.mechanics.plate_3x4@^0.1", "resolved": null, "vendor": null, "efl_mm": null, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "openuc2.tpl.plate_3x4@^0.1", "id": "openuc2.tpl.plate_3x4", "resolved": "0.1.0", "class": "generative", "actuatable": false, "carrier": true, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": null, "step": null, "symbol": null, "mesh_frame": "", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [], "ports_frame": "record", "electronics": null}, {"id": "openuc2.cube.plate_3x5", "version": "0.1.0", "kind": "cube_module", "description": "3x5 aluminium sandwich plate (miniFRAME)", "tags": ["carrier", "miniframe", "plate"], "category": "other", "thumbnail": null, "footprint_grid": [3, 5, 1], "price": 45.0, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "openuc2.mechanics.plate_3x5@^0.1", "resolved": null, "vendor": null, "efl_mm": null, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "openuc2.tpl.plate_3x5@^0.1", "id": "openuc2.tpl.plate_3x5", "resolved": "0.1.0", "class": "generative", "actuatable": false, "carrier": true, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": null, "step": null, "symbol": null, "mesh_frame": "", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [], "ports_frame": "record", "electronics": null}, {"id": "openuc2.cube.puzzle_1x1", "version": "0.1.0", "kind": "cube_module", "description": "Inter-layer puzzle piece (miniFRAME sandwich joint)", "tags": ["carrier", "miniframe"], "category": "mechanics", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": 2.0, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "openuc2.mechanics.puzzle_1x1@^0.1", "resolved": "0.1.0", "vendor": {"name": "openUC2", "mpn": "PRT-1004-PUZ11", "url": ""}, "efl_mm": null, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "openuc2.tpl.puzzle_1x1@^0.1", "id": "openuc2.tpl.puzzle_1x1", "resolved": "0.1.0", "class": "fixed", "actuatable": false, "carrier": true, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": "/v1/library/assets/templates/openuc2.tpl.puzzle_1x1/model.glb", "step": "/v1/library/assets/templates/openuc2.tpl.puzzle_1x1/model.step", "symbol": null, "mesh_frame": "record", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [], "ports_frame": "record", "electronics": null}, {"id": "openuc2.cube.starter_50mm", "version": "0.1.0", "kind": "cube_module", "description": "Starter f = 50 mm lens in a 1x1 cube \u2014 the exemplary lens trio to copy", "tags": ["starter", "cube", "cube/lens"], "category": "lens", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": null, "review": false, "review_notes": [], "component": {"ref": "openuc2.lens.starter_50mm@^0.1", "resolved": "0.1.0", "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": 50.0, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "openuc2.tpl.starter_50mm@^0.1", "id": "openuc2.tpl.starter_50mm", "resolved": "0.1.0", "class": "fixed", "actuatable": false, "carrier": false, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": null, "step": null, "symbol": null, "mesh_frame": "", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}, {"name": "back", "direction": "+z", "position_mm": [0.0, 0.0, 3.6], "after_surface": 1, "coupling": ""}], "ports_frame": "record", "electronics": null}, {"id": "openuc2.cube.z_motor", "version": "0.1.0", "kind": "cube_module", "description": "Starter motorized z-stage cube \u2014 the exemplary firmware-bound trio to copy", "tags": ["starter", "cube", "cube/stage", "cube/motorized"], "category": "stage", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": null, "review": false, "review_notes": [], "component": {"ref": "openuc2.stage.z_motor@^0.1", "resolved": "0.1.0", "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "openuc2.tpl.z_motor@^0.1", "id": "openuc2.tpl.z_motor", "resolved": "0.1.0", "class": "adaptive", "actuatable": true, "carrier": false, "bays": {}, "dof": [{"name": "dz", "kind": "translation", "axis": "z", "unit": "mm", "range": [-2.5, 2.5], "actuatable": true, "pivot_frame": "", "surface": null, "can_object": 24674}], "states": []}, "assets": {"thumbnail": null, "glb": null, "step": null, "symbol": null, "mesh_frame": "", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [], "ports_frame": "record", "electronics": {"pcb": "kicad:z_stage_driver@2.1", "firmware-contract": "uc2:can:motor_axis@1", "axis-map": [{"dof": "dz", "can-object": 24674}]}}, {"id": "user.cube.aa", "version": "0.1.0", "kind": "cube_module", "description": "aa in a 1x1 cube (bound)", "tags": ["bound"], "category": "source", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": null, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "user.source.aa@^0.1", "resolved": "0.1.0", "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "wavelengths_um": [0.532], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "user.tpl.aa@^0.1", "id": "user.tpl.aa", "resolved": "0.1.0", "class": "fixed", "actuatable": false, "carrier": false, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": "/v1/library/assets/templates/user.tpl.aa/spacer_endstop.glb", "step": "/v1/library/assets/templates/user.tpl.aa/spacer_endstop.step", "symbol": null, "mesh_frame": "", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [{"name": "out", "direction": "+z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}], "ports_frame": "record", "electronics": null}, {"id": "user.cube.karlheinz", "version": "0.1.0", "kind": "cube_module", "description": "karlheinz in a 1x1 cube (bound)", "tags": ["bound"], "category": "source", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": null, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "user.source.karlheinz@^0.1", "resolved": "0.1.0", "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "wavelengths_um": [0.532], "divergence_deg": 5.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "user.tpl.karlheinz@^0.1", "id": "user.tpl.karlheinz", "resolved": "0.1.0", "class": "fixed", "actuatable": false, "carrier": false, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": "/v1/library/assets/templates/user.tpl.karlheinz/spacer_endstop.glb", "step": "/v1/library/assets/templates/user.tpl.karlheinz/spacer_endstop.step", "symbol": null, "mesh_frame": "", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [{"name": "out", "direction": "+z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}], "ports_frame": "record", "electronics": null}, {"id": "user.cube.somelens", "version": "0.1.0", "kind": "cube_module", "description": "somelens in a 1x1 cube (bound)", "tags": ["bound"], "category": "lens", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": null, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "user.lens.somelens@^0.1", "resolved": "0.1.0", "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": 49.043, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "user.tpl.somelens@^0.1", "id": "user.tpl.somelens", "resolved": "0.1.0", "class": "fixed", "actuatable": false, "carrier": false, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": "/v1/library/assets/templates/user.tpl.somelens/ASS - 2023 - CUBLEND43F-50 - V04.glb", "step": "/v1/library/assets/templates/user.tpl.somelens/ASS - 2023 - CUBLEND43F-50 - V04.stp", "symbol": null, "mesh_frame": "record", "mesh_pose_grid": ["-y", "+x"], "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [{"name": "front", "direction": "+z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}, {"name": "back", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}], "ports_frame": "mounted", "electronics": null}, {"id": "user.cube.test", "version": "0.1.0", "kind": "cube_module", "description": "test in a 1x1 cube (bound)", "tags": ["bound"], "category": "source", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": null, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "user.source.test@^0.1", "resolved": "0.1.0", "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "user.tpl.test@^0.1", "id": "user.tpl.test", "resolved": "0.1.0", "class": "fixed", "actuatable": false, "carrier": false, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": "/v1/library/assets/templates/user.tpl.test/spacer_endstop.glb", "step": "/v1/library/assets/templates/user.tpl.test/spacer_endstop.step", "symbol": null, "mesh_frame": "", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [{"name": "out", "direction": "+x", "position_mm": [12.5, -4.917, 0.374], "after_surface": null, "coupling": ""}], "ports_frame": "record", "electronics": null}, {"id": "user.cube.testlens", "version": "0.1.0", "kind": "cube_module", "description": "testlens in a 1x1 cube (bound)", "tags": ["bound"], "category": "lens", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": null, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "user.lens.testlens@^0.1", "resolved": "0.1.0", "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": 49.043, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "user.tpl.testlens@^0.1", "id": "user.tpl.testlens", "resolved": "0.1.0", "class": "fixed", "actuatable": false, "carrier": false, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": "/v1/library/assets/templates/user.tpl.testlens/ASS - 2023 - CUBLEND43F-50 - V04.glb", "step": "/v1/library/assets/templates/user.tpl.testlens/ASS - 2023 - CUBLEND43F-50 - V04.stp", "symbol": null, "mesh_frame": "record", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}, {"name": "back", "direction": "+z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}], "ports_frame": "mounted", "electronics": null}, {"id": "user.cube.testmirror", "version": "0.1.0", "kind": "cube_module", "description": "testmirror in a 1x1 cube (bound)", "tags": ["bound"], "category": "mirror", "thumbnail": null, "footprint_grid": [1, 1, 1], "price": null, "review": true, "review_notes": ["module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.", "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."], "component": {"ref": "user.mirror.testmirror@^0.1", "resolved": "0.1.0", "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "mirror_rect_mm": null, "programmable": null}, "template": {"ref": "user.tpl.testmirror@^0.1", "id": "user.tpl.testmirror", "resolved": "0.1.0", "class": "fixed", "actuatable": false, "carrier": false, "bays": {}, "dof": [], "states": []}, "assets": {"thumbnail": null, "glb": "/v1/library/assets/templates/user.tpl.testmirror/ASS_-_2004_-_CUBMIR45\u00b0TH1_-_V03.glb", "step": null, "symbol": null, "mesh_frame": "cube", "mesh_pose_grid": ["+z", "+x"], "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null}, "ports": [{"name": "front", "direction": "+x", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}, {"name": "reflected", "direction": "-y", "position_mm": [0.0, 0.0, 0.0], "after_surface": 0, "coupling": ""}], "ports_frame": "mounted", "electronics": null}], "components": [{"id": "openuc2.beamsplitter.cube_5050", "version": "0.1.0", "kind": "optical_component", "category": "beamsplitter", "description": "Non-polarizing 50/50 beamsplitter cube", "tags": ["beamsplitter", "beamsplitter/cube", "beamsplitter/non-polarizing"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "n_surfaces": 1, "review": true, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}, {"name": "transmitted", "direction": "+z", "position_mm": [0.0, 0.0, 0.0], "after_surface": 0, "coupling": ""}, {"name": "reflected", "direction": "+x", "position_mm": [0.0, 0.0, 0.0], "after_surface": 0, "coupling": ""}], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": [{"type": "standard", "geometry": {"type": "StandardGeometry", "radius": 1e999, "conic": 0.0}, "interaction_model": {"type": "refractive_reflective", "is_reflective": true}, "semi_aperture": 12.5, "response": {"kind": "sampler", "transmit-ratio": 0.5}}]}, {"id": "openuc2.detector.camera_basic", "version": "0.1.0", "kind": "optical_component", "category": "detector", "description": "Starter CMOS camera (sensor plane at the cube center) \u2014 copy for detectors", "tags": ["starter", "detector", "detector/camera"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "n_surfaces": 0, "review": false, "ports": [{"name": "sensor", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": []}, {"id": "openuc2.detector.camera_cs165", "version": "1.1.0", "kind": "optical_component", "category": "detector", "description": "CS165MU 1.6 MP CMOS camera (sensor datum at z = -10 mm)", "tags": ["detector", "detector/camera"], "vendor": {"name": "Thorlabs", "mpn": "CS165MU", "url": ""}, "efl_mm": null, "n_surfaces": 0, "review": true, "ports": [{"name": "sensor", "direction": "-z", "position_mm": [0.0, 0.0, -10.0], "after_surface": null, "coupling": ""}], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": []}, {"id": "openuc2.electronics.motor_driver_28byj", "version": "1.0.0", "kind": "optical_component", "category": "electronics", "description": "Stepper driver board for 28BYJ-48 motorized inserts (CAN node)", "tags": ["electronics", "motor-driver"], "vendor": {"name": "openUC2", "mpn": "UC2E-MOT-28BYJ", "url": "https://openuc2.com"}, "efl_mm": null, "n_surfaces": 0, "review": true, "ports": [], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": []}, {"id": "openuc2.electronics.uc2e_esp32", "version": "1.0.0", "kind": "optical_component", "category": "electronics", "description": "UC2e ESP32 controller board (CAN master, WiFi/USB, UC2-REST firmware)", "tags": ["electronics", "controller", "esp32"], "vendor": {"name": "openUC2", "mpn": "UC2E-ESP32-V3", "url": "https://openuc2.com"}, "efl_mm": null, "n_surfaces": 0, "review": true, "ports": [], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": []}, {"id": "openuc2.filter.emission_525", "version": "0.1.0", "kind": "optical_component", "category": "filter", "description": "Band-pass emission filter, 510\u2013560 nm (for a ~525 nm fluorophore)", "tags": ["fluorescence", "reference"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "n_surfaces": 1, "review": true, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}, {"name": "back", "direction": "+z", "position_mm": [0.0, 0.0, 0.0], "after_surface": 0, "coupling": ""}], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": [{"type": "standard", "geometry": {"type": "StandardGeometry", "radius": ".inf", "conic": 0.0}, "thickness": 3.5, "semi_aperture": 12.5, "response": {"kind": "absorptive", "transmit-bands-um": [[0.51, 0.56]]}}]}, {"id": "openuc2.galvo.dual_axis", "version": "0.1.0", "kind": "optical_component", "category": "mirror", "description": "Dual-axis galvo scanner (two steering mirrors, x and y)", "tags": ["mirror", "mirror/galvo", "actuated"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "n_surfaces": 2, "review": true, "ports": [{"name": "front", "direction": "-x", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}, {"name": "reflected", "direction": "-y", "position_mm": [0.0, 0.0, 6.0], "after_surface": 1, "coupling": ""}], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": [{"type": "standard", "geometry": {"type": "StandardGeometry", "radius": 1e999}, "interaction_model": {"type": "refractive_reflective", "is_reflective": true}}, {"type": "standard", "geometry": {"type": "StandardGeometry", "radius": 1e999}, "interaction_model": {"type": "refractive_reflective", "is_reflective": true}}]}, {"id": "openuc2.lens.achromat_25mm_f50", "version": "2.0.0", "kind": "optical_component", "category": "lens", "description": "25 mm biconvex singlet, f = 50 mm (achromat placeholder)", "tags": ["lens", "lens/convex"], "vendor": {"name": "Thorlabs", "mpn": "AC254-050-A", "url": ""}, "efl_mm": 50.0, "n_surfaces": 2, "review": true, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}, {"name": "back", "direction": "+z", "position_mm": [0.0, 0.0, 5.0], "after_surface": 1, "coupling": ""}], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": [{"type": "standard", "geometry": {"type": "StandardGeometry", "radius": 51.146, "conic": 0.0}, "material_post": {"type": "Material", "name": "N-BK7"}, "thickness": 5.0, "semi_aperture": 10.0}, {"type": "standard", "geometry": {"type": "StandardGeometry", "radius": -51.146, "conic": 0.0}, "semi_aperture": 10.0}]}, {"id": "openuc2.lens.achromat_starter", "version": "0.1.0", "kind": "optical_component", "category": "lens", "description": "Starter cemented achromatic doublet, \u00d825.4 mm, f \u2248 50 mm \u2014 the optics-group exemplar", "tags": ["starter", "lens", "lens/achromat"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": 50.17, "n_surfaces": 3, "review": false, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": "", "clear_aperture_mm": 22.86}, {"name": "back", "direction": "+z", "position_mm": [0.0, 0.0, 11.5], "after_surface": 2, "coupling": "", "clear_aperture_mm": 22.86}], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": [{"type": "standard", "geometry": {"type": "StandardGeometry", "radius": 33.34, "conic": 0.0}, "material_post": {"type": "Material", "name": "N-BAF10"}, "thickness": 9.0, "is_stop": true, "semi_aperture": 12.7}, {"type": "standard", "geometry": {"type": "StandardGeometry", "radius": -22.28, "conic": 0.0}, "material_post": {"type": "Material", "name": "N-SF10"}, "thickness": 2.5, "semi_aperture": 12.7}, {"type": "standard", "geometry": {"type": "StandardGeometry", "radius": -291.07, "conic": 0.0}, "semi_aperture": 12.7}]}, {"id": "openuc2.lens.cublend12_7f40", "version": "0.1.0", "kind": "optical_component", "category": "lens", "description": "f = 40 mm \u00d812.7 plano-convex lens cube (Inventor import) \u2014 the S4 reference", "tags": ["reference"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": 40.0, "n_surfaces": 2, "review": true, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, -0.0], "after_surface": null, "coupling": ""}, {"name": "back", "direction": "+z", "position_mm": [0.0, 0.0, -0.0], "after_surface": 1, "coupling": ""}], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": [{"type": "standard", "geometry": {"type": "StandardGeometry", "radius": ".inf"}, "material_post": {"type": "Material", "name": "N-BK7"}, "thickness": 2.8, "semi_aperture": 6.35}, {"type": "standard", "geometry": {"type": "StandardGeometry", "radius": -25.0, "conic": 0.0}, "semi_aperture": 6.35}]}, {"id": "openuc2.lens.starter_50mm", "version": "0.1.0", "kind": "optical_component", "category": "lens", "description": "Starter biconvex lens, f = 50 mm \u2014 the exemplary lens record to copy", "tags": ["starter", "lens", "lens/biconvex"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": 50.0, "n_surfaces": 2, "review": false, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}, {"name": "back", "direction": "+z", "position_mm": [0.0, 0.0, 3.6], "after_surface": 1, "coupling": ""}], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": [{"type": "standard", "geometry": {"type": "StandardGeometry", "radius": 51.0593, "conic": 0.0}, "material_post": {"type": "Material", "name": "N-BK7"}, "thickness": 3.6, "semi_aperture": 12.5}, {"type": "standard", "geometry": {"type": "StandardGeometry", "radius": -51.0593, "conic": 0.0}, "semi_aperture": 12.5}]}, {"id": "openuc2.mechanics.puzzle_1x1", "version": "0.1.0", "kind": "optical_component", "category": "mechanics", "description": "Puzzle piece joining two cube layers (2 noses + 2 notches, pins both sides)", "tags": ["mechanics", "carrier", "miniframe"], "vendor": {"name": "openUC2", "mpn": "PRT-1004-PUZ11", "url": ""}, "efl_mm": null, "n_surfaces": 0, "review": true, "ports": [], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": []}, {"id": "openuc2.mirror.flat_0", "version": "1.0.0", "kind": "optical_component", "category": "mirror", "description": "Flat first-surface mirror at normal incidence (reflects straight back)", "tags": ["mirror", "mirror/flat", "mirror/normal-incidence"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "n_surfaces": 1, "review": true, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}, {"name": "reflected", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": 0, "coupling": ""}], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": [{"type": "standard", "geometry": {"type": "StandardGeometry", "radius": 1e999, "conic": 0.0}, "interaction_model": {"type": "refractive_reflective", "is_reflective": true}, "semi_aperture": 12.5}]}, {"id": "openuc2.mirror.flat_45", "version": "1.0.0", "kind": "optical_component", "category": "mirror", "description": "Flat first-surface mirror mounted at 45\u00b0", "tags": ["mirror", "mirror/flat", "mirror/single-sided"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "n_surfaces": 1, "review": true, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}, {"name": "reflected", "direction": "+x", "position_mm": [0.0, 0.0, 0.0], "after_surface": 0, "coupling": ""}], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": [{"type": "standard", "geometry": {"type": "StandardGeometry", "radius": 1e999, "conic": 0.0}, "interaction_model": {"type": "refractive_reflective", "is_reflective": true}, "semi_aperture": 12.5}]}, {"id": "openuc2.objective.paraxial_20x", "version": "0.1.0", "kind": "optical_component", "category": "lens", "description": "Paraxial 20\u00d7 objective (black box) \u2014 one thin-lens surface, f = 9 mm, NA 0.4", "tags": ["starter", "objective", "objective/paraxial"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": 9.0, "n_surfaces": 1, "review": false, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": "", "clear_aperture_mm": 11.3}, {"name": "back", "direction": "+z", "position_mm": [0.0, 0.0, 0.0], "after_surface": 0, "coupling": "", "clear_aperture_mm": 11.3}], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": [{"type": "standard", "geometry": {"type": "StandardGeometry", "radius": 1e999, "conic": 0.0}, "interaction_model": {"type": "thin_lens", "focal_length": 9.0}, "is_stop": true, "semi_aperture": 5.65}]}, {"id": "openuc2.objective.refractive_20x", "version": "0.1.0", "kind": "optical_component", "category": "lens", "description": "20x objective stand-in - biconvex singlet, f = 9 mm, NA 0.4 (kernel-traceable)", "tags": ["objective", "objective/stand-in", "starter"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": 9.0, "n_surfaces": 2, "review": false, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, -41.0], "after_surface": null, "coupling": ""}, {"name": "back", "direction": "+z", "position_mm": [0.0, 0.0, -39.0], "after_surface": 1, "coupling": ""}], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": [{"type": "standard", "geometry": {"type": "StandardGeometry", "radius": 9.3024, "conic": 0.0}, "material_post": {"type": "Material", "name": "N-BK7"}, "thickness": 2.0, "semi_aperture": 3.6, "is_stop": true}, {"type": "standard", "geometry": {"type": "StandardGeometry", "radius": -9.3024, "conic": 0.0}, "semi_aperture": 3.6}]}, {"id": "openuc2.sample.fluoro_slide", "version": "0.1.0", "kind": "optical_component", "category": "sample", "description": "Fluorescent sample - emits 520 nm into a 0.4 NA cone (secondary source)", "tags": ["sample", "sample/fluorescent", "fluorescence"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "n_surfaces": 0, "review": true, "ports": [{"name": "plane", "direction": "+z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}], "wavelengths_um": [0.52], "divergence_deg": 47.2, "beam_diameter_mm": 0.2, "symbol": null, "fragment_surfaces": []}, {"id": "openuc2.slm.dmd_45", "version": "0.1.0", "kind": "optical_component", "category": "slm", "description": "DLP digital micromirror device at 45\u00b0 (0.47\" 1920x1080, 5.4 \u00b5m pitch)", "tags": ["slm", "dmd", "structured-illumination", "programmable"], "vendor": {"name": "Texas Instruments", "mpn": "DLP4710", "url": ""}, "efl_mm": null, "n_surfaces": 1, "review": true, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}, {"name": "reflected", "direction": "+x", "position_mm": [0.0, 0.0, 0.0], "after_surface": 0, "coupling": ""}], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": [{"type": "standard", "geometry": {"type": "StandardGeometry", "radius": 1e999, "conic": 0.0}, "interaction_model": {"type": "refractive_reflective", "is_reflective": true}, "semi_aperture": 6.6}]}, {"id": "openuc2.source.laser_488", "version": "1.2.0", "kind": "optical_component", "category": "source", "description": "Collimated 488 nm laser diode module (emission datum at z = +20 mm)", "tags": ["source", "source/laser"], "vendor": {"name": "openUC2", "mpn": "LASER-488-COL", "url": ""}, "efl_mm": null, "n_surfaces": 0, "review": true, "ports": [{"name": "out", "direction": "+z", "position_mm": [0.0, 0.0, 20.0], "after_surface": null, "coupling": ""}], "wavelengths_um": [0.488], "divergence_deg": 0.0, "beam_diameter_mm": 2.0, "symbol": null, "fragment_surfaces": []}, {"id": "openuc2.source.laser_basic", "version": "0.1.0", "kind": "optical_component", "category": "source", "description": "Starter dual-line laser (488/635 nm) \u2014 the exemplary source record to copy", "tags": ["starter", "source", "source/laser"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "n_surfaces": 0, "review": false, "ports": [{"name": "out", "direction": "+z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}], "wavelengths_um": [0.488, 0.635], "divergence_deg": 1.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": []}, {"id": "openuc2.source.laser_body", "version": "0.1.0", "kind": "optical_component", "category": "source", "description": "Collimated laser module in its own cylindrical body \u2014 the S2 bare-housing reference", "tags": ["reference", "source", "source/laser"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "n_surfaces": 0, "review": true, "ports": [{"name": "out", "direction": "+z", "position_mm": [0.0, 0.0, 50.0], "after_surface": null, "coupling": "", "clear_aperture_mm": 10.0}], "wavelengths_um": [0.635], "divergence_deg": 0.5, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": []}, {"id": "openuc2.source.led_basic", "version": "0.1.0", "kind": "optical_component", "category": "source", "description": "Starter broadband LED (nominal 550 nm, wide angle) \u2014 copy for LED sources", "tags": ["starter", "source", "source/led"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "n_surfaces": 0, "review": false, "ports": [{"name": "out", "direction": "+z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}], "wavelengths_um": [0.55], "divergence_deg": 60.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": []}, {"id": "openuc2.stage.z_motor", "version": "0.1.0", "kind": "optical_component", "category": "stage", "description": "Starter motorized z-stage \u2014 the exemplary actuated (T2) trio to copy", "tags": ["starter", "stage", "stage/z"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "n_surfaces": 0, "review": false, "ports": [], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": []}, {"id": "thorlabs.mirror.km05_kinematic", "version": "0.1.0", "kind": "optical_component", "category": "mirror", "description": "KM05-class kinematic mount holding a \u00d812.7 mm mirror \u2014 the S2 housed-assembly reference", "tags": ["reference", "mirror", "mirror/kinematic"], "vendor": {"name": "Thorlabs", "mpn": "KM05", "url": "https://www.thorlabs.com/thorproduct.cfm?partnumber=KM05"}, "efl_mm": null, "n_surfaces": 1, "review": true, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": "", "clear_aperture_mm": 11.43}, {"name": "reflected", "direction": "+x", "position_mm": [0.0, 0.0, 0.0], "after_surface": 0, "coupling": "", "clear_aperture_mm": 11.43}], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": [{"type": "standard", "geometry": {"type": "StandardGeometry", "radius": 1e999, "conic": 0.0}, "interaction_model": {"type": "refractive_reflective", "is_reflective": true}, "semi_aperture": 6.35}]}, {"id": "user.lens.somelens", "version": "0.1.0", "kind": "optical_component", "category": "lens", "description": "", "tags": ["authored"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": 49.043, "n_surfaces": 2, "review": true, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}, {"name": "back", "direction": "+z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": [{"type": "standard", "geometry": {"type": "StandardGeometry", "radius": 50, "conic": 0}, "material_post": {"type": "Material", "name": "N-BK7"}, "thickness": 4, "semi_aperture": 20}, {"type": "standard", "geometry": {"type": "StandardGeometry", "radius": -50, "conic": 0}, "semi_aperture": 20}]}, {"id": "user.lens.testlens", "version": "0.1.0", "kind": "optical_component", "category": "lens", "description": "", "tags": ["authored"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": 49.043, "n_surfaces": 2, "review": true, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}, {"name": "back", "direction": "+z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": [{"type": "standard", "geometry": {"type": "StandardGeometry", "radius": 50, "conic": 0}, "material_post": {"type": "Material", "name": "N-BK7"}, "thickness": 4, "semi_aperture": 20}, {"type": "standard", "geometry": {"type": "StandardGeometry", "radius": -50, "conic": 0}, "semi_aperture": 20}]}, {"id": "user.mirror.testmirror", "version": "0.1.0", "kind": "optical_component", "category": "mirror", "description": "", "tags": ["authored"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "n_surfaces": 2, "review": true, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}, {"name": "reflected", "direction": "-x", "position_mm": [0.0, 0.0, 0.0], "after_surface": 0, "coupling": ""}], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": [{"type": "standard", "geometry": {"type": "StandardGeometry", "radius": 1e999, "conic": 0}, "material_post": {"type": "Material", "name": "N-BK7"}, "thickness": 1, "interaction_model": {"type": "refractive_reflective", "is_reflective": true}, "semi_aperture": 12.7}, {"type": "standard", "geometry": {"type": "StandardGeometry", "radius": 1e999, "conic": 0}, "semi_aperture": 12.7}]}, {"id": "user.source.aa", "version": "0.1.0", "kind": "optical_component", "category": "source", "description": "dadf", "tags": ["authored"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "n_surfaces": 0, "review": true, "ports": [{"name": "out", "direction": "+z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}], "wavelengths_um": [0.532], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": []}, {"id": "user.source.karlheinz", "version": "0.1.0", "kind": "optical_component", "category": "source", "description": "", "tags": ["authored"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "n_surfaces": 0, "review": true, "ports": [{"name": "out", "direction": "+z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": ""}], "wavelengths_um": [0.532], "divergence_deg": 5.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": []}, {"id": "user.source.test", "version": "0.1.0", "kind": "optical_component", "category": "source", "description": "test (bound in the part-binding workbench)", "tags": ["bound"], "vendor": {"name": "", "mpn": "", "url": ""}, "efl_mm": null, "n_surfaces": 0, "review": true, "ports": [{"name": "out", "direction": "+x", "position_mm": [12.5, -4.917, 0.374], "after_surface": null, "coupling": ""}], "wavelengths_um": [], "divergence_deg": 0.0, "beam_diameter_mm": null, "symbol": null, "fragment_surfaces": []}], "groups": [], "housings": [{"id": "openuc2.tpl.laser_body", "version": "0.1.0", "kind": "mechanical_template", "class": "fixed", "description": "Cylindrical laser module body (breadboard device \u2014 no cube)", "review": true, "component": {"ref": "openuc2.source.laser_body@^0.1", "resolved": "0.1.0", "id": "openuc2.source.laser_body"}, "dof": [], "assets": {"thumbnail": null, "mesh_frame": "record", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null, "glb": "/v1/library/assets/templates/openuc2.tpl.laser_body/laser_body.glb", "step": "/v1/library/assets/templates/openuc2.tpl.laser_body/laser_body.step"}, "ports": [{"name": "out", "direction": "+z", "position_mm": [0.0, 0.0, 50.0], "after_surface": null, "coupling": "", "clear_aperture_mm": 10.0}], "ports_frame": "record"}, {"id": "thorlabs.tpl.km05_kinematic", "version": "0.1.1", "kind": "mechanical_template", "class": "adaptive", "description": "KM05-class kinematic mount housing (tip/tilt, breadboard-mounted \u2014 no cube)", "review": true, "component": {"ref": "thorlabs.mirror.km05_kinematic@^0.1", "resolved": "0.1.0", "id": "thorlabs.mirror.km05_kinematic"}, "dof": [{"name": "tip", "kind": "rotation", "axis": "x", "unit": "deg", "range": [-4, 4], "actuatable": false, "pivot_frame": "optical", "surface": null}, {"name": "tilt", "kind": "rotation", "axis": "y", "unit": "deg", "range": [-4, 4], "actuatable": false, "pivot_frame": "optical", "surface": null}], "assets": {"thumbnail": null, "mesh_frame": "record", "mesh_pose_grid": null, "mesh_pose_offset_mm": null, "mesh_pose_offset_deg": null, "glb": "/v1/library/assets/templates/thorlabs.tpl.km05_kinematic/km05_kinematic.glb", "step": "/v1/library/assets/templates/thorlabs.tpl.km05_kinematic/km05_kinematic.step"}, "ports": [{"name": "front", "direction": "-z", "position_mm": [0.0, 0.0, 0.0], "after_surface": null, "coupling": "", "clear_aperture_mm": 11.43}, {"name": "reflected", "direction": "+x", "position_mm": [0.0, 0.0, 0.0], "after_surface": 0, "coupling": "", "clear_aperture_mm": 11.43}], "ports_frame": "record"}]}
+{
+  "schema": "optikit-library-index/v0",
+  "count": 19,
+  "modules": [
+    {
+      "id": "openuc2.cube.camera_basic",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "Starter CMOS camera in a 1x1 cube \u2014 the exemplary detector trio to copy",
+      "tags": [
+        "starter",
+        "cube",
+        "cube/detector"
+      ],
+      "category": "detector",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": false,
+      "review_notes": [],
+      "component": {
+        "ref": "openuc2.detector.camera_basic@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "programmable": null
+      },
+      "template": {
+        "ref": "openuc2.tpl.camera_basic@^0.1",
+        "id": "openuc2.tpl.camera_basic",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {},
+        "dof": [],
+        "states": []
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": null,
+        "step": null,
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "sensor",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "ports_frame": "record",
+      "electronics": null
+    },
+    {
+      "id": "openuc2.cube.camera_cs165",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "CS165MU camera in a 1x1 cube (placeholder housing)",
+      "tags": [
+        "cube",
+        "cube/detector"
+      ],
+      "category": "detector",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": true,
+      "review_notes": [
+        "module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."
+      ],
+      "component": {
+        "ref": "openuc2.detector.camera_cs165@^1",
+        "resolved": "1.1.0",
+        "vendor": {
+          "name": "Thorlabs",
+          "mpn": "CS165MU",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "programmable": null
+      },
+      "template": {
+        "ref": "openuc2.tpl.camera_mount_1x1@^0.1",
+        "id": "openuc2.tpl.camera_mount_1x1",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {},
+        "dof": [],
+        "states": []
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/openuc2.tpl.camera_mount_1x1/model.glb",
+        "step": "/v1/library/assets/templates/openuc2.tpl.camera_mount_1x1/model.step",
+        "symbol": null,
+        "mesh_frame": "record",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "sensor",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            -10.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "ports_frame": "record",
+      "electronics": null
+    },
+    {
+      "id": "openuc2.cube.cublend12_7f40",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "CUBLEND12.7F40 \u2014 Inventor datum-marker cube (S4 reference)",
+      "tags": [],
+      "category": "lens",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": true,
+      "review_notes": [
+        "module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."
+      ],
+      "component": {
+        "ref": "openuc2.lens.cublend12_7f40@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": 40.0,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "programmable": null
+      },
+      "template": {
+        "ref": "openuc2.tpl.cublend12_7f40@^0.1",
+        "id": "openuc2.tpl.cublend12_7f40",
+        "resolved": "0.1.0",
+        "class": "adaptive",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {},
+        "dof": [
+          {
+            "name": "dz",
+            "kind": "translation",
+            "axis": "z",
+            "unit": "mm",
+            "range": [
+              -7.5,
+              7.5
+            ],
+            "actuatable": false,
+            "pivot_frame": "",
+            "surface": null,
+            "can_object": null
+          }
+        ],
+        "states": []
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/openuc2.tpl.cublend12_7f40/ASS_-_2028_-_CUBLEND12.7F40_-_V04.glb",
+        "step": null,
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            -0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            -0.0
+          ],
+          "after_surface": 1,
+          "coupling": ""
+        }
+      ],
+      "ports_frame": "record",
+      "electronics": null
+    },
+    {
+      "id": "openuc2.cube.dmd_45",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "DMD structured-illumination cube (45\u00b0, pattern over CAN)",
+      "tags": [
+        "cube",
+        "cube/slm",
+        "structured-illumination"
+      ],
+      "category": "slm",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": 420.0,
+      "review": true,
+      "review_notes": [
+        "module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."
+      ],
+      "component": {
+        "ref": "openuc2.slm.dmd_45@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "Texas Instruments",
+          "mpn": "DLP4710",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "programmable": {
+          "mode": "reflective",
+          "pixel-pitch-um": 5.4,
+          "resolution": [
+            1920,
+            1080
+          ],
+          "fill-factor": 0.92
+        }
+      },
+      "template": {
+        "ref": "openuc2.tpl.dmd_45@^0.1",
+        "id": "openuc2.tpl.dmd_45",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": true,
+        "carrier": false,
+        "bays": {},
+        "dof": [
+          {
+            "name": "pattern_index",
+            "kind": "parameter",
+            "axis": "",
+            "unit": "",
+            "range": [
+              0.0,
+              255
+            ],
+            "actuatable": true,
+            "pivot_frame": "",
+            "surface": 0,
+            "can_object": "0x6080:1"
+          }
+        ],
+        "states": []
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": null,
+        "step": null,
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "reflected",
+          "direction": "+x",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 0,
+          "coupling": ""
+        }
+      ],
+      "ports_frame": "record",
+      "electronics": {
+        "pcb": "",
+        "firmware-contract": "uc2rest:dmd@1",
+        "axis-map": [
+          {
+            "dof": "pattern_index",
+            "can-object": "0x6080:1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "openuc2.cube.emission_525",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "Band-pass emission filter (510\u2013560 nm) in a 1x1 cube",
+      "tags": [
+        "reference",
+        "cube",
+        "cube/filter"
+      ],
+      "category": "filter",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": true,
+      "review_notes": [
+        "module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."
+      ],
+      "component": {
+        "ref": "openuc2.filter.emission_525@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "programmable": null
+      },
+      "template": {
+        "ref": "openuc2.tpl.emission_525@^0.1",
+        "id": "openuc2.tpl.emission_525",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {},
+        "dof": [],
+        "states": []
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": null,
+        "step": null,
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 0,
+          "coupling": ""
+        }
+      ],
+      "ports_frame": "record",
+      "electronics": null
+    },
+    {
+      "id": "openuc2.cube.galvo",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "Dual-axis galvo scanner cube (x/y beam steering, firmware-actuated)",
+      "tags": [
+        "cube",
+        "cube/mirror",
+        "cube/galvo"
+      ],
+      "category": "mirror",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": true,
+      "review_notes": [
+        "module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."
+      ],
+      "component": {
+        "ref": "openuc2.galvo.dual_axis@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "programmable": null
+      },
+      "template": {
+        "ref": "openuc2.tpl.galvo_dual@^0.1",
+        "id": "openuc2.tpl.galvo_dual",
+        "resolved": "0.1.0",
+        "class": "adaptive",
+        "actuatable": true,
+        "carrier": false,
+        "bays": {},
+        "dof": [
+          {
+            "name": "tilt_x",
+            "kind": "rotation",
+            "axis": "x",
+            "unit": "deg",
+            "range": [
+              -15.0,
+              15.0
+            ],
+            "actuatable": true,
+            "pivot_frame": "pivot_x",
+            "surface": 0,
+            "can_object": 24688
+          },
+          {
+            "name": "tilt_y",
+            "kind": "rotation",
+            "axis": "y",
+            "unit": "deg",
+            "range": [
+              -15.0,
+              15.0
+            ],
+            "actuatable": true,
+            "pivot_frame": "pivot_y",
+            "surface": 1,
+            "can_object": 24689
+          }
+        ],
+        "states": []
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": null,
+        "step": null,
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-x",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "reflected",
+          "direction": "-y",
+          "position_mm": [
+            0.0,
+            0.0,
+            6.0
+          ],
+          "after_surface": 1,
+          "coupling": ""
+        }
+      ],
+      "ports_frame": "record",
+      "electronics": {
+        "pcb": "kicad:galvo_driver@1.0",
+        "firmware-contract": "uc2:can:galvo_axis@1",
+        "axis-map": [
+          {
+            "dof": "tilt_x",
+            "can-object": 24688
+          },
+          {
+            "dof": "tilt_y",
+            "can-object": 24689
+          }
+        ]
+      }
+    },
+    {
+      "id": "openuc2.cube.laser_488",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "488 nm collimated laser in a 1x1 cube (placeholder housing)",
+      "tags": [
+        "cube",
+        "cube/source"
+      ],
+      "category": "source",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": true,
+      "review_notes": [
+        "module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."
+      ],
+      "component": {
+        "ref": "openuc2.source.laser_488@^1",
+        "resolved": "1.2.0",
+        "vendor": {
+          "name": "openUC2",
+          "mpn": "LASER-488-COL",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [
+          0.488
+        ],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": 2.0,
+        "mirror_rect_mm": null,
+        "programmable": null
+      },
+      "template": {
+        "ref": "openuc2.tpl.laser_pointer_1x1@^0.1",
+        "id": "openuc2.tpl.laser_pointer_1x1",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {},
+        "dof": [],
+        "states": []
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/openuc2.tpl.laser_pointer_1x1/model.glb",
+        "step": "/v1/library/assets/templates/openuc2.tpl.laser_pointer_1x1/model.step",
+        "symbol": null,
+        "mesh_frame": "record",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "out",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            20.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "ports_frame": "record",
+      "electronics": null
+    },
+    {
+      "id": "openuc2.cube.laser_basic",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "Starter dual-line laser (488/635 nm) in a 1x1 cube \u2014 the exemplary source trio",
+      "tags": [
+        "starter",
+        "cube",
+        "cube/source"
+      ],
+      "category": "source",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": false,
+      "review_notes": [],
+      "component": {
+        "ref": "openuc2.source.laser_basic@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [
+          0.488,
+          0.635
+        ],
+        "divergence_deg": 1.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "programmable": null
+      },
+      "template": {
+        "ref": "openuc2.tpl.laser_basic@^0.1",
+        "id": "openuc2.tpl.laser_basic",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {},
+        "dof": [],
+        "states": []
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": null,
+        "step": null,
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "out",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "ports_frame": "record",
+      "electronics": null
+    },
+    {
+      "id": "openuc2.cube.led_basic",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "Starter broadband LED in a 1x1 cube \u2014 the exemplary LED trio to copy",
+      "tags": [
+        "starter",
+        "cube",
+        "cube/source"
+      ],
+      "category": "source",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": false,
+      "review_notes": [],
+      "component": {
+        "ref": "openuc2.source.led_basic@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [
+          0.55
+        ],
+        "divergence_deg": 60.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "programmable": null
+      },
+      "template": {
+        "ref": "openuc2.tpl.led_basic@^0.1",
+        "id": "openuc2.tpl.led_basic",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {},
+        "dof": [],
+        "states": []
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": null,
+        "step": null,
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "out",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "ports_frame": "record",
+      "electronics": null
+    },
+    {
+      "id": "openuc2.cube.mirror_45",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "Flat first-surface mirror in a 1x1 cube (placeholder mount)",
+      "tags": [
+        "cube",
+        "cube/mirror"
+      ],
+      "category": "mirror",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": true,
+      "review_notes": [
+        "module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."
+      ],
+      "component": {
+        "ref": "openuc2.mirror.flat_45@^1",
+        "resolved": "1.0.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "programmable": null
+      },
+      "template": {
+        "ref": "openuc2.tpl.mirror_mount_1x1@^0.1",
+        "id": "openuc2.tpl.mirror_mount_1x1",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {},
+        "dof": [],
+        "states": [
+          "XY",
+          "YZ"
+        ]
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/openuc2.tpl.mirror_mount_1x1/model.glb",
+        "step": "/v1/library/assets/templates/openuc2.tpl.mirror_mount_1x1/model.step",
+        "symbol": null,
+        "mesh_frame": "record",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "reflected",
+          "direction": "+x",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 0,
+          "coupling": ""
+        }
+      ],
+      "ports_frame": "record",
+      "electronics": null
+    },
+    {
+      "id": "openuc2.cube.puzzle_1x1",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "Inter-layer puzzle piece (miniFRAME sandwich joint)",
+      "tags": [
+        "carrier",
+        "miniframe"
+      ],
+      "category": "mechanics",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": 2.0,
+      "review": true,
+      "review_notes": [
+        "module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."
+      ],
+      "component": {
+        "ref": "openuc2.mechanics.puzzle_1x1@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "openUC2",
+          "mpn": "PRT-1004-PUZ11",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "programmable": null
+      },
+      "template": {
+        "ref": "openuc2.tpl.puzzle_1x1@^0.1",
+        "id": "openuc2.tpl.puzzle_1x1",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": true,
+        "bays": {},
+        "dof": [],
+        "states": []
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/openuc2.tpl.puzzle_1x1/model.glb",
+        "step": "/v1/library/assets/templates/openuc2.tpl.puzzle_1x1/model.step",
+        "symbol": null,
+        "mesh_frame": "record",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [],
+      "ports_frame": "record",
+      "electronics": null
+    },
+    {
+      "id": "openuc2.cube.starter_50mm",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "Starter f = 50 mm lens in a 1x1 cube \u2014 the exemplary lens trio to copy",
+      "tags": [
+        "starter",
+        "cube",
+        "cube/lens"
+      ],
+      "category": "lens",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": false,
+      "review_notes": [],
+      "component": {
+        "ref": "openuc2.lens.starter_50mm@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": 50.0,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "programmable": null
+      },
+      "template": {
+        "ref": "openuc2.tpl.starter_50mm@^0.1",
+        "id": "openuc2.tpl.starter_50mm",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {},
+        "dof": [],
+        "states": []
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": null,
+        "step": null,
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            3.6
+          ],
+          "after_surface": 1,
+          "coupling": ""
+        }
+      ],
+      "ports_frame": "record",
+      "electronics": null
+    },
+    {
+      "id": "openuc2.cube.z_motor",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "Starter motorized z-stage cube \u2014 the exemplary firmware-bound trio to copy",
+      "tags": [
+        "starter",
+        "cube",
+        "cube/stage",
+        "cube/motorized"
+      ],
+      "category": "stage",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": false,
+      "review_notes": [],
+      "component": {
+        "ref": "openuc2.stage.z_motor@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "programmable": null
+      },
+      "template": {
+        "ref": "openuc2.tpl.z_motor@^0.1",
+        "id": "openuc2.tpl.z_motor",
+        "resolved": "0.1.0",
+        "class": "adaptive",
+        "actuatable": true,
+        "carrier": false,
+        "bays": {},
+        "dof": [
+          {
+            "name": "dz",
+            "kind": "translation",
+            "axis": "z",
+            "unit": "mm",
+            "range": [
+              -2.5,
+              2.5
+            ],
+            "actuatable": true,
+            "pivot_frame": "",
+            "surface": null,
+            "can_object": 24674
+          }
+        ],
+        "states": []
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": null,
+        "step": null,
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [],
+      "ports_frame": "record",
+      "electronics": {
+        "pcb": "kicad:z_stage_driver@2.1",
+        "firmware-contract": "uc2:can:motor_axis@1",
+        "axis-map": [
+          {
+            "dof": "dz",
+            "can-object": 24674
+          }
+        ]
+      }
+    },
+    {
+      "id": "user.cube.aa",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "aa in a 1x1 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "source",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": true,
+      "review_notes": [
+        "module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."
+      ],
+      "component": {
+        "ref": "user.source.aa@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [
+          0.532
+        ],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.aa@^0.1",
+        "id": "user.tpl.aa",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {},
+        "dof": [],
+        "states": []
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.aa/spacer_endstop.glb",
+        "step": "/v1/library/assets/templates/user.tpl.aa/spacer_endstop.step",
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "out",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "ports_frame": "record",
+      "electronics": null
+    },
+    {
+      "id": "user.cube.karlheinz",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "karlheinz in a 1x1 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "source",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": true,
+      "review_notes": [
+        "module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."
+      ],
+      "component": {
+        "ref": "user.source.karlheinz@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [
+          0.532
+        ],
+        "divergence_deg": 5.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.karlheinz@^0.1",
+        "id": "user.tpl.karlheinz",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {},
+        "dof": [],
+        "states": []
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.karlheinz/spacer_endstop.glb",
+        "step": "/v1/library/assets/templates/user.tpl.karlheinz/spacer_endstop.step",
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "out",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "ports_frame": "record",
+      "electronics": null
+    },
+    {
+      "id": "user.cube.somelens",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "somelens in a 1x1 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "lens",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": true,
+      "review_notes": [
+        "module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."
+      ],
+      "component": {
+        "ref": "user.lens.somelens@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": 49.043,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.somelens@^0.1",
+        "id": "user.tpl.somelens",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {},
+        "dof": [],
+        "states": []
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.somelens/ASS - 2023 - CUBLEND43F-50 - V04.glb",
+        "step": "/v1/library/assets/templates/user.tpl.somelens/ASS - 2023 - CUBLEND43F-50 - V04.stp",
+        "symbol": null,
+        "mesh_frame": "record",
+        "mesh_pose_grid": [
+          "-y",
+          "+x"
+        ],
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "front",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "ports_frame": "mounted",
+      "electronics": null
+    },
+    {
+      "id": "user.cube.test",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "test in a 1x1 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "source",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": true,
+      "review_notes": [
+        "module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."
+      ],
+      "component": {
+        "ref": "user.source.test@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.test@^0.1",
+        "id": "user.tpl.test",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {},
+        "dof": [],
+        "states": []
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.test/spacer_endstop.glb",
+        "step": "/v1/library/assets/templates/user.tpl.test/spacer_endstop.step",
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "out",
+          "direction": "+x",
+          "position_mm": [
+            12.5,
+            -4.917,
+            0.374
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "ports_frame": "record",
+      "electronics": null
+    },
+    {
+      "id": "user.cube.testlens",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "testlens in a 1x1 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "lens",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": true,
+      "review_notes": [
+        "module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."
+      ],
+      "component": {
+        "ref": "user.lens.testlens@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": 49.043,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.testlens@^0.1",
+        "id": "user.tpl.testlens",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {},
+        "dof": [],
+        "states": []
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.testlens/ASS - 2023 - CUBLEND43F-50 - V04.glb",
+        "step": "/v1/library/assets/templates/user.tpl.testlens/ASS - 2023 - CUBLEND43F-50 - V04.stp",
+        "symbol": null,
+        "mesh_frame": "record",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "ports_frame": "mounted",
+      "electronics": null
+    },
+    {
+      "id": "user.cube.testmirror",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "testmirror in a 1x1 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "mirror",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": true,
+      "review_notes": [
+        "module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
+        "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."
+      ],
+      "component": {
+        "ref": "user.mirror.testmirror@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.testmirror@^0.1",
+        "id": "user.tpl.testmirror",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {},
+        "dof": [],
+        "states": []
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.testmirror/ASS_-_2004_-_CUBMIR45\u00b0TH1_-_V03.glb",
+        "step": null,
+        "symbol": null,
+        "mesh_frame": "cube",
+        "mesh_pose_grid": [
+          "+z",
+          "+x"
+        ],
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "front",
+          "direction": "+x",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "reflected",
+          "direction": "-y",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 0,
+          "coupling": ""
+        }
+      ],
+      "ports_frame": "mounted",
+      "electronics": null
+    }
+  ],
+  "components": [
+    {
+      "id": "openuc2.beamsplitter.cube_5050",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "beamsplitter",
+      "description": "Non-polarizing 50/50 beamsplitter cube",
+      "tags": [
+        "beamsplitter",
+        "beamsplitter/cube",
+        "beamsplitter/non-polarizing"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 1,
+      "review": true,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "transmitted",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 0,
+          "coupling": ""
+        },
+        {
+          "name": "reflected",
+          "direction": "+x",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 0,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 1e999,
+            "conic": 0.0
+          },
+          "interaction_model": {
+            "type": "refractive_reflective",
+            "is_reflective": true
+          },
+          "semi_aperture": 12.5,
+          "response": {
+            "kind": "sampler",
+            "transmit-ratio": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "openuc2.detector.camera_basic",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "detector",
+      "description": "Starter CMOS camera (sensor plane at the cube center) \u2014 copy for detectors",
+      "tags": [
+        "starter",
+        "detector",
+        "detector/camera"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 0,
+      "review": false,
+      "ports": [
+        {
+          "name": "sensor",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": []
+    },
+    {
+      "id": "openuc2.detector.camera_cs165",
+      "version": "1.1.0",
+      "kind": "optical_component",
+      "category": "detector",
+      "description": "CS165MU 1.6 MP CMOS camera (sensor datum at z = -10 mm)",
+      "tags": [
+        "detector",
+        "detector/camera"
+      ],
+      "vendor": {
+        "name": "Thorlabs",
+        "mpn": "CS165MU",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 0,
+      "review": true,
+      "ports": [
+        {
+          "name": "sensor",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            -10.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": []
+    },
+    {
+      "id": "openuc2.electronics.motor_driver_28byj",
+      "version": "1.0.0",
+      "kind": "optical_component",
+      "category": "electronics",
+      "description": "Stepper driver board for 28BYJ-48 motorized inserts (CAN node)",
+      "tags": [
+        "electronics",
+        "motor-driver"
+      ],
+      "vendor": {
+        "name": "openUC2",
+        "mpn": "UC2E-MOT-28BYJ",
+        "url": "https://openuc2.com"
+      },
+      "efl_mm": null,
+      "n_surfaces": 0,
+      "review": true,
+      "ports": [],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": []
+    },
+    {
+      "id": "openuc2.electronics.uc2e_esp32",
+      "version": "1.0.0",
+      "kind": "optical_component",
+      "category": "electronics",
+      "description": "UC2e ESP32 controller board (CAN master, WiFi/USB, UC2-REST firmware)",
+      "tags": [
+        "electronics",
+        "controller",
+        "esp32"
+      ],
+      "vendor": {
+        "name": "openUC2",
+        "mpn": "UC2E-ESP32-V3",
+        "url": "https://openuc2.com"
+      },
+      "efl_mm": null,
+      "n_surfaces": 0,
+      "review": true,
+      "ports": [],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": []
+    },
+    {
+      "id": "openuc2.filter.emission_525",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "filter",
+      "description": "Band-pass emission filter, 510\u2013560 nm (for a ~525 nm fluorophore)",
+      "tags": [
+        "fluorescence",
+        "reference"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 1,
+      "review": true,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 0,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": ".inf",
+            "conic": 0.0
+          },
+          "thickness": 3.5,
+          "semi_aperture": 12.5,
+          "response": {
+            "kind": "absorptive",
+            "transmit-bands-um": [
+              [
+                0.51,
+                0.56
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "openuc2.galvo.dual_axis",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "mirror",
+      "description": "Dual-axis galvo scanner (two steering mirrors, x and y)",
+      "tags": [
+        "mirror",
+        "mirror/galvo",
+        "actuated"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 2,
+      "review": true,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-x",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "reflected",
+          "direction": "-y",
+          "position_mm": [
+            0.0,
+            0.0,
+            6.0
+          ],
+          "after_surface": 1,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 1e999
+          },
+          "interaction_model": {
+            "type": "refractive_reflective",
+            "is_reflective": true
+          }
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 1e999
+          },
+          "interaction_model": {
+            "type": "refractive_reflective",
+            "is_reflective": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "openuc2.lens.achromat_starter",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "lens",
+      "description": "Starter cemented achromatic doublet, \u00d825.4 mm, f \u2248 50 mm \u2014 the optics-group exemplar",
+      "tags": [
+        "starter",
+        "lens",
+        "lens/achromat"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": 50.17,
+      "n_surfaces": 3,
+      "review": false,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": "",
+          "clear_aperture_mm": 22.86
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            11.5
+          ],
+          "after_surface": 2,
+          "coupling": "",
+          "clear_aperture_mm": 22.86
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 33.34,
+            "conic": 0.0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-BAF10"
+          },
+          "thickness": 9.0,
+          "is_stop": true,
+          "semi_aperture": 12.7
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": -22.28,
+            "conic": 0.0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-SF10"
+          },
+          "thickness": 2.5,
+          "semi_aperture": 12.7
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": -291.07,
+            "conic": 0.0
+          },
+          "semi_aperture": 12.7
+        }
+      ]
+    },
+    {
+      "id": "openuc2.lens.cublend12_7f40",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "lens",
+      "description": "f = 40 mm \u00d812.7 plano-convex lens cube (Inventor import) \u2014 the S4 reference",
+      "tags": [
+        "reference"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": 40.0,
+      "n_surfaces": 2,
+      "review": true,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            -0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            -0.0
+          ],
+          "after_surface": 1,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": ".inf"
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-BK7"
+          },
+          "thickness": 2.8,
+          "semi_aperture": 6.35
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": -25.0,
+            "conic": 0.0
+          },
+          "semi_aperture": 6.35
+        }
+      ]
+    },
+    {
+      "id": "openuc2.lens.starter_50mm",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "lens",
+      "description": "Starter biconvex lens, f = 50 mm \u2014 the exemplary lens record to copy",
+      "tags": [
+        "starter",
+        "lens",
+        "lens/biconvex"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": 50.0,
+      "n_surfaces": 2,
+      "review": false,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            3.6
+          ],
+          "after_surface": 1,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 51.0593,
+            "conic": 0.0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-BK7"
+          },
+          "thickness": 3.6,
+          "semi_aperture": 12.5
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": -51.0593,
+            "conic": 0.0
+          },
+          "semi_aperture": 12.5
+        }
+      ]
+    },
+    {
+      "id": "openuc2.mechanics.puzzle_1x1",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "mechanics",
+      "description": "Puzzle piece joining two cube layers (2 noses + 2 notches, pins both sides)",
+      "tags": [
+        "mechanics",
+        "carrier",
+        "miniframe"
+      ],
+      "vendor": {
+        "name": "openUC2",
+        "mpn": "PRT-1004-PUZ11",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 0,
+      "review": true,
+      "ports": [],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": []
+    },
+    {
+      "id": "openuc2.mirror.flat_0",
+      "version": "1.0.0",
+      "kind": "optical_component",
+      "category": "mirror",
+      "description": "Flat first-surface mirror at normal incidence (reflects straight back)",
+      "tags": [
+        "mirror",
+        "mirror/flat",
+        "mirror/normal-incidence"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 1,
+      "review": true,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "reflected",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 0,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 1e999,
+            "conic": 0.0
+          },
+          "interaction_model": {
+            "type": "refractive_reflective",
+            "is_reflective": true
+          },
+          "semi_aperture": 12.5
+        }
+      ]
+    },
+    {
+      "id": "openuc2.mirror.flat_45",
+      "version": "1.0.0",
+      "kind": "optical_component",
+      "category": "mirror",
+      "description": "Flat first-surface mirror mounted at 45\u00b0",
+      "tags": [
+        "mirror",
+        "mirror/flat",
+        "mirror/single-sided"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 1,
+      "review": true,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "reflected",
+          "direction": "+x",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 0,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 1e999,
+            "conic": 0.0
+          },
+          "interaction_model": {
+            "type": "refractive_reflective",
+            "is_reflective": true
+          },
+          "semi_aperture": 12.5
+        }
+      ]
+    },
+    {
+      "id": "openuc2.objective.paraxial_20x",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "lens",
+      "description": "Paraxial 20\u00d7 objective (black box) \u2014 one thin-lens surface, f = 9 mm, NA 0.4",
+      "tags": [
+        "starter",
+        "objective",
+        "objective/paraxial"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": 9.0,
+      "n_surfaces": 1,
+      "review": false,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": "",
+          "clear_aperture_mm": 11.3
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 0,
+          "coupling": "",
+          "clear_aperture_mm": 11.3
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 1e999,
+            "conic": 0.0
+          },
+          "interaction_model": {
+            "type": "thin_lens",
+            "focal_length": 9.0
+          },
+          "is_stop": true,
+          "semi_aperture": 5.65
+        }
+      ]
+    },
+    {
+      "id": "openuc2.objective.refractive_20x",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "lens",
+      "description": "20x objective stand-in - biconvex singlet, f = 9 mm, NA 0.4 (kernel-traceable)",
+      "tags": [
+        "objective",
+        "objective/stand-in",
+        "starter"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": 9.0,
+      "n_surfaces": 2,
+      "review": false,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            -41.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            -39.0
+          ],
+          "after_surface": 1,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 9.3024,
+            "conic": 0.0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-BK7"
+          },
+          "thickness": 2.0,
+          "semi_aperture": 3.6,
+          "is_stop": true
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": -9.3024,
+            "conic": 0.0
+          },
+          "semi_aperture": 3.6
+        }
+      ]
+    },
+    {
+      "id": "openuc2.sample.fluoro_slide",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "sample",
+      "description": "Fluorescent sample - emits 520 nm into a 0.4 NA cone (secondary source)",
+      "tags": [
+        "sample",
+        "sample/fluorescent",
+        "fluorescence"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 0,
+      "review": true,
+      "ports": [
+        {
+          "name": "plane",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [
+        0.52
+      ],
+      "divergence_deg": 47.2,
+      "beam_diameter_mm": 0.2,
+      "symbol": null,
+      "fragment_surfaces": []
+    },
+    {
+      "id": "openuc2.slm.dmd_45",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "slm",
+      "description": "DLP digital micromirror device at 45\u00b0 (0.47\" 1920x1080, 5.4 \u00b5m pitch)",
+      "tags": [
+        "slm",
+        "dmd",
+        "structured-illumination",
+        "programmable"
+      ],
+      "vendor": {
+        "name": "Texas Instruments",
+        "mpn": "DLP4710",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 1,
+      "review": true,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "reflected",
+          "direction": "+x",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 0,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 1e999,
+            "conic": 0.0
+          },
+          "interaction_model": {
+            "type": "refractive_reflective",
+            "is_reflective": true
+          },
+          "semi_aperture": 6.6
+        }
+      ]
+    },
+    {
+      "id": "openuc2.source.laser_488",
+      "version": "1.2.0",
+      "kind": "optical_component",
+      "category": "source",
+      "description": "Collimated 488 nm laser diode module (emission datum at z = +20 mm)",
+      "tags": [
+        "source",
+        "source/laser"
+      ],
+      "vendor": {
+        "name": "openUC2",
+        "mpn": "LASER-488-COL",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 0,
+      "review": true,
+      "ports": [
+        {
+          "name": "out",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            20.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [
+        0.488
+      ],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": 2.0,
+      "symbol": null,
+      "fragment_surfaces": []
+    },
+    {
+      "id": "openuc2.source.laser_basic",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "source",
+      "description": "Starter dual-line laser (488/635 nm) \u2014 the exemplary source record to copy",
+      "tags": [
+        "starter",
+        "source",
+        "source/laser"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 0,
+      "review": false,
+      "ports": [
+        {
+          "name": "out",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [
+        0.488,
+        0.635
+      ],
+      "divergence_deg": 1.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": []
+    },
+    {
+      "id": "openuc2.source.laser_body",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "source",
+      "description": "Collimated laser module in its own cylindrical body \u2014 the S2 bare-housing reference",
+      "tags": [
+        "reference",
+        "source",
+        "source/laser"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 0,
+      "review": true,
+      "ports": [
+        {
+          "name": "out",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            50.0
+          ],
+          "after_surface": null,
+          "coupling": "",
+          "clear_aperture_mm": 10.0
+        }
+      ],
+      "wavelengths_um": [
+        0.635
+      ],
+      "divergence_deg": 0.5,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": []
+    },
+    {
+      "id": "openuc2.source.led_basic",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "source",
+      "description": "Starter broadband LED (nominal 550 nm, wide angle) \u2014 copy for LED sources",
+      "tags": [
+        "starter",
+        "source",
+        "source/led"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 0,
+      "review": false,
+      "ports": [
+        {
+          "name": "out",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [
+        0.55
+      ],
+      "divergence_deg": 60.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": []
+    },
+    {
+      "id": "openuc2.stage.z_motor",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "stage",
+      "description": "Starter motorized z-stage \u2014 the exemplary actuated (T2) trio to copy",
+      "tags": [
+        "starter",
+        "stage",
+        "stage/z"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 0,
+      "review": false,
+      "ports": [],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": []
+    },
+    {
+      "id": "thorlabs.mirror.km05_kinematic",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "mirror",
+      "description": "KM05-class kinematic mount holding a \u00d812.7 mm mirror \u2014 the S2 housed-assembly reference",
+      "tags": [
+        "reference",
+        "mirror",
+        "mirror/kinematic"
+      ],
+      "vendor": {
+        "name": "Thorlabs",
+        "mpn": "KM05",
+        "url": "https://www.thorlabs.com/thorproduct.cfm?partnumber=KM05"
+      },
+      "efl_mm": null,
+      "n_surfaces": 1,
+      "review": true,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": "",
+          "clear_aperture_mm": 11.43
+        },
+        {
+          "name": "reflected",
+          "direction": "+x",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 0,
+          "coupling": "",
+          "clear_aperture_mm": 11.43
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 1e999,
+            "conic": 0.0
+          },
+          "interaction_model": {
+            "type": "refractive_reflective",
+            "is_reflective": true
+          },
+          "semi_aperture": 6.35
+        }
+      ]
+    },
+    {
+      "id": "user.lens.somelens",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "lens",
+      "description": "",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": 49.043,
+      "n_surfaces": 2,
+      "review": true,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 50,
+            "conic": 0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-BK7"
+          },
+          "thickness": 4,
+          "semi_aperture": 20
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": -50,
+            "conic": 0
+          },
+          "semi_aperture": 20
+        }
+      ]
+    },
+    {
+      "id": "user.lens.testlens",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "lens",
+      "description": "",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": 49.043,
+      "n_surfaces": 2,
+      "review": true,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 50,
+            "conic": 0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-BK7"
+          },
+          "thickness": 4,
+          "semi_aperture": 20
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": -50,
+            "conic": 0
+          },
+          "semi_aperture": 20
+        }
+      ]
+    },
+    {
+      "id": "user.mirror.testmirror",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "mirror",
+      "description": "",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 2,
+      "review": true,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "reflected",
+          "direction": "-x",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 0,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 1e999,
+            "conic": 0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-BK7"
+          },
+          "thickness": 1,
+          "interaction_model": {
+            "type": "refractive_reflective",
+            "is_reflective": true
+          },
+          "semi_aperture": 12.7
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 1e999,
+            "conic": 0
+          },
+          "semi_aperture": 12.7
+        }
+      ]
+    },
+    {
+      "id": "user.source.aa",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "source",
+      "description": "dadf",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 0,
+      "review": true,
+      "ports": [
+        {
+          "name": "out",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [
+        0.532
+      ],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": []
+    },
+    {
+      "id": "user.source.karlheinz",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "source",
+      "description": "",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 0,
+      "review": true,
+      "ports": [
+        {
+          "name": "out",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [
+        0.532
+      ],
+      "divergence_deg": 5.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": []
+    },
+    {
+      "id": "user.source.test",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "source",
+      "description": "test (bound in the part-binding workbench)",
+      "tags": [
+        "bound"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 0,
+      "review": true,
+      "ports": [
+        {
+          "name": "out",
+          "direction": "+x",
+          "position_mm": [
+            12.5,
+            -4.917,
+            0.374
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": []
+    }
+  ],
+  "groups": [],
+  "housings": [
+    {
+      "id": "openuc2.tpl.laser_body",
+      "version": "0.1.0",
+      "kind": "mechanical_template",
+      "class": "fixed",
+      "description": "Cylindrical laser module body (breadboard device \u2014 no cube)",
+      "review": true,
+      "component": {
+        "ref": "openuc2.source.laser_body@^0.1",
+        "resolved": "0.1.0",
+        "id": "openuc2.source.laser_body"
+      },
+      "dof": [],
+      "assets": {
+        "thumbnail": null,
+        "mesh_frame": "record",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null,
+        "glb": "/v1/library/assets/templates/openuc2.tpl.laser_body/laser_body.glb",
+        "step": "/v1/library/assets/templates/openuc2.tpl.laser_body/laser_body.step"
+      },
+      "ports": [
+        {
+          "name": "out",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            50.0
+          ],
+          "after_surface": null,
+          "coupling": "",
+          "clear_aperture_mm": 10.0
+        }
+      ],
+      "ports_frame": "record"
+    },
+    {
+      "id": "thorlabs.tpl.km05_kinematic",
+      "version": "0.1.1",
+      "kind": "mechanical_template",
+      "class": "adaptive",
+      "description": "KM05-class kinematic mount housing (tip/tilt, breadboard-mounted \u2014 no cube)",
+      "review": true,
+      "component": {
+        "ref": "thorlabs.mirror.km05_kinematic@^0.1",
+        "resolved": "0.1.0",
+        "id": "thorlabs.mirror.km05_kinematic"
+      },
+      "dof": [
+        {
+          "name": "tip",
+          "kind": "rotation",
+          "axis": "x",
+          "unit": "deg",
+          "range": [
+            -4,
+            4
+          ],
+          "actuatable": false,
+          "pivot_frame": "optical",
+          "surface": null
+        },
+        {
+          "name": "tilt",
+          "kind": "rotation",
+          "axis": "y",
+          "unit": "deg",
+          "range": [
+            -4,
+            4
+          ],
+          "actuatable": false,
+          "pivot_frame": "optical",
+          "surface": null
+        }
+      ],
+      "assets": {
+        "thumbnail": null,
+        "mesh_frame": "record",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null,
+        "glb": "/v1/library/assets/templates/thorlabs.tpl.km05_kinematic/km05_kinematic.glb",
+        "step": "/v1/library/assets/templates/thorlabs.tpl.km05_kinematic/km05_kinematic.step"
+      },
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": "",
+          "clear_aperture_mm": 11.43
+        },
+        {
+          "name": "reflected",
+          "direction": "+x",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 0,
+          "coupling": "",
+          "clear_aperture_mm": 11.43
+        }
+      ],
+      "ports_frame": "record"
+    }
+  ]
+}
