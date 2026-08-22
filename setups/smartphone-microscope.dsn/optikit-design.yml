@@ -1,0 +1,654 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  name: Untitled Setup
+  description: ""
+components:
+  torch:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.source.torch
+    category: source
+    optics:
+      emission:
+        port: out
+        spectrum:
+          - wavelength_um: 0.532
+            weight: 1
+        spatial:
+          type: disc
+          radius_mm: 10
+        angular:
+          type: cone
+          half_angle_deg: 5
+        flux: 1
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+        out:
+          x-mm: 0
+          y-mm: 0
+          z-mm: -20
+      ports:
+        out:
+          frame: out
+          direction: -z
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          z: 3
+    source:
+      wavelengths_um:
+        - 0.532
+      beam_diameter_mm: 20
+  stage-manual:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.cube.stage_manual
+    category: lens
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: 50
+              conic: 0
+            material_post:
+              type: Material
+              name: N-BK7
+            thickness: 4
+            semi_aperture: 12.7
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: -50
+              conic: 0
+            semi_aperture: 12.7
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: -50
+          z-mm: 0
+        front:
+          x-mm: 0
+          y-mm: -50
+          z-mm: 0
+        back:
+          x-mm: 0
+          y-mm: -50
+          z-mm: 0
+      ports:
+        front:
+          frame: front
+          direction: -z
+        back:
+          frame: back
+          direction: +z
+          after-surface: 1
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          y: 1
+          z: 1
+  cube-base:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.cube.cube_base
+    category: other
+    optics:
+      passthrough: true
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: -x
+        back:
+          frame: optical
+          direction: +x
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          y: -1
+  cube-45-fixed:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.cube.cube_45_fixed
+    category: mirror
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0
+            material_post:
+              type: Material
+              name: N-BK7
+            interaction_model:
+              type: refractive_reflective
+              is_reflective: true
+            semi_aperture: 12.7
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: +x
+        reflected:
+          frame: optical
+          direction: -y
+          after-surface: 0
+    pose:
+      rotation:
+        type: grid
+        grid:
+          x: -y
+      translation: {}
+    mounting:
+      rotation:
+        type: grid
+        grid:
+          z: +y
+  cube-45-fixed-2:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.cube.cube_45_fixed
+    category: mirror
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0
+            material_post:
+              type: Material
+              name: N-BK7
+            interaction_model:
+              type: refractive_reflective
+              is_reflective: true
+            semi_aperture: 12.7
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: +x
+        reflected:
+          frame: optical
+          direction: -y
+          after-surface: 0
+    pose:
+      rotation:
+        type: grid
+        grid:
+          x: -y
+      translation:
+        offset-grid:
+          y: -2
+    mounting:
+      rotation:
+        type: grid
+        grid:
+          z: -y
+          x: -x
+  cube-base-2:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.cube.cube_base
+    category: other
+    optics:
+      passthrough: true
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: -x
+        back:
+          frame: optical
+          direction: +x
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          y: 1
+  cube-base-2-2:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.cube.cube_base
+    category: other
+    optics:
+      passthrough: true
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: -x
+        back:
+          frame: optical
+          direction: +x
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          z: 1
+  eyepiece:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.cube.eyepiece
+    category: lens
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: 50
+              conic: 0
+            material_post:
+              type: Material
+              name: N-BK7
+            thickness: 4
+            semi_aperture: 12.7
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: -50
+              conic: 0
+            semi_aperture: 12.7
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: -z
+        back:
+          frame: optical
+          direction: +z
+          after-surface: 1
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          y: -2
+          z: 1
+  sample-holder-fixed:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.cube.sample_holder_fixed
+    category: sample
+    optics:
+      passthrough: true
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        plane:
+          frame: optical
+          direction: +z
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          z: 2
+  puzzle:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.mechanics.puzzle
+    category: other
+    optics:
+      passthrough: true
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: -x
+        back:
+          frame: optical
+          direction: +x
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          y: 1
+          z: 1
+  puzzle-2:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.mechanics.puzzle
+    category: other
+    optics:
+      passthrough: true
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: -x
+        back:
+          frame: optical
+          direction: +x
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          y: -1
+  puzzle-3:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.mechanics.puzzle
+    category: other
+    optics:
+      passthrough: true
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: -x
+        back:
+          frame: optical
+          direction: +x
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          y: -1
+          z: -1
+  puzzle-4:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.mechanics.puzzle
+    category: other
+    optics:
+      passthrough: true
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: -x
+        back:
+          frame: optical
+          direction: +x
+    pose:
+      rotation:
+        type: grid
+      translation: {}
+  puzzle-5:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.mechanics.puzzle
+    category: other
+    optics:
+      passthrough: true
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: -x
+        back:
+          frame: optical
+          direction: +x
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          z: -1
+  puzzle-6:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.mechanics.puzzle
+    category: other
+    optics:
+      passthrough: true
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: -x
+        back:
+          frame: optical
+          direction: +x
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          y: -2
+  puzzle-7:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.mechanics.puzzle
+    category: other
+    optics:
+      passthrough: true
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: -x
+        back:
+          frame: optical
+          direction: +x
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          y: -2
+          z: -1
+  puzzle-8:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.mechanics.puzzle
+    category: other
+    optics:
+      passthrough: true
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: -x
+        back:
+          frame: optical
+          direction: +x
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          y: 1
+  puzzle-9:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.mechanics.puzzle
+    category: other
+    optics:
+      passthrough: true
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: -x
+        back:
+          frame: optical
+          direction: +x
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          y: 1
+          z: -1
+  puzzle-10:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.mechanics.puzzle
+    category: other
+    optics:
+      passthrough: true
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: -x
+        back:
+          frame: optical
+          direction: +x
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          z: 1
+  puzzle-11:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.mechanics.puzzle
+    category: other
+    optics:
+      passthrough: true
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: -x
+        back:
+          frame: optical
+          direction: +x
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          y: -2
+          z: 1
+  puzzle-12:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.mechanics.puzzle
+    category: other
+    optics:
+      passthrough: true
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: -x
+        back:
+          frame: optical
+          direction: +x
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          z: 2

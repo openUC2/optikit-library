@@ -1,6 +1,6 @@
 kind: optical_component
-id: user.lens.eyepiece
-version: 0.1.2
+id: user.lens.stage_manual
+version: 0.1.0
 category: lens
 description: ""
 tags:
