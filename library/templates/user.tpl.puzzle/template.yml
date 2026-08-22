@@ -1,0 +1,17 @@
+kind: mechanical_template
+id: user.tpl.puzzle
+version: 0.1.0
+class: fixed
+description: housing for user.mechanics.puzzle (attached from PRT - 1004 - PUZ11 - V04 - A.stp)
+tags:
+  - bound
+envelope:
+  x-mm: 55.6
+  y-mm: 55.6
+  z-mm: 5
+step: PRT - 1004 - PUZ11 - V04 - A.stp
+glb: PRT - 1004 - PUZ11 - V04 - A.glb
+mesh-frame: cube
+optical_ports: {}
+footprint_grid: null
+component: user.mechanics.puzzle@^0.1

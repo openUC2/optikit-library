@@ -1,5 +1,5 @@
 kind: optical_component
-id: user.mirror.mirror_45_fixed_2mm
+id: user.mirror.cube_45_fixed
 version: 0.1.0
 category: mirror
 description: ""
@@ -34,11 +34,5 @@ optics:
         interaction_model:
           type: refractive_reflective
           is_reflective: true
-        semi_aperture: 24
-        aperture:
-          type: RectangularAperture
-          x_min: -12
-          x_max: 12
-          y_min: -16
-          y_max: 16
+        semi_aperture: 12.7
 mount_angle_deg: 45

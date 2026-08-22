@@ -1,0 +1,11 @@
+kind: optical_component
+id: user.mechanics.cube_base
+version: 0.1.0
+category: mechanics
+description: ""
+tags:
+  - authored
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
