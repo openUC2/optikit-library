@@ -17,6 +17,26 @@ optics:
     out:
       frame: optical
       direction: +z
+      # Trace-first discovery finds terminals by role; without it the torch
+      # is just a port and no path starts here.
+      roles:
+        - emitter
+  # The physical beam, derived from the source facts below exactly as the
+  # frontend's emissionOf does (WP-112 reconciliation): beam_diameter_mm is
+  # the full diameter so the disc takes its radius; divergence_deg is the
+  # full angle so the cone takes the half angle.
+  emission:
+    port: out
+    spectrum:
+      - wavelength_um: 0.532
+        weight: 1.0
+    spatial:
+      type: disc
+      radius_mm: 10.0
+    angular:
+      type: cone
+      half_angle_deg: 5.0
+    flux: 1.0
 source:
   wavelengths_um:
     - 0.532
