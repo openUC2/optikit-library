@@ -22,7 +22,7 @@ optical_ports:
 footprint_grid:
   - 1
   - 2
-  - 1
+  - 2
 insert-pose:
   rotation:
     type: grid
@@ -32,7 +32,10 @@ insert-pose:
   translation:
     offset-mm:
       y: -50
-provenance: whole-module
+# The assembly overhangs the 55 mm cell (97.6 mm tall): it occupies
+# [1,2,2] cells but is not an exact cube multiple, so it must not claim
+# whole-module (that claim asserts mesh == grid within tolerance).
+provenance: ""
 frames:
   optical:
     x-mm: 0

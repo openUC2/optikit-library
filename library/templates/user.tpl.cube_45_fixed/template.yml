@@ -11,7 +11,7 @@ envelope:
   z-mm: 53.8
 step: ASS - 2020 - CUBMIR45°TH2 - V04.stp
 glb: ASS - 2020 - CUBMIR45°TH2 - V04.glb
-mesh-frame: cube
+mesh-frame: record
 optical_ports:
   front:
     frame: optical
