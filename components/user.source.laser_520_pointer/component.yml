@@ -1,0 +1,24 @@
+kind: optical_component
+id: user.source.laser_520_pointer
+version: 0.1.0
+category: source
+description: ""
+tags:
+  - authored
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  ports:
+    out:
+      frame: optical
+      direction: +z
+source:
+  wavelengths_um:
+    - 0.532
+  divergence_deg: 0
+  beam_diameter_mm: 5
