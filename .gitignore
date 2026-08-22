@@ -2,3 +2,6 @@
 # copy that matters is `library-index.json` at the repo root (that is the file
 # the configurator fetches when someone mounts this repo).
 library/dist/
+
+# macOS Finder droppings
+.DS_Store
