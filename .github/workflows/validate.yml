@@ -22,8 +22,11 @@ jobs:
         with:
           python-version: "3.12"
 
+      # optikit-core is NOT on PyPI; it lives in the openUC2/optikit-v2
+      # monorepo. The SHA pins the schema and index format this library is
+      # validated against — bump it deliberately, not by floating on a branch.
       - name: Install optikit-core
-        run: pip install optikit-core
+        run: pip install "optikit-core @ git+https://github.com/openUC2/optikit-v2@3e8d11e"
 
       - name: Validate the record library
         run: optikit-core library validate --root library
@@ -73,6 +76,12 @@ jobs:
         run: |
           optikit-core library build --root library
           cp library/dist/index.json library-index.json
+
+      # An index with zero records means the build ran against the wrong
+      # root — exactly the failure mode this repo shipped with. Fail loudly.
+      - name: Refuse an empty index
+        run: |
+          python -c "import json;i=json.load(open('library-index.json'));assert i['count']>0, 'index built empty - wrong root?'"
 
       - name: Commit the index if it changed
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
