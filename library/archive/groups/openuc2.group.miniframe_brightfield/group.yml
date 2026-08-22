@@ -43,14 +43,14 @@ structure:
     bottom: {module: openuc2.cube.plate_3x3@^0.1, origin: [0, 0], size: [3, 3]}
   joints: puzzle
   joint-cells:
-    - [0, 0, 0]
-    - [0, 1, 0]
-    - [0, 2, 0]
-    - [1, 0, 0]
-    - [1, 1, 0]
-    - [1, 2, 0]
-    - [2, 0, 0]
-    - [2, 1, 0]
-    - [2, 2, 0]
+    - [0, 0, 1]
+    - [0, 1, 1]
+    - [0, 2, 1]
+    - [1, 0, 1]
+    - [1, 1, 1]
+    - [1, 2, 1]
+    - [2, 0, 1]
+    - [2, 1, 1]
+    - [2, 2, 1]
 interface:
   camera: {member: camera, port: sensor}
