@@ -17,13 +17,24 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          # The validator parses the GLBs (mesh frames, the plate finder);
+          # without LFS it would be reading 130-byte pointer files.
+          lfs: true
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
+      # optikit-core is NOT on PyPI, and the openUC2/optikit-v2 monorepo is
+      # PRIVATE, so CI cannot clone it either. The wheel is vendored instead,
+      # stamped with the monorepo commit it was built from (+132eb9a, the
+      # first green main after #16) — the same pattern the monorepo uses for
+      # the kernel wheels. Bump deliberately: build a fresh wheel at the new
+      # pin (uv build --wheel) and replace vendor/. Dependencies still come
+      # from PyPI.
       - name: Install optikit-core
-        run: pip install optikit-core
+        run: pip install vendor/optikit_core-*.whl
 
       - name: Validate the record library
         run: optikit-core library validate --root library
@@ -73,6 +84,12 @@ jobs:
         run: |
           optikit-core library build --root library
           cp library/dist/index.json library-index.json
+
+      # An index with zero records means the build ran against the wrong
+      # root — exactly the failure mode this repo shipped with. Fail loudly.
+      - name: Refuse an empty index
+        run: |
+          python -c "import json;i=json.load(open('library-index.json'));assert i['count']>0, 'index built empty - wrong root?'"
 
       - name: Commit the index if it changed
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'

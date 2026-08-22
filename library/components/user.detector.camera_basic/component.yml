@@ -1,0 +1,17 @@
+# Basic CMOS camera, copied from the archived openuc2.detector.camera_basic
+# starter (WP-68). Detectors are fragment-less: the record's whole optical
+# statement is the `sensor` port, facing -z so the beam ENTERS the sensor
+# plane (the chain terminates here - WP-29 port conventions).
+kind: optical_component
+id: user.detector.camera_basic
+version: 0.1.0
+category: detector
+description: Basic CMOS camera (sensor plane at the cube center)
+tags: [detector, detector/camera]
+optics:
+  frames:
+    optical: {z-mm: 0.0}
+  ports:
+    # `roles` is what trace-first discovery terminates on; without it the
+    # camera is invisible to path finding.
+    sensor: {frame: optical, direction: -z, roles: [sensor]}
