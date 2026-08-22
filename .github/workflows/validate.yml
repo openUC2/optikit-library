@@ -22,11 +22,15 @@ jobs:
         with:
           python-version: "3.12"
 
-      # optikit-core is NOT on PyPI; it lives in the openUC2/optikit-v2
-      # monorepo. The SHA pins the schema and index format this library is
-      # validated against — bump it deliberately, not by floating on a branch.
+      # optikit-core is NOT on PyPI, and the openUC2/optikit-v2 monorepo is
+      # PRIVATE, so CI cannot clone it either. The wheel is vendored instead,
+      # stamped with the monorepo commit it was built from (+132eb9a, the
+      # first green main after #16) — the same pattern the monorepo uses for
+      # the kernel wheels. Bump deliberately: build a fresh wheel at the new
+      # pin (uv build --wheel) and replace vendor/. Dependencies still come
+      # from PyPI.
       - name: Install optikit-core
-        run: pip install "optikit-core @ git+https://github.com/openUC2/optikit-v2@3e8d11e"
+        run: pip install vendor/optikit_core-*.whl
 
       - name: Validate the record library
         run: optikit-core library validate --root library
