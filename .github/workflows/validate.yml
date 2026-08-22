@@ -17,6 +17,10 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          # The validator parses the GLBs (mesh frames, the plate finder);
+          # without LFS it would be reading 130-byte pointer files.
+          lfs: true
 
       - uses: actions/setup-python@v5
         with:
