@@ -1,0 +1,127 @@
+# Starter setup: a straight 4f relay.
+#
+# torch -> somelens (f~49) -> eyepiece (f~49) -> camera, all on one +z rail.
+# The simplest traceable bench in the library: no folds, no spectral gating.
+# There is deliberately NO `paths:` block — trace-first discovery finds the
+# beam from the declared terminals (torch `roles: [emitter]`, camera
+# `roles: [sensor]`) and nothing else.
+#
+# Optics are inlined verbatim from the library records (user.source.torch,
+# user.lens.somelens, user.lens.eyepiece, user.detector.camera_basic), the
+# way the configurator exports them.
+optikit-version: v0.0.0-alpha.1
+
+design:
+  name: relay-4f
+  version: 0.1.0
+  description: Straight 4f relay from the lantern to the camera
+  tags:
+    - starter
+    - relay
+
+components:
+  torch:
+    type: primitive
+    category: source
+    source:
+      wavelengths_um: [0.532]
+      divergence_deg: 10
+      beam_diameter_mm: 20
+    optics:
+      frames:
+        optical: {z-mm: 0.0}
+      ports:
+        out: {frame: optical, direction: +z, roles: [emitter]}
+      emission:
+        port: out
+        spectrum: [{wavelength_um: 0.532, weight: 1.0}]
+        spatial: {type: disc, radius_mm: 10.0}
+        angular: {type: cone, half_angle_deg: 5.0}
+        flux: 1.0
+    template:
+      class: fixed
+      envelope: {x-mm: 50, y-mm: 50, z-mm: 50}
+    pose:
+      rotation:
+        type: grid
+
+  somelens:
+    type: primitive
+    category: lens
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry: {type: StandardGeometry, radius: 50.0, conic: 0.0}
+            material_post: {type: Material, name: N-BK7}
+            thickness: 4.0
+            semi_aperture: 20.0
+          - type: standard
+            geometry: {type: StandardGeometry, radius: -50.0, conic: 0.0}
+            semi_aperture: 20.0
+      frames:
+        optical: {z-mm: 0.0}
+        exit: {z-mm: 4.0}
+      ports:
+        front: {frame: optical, direction: -z}
+        back: {frame: exit, direction: +z, after-surface: 1}
+    template:
+      class: fixed
+      envelope: {x-mm: 50, y-mm: 50, z-mm: 50}
+    pose:
+      rotation:
+        type: grid
+      translation:
+        anchor: torch
+        offset-mm: {z: 40.0}
+
+  eyepiece:
+    type: primitive
+    category: lens
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry: {type: StandardGeometry, radius: 50.0, conic: 0.0}
+            material_post: {type: Material, name: N-BK7}
+            thickness: 4.0
+            semi_aperture: 12.7
+          - type: standard
+            geometry: {type: StandardGeometry, radius: -50.0, conic: 0.0}
+            semi_aperture: 12.7
+      frames:
+        optical: {z-mm: 0.0}
+        exit: {z-mm: 4.0}
+      ports:
+        front: {frame: optical, direction: -z}
+        back: {frame: exit, direction: +z, after-surface: 1}
+    template:
+      class: fixed
+      envelope: {x-mm: 50, y-mm: 50, z-mm: 50}
+    pose:
+      rotation:
+        type: grid
+      translation:
+        # 4f: one focal length behind somelens' focus, two focal lengths
+        # (2 x 49.04) past its exit vertex.
+        anchor: somelens
+        offset-mm: {z: 102.1}
+
+  camera:
+    type: primitive
+    category: detector
+    optics:
+      frames:
+        optical: {z-mm: 0.0}
+      ports:
+        sensor: {frame: optical, direction: -z, roles: [sensor]}
+    template:
+      class: fixed
+      envelope: {x-mm: 50, y-mm: 50, z-mm: 50}
+    pose:
+      rotation:
+        type: grid
+      translation:
+        # The eyepiece back focus: exit vertex + ~49 mm.
+        anchor: eyepiece
+        offset-mm: {z: 53.0}

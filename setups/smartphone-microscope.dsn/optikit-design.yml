@@ -82,7 +82,7 @@ components:
         back:
           x-mm: 0
           y-mm: -50
-          z-mm: 0
+          z-mm: 4.0
       ports:
         front:
           frame: front
@@ -299,12 +299,14 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
+        exit:
+          z-mm: 4.0
       ports:
         front:
           frame: optical
           direction: -z
         back:
-          frame: optical
+          frame: exit
           direction: +z
           after-surface: 1
     pose:

@@ -2,7 +2,7 @@
   "schema": "optikit-library-index/v0",
   "count": 7,
   "source": "library",
-  "source_commit": "4c20420",
+  "source_commit": "7f540be",
   "modules": [
     {
       "id": "user.cube.camera_basic",
@@ -608,9 +608,9 @@
           "position_mm": [
             0.0,
             0.0,
-            0.0
+            4.0
           ],
-          "after_surface": null,
+          "after_surface": 1,
           "coupling": ""
         }
       ],
@@ -679,9 +679,9 @@
           "position_mm": [
             0.0,
             0.0,
-            0.0
+            4.0
           ],
-          "after_surface": null,
+          "after_surface": 1,
           "coupling": ""
         }
       ],
@@ -750,9 +750,9 @@
           "position_mm": [
             0.0,
             0.0,
-            0.0
+            4.0
           ],
-          "after_surface": null,
+          "after_surface": 1,
           "coupling": ""
         }
       ],
@@ -821,9 +821,9 @@
           "position_mm": [
             0.0,
             0.0,
-            0.0
+            4.0
           ],
-          "after_surface": null,
+          "after_surface": 1,
           "coupling": ""
         }
       ],

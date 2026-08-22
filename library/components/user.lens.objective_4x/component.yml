@@ -13,13 +13,16 @@ optics:
   frames:
     optical:
       z-mm: 0
+    exit:
+      z-mm: 4.0
   ports:
     front:
       frame: optical
       direction: -z
     back:
-      frame: optical
+      frame: exit
       direction: +z
+      after-surface: 1
   fragment:
     surfaces:
       - type: standard
