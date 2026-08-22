@@ -2,7 +2,7 @@
   "schema": "optikit-library-index/v0",
   "count": 7,
   "source": "library",
-  "source_commit": "49c8ccd",
+  "source_commit": "23466cb",
   "modules": [
     {
       "id": "user.cube.camera_basic",
