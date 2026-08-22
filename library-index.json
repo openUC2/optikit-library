@@ -2,7 +2,7 @@
   "schema": "optikit-library-index/v0",
   "count": 5,
   "source": "library",
-  "source_commit": "1cded67",
+  "source_commit": "4b4c6fd",
   "modules": [
     {
       "id": "user.cube.camera_basic",
@@ -804,7 +804,7 @@
       "version": "0.1.0",
       "kind": "mechanical_template",
       "class": "fixed",
-      "description": "housing for user.lens.objective_4x (attached from BUY - Objectiv 4x - XXX__mit Geha\u0308use.stp)",
+      "description": "housing for user.lens.objective_4x (attached from BUY - Objectiv 4x - XXX__mit Geh\u00e4use.stp)",
       "review": false,
       "component": {
         "ref": "user.lens.objective_4x@^0.1",
@@ -821,8 +821,8 @@
         ],
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null,
-        "glb": null,
-        "step": null
+        "glb": "/v1/library/assets/templates/user.tpl.objective_4x/BUY - Objectiv 4x - XXX__mit Geh\u00e4use.glb",
+        "step": "/v1/library/assets/templates/user.tpl.objective_4x/BUY - Objectiv 4x - XXX__mit Geh\u00e4use.stp"
       },
       "ports": [
         {
