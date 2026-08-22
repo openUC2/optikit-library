@@ -1,0 +1,151 @@
+# A brightfield smartphone-microscope-style rail from this library's records:
+# torch (lantern illumination) -> sample -> 4x objective -> eyepiece as tube
+# lens -> camera. Components are authored inline (optics copied from the
+# library records) so the design validates standalone.
+#
+# Deliberately NO `paths:` block: the torch's out port declares
+# `roles: [emitter]` and the camera's sensor port `roles: [sensor]`, so
+# trace-first discovery has to find torch -> camera on its own.
+#
+# Spacings come from the records' focal lengths. The objective
+# (EFL 29.70 mm, principal planes ~1.35 mm inside) has its front focus
+# ~28.3 mm before the front vertex - the sample sits there, so the space
+# behind the objective is collimated. The eyepiece (EFL 49.043 mm) refocuses
+# that space onto the camera ~47.7 mm behind its back vertex. Magnification
+# f_tube / f_obj = 49.043 / 29.70 = 1.65.
+optikit-version: v0.0.0-alpha.1
+
+design:
+  name: smartphone-scope
+  version: 0.1.0
+  description: Brightfield smartphone-style microscope from the user library records
+  tags:
+    - instrument
+    - instrument/microscope
+    - instrument/microscope/brightfield
+
+components:
+  torch:
+    type: primitive
+    category: source
+    # Facts from user.source.torch; the emission block below is the record's
+    # (disc radius = beam diameter / 2, cone half angle = divergence / 2).
+    source: {wavelengths_um: [0.532], divergence_deg: 10, beam_diameter_mm: 20}
+    optics:
+      frames:
+        optical: {z-mm: 0.0}
+      ports:
+        out: {frame: optical, direction: +z, roles: [emitter]}
+      emission:
+        port: out
+        spectrum: [{wavelength_um: 0.532, weight: 1.0}]
+        spatial: {type: disc, radius_mm: 10.0}
+        angular: {type: cone, half_angle_deg: 5.0}
+        flux: 1.0
+    pose:
+      rotation:
+        type: grid
+        grid: {z: +x, x: -z}
+      translation:
+        anchor: sample
+        offset-mm: {x: -40.0}
+
+  # The specimen plane, lit from behind by the torch. Placed at the
+  # objective's front focus; no roles - brightfield light passes through.
+  sample:
+    type: location
+    category: sample
+    optics:
+      frames:
+        optical: {z-mm: 0.0}
+      ports:
+        plane: {frame: optical, direction: +z}
+    pose:
+      rotation:
+        type: grid
+        grid: {z: +x, x: -z}
+      translation:
+        anchor: objective
+        offset-mm: {x: -28.3}
+
+  # user.lens.objective_4x: EFL 29.6994 mm.
+  objective:
+    type: primitive
+    category: lens
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry: {type: StandardGeometry, radius: 30.0, conic: 0.0}
+            material_post: {type: Material, name: N-BK7}
+            thickness: 4.0
+            semi_aperture: 5.0
+          - type: standard
+            geometry: {type: StandardGeometry, radius: -30.0, conic: 0.0}
+            semi_aperture: 5.0
+      frames:
+        optical: {z-mm: 0.0}
+        exit: {z-mm: 4.0}
+      ports:
+        front: {frame: optical, direction: -z}
+        back: {frame: exit, direction: +z, after-surface: 1}
+    template:
+      class: fixed
+      envelope: {x-mm: 50, y-mm: 50, z-mm: 50}
+    pose:
+      rotation:
+        type: grid
+        grid: {z: +x, x: -z}
+
+  # user.lens.eyepiece used as the tube lens: EFL 49.043 mm. Its front
+  # vertex sits 60 mm behind the objective's back vertex - the collimated
+  # infinity space, so the exact gap is not critical.
+  eyepiece:
+    type: primitive
+    category: lens
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry: {type: StandardGeometry, radius: 50.0, conic: 0.0}
+            material_post: {type: Material, name: N-BK7}
+            thickness: 4.0
+            semi_aperture: 12.7
+          - type: standard
+            geometry: {type: StandardGeometry, radius: -50.0, conic: 0.0}
+            semi_aperture: 12.7
+      frames:
+        optical: {z-mm: 0.0}
+        exit: {z-mm: 4.0}
+      ports:
+        front: {frame: optical, direction: -z}
+        back: {frame: exit, direction: +z, after-surface: 1}
+    template:
+      class: fixed
+      envelope: {x-mm: 50, y-mm: 50, z-mm: 50}
+    pose:
+      rotation:
+        type: grid
+        grid: {z: +x, x: -z}
+      translation:
+        anchor: objective
+        offset-mm: {x: 64.0}
+
+  # user.detector.camera_basic: sensor plane at the eyepiece's back focus
+  # (4 mm centre thickness + 47.7 mm back focal distance behind its front
+  # vertex).
+  camera:
+    type: primitive
+    category: detector
+    optics:
+      frames:
+        optical: {z-mm: 0.0}
+      ports:
+        sensor: {frame: optical, direction: -z, roles: [sensor]}
+    pose:
+      rotation:
+        type: grid
+        grid: {z: +x, x: -z}
+      translation:
+        anchor: eyepiece
+        offset-mm: {x: 51.7}
