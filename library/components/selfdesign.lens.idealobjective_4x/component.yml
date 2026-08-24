@@ -1,0 +1,40 @@
+kind: optical_component
+id: selfdesign.lens.idealobjective_4x
+version: 0.1.0
+category: lens
+description: "a self-design ideal finite objective lens with 4x magnification, WD = 15.7mm, NA = 0.1, optical tube length = 160mm, parfocal length = 45mm. The lens is represented by two paraxial surfaces. The sample is placed at 15.7mm from the first surface, and the eyepiece is placed at 160mm after the second surface. The effective focal length is 34.2235mm."
+tags:
+  - authored
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+optics:
+  frames:
+    optical:
+      z-mm: 0
+    exit:
+      z-mm: 4.0
+  ports:
+    front:
+      frame: optical
+      direction: -z
+    back:
+      frame: exit
+      direction: +z
+      after-surface: 1
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: paraxial
+          focal_length: 94.265
+        thickness: 29.3
+        semi_aperture: 4.032
+      - type: standard
+        geometry:
+          type: paraxial
+          focal_length: 37.030
+        thickness: 160
+        semi_aperture: 4.032
+effective_focal_length_mm: 34.2235
