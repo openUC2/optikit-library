@@ -1,5 +1,5 @@
 kind: optical_component
-id: user.beamsplitter.beamsplitter_cube
+id: user.beamsplitter.beamsplitter_cube_50
 version: 0.1.0
 category: beamsplitter
 description: ""
@@ -36,6 +36,9 @@ optics:
           type: Material
           name: N-BK7
         thickness: 1
+        interaction_model:
+          type: refractive_reflective
+          is_reflective: true
         semi_aperture: 12.7
       - type: standard
         geometry:

@@ -1,6 +1,6 @@
 kind: optical_component
 id: user.lens.stage_manual
-version: 0.1.0
+version: 0.1.1
 category: lens
 description: ""
 tags:
@@ -14,7 +14,7 @@ optics:
     optical:
       z-mm: 0
     exit:
-      z-mm: 4.0
+      z-mm: 4
   ports:
     front:
       frame: optical

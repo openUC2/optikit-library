@@ -2,7 +2,7 @@ kind: mechanical_template
 id: user.tpl.stage_manual
 version: 0.1.0
 class: fixed
-description: mount for user.lens.stage_manual (bound from ASS - 3004 - CUBMANSTGR10 - V04.stp)
+description: mount for user.lens.stage_manual (bound from ASS - 3004 - CUBMANSTGR10 - V04.glb)
 tags:
   - bound
 envelope:
@@ -17,12 +17,13 @@ optical_ports:
     frame: optical
     direction: -z
   back:
-    frame: optical
+    frame: exit
     direction: +z
+    after-surface: 1
 footprint_grid:
   - 1
-  - 2
-  - 2
+  - 1
+  - 1
 insert-pose:
   rotation:
     type: grid
@@ -32,12 +33,29 @@ insert-pose:
   translation:
     offset-mm:
       y: -50
-# The assembly overhangs the 55 mm cell (97.6 mm tall): it occupies
-# [1,2,2] cells but is not an exact cube multiple, so it must not claim
-# whole-module (that claim asserts mesh == grid within tolerance).
-provenance: ""
+provenance: whole-module
 frames:
   optical:
     x-mm: 0
     y-mm: -50
     z-mm: 0
+  exit:
+    x-mm: 0
+    y-mm: -50
+    z-mm: 4
+dof:
+  - name: dz
+    kind: translation
+    axis: z
+    range:
+      - -3
+      - 3
+    resolution: 0.05
+    unit: mm
+    actuatable: false
+kinematics:
+  - dof: dz
+    nodes:
+      - SUB_-_0030_-_OBJMNT+THRADA1
+    motion: translation
+    axis: +z
