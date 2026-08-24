@@ -1,0 +1,322 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  name: Laser Scanning Microscope
+  description: This is a simple galvo-based laser scanning microscope
+  tags:
+    - Laserscanning
+    - FLIM
+    - laser
+    - galvo
+components:
+  laser-520-pointer-2:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.cube.laser_520_pointer
+    category: source
+    optics:
+      emission:
+        port: out
+        spectrum:
+          - wavelength_um: 0.532
+            weight: 1
+        spatial:
+          type: disc
+          radius_mm: 2.5
+        angular:
+          type: collimated
+        flux: 1
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: -20
+          z-mm: 0
+        out:
+          x-mm: 0
+          y-mm: -20
+          z-mm: 0
+      ports:
+        out:
+          frame: out
+          direction: -y
+    pose:
+      rotation:
+        type: grid
+        grid:
+          x: +y
+      translation:
+        offset-grid:
+          x: -3
+          y: 1
+    source:
+      wavelengths_um:
+        - 0.532
+      beam_diameter_mm: 5
+  galvo-2:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.cube.galvo
+    category: mirror
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0
+            material_post:
+              type: Material
+              name: N-BK7
+            interaction_model:
+              type: refractive_reflective
+              is_reflective: true
+            semi_aperture: 12.7
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: -y
+        reflected:
+          frame: optical
+          direction: -x
+          after-surface: 0
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          x: -2
+          y: 1
+  lens-galvo-50-2:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.cube.lens_galvo_50
+    category: lens
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: 50
+              conic: 0
+            material_post:
+              type: Material
+              name: N-BK7
+            thickness: 6
+            semi_aperture: 12.7
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: -50
+              conic: 0
+            semi_aperture: 12.7
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: +y
+        back:
+          frame: optical
+          direction: -y
+          after-surface: 1
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          x: -2
+    mounting:
+      rotation:
+        type: grid
+        grid:
+          z: -x
+          x: -z
+  lens-galvo-160-2:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.cube.lens_galvo_160
+    category: lens
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: 165
+              conic: 0
+            material_post:
+              type: Material
+              name: N-BK7
+            thickness: 7
+            semi_aperture: 12.7
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: -165
+              conic: 0
+            semi_aperture: 12.7
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 10
+          z-mm: 0
+        front:
+          x-mm: 0
+          y-mm: 10
+          z-mm: 0
+        back:
+          x-mm: 0
+          y-mm: 10
+          z-mm: 0
+      ports:
+        front:
+          frame: front
+          direction: -y
+        back:
+          frame: back
+          direction: +y
+          after-surface: 1
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          x: -2
+          y: -3
+    mounting:
+      rotation:
+        type: grid
+        grid:
+          x: -x
+  beamsplitter-cube-50:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.cube.beamsplitter_cube_50
+    category: beamsplitter
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0
+            material_post:
+              type: Material
+              name: N-BK7
+            thickness: 1
+            interaction_model:
+              type: refractive_reflective
+              is_reflective: true
+            semi_aperture: 12.7
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0
+            semi_aperture: 12.7
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        front:
+          frame: optical
+          direction: +y
+        transmitted:
+          frame: optical
+          direction: -y
+          after-surface: 1
+        reflected:
+          frame: optical
+          direction: -x
+          after-surface: 0
+    pose:
+      rotation:
+        type: grid
+        grid:
+          x: +y
+      translation:
+        offset-grid:
+          x: -2
+          y: -5
+    mounting:
+      rotation:
+        type: grid
+        grid:
+          z: +y
+  stage-manual:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.cube.stage_manual
+    category: lens
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: 50
+              conic: 0
+            material_post:
+              type: Material
+              name: N-BK7
+            thickness: 4
+            semi_aperture: 12.7
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: -50
+              conic: 0
+            semi_aperture: 12.7
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: -50
+          z-mm: 0
+        front:
+          x-mm: 0
+          y-mm: -50
+          z-mm: 0
+        back:
+          x-mm: 0
+          y-mm: -50
+          z-mm: 4
+      ports:
+        front:
+          frame: front
+          direction: -z
+        back:
+          frame: back
+          direction: +z
+          after-surface: 1
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          x: -2
+          y: -4
+          z: 2
+    mounting:
+      rotation:
+        type: grid
+        grid:
+          z: -z
+          x: -x
