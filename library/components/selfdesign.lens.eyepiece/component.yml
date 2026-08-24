@@ -1,8 +1,8 @@
 kind: optical_component
-id: user.lens.eyepiece
+id: selfdesign.lens.eyepiece
 version: 0.1.0
 category: lens
-description: "a self-design kellner eyepiece with a achromatic doublet as the field lens and a biconvex lens as the eye lens. The magnification is 10x and the EFL is 25.7385 
+description: "A self-designed Kellner eyepiece with an achromatic doublet as the field lens and a biconvex lens as the eye lens. The magnification is 10x and the EFL is 25.7385 mm."
 tags:
   - authored
 vendor:
