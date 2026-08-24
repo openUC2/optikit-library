@@ -1,0 +1,12 @@
+kind: cube_module
+id: user.cube.electronic_galvo
+version: 0.1.0
+description: electronic_galvo in a 2x1 cube (bound)
+tags:
+  - bound
+component: user.electronics.electronic_galvo@^0.1
+template: user.tpl.electronic_galvo@^0.1
+footprint_grid:
+  - 2
+  - 1
+  - 1

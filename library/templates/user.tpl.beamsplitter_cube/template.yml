@@ -1,0 +1,44 @@
+kind: mechanical_template
+id: user.tpl.beamsplitter_cube
+version: 0.1.0
+class: fixed
+description: mount for user.beamsplitter.beamsplitter_cube (bound from ASS - 2011 - CUBSPLCUB - V04 - A.stp)
+tags:
+  - bound
+envelope:
+  x-mm: 49.8
+  y-mm: 49.8
+  z-mm: 53.8
+step: ASS - 2011 - CUBSPLCUB - V04 - A.stp
+glb: ASS - 2011 - CUBSPLCUB - V04 - A.glb
+mesh-frame: cube
+optical_ports:
+  front:
+    frame: optical
+    direction: -y
+  transmitted:
+    frame: optical
+    direction: +y
+    after-surface: 1
+  reflected:
+    frame: optical
+    direction: +x
+    after-surface: 0
+footprint_grid:
+  - 1
+  - 1
+  - 1
+insert-pose:
+  rotation:
+    type: grid
+    grid:
+      z: +y
+      x: -x
+  translation:
+    offset-mm: {}
+provenance: whole-module
+frames:
+  optical:
+    x-mm: 0
+    y-mm: 0
+    z-mm: 0

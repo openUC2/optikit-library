@@ -1,0 +1,45 @@
+kind: optical_component
+id: user.beamsplitter.beamsplitter_cube
+version: 0.1.0
+category: beamsplitter
+description: ""
+tags:
+  - authored
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  ports:
+    front:
+      frame: optical
+      direction: -z
+    transmitted:
+      frame: optical
+      direction: +z
+      after-surface: 1
+    reflected:
+      frame: optical
+      direction: -x
+      after-surface: 0
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0
+        material_post:
+          type: Material
+          name: N-BK7
+        thickness: 1
+        semi_aperture: 12.7
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0
+        semi_aperture: 12.7

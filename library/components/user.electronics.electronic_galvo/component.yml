@@ -1,0 +1,11 @@
+kind: optical_component
+id: user.electronics.electronic_galvo
+version: 0.1.0
+category: electronics
+description: ""
+tags:
+  - authored
+vendor:
+  name: ""
+  mpn: ""
+  url: ""

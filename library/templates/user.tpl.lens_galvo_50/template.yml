@@ -1,0 +1,39 @@
+kind: mechanical_template
+id: user.tpl.lens_galvo_50
+version: 0.1.0
+class: fixed
+description: mount for user.lens.lens_galvo_50 (bound from ASS - 2073 - CUBLEND25F50 - V04.stp)
+tags:
+  - bound
+envelope:
+  x-mm: 49.8
+  y-mm: 49.8
+  z-mm: 53.8
+step: ASS - 2073 - CUBLEND25F50 - V04.stp
+glb: ASS - 2073 - CUBLEND25F50 - V04.glb
+mesh-frame: cube
+optical_ports:
+  front:
+    frame: optical
+    direction: +y
+  back:
+    frame: optical
+    direction: -y
+footprint_grid:
+  - 1
+  - 1
+  - 1
+insert-pose:
+  rotation:
+    type: grid
+    grid:
+      z: -y
+      x: +x
+  translation:
+    offset-mm: {}
+provenance: whole-module
+frames:
+  optical:
+    x-mm: 0
+    y-mm: 0
+    z-mm: 0

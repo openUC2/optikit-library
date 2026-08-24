@@ -1,0 +1,12 @@
+kind: cube_module
+id: user.cube.beamsplitter_cube
+version: 0.1.0
+description: beamsplitter_cube in a 1x1 cube (bound)
+tags:
+  - bound
+component: user.beamsplitter.beamsplitter_cube@^0.1
+template: user.tpl.beamsplitter_cube@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
