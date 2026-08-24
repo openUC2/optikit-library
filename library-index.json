@@ -2,7 +2,7 @@
   "schema": "optikit-library-index/v0",
   "count": 7,
   "source": "library",
-  "source_commit": "49c8ccd",
+  "source_commit": "9aeaf86",
   "modules": [
     {
       "id": "user.cube.camera_basic",
@@ -536,6 +536,182 @@
     }
   ],
   "components": [
+    {
+      "id": "selfdesign.lens.eyepiece",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "lens",
+      "description": "A self-designed Kellner eyepiece with an achromatic doublet as the field lens and a biconvex lens as the eye lens. The magnification is 10x and the EFL is 25.7385 mm.",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": 25.7385,
+      "n_surfaces": 5,
+      "review": false,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            4.0
+          ],
+          "after_surface": 4,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 45.095,
+            "conic": 0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "LF1"
+          },
+          "thickness": 5.842,
+          "semi_aperture": 11
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": -45.095,
+            "conic": 0
+          },
+          "thickness": 2.54,
+          "semi_aperture": 11
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 24.663,
+            "conic": 0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-BK7"
+          },
+          "thickness": 8.636,
+          "semi_aperture": 11
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": -18.237,
+            "conic": 0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "SF2"
+          },
+          "thickness": 2.286,
+          "semi_aperture": 11
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": "1e999",
+            "conic": 0
+          },
+          "thickness": 15.145,
+          "semi_aperture": 11
+        }
+      ]
+    },
+    {
+      "id": "selfdesign.lens.idealobjective_4x",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "lens",
+      "description": "a self-design ideal finite objective lens with 4x magnification, WD = 15.7mm, NA = 0.1, optical tube length = 160mm, parfocal length = 45mm. The lens is represented by two paraxial surfaces. The sample is placed at 15.7mm from the first surface, and the eyepiece is placed at 160mm after the second surface. The effective focal length is 34.2235mm.",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": 34.2235,
+      "n_surfaces": 2,
+      "review": false,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            4.0
+          ],
+          "after_surface": 1,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "paraxial",
+            "focal_length": 94.265
+          },
+          "thickness": 29.3,
+          "semi_aperture": 4.032
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "paraxial",
+            "focal_length": 37.03
+          },
+          "thickness": 160,
+          "semi_aperture": 4.032
+        }
+      ]
+    },
     {
       "id": "user.detector.camera_basic",
       "version": "0.1.0",
