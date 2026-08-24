@@ -1,0 +1,72 @@
+kind: optical_component
+id: user.lens.eyepiece
+version: 0.1.0
+category: lens
+description: "a self-design kellner eyepiece with a achromatic doublet as the field lens and a biconvex lens as the eye lens. The magnification is 10x and the EFL is 25.7385 
+tags:
+  - authored
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+optics:
+  frames:
+    optical:
+      z-mm: 0
+    exit:
+      z-mm: 4.0
+  ports:
+    front:
+      frame: optical
+      direction: -z
+    back:
+      frame: exit
+      direction: +z
+      after-surface: 4
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: 45.095
+          conic: 0
+        material_post:
+          type: Material
+          name: LF1
+        thickness: 5.842
+        semi_aperture: 11
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: -45.095
+          conic: 0
+        thickness: 2.540
+        semi_aperture: 11
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: 24.663
+          conic: 0
+        material_post:
+          type: Material
+          name: N-BK7
+        thickness: 8.636
+        semi_aperture: 11
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: -18.237
+          conic: 0
+        material_post:
+          type: Material
+          name: SF2
+        thickness: 2.286
+        semi_aperture: 11
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: Infinity
+          conic: 0
+        thickness: 15.145
+        semi_aperture: 11
+effective_focal_length_mm: 25.7385
