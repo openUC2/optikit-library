@@ -1,0 +1,62 @@
+kind: optical_component
+id: user.mirror.galvo_mirror
+version: 0.1.0
+category: mirror
+description: ""
+tags:
+  - authored
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+optics:
+  frames:
+    optical:
+      z-mm: 0
+    pivot_x:
+      z-mm: 0
+      rotation:
+        - 0
+        - -0.92388
+        - 0
+        - 0.382683
+    pivot_y:
+      z-mm: 7
+      rotation:
+        - -0.46194
+        - 0.191342
+        - 0.732538
+        - -0.46194
+  ports:
+    front:
+      frame: pivot_x
+      direction: -x
+    fold:
+      frame: pivot_x
+      direction: +z
+      after-surface: 0
+    reflected:
+      frame: pivot_y
+      direction: -y
+      after-surface: 1
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0
+        thickness: 6
+        interaction_model:
+          type: refractive_reflective
+          is_reflective: true
+        semi_aperture: 5
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0
+        interaction_model:
+          type: refractive_reflective
+          is_reflective: true
+        semi_aperture: 5

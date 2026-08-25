@@ -1,0 +1,12 @@
+kind: cube_module
+id: user.cube.galvo_mirror
+version: 0.1.0
+description: galvo_mirror in a 2x2 cube (bound)
+tags:
+  - bound
+component: user.mirror.galvo_mirror@^0.1
+template: user.tpl.galvo_mirror@^0.1
+footprint_grid:
+  - 2
+  - 2
+  - 1

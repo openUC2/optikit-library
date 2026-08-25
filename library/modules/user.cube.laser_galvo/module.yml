@@ -1,0 +1,12 @@
+kind: cube_module
+id: user.cube.laser_galvo
+version: 0.1.0
+description: laser_galvo in a 1x2 cube (bound)
+tags:
+  - bound
+component: user.source.laser_galvo@^0.1
+template: user.tpl.laser_galvo@^0.1
+footprint_grid:
+  - 1
+  - 2
+  - 1

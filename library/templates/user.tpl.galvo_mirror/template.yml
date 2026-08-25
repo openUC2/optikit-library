@@ -1,0 +1,90 @@
+kind: mechanical_template
+id: user.tpl.galvo_mirror
+version: 0.1.0
+class: fixed
+description: mount for user.mirror.galvo_mirror (bound from ASS - 2075 - CUBGLV - V04.stp)
+tags:
+  - bound
+dof:
+  - name: tilt_x
+    kind: rotation
+    axis: x
+    range:
+      - -15
+      - 15
+    resolution: 0.1
+    unit: deg
+    actuatable: false
+    surface: 0
+  - name: tilt_y
+    kind: rotation
+    axis: y
+    range:
+      - -15
+      - 15
+    resolution: 0.1
+    unit: deg
+    actuatable: false
+    surface: 1
+kinematics:
+  - dof: tilt_x
+    nodes:
+      - PRT - TMP - Mirror Galvo Moving:1
+    motion: rotation
+    axis: +x
+  - dof: tilt_y
+    nodes:
+      - PRT - TMP - Mirror Galvo Moving:2
+    motion: rotation
+    axis: +y
+envelope:
+  x-mm: 83.749
+  y-mm: 64.207
+  z-mm: 70.55
+step: ASS - 2075 - CUBGLV - V04.stp
+glb: ASS - 2075 - CUBGLV - V04.glb
+mesh-frame: record
+mesh-pose:
+  rotation:
+    type: grid
+    grid:
+      z: -z
+      x: +x
+optical_ports:
+  front:
+    frame: pivot_x
+    direction: -x
+  fold:
+    frame: pivot_x
+    direction: +z
+    after-surface: 0
+  reflected:
+    frame: pivot_y
+    direction: -y
+    after-surface: 1
+footprint_grid:
+  - 2
+  - 2
+  - 1
+insert-pose:
+  rotation:
+    type: grid
+    grid:
+      z: +z
+      x: +x
+  translation:
+    offset-mm: {}
+provenance: whole-module
+frames:
+  optical:
+    x-mm: 0
+    y-mm: 0
+    z-mm: 0
+  pivot_x:
+    x-mm: 0
+    y-mm: 0
+    z-mm: 0
+  pivot_y:
+    x-mm: 0
+    y-mm: 0
+    z-mm: 7

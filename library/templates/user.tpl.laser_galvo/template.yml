@@ -1,0 +1,44 @@
+kind: mechanical_template
+id: user.tpl.laser_galvo
+version: 0.1.0
+class: fixed
+description: mount for user.source.laser_galvo (bound from ASS - 2081 - CUBLAS650ECC - V04.stp)
+tags:
+  - bound
+envelope:
+  x-mm: 49.8
+  y-mm: 53.8
+  z-mm: 73.5
+step: ASS - 2081 - CUBLAS650ECC - V04.stp
+glb: ASS - 2081 - CUBLAS650ECC - V04.glb
+mesh-frame: record
+mesh-pose:
+  rotation:
+    type: grid
+    grid:
+      z: +z
+      x: -x
+optical_ports:
+  out:
+    frame: optical
+    direction: +y
+footprint_grid:
+  - 1
+  - 2
+  - 1
+insert-pose:
+  rotation:
+    type: grid
+    grid:
+      z: +y
+      x: +x
+  translation:
+    offset-mm:
+      y: 18
+      z: 7
+provenance: whole-module
+frames:
+  optical:
+    x-mm: 0
+    y-mm: 18
+    z-mm: 7

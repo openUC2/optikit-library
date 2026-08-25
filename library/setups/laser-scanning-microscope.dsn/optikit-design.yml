@@ -1,18 +1,90 @@
 optikit-version: v0.0.0-alpha.1
 design:
   name: Laser Scanning Microscope
-  description: This is a simple galvo-based laser scanning microscope
+  description: This is a simple laser scanning microscope with a 2D camera
   tags:
-    - Laserscanning
-    - FLIM
-    - laser
-    - galvo
+    - laser scanning
+    - confocal
 components:
-  laser-520-pointer-2:
+  galvo-mirror:
     type: primitive
     primitive:
       static-models:
-        gltf: user.cube.laser_520_pointer
+        gltf: user.cube.galvo_mirror
+    category: mirror
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0
+            thickness: 6
+            interaction_model:
+              type: refractive_reflective
+              is_reflective: true
+            semi_aperture: 5
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0
+            interaction_model:
+              type: refractive_reflective
+              is_reflective: true
+            semi_aperture: 5
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+        reflected:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 7
+      ports:
+        front:
+          frame: optical
+          direction: -x
+        fold:
+          frame: optical
+          direction: +z
+          after-surface: 0
+        reflected:
+          frame: reflected
+          direction: -y
+          after-surface: 1
+    pose:
+      rotation:
+        type: grid
+        grid:
+          x: -y
+      translation:
+        offset-grid:
+          y: 1
+    dof:
+      - name: tilt_x
+        kind: rotation
+        axis: x
+        range:
+          - -15
+          - 15
+        unit: deg
+        surface: 0
+      - name: tilt_y
+        kind: rotation
+        axis: y
+        range:
+          - -15
+          - 15
+        unit: deg
+        surface: 1
+  laser-galvo:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.cube.laser_galvo
     category: source
     optics:
       emission:
@@ -29,71 +101,31 @@ components:
       frames:
         optical:
           x-mm: 0
-          y-mm: -20
-          z-mm: 0
+          y-mm: 18
+          z-mm: 7
         out:
           x-mm: 0
-          y-mm: -20
-          z-mm: 0
+          y-mm: 18
+          z-mm: 7
+          clear-aperture-mm: 5
       ports:
         out:
           frame: out
-          direction: -y
+          direction: +y
     pose:
       rotation:
         type: grid
         grid:
-          x: +y
+          x: -y
       translation:
         offset-grid:
-          x: -3
+          x: -2
           y: 1
     source:
       wavelengths_um:
         - 0.532
       beam_diameter_mm: 5
-  galvo-2:
-    type: primitive
-    primitive:
-      static-models:
-        gltf: user.cube.galvo
-    category: mirror
-    optics:
-      fragment:
-        surfaces:
-          - type: standard
-            geometry:
-              type: StandardGeometry
-              radius: .inf
-              conic: 0
-            material_post:
-              type: Material
-              name: N-BK7
-            interaction_model:
-              type: refractive_reflective
-              is_reflective: true
-            semi_aperture: 12.7
-      frames:
-        optical:
-          x-mm: 0
-          y-mm: 0
-          z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction: -y
-        reflected:
-          frame: optical
-          direction: -x
-          after-surface: 0
-    pose:
-      rotation:
-        type: grid
-      translation:
-        offset-grid:
-          x: -2
-          y: 1
-  lens-galvo-50-2:
+  lens-galvo-50:
     type: primitive
     primitive:
       static-models:
@@ -134,16 +166,12 @@ components:
     pose:
       rotation:
         type: grid
+        grid:
+          x: -x
       translation:
         offset-grid:
-          x: -2
-    mounting:
-      rotation:
-        type: grid
-        grid:
-          z: -x
-          x: -z
-  lens-galvo-160-2:
+          y: 2
+  lens-galvo-160:
     type: primitive
     primitive:
       static-models:
@@ -194,13 +222,7 @@ components:
         type: grid
       translation:
         offset-grid:
-          x: -2
-          y: -3
-    mounting:
-      rotation:
-        type: grid
-        grid:
-          x: -x
+          y: 6
   beamsplitter-cube-50:
     type: primitive
     primitive:
@@ -253,18 +275,17 @@ components:
           x: +y
       translation:
         offset-grid:
-          x: -2
-          y: -5
+          y: 8
     mounting:
       rotation:
         type: grid
         grid:
-          z: +y
-  stage-manual:
+          z: -y
+  objective-4x:
     type: primitive
     primitive:
       static-models:
-        gltf: user.cube.stage_manual
+        gltf: user.lens.objective_4x
     category: lens
     optics:
       fragment:
@@ -272,51 +293,105 @@ components:
           - type: standard
             geometry:
               type: StandardGeometry
-              radius: 50
+              radius: 30
               conic: 0
             material_post:
               type: Material
               name: N-BK7
             thickness: 4
-            semi_aperture: 12.7
+            semi_aperture: 5
           - type: standard
             geometry:
               type: StandardGeometry
-              radius: -50
+              radius: -30
               conic: 0
-            semi_aperture: 12.7
+            semi_aperture: 5
       frames:
         optical:
           x-mm: 0
-          y-mm: -50
+          y-mm: 0
           z-mm: 0
-        front:
-          x-mm: 0
-          y-mm: -50
-          z-mm: 0
-        back:
-          x-mm: 0
-          y-mm: -50
-          z-mm: 4
       ports:
         front:
-          frame: front
-          direction: -z
-        back:
-          frame: back
+          frame: optical
           direction: +z
+        back:
+          frame: optical
+          direction: -z
           after-surface: 1
     pose:
       rotation:
         type: grid
       translation:
         offset-grid:
-          x: -2
-          y: -4
+          y: 8
           z: 2
+  camera-basic:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.cube.camera_basic
+    category: detector
+    optics:
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        sensor:
+          frame: optical
+          direction: -z
+    pose:
+      rotation:
+        type: grid
+      translation:
+        offset-grid:
+          y: 8
+          z: -1
     mounting:
       rotation:
         type: grid
         grid:
           z: -z
           x: -x
+  sample-holder-fixed:
+    type: primitive
+    primitive:
+      static-models:
+        gltf: user.cube.sample_holder_fixed
+    category: sample
+    optics:
+      passthrough: true
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+      ports:
+        plane:
+          frame: optical
+          direction: +z
+    pose:
+      rotation:
+        type: grid
+        grid:
+          x: -x
+      translation:
+        offset-grid:
+          y: 8
+          z: 3
+paths:
+  from-laser-galvo:
+    chain:
+      - laser-galvo.out
+      - galvo-mirror.reflected>front
+      - lens-galvo-50.front>back
+      - lens-galvo-160.front>back
+      - beamsplitter-cube-50.reflected>front
+      - objective-4x.back>front
+      - camera-basic.sensor
+instantiation:
+  dof_values:
+    galvo-mirror.tilt_x: -13.4
+    galvo-mirror.tilt_y: -3.7

@@ -1,0 +1,48 @@
+kind: mechanical_template
+id: user.tpl.mirror_kinematic
+version: 0.1.0
+class: fixed
+description: mount for user.mirror.mirror_kinematic (bound from ASS - 2013 - CUBKINMIR45°90° - V04 - B.stp)
+tags:
+  - bound
+envelope:
+  x-mm: 52.969
+  y-mm: 49.8
+  z-mm: 53.8
+step: ASS - 2013 - CUBKINMIR45°90° - V04 - B.stp
+glb: ASS - 2013 - CUBKINMIR45°90° - V04 - B.glb
+mesh-frame: cube
+optical_ports:
+  front:
+    frame: optical
+    direction:
+      - 0.707
+      - 0.707
+      - 0
+  reflected:
+    frame: optical
+    direction:
+      - 0.707
+      - -0.707
+      - 0
+    after-surface: 0
+footprint_grid:
+  - 1
+  - 1
+  - 1
+insert-pose:
+  rotation:
+    type: grid
+    grid:
+      z: -x
+      x: +y
+    offset-deg:
+      y: -45
+  translation:
+    offset-mm: {}
+provenance: whole-module
+frames:
+  optical:
+    x-mm: 0
+    y-mm: 0
+    z-mm: 0

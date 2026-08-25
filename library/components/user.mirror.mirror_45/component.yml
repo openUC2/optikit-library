@@ -1,5 +1,5 @@
 kind: optical_component
-id: user.mirror.galvo
+id: user.mirror.mirror_45
 version: 0.1.0
 category: mirror
 description: ""
@@ -31,8 +31,15 @@ optics:
         material_post:
           type: Material
           name: N-BK7
+        thickness: 6
         interaction_model:
           type: refractive_reflective
           is_reflective: true
+        semi_aperture: 12.7
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0
         semi_aperture: 12.7
 mount_angle_deg: 45
