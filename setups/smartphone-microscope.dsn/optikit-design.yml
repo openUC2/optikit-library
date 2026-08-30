@@ -3,12 +3,12 @@ design:
   name: Smartphone Microscope
   description: This is the smartphone Microscope also found in the coreBOX
   tags:
-    - Microscope
-    - Smartphone
-    - Finite-corrected
+  - Microscope
+  - Smartphone
+  - Finite-corrected
 components:
   torch:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.source.torch
@@ -17,8 +17,8 @@ components:
       emission:
         port: out
         spectrum:
-          - wavelength_um: 0.532
-            weight: 1
+        - wavelength_um: 0.532
+          weight: 1
         spatial:
           type: disc
           radius_mm: 10
@@ -41,16 +41,16 @@ components:
           direction: -z
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           z: 3
     source:
       wavelengths_um:
-        - 0.532
+      - 0.532
       beam_diameter_mm: 20
   stage-manual:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.cube.stage_manual
@@ -58,22 +58,22 @@ components:
     optics:
       fragment:
         surfaces:
-          - type: standard
-            geometry:
-              type: StandardGeometry
-              radius: 50
-              conic: 0
-            material_post:
-              type: Material
-              name: N-BK7
-            thickness: 4
-            semi_aperture: 12.7
-          - type: standard
-            geometry:
-              type: StandardGeometry
-              radius: -50
-              conic: 0
-            semi_aperture: 12.7
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: 50
+            conic: 0
+          material_post:
+            type: Material
+            name: N-BK7
+          thickness: 4
+          semi_aperture: 12.7
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: -50
+            conic: 0
+          semi_aperture: 12.7
       frames:
         optical:
           x-mm: 0
@@ -97,13 +97,13 @@ components:
           after-surface: 1
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           y: 1
           z: 1
   cube-base:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.cube.cube_base
@@ -124,12 +124,12 @@ components:
           direction: +x
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           y: -1
   cube-45-fixed:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.cube.cube_45_fixed
@@ -137,18 +137,18 @@ components:
     optics:
       fragment:
         surfaces:
-          - type: standard
-            geometry:
-              type: StandardGeometry
-              radius: .inf
-              conic: 0
-            material_post:
-              type: Material
-              name: N-BK7
-            interaction_model:
-              type: refractive_reflective
-              is_reflective: true
-            semi_aperture: 12.7
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: .inf
+            conic: 0
+          material_post:
+            type: Material
+            name: N-BK7
+          interaction_model:
+            type: refractive_reflective
+            is_reflective: true
+          semi_aperture: 12.7
       frames:
         optical:
           x-mm: 0
@@ -164,17 +164,17 @@ components:
           after-surface: 0
     pose:
       rotation:
-        type: grid
+        kind: grid
         grid:
           x: -y
       translation: {}
     mounting:
       rotation:
-        type: grid
+        kind: grid
         grid:
           z: +y
   cube-45-fixed-2:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.cube.cube_45_fixed
@@ -182,18 +182,18 @@ components:
     optics:
       fragment:
         surfaces:
-          - type: standard
-            geometry:
-              type: StandardGeometry
-              radius: .inf
-              conic: 0
-            material_post:
-              type: Material
-              name: N-BK7
-            interaction_model:
-              type: refractive_reflective
-              is_reflective: true
-            semi_aperture: 12.7
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: .inf
+            conic: 0
+          material_post:
+            type: Material
+            name: N-BK7
+          interaction_model:
+            type: refractive_reflective
+            is_reflective: true
+          semi_aperture: 12.7
       frames:
         optical:
           x-mm: 0
@@ -209,7 +209,7 @@ components:
           after-surface: 0
     pose:
       rotation:
-        type: grid
+        kind: grid
         grid:
           x: -y
       translation:
@@ -217,12 +217,12 @@ components:
           y: -2
     mounting:
       rotation:
-        type: grid
+        kind: grid
         grid:
           z: -y
           x: -x
   cube-base-2:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.cube.cube_base
@@ -243,12 +243,12 @@ components:
           direction: +x
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           y: 1
   eyepiece:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.cube.eyepiece
@@ -256,22 +256,22 @@ components:
     optics:
       fragment:
         surfaces:
-          - type: standard
-            geometry:
-              type: StandardGeometry
-              radius: 50
-              conic: 0
-            material_post:
-              type: Material
-              name: N-BK7
-            thickness: 4
-            semi_aperture: 12.7
-          - type: standard
-            geometry:
-              type: StandardGeometry
-              radius: -50
-              conic: 0
-            semi_aperture: 12.7
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: 50
+            conic: 0
+          material_post:
+            type: Material
+            name: N-BK7
+          thickness: 4
+          semi_aperture: 12.7
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: -50
+            conic: 0
+          semi_aperture: 12.7
       frames:
         optical:
           x-mm: 0
@@ -289,13 +289,13 @@ components:
           after-surface: 1
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           y: -2
           z: 1
   sample-holder-fixed:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.cube.sample_holder_fixed
@@ -313,12 +313,12 @@ components:
           direction: +z
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           z: 2
   puzzle-17:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.mechanics.puzzle
@@ -339,13 +339,13 @@ components:
           direction: +x
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           y: 1
           z: 1
   puzzle-18:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.mechanics.puzzle
@@ -366,13 +366,13 @@ components:
           direction: +x
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           y: 1
           z: 2
   puzzle-19:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.mechanics.puzzle
@@ -393,12 +393,12 @@ components:
           direction: +x
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           y: -1
   puzzle-20:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.mechanics.puzzle
@@ -419,13 +419,13 @@ components:
           direction: +x
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           y: -1
           z: 1
   puzzle-21:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.mechanics.puzzle
@@ -446,10 +446,10 @@ components:
           direction: +x
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation: {}
   puzzle-22:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.mechanics.puzzle
@@ -470,12 +470,12 @@ components:
           direction: +x
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           z: 1
   puzzle-23:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.mechanics.puzzle
@@ -496,12 +496,12 @@ components:
           direction: +x
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           y: -2
   puzzle-24:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.mechanics.puzzle
@@ -522,13 +522,13 @@ components:
           direction: +x
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           y: -2
           z: 1
   puzzle-25:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.mechanics.puzzle
@@ -549,12 +549,12 @@ components:
           direction: +x
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           y: 1
   puzzle-26:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.mechanics.puzzle
@@ -575,13 +575,13 @@ components:
           direction: +x
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           y: -2
           z: 2
   puzzle-27:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.mechanics.puzzle
@@ -602,12 +602,12 @@ components:
           direction: +x
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           z: 2
   puzzle-28:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.mechanics.puzzle
@@ -628,12 +628,12 @@ components:
           direction: +x
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           z: 3
   cube-base-3:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.cube.cube_base
@@ -654,7 +654,7 @@ components:
           direction: +x
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           z: 1

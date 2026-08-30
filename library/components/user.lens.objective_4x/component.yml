@@ -23,22 +23,5 @@ optics:
       frame: exit
       direction: +z
       after-surface: 1
-  fragment:
-    surfaces:
-      - type: standard
-        geometry:
-          type: StandardGeometry
-          radius: 30
-          conic: 0
-        material_post:
-          type: Material
-          name: N-BK7
-        thickness: 4
-        semi_aperture: 5
-      - type: standard
-        geometry:
-          type: StandardGeometry
-          radius: -30
-          conic: 0
-        semi_aperture: 5
+  fragment-file: optics.optiland.yml
 effective_focal_length_mm: 29.6994

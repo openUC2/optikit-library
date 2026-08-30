@@ -1,0 +1,41 @@
+kind: mechanical_template
+id: user.tpl.led_matrix
+version: 0.1.0
+class: fixed
+description: mount for user.source.led_matrix (bound from ASS - 2046 - CUBLEDMTX - V04.stp)
+tags:
+- bound
+envelope:
+  x-mm: 49.8
+  y-mm: 49.8
+  z-mm: 53.8
+step: ASS - 2046 - CUBLEDMTX - V04.stp
+glb: ASS - 2046 - CUBLEDMTX - V04.glb
+mesh-pose:
+  rotation:
+    kind: grid
+    grid:
+      z: -z
+      x: +x
+optical_ports:
+  out:
+    frame: optical
+    direction: +z
+footprint_grid:
+- 1
+- 1
+- 1
+insert-pose:
+  rotation:
+    kind: grid
+    grid:
+      z: +z
+      x: +x
+  translation:
+    offset-mm: {}
+provenance: whole-module
+frames:
+  optical:
+    x-mm: 0
+    y-mm: 0
+    z-mm: 0

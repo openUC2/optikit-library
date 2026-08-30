@@ -20,13 +20,13 @@ design:
   version: 0.1.0
   description: Brightfield smartphone-style microscope from the user library records
   tags:
-    - instrument
-    - instrument/microscope
-    - instrument/microscope/brightfield
+  - instrument
+  - instrument/microscope
+  - instrument/microscope/brightfield
 
 components:
   torch:
-    type: primitive
+    kind: primitive
     category: source
     # Facts from user.source.torch; the emission block below is the record's
     # (disc radius = beam diameter / 2, cone half angle = divergence / 2).
@@ -44,7 +44,7 @@ components:
         flux: 1.0
     pose:
       rotation:
-        type: grid
+        kind: grid
         grid: {z: +x, x: -z}
       translation:
         anchor: sample
@@ -53,7 +53,7 @@ components:
   # The specimen plane, lit from behind by the torch. Placed at the
   # objective's front focus; no roles - brightfield light passes through.
   sample:
-    type: location
+    kind: location
     category: sample
     optics:
       frames:
@@ -62,7 +62,7 @@ components:
         plane: {frame: optical, direction: +z}
     pose:
       rotation:
-        type: grid
+        kind: grid
         grid: {z: +x, x: -z}
       translation:
         anchor: objective
@@ -70,19 +70,19 @@ components:
 
   # user.lens.objective_4x: EFL 29.6994 mm.
   objective:
-    type: primitive
+    kind: primitive
     category: lens
     optics:
       fragment:
         surfaces:
-          - type: standard
-            geometry: {type: StandardGeometry, radius: 30.0, conic: 0.0}
-            material_post: {type: Material, name: N-BK7}
-            thickness: 4.0
-            semi_aperture: 5.0
-          - type: standard
-            geometry: {type: StandardGeometry, radius: -30.0, conic: 0.0}
-            semi_aperture: 5.0
+        - type: standard
+          geometry: {type: StandardGeometry, radius: 30.0, conic: 0.0}
+          material_post: {type: Material, name: N-BK7}
+          thickness: 4.0
+          semi_aperture: 5.0
+        - type: standard
+          geometry: {type: StandardGeometry, radius: -30.0, conic: 0.0}
+          semi_aperture: 5.0
       frames:
         optical: {z-mm: 0.0}
         exit: {z-mm: 4.0}
@@ -94,26 +94,26 @@ components:
       envelope: {x-mm: 50, y-mm: 50, z-mm: 50}
     pose:
       rotation:
-        type: grid
+        kind: grid
         grid: {z: +x, x: -z}
 
   # user.lens.eyepiece used as the tube lens: EFL 49.043 mm. Its front
   # vertex sits 60 mm behind the objective's back vertex - the collimated
   # infinity space, so the exact gap is not critical.
   eyepiece:
-    type: primitive
+    kind: primitive
     category: lens
     optics:
       fragment:
         surfaces:
-          - type: standard
-            geometry: {type: StandardGeometry, radius: 50.0, conic: 0.0}
-            material_post: {type: Material, name: N-BK7}
-            thickness: 4.0
-            semi_aperture: 12.7
-          - type: standard
-            geometry: {type: StandardGeometry, radius: -50.0, conic: 0.0}
-            semi_aperture: 12.7
+        - type: standard
+          geometry: {type: StandardGeometry, radius: 50.0, conic: 0.0}
+          material_post: {type: Material, name: N-BK7}
+          thickness: 4.0
+          semi_aperture: 12.7
+        - type: standard
+          geometry: {type: StandardGeometry, radius: -50.0, conic: 0.0}
+          semi_aperture: 12.7
       frames:
         optical: {z-mm: 0.0}
         exit: {z-mm: 4.0}
@@ -125,7 +125,7 @@ components:
       envelope: {x-mm: 50, y-mm: 50, z-mm: 50}
     pose:
       rotation:
-        type: grid
+        kind: grid
         grid: {z: +x, x: -z}
       translation:
         anchor: objective
@@ -135,7 +135,7 @@ components:
   # (4 mm centre thickness + 47.7 mm back focal distance behind its front
   # vertex).
   camera:
-    type: primitive
+    kind: primitive
     category: detector
     optics:
       frames:
@@ -144,7 +144,7 @@ components:
         sensor: {frame: optical, direction: -z, roles: [sensor]}
     pose:
       rotation:
-        type: grid
+        kind: grid
         grid: {z: +x, x: -z}
       translation:
         anchor: eyepiece

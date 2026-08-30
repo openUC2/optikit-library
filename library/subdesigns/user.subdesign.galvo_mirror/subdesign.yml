@@ -1,0 +1,12 @@
+kind: cube_subdesign
+id: user.subdesign.galvo_mirror
+version: 0.1.0
+description: user.mirror.galvo_mirror decomposed — sliders ride inputs tilt_x, tilt_y
+component: user.mirror.galvo_mirror@^0.1
+tags:
+  - subdesign
+  - decomposed
+review:
+  - "optics-only children: the module's template still renders the monolithic mesh, so the beam scans
+    while the CAD mirror does not turn — split the mesh with `optikit-core library decompose` when the
+    moving subtrees should follow"

@@ -1,9 +1,141 @@
 {
   "schema": "optikit-library-index/v0",
-  "count": 7,
-  "source": "library",
-  "source_commit": "bfae8a2",
+  "count": 19,
   "modules": [
+    {
+      "id": "user.cube.beamsplitter_cube_50",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "beamsplitter_cube_50 in a 1x1 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "beamsplitter",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": false,
+      "review_notes": [],
+      "design": null,
+      "component": {
+        "ref": "user.beamsplitter.beamsplitter_cube_50@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": 1e999,
+              "conic": 0.0
+            },
+            "interaction_model": {
+              "type": "refractive_reflective",
+              "is_reflective": true
+            },
+            "material_post": {
+              "type": "Material",
+              "name": "N-BK7"
+            },
+            "thickness": 1,
+            "semi_aperture": 12.7
+          },
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": 1e999,
+              "conic": 0.0
+            },
+            "semi_aperture": 12.7
+          }
+        ],
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.beamsplitter_cube_50@^0.1",
+        "id": "user.tpl.beamsplitter_cube_50",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {}
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.beamsplitter_cube_50/ASS - 2011 - CUBSPLCUB - V04 - A.glb",
+        "step": "/v1/library/assets/templates/user.tpl.beamsplitter_cube_50/ASS - 2011 - CUBSPLCUB - V04 - A.stp",
+        "symbol": null,
+        "mesh_frame": "cube",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "front",
+          "direction": "+y",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "transmitted",
+          "direction": "-y",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 1,
+          "coupling": ""
+        },
+        {
+          "name": "reflected",
+          "direction": "-x",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 0,
+          "coupling": ""
+        }
+      ],
+      "frames": {
+        "optical": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "ports_frame": "mounted",
+      "insert_rot_xyzw": [
+        0.707107,
+        0.0,
+        0.0,
+        0.707107
+      ],
+      "electronics": null
+    },
     {
       "id": "user.cube.camera_basic",
       "version": "0.1.0",
@@ -23,6 +155,7 @@
       "price": null,
       "review": false,
       "review_notes": [],
+      "design": null,
       "component": {
         "ref": "user.detector.camera_basic@^0.1",
         "resolved": "0.1.0",
@@ -36,6 +169,8 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [],
         "programmable": null
       },
       "template": {
@@ -45,9 +180,7 @@
         "class": "fixed",
         "actuatable": false,
         "carrier": false,
-        "bays": {},
-        "dof": [],
-        "states": []
+        "bays": {}
       },
       "assets": {
         "thumbnail": null,
@@ -72,7 +205,96 @@
           "coupling": ""
         }
       ],
+      "frames": {},
       "ports_frame": "record",
+      "insert_rot_xyzw": null,
+      "electronics": null
+    },
+    {
+      "id": "user.cube.camera_hik",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "camera_hik in a 3x1 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "detector",
+      "thumbnail": null,
+      "footprint_grid": [
+        3,
+        1,
+        1
+      ],
+      "price": null,
+      "review": false,
+      "review_notes": [],
+      "design": null,
+      "component": {
+        "ref": "user.detector.camera_hik@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [],
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.camera_hik@^0.1",
+        "id": "user.tpl.camera_hik",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {}
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.camera_hik/ASS - 4003 - CAM+OBJ.glb",
+        "step": "/v1/library/assets/templates/user.tpl.camera_hik/ASS - 4003 - CAM+OBJ.stp",
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": [
+          "-z",
+          "+x"
+        ],
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "sensor",
+          "direction": "-x",
+          "position_mm": [
+            -40.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "frames": {
+        "optical": [
+          -40.0,
+          0.0,
+          0.0
+        ]
+      },
+      "ports_frame": "mounted",
+      "insert_rot_xyzw": [
+        0.0,
+        0.707107,
+        0.0,
+        0.707107
+      ],
       "electronics": null
     },
     {
@@ -93,6 +315,7 @@
       "price": null,
       "review": false,
       "review_notes": [],
+      "design": null,
       "component": {
         "ref": "user.mirror.cube_45_fixed@^0.1",
         "resolved": "0.1.0",
@@ -106,6 +329,26 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": 1e999,
+              "conic": 0.0
+            },
+            "interaction_model": {
+              "type": "refractive_reflective",
+              "is_reflective": true
+            },
+            "material_post": {
+              "type": "Material",
+              "name": "N-BK7"
+            },
+            "semi_aperture": 12.7
+          }
+        ],
         "programmable": null
       },
       "template": {
@@ -115,9 +358,7 @@
         "class": "fixed",
         "actuatable": false,
         "carrier": false,
-        "bays": {},
-        "dof": [],
-        "states": []
+        "bays": {}
       },
       "assets": {
         "thumbnail": null,
@@ -153,7 +394,20 @@
           "coupling": ""
         }
       ],
+      "frames": {
+        "optical": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
       "ports_frame": "mounted",
+      "insert_rot_xyzw": [
+        -0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
       "electronics": null
     },
     {
@@ -174,6 +428,7 @@
       "price": null,
       "review": false,
       "review_notes": [],
+      "design": null,
       "component": {
         "ref": "user.mechanics.cube_base@^0.1",
         "resolved": "0.1.0",
@@ -187,6 +442,8 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [],
         "programmable": null
       },
       "template": {
@@ -196,9 +453,7 @@
         "class": "fixed",
         "actuatable": false,
         "carrier": false,
-        "bays": {},
-        "dof": [],
-        "states": []
+        "bays": {}
       },
       "assets": {
         "thumbnail": null,
@@ -211,7 +466,80 @@
         "mesh_pose_offset_deg": null
       },
       "ports": [],
+      "frames": {},
       "ports_frame": "record",
+      "insert_rot_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "electronics": null
+    },
+    {
+      "id": "user.cube.electronic_galvo",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "electronic_galvo in a 2x1 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "electronics",
+      "thumbnail": null,
+      "footprint_grid": [
+        2,
+        1,
+        1
+      ],
+      "price": null,
+      "review": false,
+      "review_notes": [],
+      "design": null,
+      "component": {
+        "ref": "user.electronics.electronic_galvo@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [],
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.electronic_galvo@^0.1",
+        "id": "user.tpl.electronic_galvo",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {}
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.electronic_galvo/ASS - 2079 - CUBGLVBRD - V04.glb",
+        "step": "/v1/library/assets/templates/user.tpl.electronic_galvo/ASS - 2079 - CUBGLVBRD - V04.stp",
+        "symbol": null,
+        "mesh_frame": "cube",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [],
+      "frames": {},
+      "ports_frame": "record",
+      "insert_rot_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
       "electronics": null
     },
     {
@@ -232,6 +560,7 @@
       "price": null,
       "review": false,
       "review_notes": [],
+      "design": null,
       "component": {
         "ref": "user.lens.eyepiece@^0.1",
         "resolved": "0.1.2",
@@ -245,6 +574,32 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": 50.0,
+              "conic": 0.0
+            },
+            "material_post": {
+              "type": "Material",
+              "name": "N-BK7"
+            },
+            "thickness": 4,
+            "semi_aperture": 12.7
+          },
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": -50.0,
+              "conic": 0.0
+            },
+            "semi_aperture": 12.7
+          }
+        ],
         "programmable": null
       },
       "template": {
@@ -254,9 +609,7 @@
         "class": "fixed",
         "actuatable": false,
         "carrier": false,
-        "bays": {},
-        "dof": [],
-        "states": []
+        "bays": {}
       },
       "assets": {
         "thumbnail": null,
@@ -292,7 +645,1023 @@
           "coupling": ""
         }
       ],
+      "frames": {
+        "optical": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
       "ports_frame": "mounted",
+      "insert_rot_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "electronics": null
+    },
+    {
+      "id": "user.cube.laser_520_pointer",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "laser_520_pointer in a 1x2 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "source",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        2,
+        1
+      ],
+      "price": null,
+      "review": false,
+      "review_notes": [],
+      "design": null,
+      "component": {
+        "ref": "user.source.laser_520_pointer@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [
+          0.532
+        ],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": 5.0,
+        "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [],
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.laser_520_pointer@^0.1",
+        "id": "user.tpl.laser_520_pointer",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {}
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.laser_520_pointer/ASS - 2018 - CUBLAS520 - V04 - A.glb",
+        "step": "/v1/library/assets/templates/user.tpl.laser_520_pointer/ASS - 2018 - CUBLAS520 - V04 - A.stp",
+        "symbol": null,
+        "mesh_frame": "cube",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "out",
+          "direction": "-y",
+          "position_mm": [
+            0.0,
+            -20.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "frames": {
+        "optical": [
+          0.0,
+          -20.0,
+          0.0
+        ]
+      },
+      "ports_frame": "mounted",
+      "insert_rot_xyzw": [
+        0.707107,
+        0.0,
+        0.0,
+        0.707107
+      ],
+      "electronics": null
+    },
+    {
+      "id": "user.cube.laser_galvo",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "laser_galvo in a 1x2 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "source",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        2,
+        1
+      ],
+      "price": null,
+      "review": false,
+      "review_notes": [],
+      "design": null,
+      "component": {
+        "ref": "user.source.laser_galvo@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [
+          0.532
+        ],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": 5.0,
+        "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [],
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.laser_galvo@^0.1",
+        "id": "user.tpl.laser_galvo",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {}
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.laser_galvo/ASS - 2081 - CUBLAS650ECC - V04.glb",
+        "step": "/v1/library/assets/templates/user.tpl.laser_galvo/ASS - 2081 - CUBLAS650ECC - V04.stp",
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": [
+          "+z",
+          "-x"
+        ],
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "out",
+          "direction": "+y",
+          "position_mm": [
+            0.0,
+            18.0,
+            7.0
+          ],
+          "after_surface": null,
+          "coupling": "",
+          "clear_aperture_mm": 5.0
+        }
+      ],
+      "frames": {
+        "optical": [
+          0.0,
+          18.0,
+          7.0
+        ]
+      },
+      "ports_frame": "mounted",
+      "insert_rot_xyzw": [
+        -0.707107,
+        0.0,
+        0.0,
+        0.707107
+      ],
+      "electronics": null
+    },
+    {
+      "id": "user.cube.led_matrix",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "led_matrix in a 1x1 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "source",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": false,
+      "review_notes": [],
+      "design": null,
+      "component": {
+        "ref": "user.source.led_matrix@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [
+          0.532
+        ],
+        "divergence_deg": 1.0,
+        "beam_diameter_mm": 20.0,
+        "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [],
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.led_matrix@^0.1",
+        "id": "user.tpl.led_matrix",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {}
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.led_matrix/ASS - 2046 - CUBLEDMTX - V04.glb",
+        "step": "/v1/library/assets/templates/user.tpl.led_matrix/ASS - 2046 - CUBLEDMTX - V04.stp",
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": [
+          "-z",
+          "+x"
+        ],
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "out",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "frames": {
+        "optical": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "ports_frame": "mounted",
+      "insert_rot_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "electronics": null
+    },
+    {
+      "id": "user.cube.lens_100mm_simple",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "lens_100mm_simple in a 1x2 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "lens",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        2,
+        1
+      ],
+      "price": null,
+      "review": false,
+      "review_notes": [],
+      "design": null,
+      "component": {
+        "ref": "user.lens.lens_100mm_simple@^0.1",
+        "resolved": "0.1.1",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": 97.8272,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": 100.0,
+              "conic": 0.0
+            },
+            "material_post": {
+              "type": "Material",
+              "name": "BK7G18"
+            },
+            "thickness": 10,
+            "semi_aperture": 20
+          },
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": -100.0,
+              "conic": 0.0
+            },
+            "semi_aperture": 20
+          }
+        ],
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.lens_100mm_simple@^0.1",
+        "id": "user.tpl.lens_100mm_simple",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {}
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.lens_100mm_simple/ASS - 2022 - CUBLEND40F100 - V04.glb",
+        "step": "/v1/library/assets/templates/user.tpl.lens_100mm_simple/ASS - 2022 - CUBLEND40F100 - V04.stp",
+        "symbol": null,
+        "mesh_frame": "cube",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "frames": {
+        "optical": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "ports_frame": "mounted",
+      "insert_rot_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "electronics": null
+    },
+    {
+      "id": "user.cube.lens_50mm_simple",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "lens_50mm_simple in a 1x2 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "lens",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        2,
+        1
+      ],
+      "price": null,
+      "review": false,
+      "review_notes": [],
+      "design": null,
+      "component": {
+        "ref": "user.lens.lens_50mm_simple@^0.1",
+        "resolved": "0.1.1",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": 49.7799,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": 50.0,
+              "conic": 0.0
+            },
+            "material_post": {
+              "type": "Material",
+              "name": "BK7G18"
+            },
+            "thickness": 10,
+            "semi_aperture": 20
+          },
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": -50.0,
+              "conic": 0.0
+            },
+            "semi_aperture": 20
+          }
+        ],
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.lens_50mm_simple@^0.1",
+        "id": "user.tpl.lens_50mm_simple",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {}
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.lens_50mm_simple/ASS - 2021 - CUBLEND40F50 - V04.glb",
+        "step": "/v1/library/assets/templates/user.tpl.lens_50mm_simple/ASS - 2021 - CUBLEND40F50 - V04.stp",
+        "symbol": null,
+        "mesh_frame": "cube",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "frames": {
+        "optical": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "ports_frame": "mounted",
+      "insert_rot_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "electronics": null
+    },
+    {
+      "id": "user.cube.lens_galvo_160",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "lens_galvo_160 in a 1x1 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "lens",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": false,
+      "review_notes": [],
+      "design": null,
+      "component": {
+        "ref": "user.lens.lens_galvo_160@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": 160.7984,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": 165.0,
+              "conic": 0.0
+            },
+            "material_post": {
+              "type": "Material",
+              "name": "N-BK7"
+            },
+            "thickness": 7,
+            "semi_aperture": 12.7
+          },
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": -165.0,
+              "conic": 0.0
+            },
+            "semi_aperture": 12.7
+          }
+        ],
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.lens_galvo_160@^0.1",
+        "id": "user.tpl.lens_galvo_160",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {}
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.lens_galvo_160/ASS - 2074 - CUBLEND25F160 - V04.glb",
+        "step": "/v1/library/assets/templates/user.tpl.lens_galvo_160/ASS - 2074 - CUBLEND25F160 - V04.stp",
+        "symbol": null,
+        "mesh_frame": "cube",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-y",
+          "position_mm": [
+            0.0,
+            10.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+y",
+          "position_mm": [
+            0.0,
+            10.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "frames": {
+        "optical": [
+          0.0,
+          10.0,
+          0.0
+        ]
+      },
+      "ports_frame": "mounted",
+      "insert_rot_xyzw": [
+        0.5,
+        0.5,
+        0.5,
+        -0.5
+      ],
+      "electronics": null
+    },
+    {
+      "id": "user.cube.lens_galvo_50",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "lens_galvo_50 in a 1x1 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "lens",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": false,
+      "review_notes": [],
+      "design": null,
+      "component": {
+        "ref": "user.lens.lens_galvo_50@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": 49.3842,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": 50.0,
+              "conic": 0.0
+            },
+            "material_post": {
+              "type": "Material",
+              "name": "N-BK7"
+            },
+            "thickness": 6,
+            "semi_aperture": 12.7
+          },
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": -50.0,
+              "conic": 0.0
+            },
+            "semi_aperture": 12.7
+          }
+        ],
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.lens_galvo_50@^0.1",
+        "id": "user.tpl.lens_galvo_50",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {}
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.lens_galvo_50/ASS - 2073 - CUBLEND25F50 - V04.glb",
+        "step": "/v1/library/assets/templates/user.tpl.lens_galvo_50/ASS - 2073 - CUBLEND25F50 - V04.stp",
+        "symbol": null,
+        "mesh_frame": "cube",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "front",
+          "direction": "+y",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "-y",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "frames": {
+        "optical": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "ports_frame": "mounted",
+      "insert_rot_xyzw": [
+        0.707107,
+        0.0,
+        0.0,
+        0.707107
+      ],
+      "electronics": null
+    },
+    {
+      "id": "user.cube.mirror_45",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "mirror_45 in a 1x1 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "mirror",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": false,
+      "review_notes": [],
+      "design": null,
+      "component": {
+        "ref": "user.mirror.mirror_45@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": 1e999,
+              "conic": 0.0
+            },
+            "interaction_model": {
+              "type": "refractive_reflective",
+              "is_reflective": true
+            },
+            "material_post": {
+              "type": "Material",
+              "name": "N-BK7"
+            },
+            "thickness": 6,
+            "semi_aperture": 12.7
+          },
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": 1e999,
+              "conic": 0.0
+            },
+            "semi_aperture": 12.7
+          }
+        ],
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.mirror_45@^0.1",
+        "id": "user.tpl.mirror_45",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {}
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.mirror_45/ASS - 2016 - CUBMIR45\u00b090\u00b0 - V04 - C.glb",
+        "step": "/v1/library/assets/templates/user.tpl.mirror_45/ASS - 2016 - CUBMIR45\u00b090\u00b0 - V04 - C.stp",
+        "symbol": null,
+        "mesh_frame": "cube",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "front",
+          "direction": [
+            0.707,
+            -0.707,
+            0.0
+          ],
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "reflected",
+          "direction": [
+            -0.707,
+            -0.707,
+            0.0
+          ],
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 0,
+          "coupling": ""
+        }
+      ],
+      "frames": {
+        "optical": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "ports_frame": "mounted",
+      "insert_rot_xyzw": [
+        -0.653281,
+        -0.270598,
+        0.270598,
+        0.653281
+      ],
+      "electronics": null
+    },
+    {
+      "id": "user.cube.mirror_kinematic",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "mirror_kinematic in a 1x1 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "mirror",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "review": false,
+      "review_notes": [],
+      "design": null,
+      "component": {
+        "ref": "user.mirror.mirror_kinematic@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": null,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": 1e999,
+              "conic": 0.0
+            },
+            "interaction_model": {
+              "type": "refractive_reflective",
+              "is_reflective": true
+            },
+            "material_post": {
+              "type": "Material",
+              "name": "N-BK7"
+            },
+            "thickness": 6,
+            "semi_aperture": 12.7
+          },
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": 1e999,
+              "conic": 0.0
+            },
+            "semi_aperture": 12.7
+          }
+        ],
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.mirror_kinematic@^0.1",
+        "id": "user.tpl.mirror_kinematic",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {}
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.mirror_kinematic/ASS - 2013 - CUBKINMIR45\u00b090\u00b0 - V04 - B.glb",
+        "step": "/v1/library/assets/templates/user.tpl.mirror_kinematic/ASS - 2013 - CUBKINMIR45\u00b090\u00b0 - V04 - B.stp",
+        "symbol": null,
+        "mesh_frame": "cube",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "front",
+          "direction": [
+            0.707,
+            0.707,
+            0.0
+          ],
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "reflected",
+          "direction": [
+            0.707,
+            -0.707,
+            0.0
+          ],
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 0,
+          "coupling": ""
+        }
+      ],
+      "frames": {
+        "optical": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "ports_frame": "mounted",
+      "insert_rot_xyzw": [
+        -0.270598,
+        -0.653281,
+        0.653281,
+        0.270598
+      ],
       "electronics": null
     },
     {
@@ -313,6 +1682,7 @@
       "price": null,
       "review": false,
       "review_notes": [],
+      "design": null,
       "component": {
         "ref": "user.sample.sample_holder_fixed@^0.1",
         "resolved": "0.1.1",
@@ -326,6 +1696,8 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [],
         "programmable": null
       },
       "template": {
@@ -335,9 +1707,7 @@
         "class": "fixed",
         "actuatable": false,
         "carrier": false,
-        "bays": {},
-        "dof": [],
-        "states": []
+        "bays": {}
       },
       "assets": {
         "thumbnail": null,
@@ -362,102 +1732,27 @@
           "coupling": ""
         }
       ],
+      "frames": {
+        "optical": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
       "ports_frame": "mounted",
-      "electronics": null
-    },
-    {
-      "id": "user.cube.somelens",
-      "version": "0.1.0",
-      "kind": "cube_module",
-      "description": "somelens in a 1x1 cube (bound)",
-      "tags": [
-        "bound"
+      "insert_rot_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
       ],
-      "category": "lens",
-      "thumbnail": null,
-      "footprint_grid": [
-        1,
-        1,
-        1
-      ],
-      "price": null,
-      "review": true,
-      "review_notes": [
-        "module: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
-        "component: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build.",
-        "template: carried over from the pre-reset library \u2014 the prescription has NOT been confirmed against a real part. Verify it in the component editor and delete this note before using it in a design you intend to build."
-      ],
-      "component": {
-        "ref": "user.lens.somelens@^0.1",
-        "resolved": "0.1.0",
-        "vendor": {
-          "name": "",
-          "mpn": "",
-          "url": ""
-        },
-        "efl_mm": 49.043,
-        "wavelengths_um": [],
-        "divergence_deg": 0.0,
-        "beam_diameter_mm": null,
-        "mirror_rect_mm": null,
-        "programmable": null
-      },
-      "template": {
-        "ref": "user.tpl.somelens@^0.1",
-        "id": "user.tpl.somelens",
-        "resolved": "0.1.0",
-        "class": "fixed",
-        "actuatable": false,
-        "carrier": false,
-        "bays": {},
-        "dof": [],
-        "states": []
-      },
-      "assets": {
-        "thumbnail": null,
-        "glb": "/v1/library/assets/templates/user.tpl.somelens/ASS - 2023 - CUBLEND43F-50 - V04.glb",
-        "step": "/v1/library/assets/templates/user.tpl.somelens/ASS - 2023 - CUBLEND43F-50 - V04.stp",
-        "symbol": null,
-        "mesh_frame": "record",
-        "mesh_pose_grid": [
-          "-y",
-          "+x"
-        ],
-        "mesh_pose_offset_mm": null,
-        "mesh_pose_offset_deg": null
-      },
-      "ports": [
-        {
-          "name": "front",
-          "direction": "+z",
-          "position_mm": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "after_surface": null,
-          "coupling": ""
-        },
-        {
-          "name": "back",
-          "direction": "-z",
-          "position_mm": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "after_surface": null,
-          "coupling": ""
-        }
-      ],
-      "ports_frame": "mounted",
       "electronics": null
     },
     {
       "id": "user.cube.stage_manual",
       "version": "0.1.0",
       "kind": "cube_module",
-      "description": "stage_manual in a 1x2 cube (bound)",
+      "description": "stage_manual in a 1x1 cube (bound)",
       "tags": [
         "bound"
       ],
@@ -465,15 +1760,16 @@
       "thumbnail": null,
       "footprint_grid": [
         1,
-        2,
+        1,
         1
       ],
       "price": null,
       "review": false,
       "review_notes": [],
+      "design": null,
       "component": {
         "ref": "user.lens.stage_manual@^0.1",
-        "resolved": "0.1.0",
+        "resolved": "0.1.1",
         "vendor": {
           "name": "",
           "mpn": "",
@@ -484,18 +1780,42 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": 50.0,
+              "conic": 0.0
+            },
+            "material_post": {
+              "type": "Material",
+              "name": "N-BK7"
+            },
+            "thickness": 4,
+            "semi_aperture": 12.7
+          },
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": -50.0,
+              "conic": 0.0
+            },
+            "semi_aperture": 12.7
+          }
+        ],
         "programmable": null
       },
       "template": {
         "ref": "user.tpl.stage_manual@^0.1",
         "id": "user.tpl.stage_manual",
         "resolved": "0.1.0",
-        "class": "fixed",
+        "class": "adaptive",
         "actuatable": false,
         "carrier": false,
-        "bays": {},
-        "dof": [],
-        "states": []
+        "bays": {}
       },
       "assets": {
         "thumbnail": null,
@@ -525,13 +1845,153 @@
           "position_mm": [
             0.0,
             -50.0,
-            0.0
+            4.0
+          ],
+          "after_surface": 1,
+          "coupling": ""
+        }
+      ],
+      "frames": {
+        "optical": [
+          0.0,
+          -50.0,
+          0.0
+        ],
+        "exit": [
+          0.0,
+          -50.0,
+          4.0
+        ]
+      },
+      "ports_frame": "mounted",
+      "insert_rot_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "electronics": null
+    },
+    {
+      "id": "user.cube.stage_motorized",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "stage_motorized in a 2x3 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "lens",
+      "thumbnail": null,
+      "footprint_grid": [
+        2,
+        3,
+        1
+      ],
+      "price": null,
+      "review": false,
+      "review_notes": [],
+      "design": null,
+      "component": {
+        "ref": "user.lens.stage_motorized@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": ""
+        },
+        "efl_mm": 49.043,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": 50.0,
+              "conic": 0.0
+            },
+            "material_post": {
+              "type": "Material",
+              "name": "N-BK7"
+            },
+            "thickness": 4,
+            "semi_aperture": 12.7
+          },
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": -50.0,
+              "conic": 0.0
+            },
+            "semi_aperture": 12.7
+          }
+        ],
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.stage_motorized@^0.1",
+        "id": "user.tpl.stage_motorized",
+        "resolved": "0.1.0",
+        "class": "adaptive",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {}
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.stage_motorized/ASS - 3002 - CASAUTSTGR22 - A.glb",
+        "step": "/v1/library/assets/templates/user.tpl.stage_motorized/ASS - 3002 - CASAUTSTGR22 - A.stp",
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": [
+          "-z",
+          "+y"
+        ],
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            -50.0,
+            0.0,
+            -10.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            -50.0,
+            0.0,
+            -10.0
           ],
           "after_surface": null,
           "coupling": ""
         }
       ],
+      "frames": {
+        "optical": [
+          -50.0,
+          0.0,
+          -10.0
+        ]
+      },
       "ports_frame": "mounted",
+      "insert_rot_xyzw": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
       "electronics": null
     }
   ],
@@ -587,7 +2047,7 @@
           "geometry": {
             "type": "StandardGeometry",
             "radius": 45.095,
-            "conic": 0
+            "conic": 0.0
           },
           "material_post": {
             "type": "Material",
@@ -601,7 +2061,7 @@
           "geometry": {
             "type": "StandardGeometry",
             "radius": -45.095,
-            "conic": 0
+            "conic": 0.0
           },
           "thickness": 2.54,
           "semi_aperture": 11
@@ -611,7 +2071,7 @@
           "geometry": {
             "type": "StandardGeometry",
             "radius": 24.663,
-            "conic": 0
+            "conic": 0.0
           },
           "material_post": {
             "type": "Material",
@@ -625,7 +2085,7 @@
           "geometry": {
             "type": "StandardGeometry",
             "radius": -18.237,
-            "conic": 0
+            "conic": 0.0
           },
           "material_post": {
             "type": "Material",
@@ -638,13 +2098,14 @@
           "type": "standard",
           "geometry": {
             "type": "StandardGeometry",
-            "radius": "1e999",
-            "conic": 0
+            "radius": 1e999,
+            "conic": 0.0
           },
           "thickness": 15.145,
           "semi_aperture": 11
         }
-      ]
+      ],
+      "mirror_elements": null
     },
     {
       "id": "selfdesign.lens.idealobjective_4x",
@@ -710,7 +2171,95 @@
           "thickness": 160,
           "semi_aperture": 4.032
         }
-      ]
+      ],
+      "mirror_elements": null
+    },
+    {
+      "id": "user.beamsplitter.beamsplitter_cube_50",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "beamsplitter",
+      "description": "",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 2,
+      "review": false,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "transmitted",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 1,
+          "coupling": ""
+        },
+        {
+          "name": "reflected",
+          "direction": "-x",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 0,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 1e999,
+            "conic": 0.0
+          },
+          "interaction_model": {
+            "type": "refractive_reflective",
+            "is_reflective": true
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-BK7"
+          },
+          "thickness": 1,
+          "semi_aperture": 12.7
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 1e999,
+            "conic": 0.0
+          },
+          "semi_aperture": 12.7
+        }
+      ],
+      "mirror_elements": null
     },
     {
       "id": "user.detector.camera_basic",
@@ -747,7 +2296,70 @@
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
-      "fragment_surfaces": []
+      "fragment_surfaces": [],
+      "mirror_elements": null
+    },
+    {
+      "id": "user.detector.camera_hik",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "detector",
+      "description": "",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 0,
+      "review": false,
+      "ports": [
+        {
+          "name": "sensor",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [],
+      "mirror_elements": null
+    },
+    {
+      "id": "user.electronics.electronic_galvo",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "electronics",
+      "description": "",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 0,
+      "review": false,
+      "ports": [],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [],
+      "mirror_elements": null
     },
     {
       "id": "user.lens.eyepiece",
@@ -799,8 +2411,8 @@
           "type": "standard",
           "geometry": {
             "type": "StandardGeometry",
-            "radius": 50,
-            "conic": 0
+            "radius": 50.0,
+            "conic": 0.0
           },
           "material_post": {
             "type": "Material",
@@ -813,12 +2425,301 @@
           "type": "standard",
           "geometry": {
             "type": "StandardGeometry",
-            "radius": -50,
-            "conic": 0
+            "radius": -50.0,
+            "conic": 0.0
           },
           "semi_aperture": 12.7
         }
-      ]
+      ],
+      "mirror_elements": null
+    },
+    {
+      "id": "user.lens.lens_100mm_simple",
+      "version": "0.1.1",
+      "kind": "optical_component",
+      "category": "lens",
+      "description": "",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": 97.8272,
+      "n_surfaces": 2,
+      "review": false,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 100.0,
+            "conic": 0.0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "BK7G18"
+          },
+          "thickness": 10,
+          "semi_aperture": 20
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": -100.0,
+            "conic": 0.0
+          },
+          "semi_aperture": 20
+        }
+      ],
+      "mirror_elements": null
+    },
+    {
+      "id": "user.lens.lens_50mm_simple",
+      "version": "0.1.1",
+      "kind": "optical_component",
+      "category": "lens",
+      "description": "",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": 49.7799,
+      "n_surfaces": 2,
+      "review": false,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 50.0,
+            "conic": 0.0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "BK7G18"
+          },
+          "thickness": 10,
+          "semi_aperture": 20
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": -50.0,
+            "conic": 0.0
+          },
+          "semi_aperture": 20
+        }
+      ],
+      "mirror_elements": null
+    },
+    {
+      "id": "user.lens.lens_galvo_160",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "lens",
+      "description": "",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": 160.7984,
+      "n_surfaces": 2,
+      "review": false,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 165.0,
+            "conic": 0.0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-BK7"
+          },
+          "thickness": 7,
+          "semi_aperture": 12.7
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": -165.0,
+            "conic": 0.0
+          },
+          "semi_aperture": 12.7
+        }
+      ],
+      "mirror_elements": null
+    },
+    {
+      "id": "user.lens.lens_galvo_50",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "lens",
+      "description": "",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": 49.3842,
+      "n_surfaces": 2,
+      "review": false,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 50.0,
+            "conic": 0.0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-BK7"
+          },
+          "thickness": 6,
+          "semi_aperture": 12.7
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": -50.0,
+            "conic": 0.0
+          },
+          "semi_aperture": 12.7
+        }
+      ],
+      "mirror_elements": null
     },
     {
       "id": "user.lens.objective_4x",
@@ -870,8 +2771,8 @@
           "type": "standard",
           "geometry": {
             "type": "StandardGeometry",
-            "radius": 30,
-            "conic": 0
+            "radius": 30.0,
+            "conic": 0.0
           },
           "material_post": {
             "type": "Material",
@@ -884,87 +2785,17 @@
           "type": "standard",
           "geometry": {
             "type": "StandardGeometry",
-            "radius": -30,
-            "conic": 0
+            "radius": -30.0,
+            "conic": 0.0
           },
           "semi_aperture": 5
         }
-      ]
-    },
-    {
-      "id": "user.lens.somelens",
-      "version": "0.1.0",
-      "kind": "optical_component",
-      "category": "lens",
-      "description": "",
-      "tags": [
-        "authored"
       ],
-      "vendor": {
-        "name": "",
-        "mpn": "",
-        "url": ""
-      },
-      "efl_mm": 49.043,
-      "n_surfaces": 2,
-      "review": true,
-      "ports": [
-        {
-          "name": "front",
-          "direction": "-z",
-          "position_mm": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "after_surface": null,
-          "coupling": ""
-        },
-        {
-          "name": "back",
-          "direction": "+z",
-          "position_mm": [
-            0.0,
-            0.0,
-            4.0
-          ],
-          "after_surface": 1,
-          "coupling": ""
-        }
-      ],
-      "wavelengths_um": [],
-      "divergence_deg": 0.0,
-      "beam_diameter_mm": null,
-      "symbol": null,
-      "fragment_surfaces": [
-        {
-          "type": "standard",
-          "geometry": {
-            "type": "StandardGeometry",
-            "radius": 50,
-            "conic": 0
-          },
-          "material_post": {
-            "type": "Material",
-            "name": "N-BK7"
-          },
-          "thickness": 4,
-          "semi_aperture": 20
-        },
-        {
-          "type": "standard",
-          "geometry": {
-            "type": "StandardGeometry",
-            "radius": -50,
-            "conic": 0
-          },
-          "semi_aperture": 20
-        }
-      ]
+      "mirror_elements": null
     },
     {
       "id": "user.lens.stage_manual",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "kind": "optical_component",
       "category": "lens",
       "description": "",
@@ -1012,8 +2843,8 @@
           "type": "standard",
           "geometry": {
             "type": "StandardGeometry",
-            "radius": 50,
-            "conic": 0
+            "radius": 50.0,
+            "conic": 0.0
           },
           "material_post": {
             "type": "Material",
@@ -1026,12 +2857,85 @@
           "type": "standard",
           "geometry": {
             "type": "StandardGeometry",
-            "radius": -50,
-            "conic": 0
+            "radius": -50.0,
+            "conic": 0.0
           },
           "semi_aperture": 12.7
         }
-      ]
+      ],
+      "mirror_elements": null
+    },
+    {
+      "id": "user.lens.stage_motorized",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "lens",
+      "description": "",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": 49.043,
+      "n_surfaces": 2,
+      "review": false,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "back",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 50.0,
+            "conic": 0.0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-BK7"
+          },
+          "thickness": 4,
+          "semi_aperture": 12.7
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": -50.0,
+            "conic": 0.0
+          },
+          "semi_aperture": 12.7
+        }
+      ],
+      "mirror_elements": null
     },
     {
       "id": "user.mechanics.cube_base",
@@ -1055,7 +2959,8 @@
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
-      "fragment_surfaces": []
+      "fragment_surfaces": [],
+      "mirror_elements": null
     },
     {
       "id": "user.mechanics.puzzle",
@@ -1079,7 +2984,8 @@
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
-      "fragment_surfaces": []
+      "fragment_surfaces": [],
+      "mirror_elements": null
     },
     {
       "id": "user.mirror.cube_45_fixed",
@@ -1132,19 +3038,172 @@
           "geometry": {
             "type": "StandardGeometry",
             "radius": 1e999,
-            "conic": 0
-          },
-          "material_post": {
-            "type": "Material",
-            "name": "N-BK7"
+            "conic": 0.0
           },
           "interaction_model": {
             "type": "refractive_reflective",
             "is_reflective": true
           },
+          "material_post": {
+            "type": "Material",
+            "name": "N-BK7"
+          },
           "semi_aperture": 12.7
         }
-      ]
+      ],
+      "mirror_elements": null
+    },
+    {
+      "id": "user.mirror.mirror_45",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "mirror",
+      "description": "",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 2,
+      "review": false,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "reflected",
+          "direction": "-x",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 0,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 1e999,
+            "conic": 0.0
+          },
+          "interaction_model": {
+            "type": "refractive_reflective",
+            "is_reflective": true
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-BK7"
+          },
+          "thickness": 6,
+          "semi_aperture": 12.7
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 1e999,
+            "conic": 0.0
+          },
+          "semi_aperture": 12.7
+        }
+      ],
+      "mirror_elements": null
+    },
+    {
+      "id": "user.mirror.mirror_kinematic",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "mirror",
+      "description": "",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 2,
+      "review": false,
+      "ports": [
+        {
+          "name": "front",
+          "direction": "-z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        },
+        {
+          "name": "reflected",
+          "direction": "-x",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": 0,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 1e999,
+            "conic": 0.0
+          },
+          "interaction_model": {
+            "type": "refractive_reflective",
+            "is_reflective": true
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-BK7"
+          },
+          "thickness": 6,
+          "semi_aperture": 12.7
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 1e999,
+            "conic": 0.0
+          },
+          "semi_aperture": 12.7
+        }
+      ],
+      "mirror_elements": null
     },
     {
       "id": "user.sample.sample_holder_fixed",
@@ -1180,7 +3239,126 @@
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
-      "fragment_surfaces": []
+      "fragment_surfaces": [],
+      "mirror_elements": null
+    },
+    {
+      "id": "user.source.laser_520_pointer",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "source",
+      "description": "",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 0,
+      "review": false,
+      "ports": [
+        {
+          "name": "out",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [
+        0.532
+      ],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": 5.0,
+      "symbol": null,
+      "fragment_surfaces": [],
+      "mirror_elements": null
+    },
+    {
+      "id": "user.source.laser_galvo",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "source",
+      "description": "",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 0,
+      "review": false,
+      "ports": [
+        {
+          "name": "out",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": "",
+          "clear_aperture_mm": 5.0
+        }
+      ],
+      "wavelengths_um": [
+        0.532
+      ],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": 5.0,
+      "symbol": null,
+      "fragment_surfaces": [],
+      "mirror_elements": null
+    },
+    {
+      "id": "user.source.led_matrix",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "source",
+      "description": "",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": ""
+      },
+      "efl_mm": null,
+      "n_surfaces": 0,
+      "review": false,
+      "ports": [
+        {
+          "name": "out",
+          "direction": "+z",
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after_surface": null,
+          "coupling": ""
+        }
+      ],
+      "wavelengths_um": [
+        0.532
+      ],
+      "divergence_deg": 1.0,
+      "beam_diameter_mm": 20.0,
+      "symbol": null,
+      "fragment_surfaces": [],
+      "mirror_elements": null
     },
     {
       "id": "user.source.torch",
@@ -1218,7 +3396,8 @@
       "divergence_deg": 10.0,
       "beam_diameter_mm": 20.0,
       "symbol": null,
-      "fragment_surfaces": []
+      "fragment_surfaces": [],
+      "mirror_elements": null
     }
   ],
   "groups": [],
@@ -1235,10 +3414,9 @@
         "resolved": "0.1.0",
         "id": "user.lens.objective_4x"
       },
-      "dof": [],
       "assets": {
         "thumbnail": null,
-        "mesh_frame": "record",
+        "mesh_frame": "",
         "mesh_pose_grid": [
           "-y",
           "+z"
@@ -1286,7 +3464,6 @@
         "resolved": "0.1.0",
         "id": "user.mechanics.puzzle"
       },
-      "dof": [],
       "assets": {
         "thumbnail": null,
         "mesh_frame": "cube",
@@ -1311,10 +3488,9 @@
         "resolved": "0.1.0",
         "id": "user.source.torch"
       },
-      "dof": [],
       "assets": {
         "thumbnail": null,
-        "mesh_frame": "record",
+        "mesh_frame": "",
         "mesh_pose_grid": [
           "+z",
           "+x"
@@ -1342,6 +3518,45 @@
         }
       ],
       "ports_frame": "mounted"
+    }
+  ],
+  "setups": [
+    {
+      "id": "laser-scanning-microscope",
+      "name": "Laser Scanning Microscope",
+      "description": "This is a simple laser scanning microscope with a 2D camera",
+      "tags": [
+        "laser scanning",
+        "confocal"
+      ],
+      "parts": 8,
+      "paths": 1,
+      "thumbnail": "/v1/library/setups/laser-scanning-microscope/preview"
+    },
+    {
+      "id": "michelson-interferometer",
+      "name": "Michelson Interferometer",
+      "description": "This is a simple setup for a michelson interferometer",
+      "tags": [
+        "Inteferometer",
+        "Michelson"
+      ],
+      "parts": 18,
+      "paths": 0,
+      "thumbnail": "/v1/library/setups/michelson-interferometer/preview"
+    },
+    {
+      "id": "simple-microscope",
+      "name": "Simple Microscope",
+      "description": "This is a simple microscope from the electronics box.",
+      "tags": [
+        "Microscope",
+        "infinity",
+        "camera"
+      ],
+      "parts": 23,
+      "paths": 0,
+      "thumbnail": "/v1/library/setups/simple-microscope/preview"
     }
   ]
 }

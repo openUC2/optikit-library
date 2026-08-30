@@ -25,24 +25,4 @@ optics:
       frame: optical
       direction: -x
       after-surface: 0
-  fragment:
-    surfaces:
-      - type: standard
-        geometry:
-          type: StandardGeometry
-          radius: .inf
-          conic: 0
-        material_post:
-          type: Material
-          name: N-BK7
-        thickness: 1
-        interaction_model:
-          type: refractive_reflective
-          is_reflective: true
-        semi_aperture: 12.7
-      - type: standard
-        geometry:
-          type: StandardGeometry
-          radius: .inf
-          conic: 0
-        semi_aperture: 12.7
+  fragment-file: optics.optiland.yml

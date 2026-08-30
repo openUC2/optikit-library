@@ -4,7 +4,7 @@ version: 0.1.0
 class: fixed
 description: mount for user.lens.lens_100mm_simple (bound from ASS - 2022 - CUBLEND40F100 - V04.stp)
 tags:
-  - bound
+- bound
 envelope:
   x-mm: 49.8
   y-mm: 49.8
@@ -20,12 +20,12 @@ optical_ports:
     frame: optical
     direction: +z
 footprint_grid:
-  - 1
-  - 2
-  - 1
+- 1
+- 2
+- 1
 insert-pose:
   rotation:
-    type: grid
+    kind: grid
     grid:
       z: +z
       x: +x

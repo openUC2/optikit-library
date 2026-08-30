@@ -4,20 +4,19 @@ version: 0.1.0
 class: fixed
 description: housing for user.lens.objective_4x (attached from BUY - Objectiv 4x - XXX__mit Gehäuse.stp)
 tags:
-  - bound
+- bound
 # Declared in the frame the mesh-pose grid below produces: the housing runs
 # along z, the optical axis, matching the ports. The old values were the raw
 # file-axis box (long axis x), which the declared grid re-maps.
 envelope:
-  x-mm: 34.989
-  y-mm: 35
-  z-mm: 61
+  x-mm: 35.0
+  y-mm: 34.99
+  z-mm: 61.0
 step: BUY - Objectiv 4x - XXX__mit Gehäuse.stp
 glb: BUY - Objectiv 4x - XXX__mit Gehäuse.glb
-mesh-frame: record
 mesh-pose:
   rotation:
-    type: grid
+    kind: grid
     grid:
       z: -y
       x: +z
@@ -28,10 +27,10 @@ optical_ports:
   back:
     frame: optical
     direction: -z
-footprint_grid: null
+footprint_grid:
 insert-pose:
   rotation:
-    type: grid
+    kind: grid
     grid:
       z: -z
       x: -x

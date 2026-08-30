@@ -4,7 +4,7 @@ version: 0.1.0
 class: fixed
 description: mount for user.mirror.cube_45_fixed (bound from ASS - 2020 - CUBMIR45°TH2 - V04.stp)
 tags:
-  - bound
+- bound
 envelope:
   x-mm: 49.8
   y-mm: 49.8
@@ -21,12 +21,12 @@ optical_ports:
     direction: -y
     after-surface: 0
 footprint_grid:
-  - 1
-  - 1
-  - 1
+- 1
+- 1
+- 1
 insert-pose:
   rotation:
-    type: grid
+    kind: grid
     grid:
       z: -x
       x: +y

@@ -16,12 +16,12 @@ design:
   version: 0.1.0
   description: Straight 4f relay from the lantern to the camera
   tags:
-    - starter
-    - relay
+  - starter
+  - relay
 
 components:
   torch:
-    type: primitive
+    kind: primitive
     category: source
     source:
       wavelengths_um: [0.532]
@@ -43,22 +43,22 @@ components:
       envelope: {x-mm: 50, y-mm: 50, z-mm: 50}
     pose:
       rotation:
-        type: grid
+        kind: grid
 
   somelens:
-    type: primitive
+    kind: primitive
     category: lens
     optics:
       fragment:
         surfaces:
-          - type: standard
-            geometry: {type: StandardGeometry, radius: 50.0, conic: 0.0}
-            material_post: {type: Material, name: N-BK7}
-            thickness: 4.0
-            semi_aperture: 20.0
-          - type: standard
-            geometry: {type: StandardGeometry, radius: -50.0, conic: 0.0}
-            semi_aperture: 20.0
+        - type: standard
+          geometry: {type: StandardGeometry, radius: 50.0, conic: 0.0}
+          material_post: {type: Material, name: N-BK7}
+          thickness: 4.0
+          semi_aperture: 20.0
+        - type: standard
+          geometry: {type: StandardGeometry, radius: -50.0, conic: 0.0}
+          semi_aperture: 20.0
       frames:
         optical: {z-mm: 0.0}
         exit: {z-mm: 4.0}
@@ -70,25 +70,25 @@ components:
       envelope: {x-mm: 50, y-mm: 50, z-mm: 50}
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         anchor: torch
         offset-mm: {z: 40.0}
 
   eyepiece:
-    type: primitive
+    kind: primitive
     category: lens
     optics:
       fragment:
         surfaces:
-          - type: standard
-            geometry: {type: StandardGeometry, radius: 50.0, conic: 0.0}
-            material_post: {type: Material, name: N-BK7}
-            thickness: 4.0
-            semi_aperture: 12.7
-          - type: standard
-            geometry: {type: StandardGeometry, radius: -50.0, conic: 0.0}
-            semi_aperture: 12.7
+        - type: standard
+          geometry: {type: StandardGeometry, radius: 50.0, conic: 0.0}
+          material_post: {type: Material, name: N-BK7}
+          thickness: 4.0
+          semi_aperture: 12.7
+        - type: standard
+          geometry: {type: StandardGeometry, radius: -50.0, conic: 0.0}
+          semi_aperture: 12.7
       frames:
         optical: {z-mm: 0.0}
         exit: {z-mm: 4.0}
@@ -100,7 +100,7 @@ components:
       envelope: {x-mm: 50, y-mm: 50, z-mm: 50}
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         # 4f: one focal length behind somelens' focus, two focal lengths
         # (2 x 49.04) past its exit vertex.
@@ -108,7 +108,7 @@ components:
         offset-mm: {z: 102.1}
 
   camera:
-    type: primitive
+    kind: primitive
     category: detector
     optics:
       frames:
@@ -120,7 +120,7 @@ components:
       envelope: {x-mm: 50, y-mm: 50, z-mm: 50}
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         # The eyepiece back focus: exit vertex + ~49 mm.
         anchor: eyepiece

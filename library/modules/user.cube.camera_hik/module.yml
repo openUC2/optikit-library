@@ -1,0 +1,12 @@
+kind: cube_module
+id: user.cube.camera_hik
+version: 0.1.0
+description: camera_hik in a 3x1 cube (bound)
+tags:
+  - bound
+component: user.detector.camera_hik@^0.1
+template: user.tpl.camera_hik@^0.1
+footprint_grid:
+  - 3
+  - 1
+  - 1

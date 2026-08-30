@@ -5,48 +5,16 @@ class: fixed
 description: mount for user.mirror.galvo_mirror (bound from ASS - 2075 - CUBGLV - V04.stp)
 tags:
   - bound
-dof:
-  - name: tilt_x
-    kind: rotation
-    axis: x
-    range:
-      - -15
-      - 15
-    resolution: 0.1
-    unit: deg
-    actuatable: false
-    surface: 0
-  - name: tilt_y
-    kind: rotation
-    axis: y
-    range:
-      - -15
-      - 15
-    resolution: 0.1
-    unit: deg
-    actuatable: false
-    surface: 1
-kinematics:
-  - dof: tilt_x
-    nodes:
-      - PRT - TMP - Mirror Galvo Moving:1
-    motion: rotation
-    axis: +x
-  - dof: tilt_y
-    nodes:
-      - PRT - TMP - Mirror Galvo Moving:2
-    motion: rotation
-    axis: +y
 envelope:
-  x-mm: 83.749
-  y-mm: 64.207
+  x-mm: 83.723
+  y-mm: 85.23
   z-mm: 70.55
 step: ASS - 2075 - CUBGLV - V04.stp
 glb: ASS - 2075 - CUBGLV - V04.glb
 mesh-frame: record
 mesh-pose:
   rotation:
-    type: grid
+    kind: grid
     grid:
       z: -z
       x: +x
@@ -68,7 +36,7 @@ footprint_grid:
   - 1
 insert-pose:
   rotation:
-    type: grid
+    kind: grid
     grid:
       z: +z
       x: +x

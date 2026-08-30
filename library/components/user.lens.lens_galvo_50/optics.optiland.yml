@@ -1,0 +1,130 @@
+# GENERATED from user.lens.lens_galvo_50's `optics.fragment` — the prescription, in
+# Optiland's own dict shape, loadable directly with `Optic.from_dict`.
+#
+# The SURFACES are authoritative: they are the record's optical truth,
+# shipped verbatim. The aperture, fields and wavelengths are PLACEHOLDERS so
+# that this file loads on its own — simulation context belongs to the design
+# (`paths.<name>.simulation`), which overrides all of it at compile time.
+#
+# Frames and ports stay on the record: they position this prescription in
+# the cube and say where light enters and leaves (DSN, not Optiland).
+version: 1.0
+name: user.lens.lens_galvo_50
+aperture:
+  type: EPD
+  value: 10.0
+fields:
+  fields:
+    - x: 0.0
+      y: 0.0
+      vx: 0.0
+      vy: 0.0
+      weight: 1.0
+  telecentric: false
+  field_definition:
+    field_type: AngleField
+wavelengths:
+  polarization: ignore
+  wavelengths:
+    - value: 0.532
+      unit: um
+      is_primary: true
+      weight: 1.0
+apodization:
+pickups: []
+solves:
+  solves: []
+surface_group:
+  surfaces:
+    - type: ObjectSurface
+      geometry:
+        type: Plane
+        cs:
+          x: 0.0
+          y: 0.0
+          z: -1000000000.0
+          rx: 0.0
+          ry: 0.0
+          rz: 0.0
+          reference_cs:
+        radius: .inf
+      material_post:
+        type: IdealMaterial
+        index: 1.0
+        absorb_coeff: 0.0
+      comment: 'object: at infinity (placeholder — the design decides)'
+    - type: Surface
+      geometry:
+        type: StandardGeometry
+        radius: 50.0
+        conic: 0.0
+        cs:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+          rx: 0.0
+          ry: 0.0
+          rz: 0.0
+          reference_cs:
+      material_post:
+        type: Material
+        name: N-BK7
+      thickness: 6
+      semi_aperture: 12.7
+      interaction_model:
+        type: RefractiveReflectiveModel
+        is_reflective: false
+        coating:
+        bsdf:
+      is_stop: false
+      aperture:
+    - type: Surface
+      geometry:
+        type: StandardGeometry
+        radius: -50.0
+        conic: 0.0
+        cs:
+          x: 0.0
+          y: 0.0
+          z: 6.0
+          rx: 0.0
+          ry: 0.0
+          rz: 0.0
+          reference_cs:
+      semi_aperture: 12.7
+      material_post:
+        type: IdealMaterial
+        propagation_model:
+          class: HomogeneousPropagation
+        index: 1.0
+        absorp: 0.0
+      interaction_model:
+        type: RefractiveReflectiveModel
+        is_reflective: false
+        coating:
+        bsdf:
+      is_stop: false
+      aperture:
+    - type: Surface
+      thickness: 0.0
+      geometry:
+        type: Plane
+        cs:
+          x: 0.0
+          y: 0.0
+          z: 55.3842
+          rx: 0.0
+          ry: 0.0
+          rz: 0.0
+          reference_cs:
+        radius: .inf
+      material_post:
+        type: IdealMaterial
+        index: 1.0
+        absorb_coeff: 0.0
+      is_stop: false
+      aperture:
+      comment: "image: at the record's EFL (placeholder)"
+      interaction_model:
+        type: RefractiveReflectiveModel
+        is_reflective: false

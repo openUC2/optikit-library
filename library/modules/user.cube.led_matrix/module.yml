@@ -1,0 +1,12 @@
+kind: cube_module
+id: user.cube.led_matrix
+version: 0.1.0
+description: led_matrix in a 1x1 cube (bound)
+tags:
+  - bound
+component: user.source.led_matrix@^0.1
+template: user.tpl.led_matrix@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1

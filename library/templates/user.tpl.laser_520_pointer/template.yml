@@ -4,7 +4,7 @@ version: 0.1.0
 class: fixed
 description: mount for user.source.laser_520_pointer (bound from ASS - 2018 - CUBLAS520 - V04 - A.stp)
 tags:
-  - bound
+- bound
 envelope:
   x-mm: 49.8
   y-mm: 87.5
@@ -17,12 +17,12 @@ optical_ports:
     frame: optical
     direction: -y
 footprint_grid:
-  - 1
-  - 2
-  - 1
+- 1
+- 2
+- 1
 insert-pose:
   rotation:
-    type: grid
+    kind: grid
     grid:
       z: -y
       x: +x

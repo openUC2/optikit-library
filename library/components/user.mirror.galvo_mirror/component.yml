@@ -1,6 +1,6 @@
 kind: optical_component
 id: user.mirror.galvo_mirror
-version: 0.1.0
+version: 0.1.1
 category: mirror
 description: ""
 tags:
@@ -17,16 +17,16 @@ optics:
       z-mm: 0
       rotation:
         - 0
-        - -0.92388
-        - 0
         - 0.382683
+        - 0
+        - 0.92388
     pivot_y:
       z-mm: 7
       rotation:
-        - -0.46194
-        - 0.191342
-        - 0.732538
-        - -0.46194
+        - -0.653281
+        - -0.270598
+        - -0.653281
+        - -0.270598
   ports:
     front:
       frame: pivot_x
@@ -50,7 +50,7 @@ optics:
         interaction_model:
           type: refractive_reflective
           is_reflective: true
-        semi_aperture: 5
+        semi_aperture: 12.7
       - type: standard
         geometry:
           type: StandardGeometry
@@ -59,4 +59,5 @@ optics:
         interaction_model:
           type: refractive_reflective
           is_reflective: true
-        semi_aperture: 5
+        semi_aperture: 12.7
+mount_angle_deg: 45

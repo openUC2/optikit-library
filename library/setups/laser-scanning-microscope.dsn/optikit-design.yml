@@ -3,11 +3,11 @@ design:
   name: Laser Scanning Microscope
   description: This is a simple laser scanning microscope with a 2D camera
   tags:
-    - laser scanning
-    - confocal
+  - laser scanning
+  - confocal
 components:
   galvo-mirror:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.cube.galvo_mirror
@@ -15,25 +15,25 @@ components:
     optics:
       fragment:
         surfaces:
-          - type: standard
-            geometry:
-              type: StandardGeometry
-              radius: .inf
-              conic: 0
-            thickness: 6
-            interaction_model:
-              type: refractive_reflective
-              is_reflective: true
-            semi_aperture: 5
-          - type: standard
-            geometry:
-              type: StandardGeometry
-              radius: .inf
-              conic: 0
-            interaction_model:
-              type: refractive_reflective
-              is_reflective: true
-            semi_aperture: 5
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: .inf
+            conic: 0
+          thickness: 6
+          interaction_model:
+            type: refractive_reflective
+            is_reflective: true
+          semi_aperture: 5
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: .inf
+            conic: 0
+          interaction_model:
+            type: refractive_reflective
+            is_reflective: true
+          semi_aperture: 5
       frames:
         optical:
           x-mm: 0
@@ -57,31 +57,14 @@ components:
           after-surface: 1
     pose:
       rotation:
-        type: grid
+        kind: grid
         grid:
           x: -y
       translation:
         offset-grid:
           y: 1
-    dof:
-      - name: tilt_x
-        kind: rotation
-        axis: x
-        range:
-          - -15
-          - 15
-        unit: deg
-        surface: 0
-      - name: tilt_y
-        kind: rotation
-        axis: y
-        range:
-          - -15
-          - 15
-        unit: deg
-        surface: 1
   laser-galvo:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.cube.laser_galvo
@@ -90,8 +73,8 @@ components:
       emission:
         port: out
         spectrum:
-          - wavelength_um: 0.532
-            weight: 1
+        - wavelength_um: 0.532
+          weight: 1
         spatial:
           type: disc
           radius_mm: 2.5
@@ -114,7 +97,7 @@ components:
           direction: +y
     pose:
       rotation:
-        type: grid
+        kind: grid
         grid:
           x: -y
       translation:
@@ -123,10 +106,10 @@ components:
           y: 1
     source:
       wavelengths_um:
-        - 0.532
+      - 0.532
       beam_diameter_mm: 5
   lens-galvo-50:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.cube.lens_galvo_50
@@ -134,22 +117,22 @@ components:
     optics:
       fragment:
         surfaces:
-          - type: standard
-            geometry:
-              type: StandardGeometry
-              radius: 50
-              conic: 0
-            material_post:
-              type: Material
-              name: N-BK7
-            thickness: 6
-            semi_aperture: 12.7
-          - type: standard
-            geometry:
-              type: StandardGeometry
-              radius: -50
-              conic: 0
-            semi_aperture: 12.7
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: 50
+            conic: 0
+          material_post:
+            type: Material
+            name: N-BK7
+          thickness: 6
+          semi_aperture: 12.7
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: -50
+            conic: 0
+          semi_aperture: 12.7
       frames:
         optical:
           x-mm: 0
@@ -165,14 +148,14 @@ components:
           after-surface: 1
     pose:
       rotation:
-        type: grid
+        kind: grid
         grid:
           x: -x
       translation:
         offset-grid:
           y: 2
   lens-galvo-160:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.cube.lens_galvo_160
@@ -180,22 +163,22 @@ components:
     optics:
       fragment:
         surfaces:
-          - type: standard
-            geometry:
-              type: StandardGeometry
-              radius: 165
-              conic: 0
-            material_post:
-              type: Material
-              name: N-BK7
-            thickness: 7
-            semi_aperture: 12.7
-          - type: standard
-            geometry:
-              type: StandardGeometry
-              radius: -165
-              conic: 0
-            semi_aperture: 12.7
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: 165
+            conic: 0
+          material_post:
+            type: Material
+            name: N-BK7
+          thickness: 7
+          semi_aperture: 12.7
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: -165
+            conic: 0
+          semi_aperture: 12.7
       frames:
         optical:
           x-mm: 0
@@ -219,12 +202,12 @@ components:
           after-surface: 1
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           y: 6
   beamsplitter-cube-50:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.cube.beamsplitter_cube_50
@@ -232,25 +215,25 @@ components:
     optics:
       fragment:
         surfaces:
-          - type: standard
-            geometry:
-              type: StandardGeometry
-              radius: .inf
-              conic: 0
-            material_post:
-              type: Material
-              name: N-BK7
-            thickness: 1
-            interaction_model:
-              type: refractive_reflective
-              is_reflective: true
-            semi_aperture: 12.7
-          - type: standard
-            geometry:
-              type: StandardGeometry
-              radius: .inf
-              conic: 0
-            semi_aperture: 12.7
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: .inf
+            conic: 0
+          material_post:
+            type: Material
+            name: N-BK7
+          thickness: 1
+          interaction_model:
+            type: refractive_reflective
+            is_reflective: true
+          semi_aperture: 12.7
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: .inf
+            conic: 0
+          semi_aperture: 12.7
       frames:
         optical:
           x-mm: 0
@@ -270,7 +253,7 @@ components:
           after-surface: 0
     pose:
       rotation:
-        type: grid
+        kind: grid
         grid:
           x: +y
       translation:
@@ -278,11 +261,11 @@ components:
           y: 8
     mounting:
       rotation:
-        type: grid
+        kind: grid
         grid:
           z: -y
   objective-4x:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.lens.objective_4x
@@ -290,22 +273,22 @@ components:
     optics:
       fragment:
         surfaces:
-          - type: standard
-            geometry:
-              type: StandardGeometry
-              radius: 30
-              conic: 0
-            material_post:
-              type: Material
-              name: N-BK7
-            thickness: 4
-            semi_aperture: 5
-          - type: standard
-            geometry:
-              type: StandardGeometry
-              radius: -30
-              conic: 0
-            semi_aperture: 5
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: 30
+            conic: 0
+          material_post:
+            type: Material
+            name: N-BK7
+          thickness: 4
+          semi_aperture: 5
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: -30
+            conic: 0
+          semi_aperture: 5
       frames:
         optical:
           x-mm: 0
@@ -321,13 +304,13 @@ components:
           after-surface: 1
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           y: 8
           z: 2
   camera-basic:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.cube.camera_basic
@@ -344,19 +327,19 @@ components:
           direction: -z
     pose:
       rotation:
-        type: grid
+        kind: grid
       translation:
         offset-grid:
           y: 8
           z: -1
     mounting:
       rotation:
-        type: grid
+        kind: grid
         grid:
           z: -z
           x: -x
   sample-holder-fixed:
-    type: primitive
+    kind: primitive
     primitive:
       static-models:
         gltf: user.cube.sample_holder_fixed
@@ -374,7 +357,7 @@ components:
           direction: +z
     pose:
       rotation:
-        type: grid
+        kind: grid
         grid:
           x: -x
       translation:
@@ -384,14 +367,11 @@ components:
 paths:
   from-laser-galvo:
     chain:
-      - laser-galvo.out
-      - galvo-mirror.reflected>front
-      - lens-galvo-50.front>back
-      - lens-galvo-160.front>back
-      - beamsplitter-cube-50.reflected>front
-      - objective-4x.back>front
-      - camera-basic.sensor
-instantiation:
-  dof_values:
-    galvo-mirror.tilt_x: -13.4
-    galvo-mirror.tilt_y: -3.7
+    - laser-galvo.out
+    - galvo-mirror.reflected>front
+    - lens-galvo-50.front>back
+    - lens-galvo-160.front>back
+    - beamsplitter-cube-50.reflected>front
+    - objective-4x.back>front
+    - camera-basic.sensor
+instantiation: {}

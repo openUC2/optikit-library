@@ -4,7 +4,7 @@ version: 0.1.0
 class: fixed
 description: mount for user.beamsplitter.beamsplitter_cube_50 (bound from ASS - 2011 - CUBSPLCUB - V04 - A.stp)
 tags:
-  - bound
+- bound
 envelope:
   x-mm: 49.8
   y-mm: 49.8
@@ -25,12 +25,12 @@ optical_ports:
     direction: -x
     after-surface: 0
 footprint_grid:
-  - 1
-  - 1
-  - 1
+- 1
+- 1
+- 1
 insert-pose:
   rotation:
-    type: grid
+    kind: grid
     grid:
       z: -y
       x: +x

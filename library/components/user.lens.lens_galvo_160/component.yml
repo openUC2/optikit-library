@@ -20,22 +20,5 @@ optics:
     back:
       frame: optical
       direction: +z
-  fragment:
-    surfaces:
-      - type: standard
-        geometry:
-          type: StandardGeometry
-          radius: 165
-          conic: 0
-        material_post:
-          type: Material
-          name: N-BK7
-        thickness: 7
-        semi_aperture: 12.7
-      - type: standard
-        geometry:
-          type: StandardGeometry
-          radius: -165
-          conic: 0
-        semi_aperture: 12.7
+  fragment-file: optics.optiland.yml
 effective_focal_length_mm: 160.7984

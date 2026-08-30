@@ -4,7 +4,7 @@ version: 0.1.0
 class: fixed
 description: mount for user.mechanics.cube_base (bound from ASS - 2000 - CUB - V04.stp)
 tags:
-  - bound
+- bound
 envelope:
   x-mm: 49.8
   y-mm: 49.8
@@ -14,12 +14,12 @@ glb: ASS - 2000 - CUB - V04.glb
 mesh-frame: cube
 optical_ports: {}
 footprint_grid:
-  - 1
-  - 1
-  - 1
+- 1
+- 1
+- 1
 insert-pose:
   rotation:
-    type: grid
+    kind: grid
     grid:
       z: +z
       x: +x

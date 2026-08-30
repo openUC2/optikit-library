@@ -4,17 +4,16 @@ version: 0.1.0
 class: fixed
 description: mount for user.source.laser_galvo (bound from ASS - 2081 - CUBLAS650ECC - V04.stp)
 tags:
-  - bound
+- bound
 envelope:
   x-mm: 49.8
-  y-mm: 53.8
-  z-mm: 73.5
+  y-mm: 73.5
+  z-mm: 53.8
 step: ASS - 2081 - CUBLAS650ECC - V04.stp
 glb: ASS - 2081 - CUBLAS650ECC - V04.glb
-mesh-frame: record
 mesh-pose:
   rotation:
-    type: grid
+    kind: grid
     grid:
       z: +z
       x: -x
@@ -23,12 +22,12 @@ optical_ports:
     frame: optical
     direction: +y
 footprint_grid:
-  - 1
-  - 2
-  - 1
+- 1
+- 2
+- 1
 insert-pose:
   rotation:
-    type: grid
+    kind: grid
     grid:
       z: +y
       x: +x

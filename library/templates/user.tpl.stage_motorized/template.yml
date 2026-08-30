@@ -1,0 +1,48 @@
+kind: mechanical_template
+id: user.tpl.stage_motorized
+version: 0.1.0
+# adaptive, not fixed: mechanical dz + kinematics (see user.tpl.stage_manual —
+# same E_T1_HAS_DOF fix, 2026-08-28).
+class: adaptive
+description: mount for user.lens.stage_motorized (bound from ASS - 3002 - CASAUTSTGR22 - A.stp)
+tags:
+- bound
+envelope:
+  x-mm: 123.25
+  y-mm: 50.0
+  z-mm: 115.7
+step: ASS - 3002 - CASAUTSTGR22 - A.stp
+glb: ASS - 3002 - CASAUTSTGR22 - A.glb
+mesh-pose:
+  rotation:
+    kind: grid
+    grid:
+      z: -z
+      x: +y
+optical_ports:
+  front:
+    frame: optical
+    direction: -z
+  back:
+    frame: optical
+    direction: +z
+footprint_grid:
+- 3
+- 1
+- 2
+insert-pose:
+  rotation:
+    kind: grid
+    grid:
+      z: +z
+      x: -x
+  translation:
+    offset-mm:
+      x: -50
+      z: -10
+provenance: whole-module
+frames:
+  optical:
+    x-mm: -50
+    y-mm: 0
+    z-mm: -10
