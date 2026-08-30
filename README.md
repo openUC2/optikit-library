@@ -4,12 +4,57 @@ The parts openUC2 ships. Mount it in the configurator, or point a local
 optikit-core service at it.
 
 ```
-library/     the parts — component / template / module trios, plus groups
-  archive/   retired records, kept so a design that names one can be repaired
-designs/     reference instruments
-setups/      complete builds: a design + the records it needs + docs
-library-index.json   what the configurator fetches (CI rebuilds it)
+library/
+  components/    optical prescriptions — frames, ports, surfaces (F2)
+  templates/     mechanical housings/inserts — mesh, envelope, mounting (F3)
+  modules/       one placeable cube: binds a component (or subdesign) + template
+  subdesigns/    multi-part optics as a nested design (galvo pairs, stages)
+  groups/        multi-cube arrangements placed as one rigid unit
+  archive/       retired records, kept so a design that names one can be repaired
+  setups/        designs saved from the running app ("save setup" in the editor)
+  dist/index.json   `library build`'s local output — gitignored, not fetched
+designs/     hand-authored reference instruments
+setups/      curated complete builds, each with a preview image
+library-index.json   the committed index — what mounting this repo fetches
+             (CI regenerates it from library/ on every push to main)
 ```
+
+## Relation to the Go DSN model
+
+The wire format is Go's `.dsn` (`openUC2/optikit`, `optikit-design.yml`) — see
+[DSN-CONTRACT.md](https://github.com/openUC2/optikit-v2/blob/main/DOCS/DSN-CONTRACT.md)
+in optikit-core for the normative spec. Two kinds of thing live here:
+
+- **`designs/`, `setups/`, and `library/setups/` are literal Go documents** —
+  an `optikit-design.yml` with `components:`, `inputs:`, `paths:`, nothing
+  library-specific. Open one in Go's own tooling; it needs nothing from us.
+- **`library/{components,templates,modules,subdesigns,groups}/` are our
+  catalog layer on top** — versioned, addressable records
+  (`namespace.category.slug@version`) that a design's `components.<id>` can
+  reference instead of inlining. Each `kind:` maps onto the model differently:
+  - `optical_component` — the `optics:` block a placed `kind: primitive`
+    component carries (ports, frames, surfaces). Pure prescription, no mesh.
+  - `mechanical_template` — the mesh + the F2→F3 binding (`insert-pose`,
+    `mesh-pose`, `footprint_grid`) that seats a component's optics inside a
+    cube. Our extension; Go has no separate mounting record.
+  - `cube_module` — the one thing the palette places. Resolves to a single
+    Go component: `kind: primitive` (mesh + inlined `optics:`) for a
+    component-backed module, or `kind: design` (a nested-design reference)
+    for a subdesign-backed one.
+  - `cube_subdesign` — a `cube_module`'s `design:` target when its optics
+    can't be one record (e.g. a galvo's two independently-tilting mirrors).
+    Its `optikit-design.yml` **is** an ordinary nested Go design; the
+    `subdesign.yml` wrapper only adds the library id/version and,
+    optionally, which `optical_component` it was decomposed from
+    (`library decompose`, so the compact record's editors still resolve it).
+  - `cube_group` — several modules placed together, sharing one transform.
+    Go has no equivalent; it flattens to plain sibling components on export.
+
+`library-index.json` is **not** DSN — it is our derived, read-only catalog:
+components, templates and modules resolved into flat entries (ports folded
+into the mounted frame, a subdesign's declared inputs and per-mirror
+motions precomputed) so the configurator can populate the palette without
+re-deriving any of it.
 
 # Why? 
 
