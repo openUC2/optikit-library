@@ -1,0 +1,12 @@
+kind: cube_subdesign
+id: user.subdesign.my_next_xyz_stage_2
+version: 0.1.0
+description: user.sample.my_next_xyz_stage_2 decomposed — sliders ride inputs dz, dx
+component: user.sample.my_next_xyz_stage_2@^0.1
+tags:
+  - subdesign
+  - decomposed
+review:
+  - "optics-only children: the module's template still renders the monolithic mesh, so the beam moves
+    while the CAD does not — split the mesh with `optikit-core library decompose` when the moving subtrees
+    should follow"

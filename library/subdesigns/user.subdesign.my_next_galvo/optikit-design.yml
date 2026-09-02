@@ -1,0 +1,88 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  name: my-next-galvo
+  version: 0.1.0
+  description: user.mirror.my_next_galvo, decomposed (per-mirror tilts as inputs)
+inputs:
+  tilt_x:
+    kind: float64
+    units: deg
+    min: -15.0
+    max: 15.0
+    resolution: 0.1
+  tilt_y:
+    kind: float64
+    units: deg
+    min: -15.0
+    max: 15.0
+    resolution: 0.1
+components:
+  mirror-0:
+    kind: primitive
+    category: mirror
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0
+            interaction_model:
+              type: refractive_reflective
+              is_reflective: true
+            semi_aperture: 5
+      frames:
+        optical:
+          x-mm: 0.0
+          y-mm: 0.0
+          z-mm: 0.0
+      ports:
+        front:
+          frame: optical
+          direction: -x
+        reflected:
+          frame: optical
+          direction: +z
+          after-surface: 0
+    pose:
+      rotation:
+        kind: uc2
+        offset-deg:
+          y: ~ inputs['tilt_x'].value
+  mirror-1:
+    kind: primitive
+    category: mirror
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0
+            interaction_model:
+              type: refractive_reflective
+              is_reflective: true
+            semi_aperture: 5
+      frames:
+        optical:
+          x-mm: 0.0
+          y-mm: 0.0
+          z-mm: 0.0
+      ports:
+        front:
+          frame: optical
+          direction: -z
+        reflected:
+          frame: optical
+          direction: -y
+          after-surface: 0
+    pose:
+      translation:
+        offset-mm:
+          z: 7.0
+      rotation:
+        kind: uc2
+        offset-deg:
+          x: ~ inputs['tilt_y'].value

@@ -1,0 +1,13 @@
+kind: cube_subdesign
+id: user.subdesign.ac254_050_a_ml_on_stage_motorized
+version: 0.1.0
+description: thorlabs.lens.ac254-050-a-ml on user.cube.stage_motorized — the beam follows input z 
+  along +z
+component: thorlabs.lens.ac254-050-a-ml@^0.1
+tags:
+  - subdesign
+  - composed
+review:
+  - "optics-only child: the module renders the CARRIER's template mesh, so the beam rides the axis while
+    the CAD platform and the optic's own housing do not travel — a merged mesh is a follow-up CAD task,
+    not a schema one"

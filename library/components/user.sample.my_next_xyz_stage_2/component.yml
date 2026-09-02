@@ -1,0 +1,20 @@
+kind: optical_component
+id: user.sample.my_next_xyz_stage_2
+version: 0.1.0
+category: sample
+description: ""
+tags:
+  - authored
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  ports:
+    plane:
+      frame: optical
+      direction: +z
+  passthrough: true

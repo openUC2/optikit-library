@@ -1,0 +1,69 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  name: ac254-050-a-ml-on-stage-motorized
+  version: 0.1.0
+  description: thorlabs.lens.ac254-050-a-ml riding user.cube.stage_motorized's z axis
+inputs:
+  z:
+    kind: float64
+    units: mm
+    min: -5.0
+    max: 5.0
+components:
+  ac254-050-a-ml:
+    kind: primitive
+    category: lens
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: 33.34000000000005
+              conic: 0.0
+            material_post:
+              type: Material
+              name: N-BAF10
+            thickness: 9.0
+            is_stop: true
+            semi_aperture: 12.7
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: -22.27999999999998
+              conic: 0.0
+            material_post:
+              type: Material
+              name: N-SF10
+            thickness: 2.5
+            semi_aperture: 12.7
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: -291.07000000000244
+              conic: 0.0
+            semi_aperture: 12.7
+      frames:
+        optical: {}
+        exit:
+          z-mm: 11.5
+        mount:
+          z-mm: 6.868213
+      ports:
+        front:
+          frame: optical
+          direction: -z
+        back:
+          frame: exit
+          direction: +z
+          after-surface: 2
+    pose:
+      translation:
+        offset-mm:
+          x: -50.0
+          z: ~ inputs['z'].value - 20
+      rotation:
+        kind: grid
+        grid:
+          z: +x
+          x: -z

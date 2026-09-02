@@ -1,0 +1,41 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  name: my-next-xyz-stage-2
+  version: 0.1.0
+  description: user.sample.my_next_xyz_stage_2, decomposed (motion as inputs)
+inputs:
+  dz:
+    kind: float64
+    units: mm
+    min: -5.0
+    max: 5.0
+    resolution: 0.05
+  dx:
+    kind: float64
+    units: mm
+    min: -5.0
+    max: 5.0
+    resolution: 0.05
+components:
+  my-next-xyz-stage-2:
+    kind: primitive
+    category: sample
+    optics:
+      frames:
+        optical: {}
+      ports:
+        plane:
+          frame: optical
+          direction: +z
+      passthrough: true
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +z
+          x: +x
+      translation:
+        offset-mm:
+          x: ~ 0.36 + inputs['dx'].value
+          y: 1.17
+          z: ~ 64.88 + inputs['dz'].value
