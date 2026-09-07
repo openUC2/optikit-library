@@ -212,16 +212,11 @@ components:
       rotation:
         kind: grid
         grid:
-          x: -x
+          x: +y
       translation:
         offset-grid:
           x: 2
           y: -2
-    mounting:
-      rotation:
-        kind: grid
-        grid:
-          x: -y
   cube-base:
     kind: primitive
     primitive:

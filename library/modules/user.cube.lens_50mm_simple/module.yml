@@ -1,12 +1,13 @@
 kind: cube_module
 id: user.cube.lens_50mm_simple
-version: 0.1.0
+version: 0.2.0
 description: lens_50mm_simple in a 1x2 cube (bound)
 tags:
   - bound
-component: user.lens.lens_50mm_simple@^0.1
+  - subdesign
 template: user.tpl.lens_50mm_simple@^0.1
 footprint_grid:
   - 1
   - 2
   - 1
+design: user.subdesign.lens_50mm_simple@^0.1

@@ -1,0 +1,9 @@
+kind: cube_subdesign
+id: user.subdesign.cube_45_fixed
+version: 0.1.0
+description: 'user.mirror.cube_45_fixed, seats as variants: seat-pz-px, seat-mx-pz, seat-py-px, seat-my-mx'
+component: user.mirror.cube_45_fixed@^0.1
+tags:
+  - subdesign
+  - seats
+review: []

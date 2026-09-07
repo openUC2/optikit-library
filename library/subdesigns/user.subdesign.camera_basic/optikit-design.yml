@@ -1,0 +1,32 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  name: camera-basic
+  version: 0.1.0
+  description: user.detector.camera_basic in a cube — 2 seat(s)
+inputs: {}
+components:
+  camera-basic:
+    kind: primitive
+    category: detector
+    optics:
+      frames:
+        optical: {}
+      ports:
+        sensor:
+          frame: optical
+          direction: -z
+          roles:
+            - sensor
+variants:
+  seat-pz-px:
+    description: as authored — the insert's home seat
+  seat-mz-mx:
+    description: insert seated -z / -x
+    components:
+      camera-basic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -z
+              x: -x

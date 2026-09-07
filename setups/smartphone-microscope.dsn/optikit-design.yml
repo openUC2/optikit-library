@@ -168,11 +168,8 @@ components:
         grid:
           x: -y
       translation: {}
-    mounting:
-      rotation:
-        kind: grid
-        grid:
-          z: +y
+    instantiation:
+      variant: seat-py-px
   cube-45-fixed-2:
     kind: primitive
     primitive:
@@ -215,12 +212,8 @@ components:
       translation:
         offset-grid:
           y: -2
-    mounting:
-      rotation:
-        kind: grid
-        grid:
-          z: -y
-          x: -x
+    instantiation:
+      variant: seat-my-mx
   cube-base-2:
     kind: primitive
     primitive:

@@ -1,0 +1,39 @@
+kind: mechanical_template
+id: user.tpl.thorlabslaser
+version: 0.1.0
+class: fixed
+description: housing for user.source.thorlabslaser (attached from L976SEV1-Step.step)
+tags:
+  - bound
+envelope:
+  x-mm: 8.779
+  y-mm: 8.852
+  z-mm: 16.45
+step: L976SEV1-Step.step
+glb: L976SEV1-Step.glb
+mesh-frame: cube
+mesh-pose:
+  rotation:
+    kind: grid
+    grid:
+      z: +x
+      x: -z
+optical_ports:
+  out:
+    frame: optical
+    direction: +x
+footprint_grid: null
+insert-pose:
+  rotation:
+    kind: grid
+    grid:
+      z: +x
+      x: -y
+  translation:
+    offset-mm: {}
+component: user.source.thorlabslaser@^0.1
+frames:
+  optical:
+    x-mm: 0
+    y-mm: 0
+    z-mm: 0

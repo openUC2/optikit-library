@@ -1,12 +1,13 @@
 kind: cube_module
 id: user.cube.cube_45_fixed
-version: 0.1.0
+version: 0.2.0
 description: cube_45_fixed in a 1x1 cube (bound)
 tags:
   - bound
-component: user.mirror.cube_45_fixed@^0.1
+  - subdesign
 template: user.tpl.cube_45_fixed@^0.1
 footprint_grid:
   - 1
   - 1
   - 1
+design: user.subdesign.cube_45_fixed@^0.1

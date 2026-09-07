@@ -1,0 +1,12 @@
+kind: cube_module
+id: thorlabs.cube.ac254_030_a_holder
+version: 0.1.0
+description: thorlabs.lens.ac254-030-a in a generated holder
+tags:
+  - generated
+design: thorlabs.subdesign.ac254_030_a_holder@^0.1
+template: user.tpl.cube_base@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1

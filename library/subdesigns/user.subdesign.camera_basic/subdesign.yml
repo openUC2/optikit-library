@@ -1,0 +1,9 @@
+kind: cube_subdesign
+id: user.subdesign.camera_basic
+version: 0.1.0
+description: 'user.detector.camera_basic, seats as variants: seat-pz-px, seat-mz-mx'
+component: user.detector.camera_basic@^0.1
+tags:
+  - subdesign
+  - seats
+review: []

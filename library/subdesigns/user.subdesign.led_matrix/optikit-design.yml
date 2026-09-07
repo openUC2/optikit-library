@@ -1,0 +1,41 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  name: led-matrix
+  version: 0.1.0
+  description: user.source.led_matrix in a cube — 2 seat(s)
+inputs: {}
+components:
+  led-matrix:
+    kind: primitive
+    category: source
+    optics:
+      frames:
+        optical: {}
+      ports:
+        out:
+          frame: optical
+          direction: +z
+    source:
+      wavelengths_um:
+        - 0.532
+      divergence_deg: 1.0
+      beam_diameter_mm: 20.0
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +z
+          x: +x
+variants:
+  seat-pz-px:
+    description: as authored — the insert's home seat
+  seat-mz-px:
+    description: insert seated -z / +x
+    components:
+      led-matrix:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -z
+              x: +x

@@ -1,0 +1,65 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  name: beamsplitter-cube-50
+  version: 0.1.0
+  description: user.beamsplitter.beamsplitter_cube_50 in a cube — 2 seat(s)
+inputs: {}
+components:
+  beamsplitter-cube-50:
+    kind: primitive
+    category: beamsplitter
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0.0
+            interaction_model:
+              type: refractive_reflective
+              is_reflective: true
+            material_post:
+              type: Material
+              name: N-BK7
+            thickness: 1
+            semi_aperture: 12.7
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0.0
+            semi_aperture: 12.7
+      frames:
+        optical: {}
+      ports:
+        front:
+          frame: optical
+          direction: -z
+        transmitted:
+          frame: optical
+          direction: +z
+          after-surface: 1
+        reflected:
+          frame: optical
+          direction: -x
+          after-surface: 0
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: -y
+          x: +x
+variants:
+  seat-pz-px:
+    description: as authored — the insert's home seat
+  seat-my-px:
+    description: insert seated -y / +x
+    components:
+      beamsplitter-cube-50:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -z
+              x: +x

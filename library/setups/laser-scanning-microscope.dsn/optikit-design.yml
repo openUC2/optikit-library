@@ -259,11 +259,8 @@ components:
       translation:
         offset-grid:
           y: 8
-    mounting:
-      rotation:
-        kind: grid
-        grid:
-          z: -y
+    instantiation:
+      variant: seat-my-px
   objective-4x:
     kind: primitive
     primitive:
@@ -332,12 +329,8 @@ components:
         offset-grid:
           y: 8
           z: -1
-    mounting:
-      rotation:
-        kind: grid
-        grid:
-          z: -z
-          x: -x
+    instantiation:
+      variant: seat-mz-mx
   sample-holder-fixed:
     kind: primitive
     primitive:

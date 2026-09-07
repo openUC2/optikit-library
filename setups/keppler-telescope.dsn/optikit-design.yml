@@ -53,12 +53,8 @@ components:
       translation:
         offset-grid:
           x: 2
-    mounting:
-      rotation:
-        kind: grid
-        grid:
-          z: -x
-          x: +z
+    instantiation:
+      variant: seat-mx-pz
   laser-520-pointer:
     kind: primitive
     primitive:
@@ -148,12 +144,8 @@ components:
       translation:
         offset-grid:
           x: -1
-    mounting:
-      rotation:
-        kind: grid
-        grid:
-          z: -x
-          x: +z
+    instantiation:
+      variant: seat-mx-pz
   cube-base-4:
     kind: primitive
     primitive:

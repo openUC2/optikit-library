@@ -1,0 +1,9 @@
+kind: cube_subdesign
+id: user.subdesign.lens_100mm_simple
+version: 0.1.0
+description: 'user.lens.lens_100mm_simple, seats as variants: seat-pz-px, seat-mx-pz'
+component: user.lens.lens_100mm_simple@^0.1
+tags:
+  - subdesign
+  - seats
+review: []

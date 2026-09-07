@@ -185,12 +185,8 @@ components:
       translation:
         offset-grid:
           y: 1
-    mounting:
-      rotation:
-        kind: grid
-        grid:
-          z: -x
-          x: +z
+    instantiation:
+      variant: seat-mx-pz
   sample-holder-fixed:
     kind: primitive
     primitive:
@@ -250,15 +246,12 @@ components:
         offset-grid:
           y: 1
           z: 4
-    mounting:
-      rotation:
-        kind: grid
-        grid:
-          z: -z
     source:
       wavelengths_um:
       - 0.532
       beam_diameter_mm: 20
+    instantiation:
+      variant: seat-mz-px
   cube-base:
     kind: primitive
     primitive:

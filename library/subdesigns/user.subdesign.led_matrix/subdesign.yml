@@ -1,0 +1,9 @@
+kind: cube_subdesign
+id: user.subdesign.led_matrix
+version: 0.1.0
+description: 'user.source.led_matrix, seats as variants: seat-pz-px, seat-mz-px'
+component: user.source.led_matrix@^0.1
+tags:
+  - subdesign
+  - seats
+review: []

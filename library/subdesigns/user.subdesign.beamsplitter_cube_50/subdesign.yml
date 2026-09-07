@@ -1,0 +1,9 @@
+kind: cube_subdesign
+id: user.subdesign.beamsplitter_cube_50
+version: 0.1.0
+description: 'user.beamsplitter.beamsplitter_cube_50, seats as variants: seat-pz-px, seat-my-px'
+component: user.beamsplitter.beamsplitter_cube_50@^0.1
+tags:
+  - subdesign
+  - seats
+review: []

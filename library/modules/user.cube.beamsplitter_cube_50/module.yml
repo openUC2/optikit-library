@@ -1,12 +1,13 @@
 kind: cube_module
 id: user.cube.beamsplitter_cube_50
-version: 0.1.0
+version: 0.2.0
 description: beamsplitter_cube_50 in a 1x1 cube (bound)
 tags:
   - bound
-component: user.beamsplitter.beamsplitter_cube_50@^0.1
+  - subdesign
 template: user.tpl.beamsplitter_cube_50@^0.1
 footprint_grid:
   - 1
   - 1
   - 1
+design: user.subdesign.beamsplitter_cube_50@^0.1

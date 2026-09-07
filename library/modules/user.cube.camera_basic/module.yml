@@ -2,9 +2,12 @@
 # starter (WP-68): binds the camera detector to its fixed housing.
 kind: cube_module
 id: user.cube.camera_basic
-version: 0.1.0
+version: 0.2.0
 description: Basic CMOS camera in a 1x1 cube
-tags: [cube, cube/detector]
-component: user.detector.camera_basic@^0.1
+tags:
+  - cube
+  - cube/detector
+  - subdesign
 template: user.tpl.camera_basic@^0.1
 footprint_grid: [1, 1, 1]
+design: user.subdesign.camera_basic@^0.1
