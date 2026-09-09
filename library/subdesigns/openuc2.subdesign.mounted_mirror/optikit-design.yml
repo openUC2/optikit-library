@@ -1,0 +1,54 @@
+# The cube-mounted static mirror — Ethan's mirror-static.dsn shape, verbatim
+# (openUC2/optikit@9eb701e, examples/designs/cube-mounted/mirror-static.dsn).
+#
+# WP-228: BOTH of D5's joints live here now, each as Go composes them —
+# one variant axis per nesting LEVEL, an input propagating the choice down:
+#
+#   - the MAS master insert seats in the cube in 90° steps → THIS design's
+#     variants (x = normal in the x-y plane, z = re-mounted so the normal
+#     gains a z component). This replaces the placement's `mounting:` joint
+#     for subdesign-backed modules.
+#   - the mirror DISC turns 45° inside the flat insert → the NESTED
+#     mounted-mirror.dsn's variants (x / xy), selected by the `off-axis`
+#     input via the ternary — one bool from the panel toggle to the disc.
+optikit-version: v0.0.0-alpha.1
+
+design:
+  name: mounted-mirror-assembly
+  version: 0.2.0
+  description: A diagonal mirror mounted in a cube, with 90 or 45 deg rotations
+  tags:
+    - cube-mounted
+    - mirror
+    - mirror/flat
+    - mirror/single-sided
+    - in/qbox
+
+components:
+  mounted-mirror:
+    kind: design
+    design: mounted-mirror.dsn
+    instantiation:
+      variant: "~ inputs['off-axis'].value ? 'xy' : 'x'"
+
+inputs:
+  off-axis:
+    description: >
+      Whether the mirror disc is turned to a 45 deg deflection from the base
+      axis direction of the cube's coordinate system, as specified by the
+      nested design's variant.
+    kind: bool
+    tags:
+      - adjustment/manual-assembly
+
+variants:
+  x:
+    description: Base direction in the x-axis for the normal vector of the mirror before any off-axis deflection
+  z:
+    description: Base direction in the z-axis for the normal vector of the mirror before any off-axis deflection
+    components:
+      mounted-mirror:
+        pose:
+          rotation:
+            kind: grid
+            grid: {z: +y, x: +z}

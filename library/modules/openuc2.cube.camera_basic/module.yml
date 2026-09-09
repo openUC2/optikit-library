@@ -1,0 +1,10 @@
+# The starter camera cube — binds the CMOS camera detector to its fixed
+# housing (WP-68).
+kind: cube_module
+id: openuc2.cube.camera_basic
+version: 0.1.0
+description: Starter CMOS camera in a 1x1 cube — the exemplary detector trio to copy
+tags: [starter, cube, cube/detector]
+component: openuc2.detector.camera_basic@^0.1
+template: openuc2.tpl.camera_basic@^0.1
+footprint_grid: [1, 1, 1]

@@ -1,0 +1,13 @@
+# The motorized z-stage as a design (WP-230).
+#
+# No mesh ships for this starter record, so the decomposition is pure
+# structure: a fixed body and a carriage whose pose expression reads the
+# design input `dz`. When the CAD lands, `library decompose` splits it and
+# the components gain their `static-models` — the shape does not change.
+kind: cube_subdesign
+id: openuc2.subdesign.z_motor
+version: 0.1.0
+description: Starter motorized z-stage, decomposed (±2.5 mm actuated travel)
+tags: [subdesign, stage, actuated]
+review:
+  - "no mesh yet — body/carriage carry no static-models until the CAD ships"

@@ -1,0 +1,58 @@
+kind: optical_component
+id: thorlabs.mirror.pf10-03-f01
+version: 0.1.0
+category: mirror
+description: 'PF10-03-F01: Mirror, Ø25.4 mm, UV-Enhanced Aluminum'
+tags:
+  - imported
+  - catalog
+  - catalog/optics-catalog-2026-05-20
+vendor:
+  name: Thorlabs
+  mpn: PF10-03-F01
+  url: https://www.thorlabs.com/uv-enhanced-aluminum-mirrors?pn=PF10-03-F01
+  price: 60.2
+  currency: USD
+optics:
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0.0
+        thickness: 6.0
+        material_post:
+          type: Material
+          name: LITHOSIL-Q
+        semi_aperture: 12.7
+        interaction_model:
+          type: refractive_reflective
+          is_reflective: true
+        response:
+          kind: mirror
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0.0
+        semi_aperture: 12.7
+  frames:
+    optical:
+      z-mm: 0.0
+    exit:
+      z-mm: 6.0
+    mount:
+      z-mm: 3.0
+  ports:
+    front:
+      frame: optical
+      direction: -z
+    reflected:
+      frame: optical
+      direction: -x
+      after-surface: 0
+review:
+  - prescription derived from the catalog row (confidence derived), not from a vendor .zmx
+  - "glass 'UV Fused Silica': fused silica modelled as Schott LITHOSIL-Q (n_d 1.4585)"
+  - mirror coating band not on the row — reflects everything (broadband)

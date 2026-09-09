@@ -1,0 +1,17 @@
+kind: cube_module
+id: openuc2.cube.dmd_45
+version: 0.1.1
+description: DMD structured-illumination cube (45°, pattern over CAN)
+tags: [cube, cube/slm, structured-illumination]
+component: openuc2.slm.dmd_45@^0.1
+template: openuc2.tpl.dmd_45@^0.1
+electronics:
+  firmware-contract: uc2rest:dmd@1
+  # WP-230/234: `pattern_index` was a `kind: parameter` DOF nothing read.
+  # The displayed pattern is a device STATE, and its Go-native home is an
+  # int `input` on a subdesign — which this compact module does not have.
+  # The axis-map is empty until the DMD is decomposed (WP-229), rather than
+  # binding a CAN object to a name no design declares.
+  axis-map: []
+footprint_grid: [1, 1, 1]
+price: 420.0

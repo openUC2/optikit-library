@@ -1,0 +1,17 @@
+kind: optical_component
+id: openuc2.lens.achromat_25mm_f50
+version: 2.0.1
+category: lens
+description: 25 mm biconvex singlet, f = 50 mm (achromat placeholder)
+tags: [lens, lens/convex]
+effective_focal_length_mm: 50.0
+optics:
+  frames:
+    optical: {z-mm: 0.0}
+    exit: {z-mm: 5.0}
+    mount: {z-mm: 2.6}
+  ports:
+    front: {frame: optical, direction: -z}
+    back: {frame: exit, direction: +z, after-surface: 1}
+  fragment-file: optics.optiland.yml
+vendor: {name: Thorlabs, mpn: AC254-050-A}

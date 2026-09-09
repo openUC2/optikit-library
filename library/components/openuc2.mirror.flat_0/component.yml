@@ -1,0 +1,13 @@
+kind: optical_component
+id: openuc2.mirror.flat_0
+version: 1.0.1
+category: mirror
+description: Flat first-surface mirror at normal incidence (reflects straight back)
+tags: [mirror, mirror/flat, mirror/normal-incidence]
+optics:
+  frames:
+    optical: {z-mm: 0.0}
+  ports:
+    front: {frame: optical, direction: -z}
+    reflected: {frame: optical, direction: -z, after-surface: 0}
+  fragment-file: optics.optiland.yml

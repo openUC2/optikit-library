@@ -1,0 +1,31 @@
+kind: optical_component
+id: openuc2.mirror.mirror_1x1
+version: 0.1.1
+category: mirror
+description: Mirror module for beam steering
+tags:
+  - migrated
+  - lenses
+docs: []
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+mount_angle_deg: 45
+mechanics:
+  template: openuc2.tpl.mirror_1x1
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  ports:
+    front:
+      frame: optical
+      direction: -z
+    reflected:
+      frame: optical
+      direction: +x
+      after-surface: 0
+  fragment-file: optics.optiland.yml
+vendor:
+  name: ""
+  mpn: ""
+  url: ""

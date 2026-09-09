@@ -1,5 +1,5 @@
 kind: optical_component
-id: thorlabs.lens.ac254-050-a-ml
+id: thorlabs.lens.ac254-050-a
 version: 0.1.1
 category: lens
 description: 'AC254-050-A AC254-050-A POSITIVE VISIBLE ACHROMATS: Infinite 50'
@@ -8,7 +8,7 @@ tags:
   - zmx
 vendor:
   name: Thorlabs
-  mpn: AC254-050-A-ML
+  mpn: AC254-050-A
 optics:
   frames:
     optical:

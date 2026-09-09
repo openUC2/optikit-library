@@ -1,0 +1,22 @@
+kind: mechanical_template
+id: openuc2.tpl.frame_illumination_head
+version: 0.1.2
+class: fixed
+description: transmission illumination head — ring LED
+tags:
+  - frame
+glb: model.glb
+mesh-frame: cube
+envelope:
+  x-mm: 51.7
+  y-mm: 101.0
+  z-mm: 59.6
+carrier: false
+footprint_grid:
+fits: openuc2.frame.illumination
+component: openuc2.mechanics.frame_illumination_head@^0.1
+review:
+  - 'measured from FRAME #0007 - Microscope incl accessories.step (exported 2026-09-08)'
+  - two `CUBREW` cubes (LED/lens on the axis, camera one cell +y) shipped as ONE housing; becomes a 
+    group in an arm bay once the arm's cube seats are confirmed co-registered with the FRAME grid 
+    (they sit 3.9 mm below layer 6 in this export)

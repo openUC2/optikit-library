@@ -1,0 +1,16 @@
+# T3: generated 3x8 sandwich plate (generators/plate_nxm.py) — the long
+# plate of the laser-scanning OPM.
+kind: mechanical_template
+id: openuc2.tpl.plate_3x8
+version: 0.1.0
+class: generative
+carrier: true
+description: 3x8 sandwich plate, 4 screw holes per cell on the cube hole circle
+tags: [carrier, miniframe, plate, generated]
+envelope: {x-mm: 150, y-mm: 400, z-mm: 5}
+generator:
+  script: generators/plate_nxm.py
+  params:
+    nx: 3
+    ny: 8
+footprint_grid: [3, 8, 1]

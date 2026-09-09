@@ -1,0 +1,83 @@
+# The mounted mirror, decomposed the way the Go reference decomposes it
+# (openUC2/optikit@8ccf629, examples/designs/cube-mounted/mirror-static.dsn/
+# mounted-mirror.dsn). Ships as a library subdesign (WP-198).
+#
+# Decision D5, both joints, each where it belongs:
+#   - the MAS master insert seats in the cube in 90° steps → that is the
+#     placement's `mounting` joint (24-grid, WP-177), not stated here;
+#   - the mirror DISC rotates inside the flat master insert in 45° steps →
+#     that is the `xy` variant below, on the inner insert, exactly as Ethan
+#     spells it.
+optikit-version: v0.0.0-alpha.1
+
+design:
+  name: mounted-mirror
+  version: 0.1.0
+  description: A mirror disc mounted on a cube insert
+  tags:
+  - insert-mounted
+  - mirror
+  - mirror/flat
+  - mirror/single-sided
+  - in/core-box
+
+components:
+  # The disc: the optic itself, and the only child a variant turns.
+  inner-insert:
+    kind: primitive
+    category: mirror
+    primitive:
+      static-models:
+        gltf: mirror-disc.glb
+        step: mirror-disc.step
+    optics:
+      fragment:
+        surfaces:
+        - type: standard
+          geometry: {type: StandardGeometry, radius: .inf}
+          interaction_model: {type: refractive_reflective, is_reflective: true}
+      frames:
+        optical: {z-mm: 0.0, clear-aperture-mm: 22.0}
+      ports:
+        front: {frame: optical, direction: -z}
+        reflected: {frame: optical, direction: +x, after-surface: 0}
+    pose:
+      rotation:
+        kind: grid
+  master-insert-top:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: master-insert.glb
+        step: master-insert.step
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-mm: {z: 15}
+  master-insert-bottom:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: master-insert.glb
+        step: master-insert.step
+    pose:
+      rotation:
+        kind: grid
+        grid: {z: -z}
+      translation:
+        offset-mm: {z: -15}
+
+variants:
+  x:
+    description: Mirror normal along the design's +x basis vector (the 90° seat)
+  xy:
+    description: Mirror normal halfway between +x and +y — the disc turned 45°
+    components:
+      inner-insert:
+        pose:
+          rotation:
+            kind: euler
+            euler: {z: 45}

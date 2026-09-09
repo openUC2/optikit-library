@@ -1,0 +1,9 @@
+# WP-53: solid aluminium sandwich plate — clamps a cube stack into one unit.
+kind: optical_component
+id: openuc2.mechanics.plate_3x3
+version: 0.1.0
+category: mechanics
+description: 3x3 aluminium sandwich plate (miniFRAME top/bottom)
+tags: [mechanics, carrier, miniframe, plate]
+review:
+  - hole pattern uses parametric defaults — verify against UC2-GIT/MDK before machining

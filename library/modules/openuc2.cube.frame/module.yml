@@ -1,0 +1,10 @@
+kind: cube_module
+id: openuc2.cube.frame
+version: 0.1.1
+description: FRAME body — the substructure with the miniFRAME rail bay; stage, arm and electronics dock on its mounts
+tags: [carrier, frame]
+component: openuc2.mechanics.frame@^0.1
+template: openuc2.tpl.frame@^0.1
+# Informational for a carrier: its origin is the axis cube and the body extends both ways.
+footprint_grid: [7, 7, 3]
+price: 1500.0

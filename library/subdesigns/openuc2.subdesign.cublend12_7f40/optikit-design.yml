@@ -1,0 +1,47 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: 12.7 mm f40 plano-convex lens on a +-7.5 mm axial insert
+  name: cublend12-7f40
+  version: 0.1.0
+components:
+  body:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: body.glb
+  # WP-230: the LENS is what dz moves, so the optics ride the carriage —
+  # the fragment is openuc2.lens.cublend12_7f40@0.1.0's, verbatim (F2 ships
+  # unchanged); if that record revs, rev this file.
+  masinslend12-7f40:
+    kind: primitive
+    category: lens
+    primitive:
+      static-models:
+        gltf: masinslend12-7f40.glb
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry: {type: StandardGeometry, radius: '.inf'}
+            material_post: {type: Material, name: N-BK7}
+            thickness: 2.8
+            semi_aperture: 6.35
+          - type: standard
+            geometry: {type: StandardGeometry, radius: -25.0, conic: 0.0}
+            semi_aperture: 6.35
+      frames:
+        optical: {z-mm: -0.0, clear-aperture-mm: 12.7}
+      ports:
+        front: {frame: optical, direction: -z}
+        back: {frame: optical, direction: +z, after-surface: 1}
+    pose:
+      translation:
+        offset-mm:
+          z: ~ inputs['dz'].value
+inputs:
+  dz:
+    kind: float64
+    units: mm
+    min: -7.5
+    max: 7.5

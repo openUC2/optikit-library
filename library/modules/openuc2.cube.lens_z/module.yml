@@ -1,0 +1,18 @@
+# Cube module ("library part"): binds the 25 mm achromat to the adaptive lens
+# insert, with a motorized-focus electronics contract mapping `dz` to a CANopen
+# object. This is the object the configurator sidebar shows.
+kind: cube_module
+id: openuc2.cube.lens_z
+version: 2.0.0
+description: Motorizable focus lens cube (25 mm achromat on a ±7.5 mm z insert)
+tags: [cube, cube/lens, cube/motorized]
+# WP-227: subdesign-backed — the design input `dz` drives the lens
+# child's pose expression; the axis-map names that INPUT.
+design: openuc2.subdesign.lens_z@^0.1
+template: openuc2.tpl.lens_insert_25mm@^2
+electronics:
+  pcb: "kicad:z_stage_driver@2.1"
+  firmware-contract: "uc2:can:motor_axis@1"
+  axis-map:
+    - {dof: dz, can-object: 0x6062}
+footprint_grid: [1, 1, 1]

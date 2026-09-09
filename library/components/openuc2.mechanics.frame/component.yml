@@ -1,0 +1,9 @@
+# The FRAME body: the substructure whose rail system takes the miniFRAME
+# inner cube. Stage, illumination arm and electronics are their own records,
+# docked on the body's mounts (templates/openuc2.tpl.frame/assembly.yml).
+kind: optical_component
+id: openuc2.mechanics.frame
+version: 0.1.1
+category: mechanics
+description: FRAME body — substructure with the miniFRAME rail bay
+tags: [mechanics, carrier, frame]

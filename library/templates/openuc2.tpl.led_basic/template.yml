@@ -1,0 +1,11 @@
+# The starter LED holder — T1 fixed, emission along +z (WP-68).
+kind: mechanical_template
+id: openuc2.tpl.led_basic
+version: 0.1.0
+class: fixed
+description: Starter 1x1 LED holder (emission along +z)
+tags: [starter, insert/led]
+envelope: {x-mm: 50, y-mm: 50, z-mm: 50}
+optical_ports:
+  out: {frame: optical, direction: +z}
+footprint_grid: [1, 1, 1]

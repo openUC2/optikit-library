@@ -1,0 +1,14 @@
+kind: optical_component
+id: openuc2.filter.emission_525
+version: 0.1.1
+category: filter
+description: Band-pass emission filter, 510–560 nm (for a ~525 nm fluorophore)
+tags: [fluorescence, reference]
+docs: []
+optics:
+  frames:
+    optical: {z-mm: 0.0}
+  ports:
+    front: {frame: optical, direction: -z}
+    back: {frame: optical, direction: +z, after-surface: 0}
+  fragment-file: optics.optiland.yml

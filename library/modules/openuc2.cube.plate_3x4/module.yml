@@ -1,0 +1,9 @@
+kind: cube_module
+id: openuc2.cube.plate_3x4
+version: 0.1.0
+description: 3x4 aluminium sandwich plate (miniFRAME)
+tags: [carrier, miniframe, plate]
+component: openuc2.mechanics.plate_3x4@^0.1
+template: openuc2.tpl.plate_3x4@^0.1
+footprint_grid: [3, 4, 1]
+price: 45.0

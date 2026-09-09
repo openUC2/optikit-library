@@ -1,0 +1,53 @@
+# The LED-fluorescence OPM, transcribed from the FRAME flyer's fluo layer
+# (2026-09-08): the excitation enters the dichroic from the side and is sent up
+# the objective axis; the emission comes back down through the dichroic onto
+# the fold mirror, the emission filter, the tube lens and the camera arm — the
+# brightfield skeleton with a dichroic layer on top.
+kind: cube_group
+id: openuc2.group.miniframe_fluo
+version: 0.1.0
+description: miniFRAME LED-fluorescence OPM — dichroic on the axis, emission filter, tube lens, camera arm
+tags: [opm, miniframe, fluorescence]
+review:
+  - layout authored from the flyer, not from CAD — verify cells, the dichroic's seat and the beam path
+  - the excitation source is `led_basic`; a laser variant swaps it for `laser_488`, and the dichroic follows the chosen wavelengths (WP-272)
+envelope-grid: [3, 3, 2]
+members:
+  # ── layer 1, under the objective: excitation in from -x, dichroic on the axis ──
+  dichroic:        {module: openuc2.cube.filter_dichroic@^0.1, cell: [1, 2, 1]}
+  excitation:      {module: openuc2.cube.led_basic@^0.1,       cell: [0, 2, 1]}
+  top_22:          {module: openuc2.cube.cube_1x1@^0.1,        cell: [2, 2, 1]}
+  top_01:          {module: openuc2.cube.cube_1x1@^0.1,        cell: [0, 1, 1]}
+  top_11:          {module: openuc2.cube.cube_1x1@^0.1,        cell: [1, 1, 1]}
+  top_21:          {module: openuc2.cube.cube_1x1@^0.1,        cell: [2, 1, 1]}
+  top_00:          {module: openuc2.cube.cube_1x1@^0.1,        cell: [0, 0, 1]}
+  top_10:          {module: openuc2.cube.cube_1x1@^0.1,        cell: [1, 0, 1]}
+  top_20:          {module: openuc2.cube.cube_1x1@^0.1,        cell: [2, 0, 1]}
+  # ── layer 0, the imaging path: fold on the axis, filter, tube lens, then the arm ──
+  fold_mirror:     {module: openuc2.cube.mirror_45@^0.1,       cell: [1, 2, 0]}
+  emission_filter: {module: openuc2.cube.emission_525@^0.1,    cell: [1, 1, 0]}
+  tube_lens:       {module: openuc2.cube.tube_lens_1x1@^0.1,   cell: [1, 0, 0]}
+  low_02:          {module: openuc2.cube.cube_1x1@^0.1,        cell: [0, 2, 0]}
+  low_22:          {module: openuc2.cube.cube_1x1@^0.1,        cell: [2, 2, 0]}
+  low_00:          {module: openuc2.cube.cube_1x1@^0.1,        cell: [0, 0, 0]}
+  low_20:          {module: openuc2.cube.cube_1x1@^0.1,        cell: [2, 0, 0]}
+  # ── the camera arm hangs off the front (-y), beyond the plates ──
+  arm_relay:       {module: openuc2.cube.cube_1x1@^0.1,        cell: [1, -1, 0], overhang: true}
+  camera:          {module: openuc2.cube.camera_basic@^0.1,    cell: [1, -2, 0], overhang: true}
+structure:
+  plates:
+    top:    {module: openuc2.cube.plate_3x3@^0.1, origin: [0, 0], size: [3, 3]}
+    bottom: {module: openuc2.cube.plate_3x3@^0.1, origin: [0, 0], size: [3, 3]}
+  joints: puzzle
+  joint-cells:
+    - [0, 0, 1]
+    - [1, 0, 1]
+    - [2, 0, 1]
+    - [1, 1, 1]
+    - [0, 2, 1]
+    - [1, 2, 1]
+    - [2, 2, 1]
+interface:
+  # `axis` names the member a carrier bay puts on its optical axis.
+  axis:   {member: fold_mirror, port: front}
+  camera: {member: camera, port: sensor}

@@ -1,22 +1,22 @@
 kind: optical_component
-id: thorlabs.lens.ac254-050-a-ml
+id: thorlabs.lens.ac254-075-a-ml
 version: 0.1.1
 category: lens
-description: 'AC254-050-A AC254-050-A POSITIVE VISIBLE ACHROMATS: Infinite 50'
+description: 'AC254-075-A AC254-075-A POSITIVE VISIBLE ACHROMATS: Infinite 75'
 tags:
   - imported
   - zmx
 vendor:
   name: Thorlabs
-  mpn: AC254-050-A-ML
+  mpn: AC254-075-A-ML
 optics:
   frames:
     optical:
       z-mm: 0.0
     exit:
-      z-mm: 11.5
+      z-mm: 9.5
     mount:
-      z-mm: 6.868213
+      z-mm: 5.209235
   ports:
     front:
       frame: optical
@@ -27,5 +27,5 @@ optics:
       after-surface: 2
   fragment-file: optics.optiland.yml
 review:
-  - "surface 2: glass 'SF10' normalized to database name 'N-SF10' via optiland's search — verify"
-effective_focal_length_mm: 50.169421
+  - "surface 2: glass 'SF5' normalized to database name 'N-SF5' via optiland's search — verify"
+effective_focal_length_mm: 74.896927

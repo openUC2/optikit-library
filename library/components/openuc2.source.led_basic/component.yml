@@ -1,0 +1,18 @@
+# The starter LED — a broadband, wide-angle emitter (WP-68). Like every
+# source it is fragment-less and speaks through its `source` block (WP-47):
+# one nominal line at 550 nm standing in for the broad spectrum, and a wide
+# full-angle divergence (a bare LED is nothing like collimated).
+kind: optical_component
+id: openuc2.source.led_basic
+version: 0.1.0
+category: source
+description: Starter broadband LED (nominal 550 nm, wide angle) — copy for LED sources
+tags: [starter, source, source/led]
+optics:
+  frames:
+    optical: {z-mm: 0.0}
+  ports:
+    out: {frame: optical, direction: +z}
+source:
+  wavelengths_um: [0.55]
+  divergence_deg: 60.0

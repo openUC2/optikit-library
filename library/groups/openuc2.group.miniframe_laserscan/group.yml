@@ -1,0 +1,146 @@
+kind: cube_group
+id: openuc2.group.miniframe_laserscan
+version: 0.1.2
+description: miniFRAME laser-scanning (FLIM 488) OPM — fiber-coupled laser on the plate tab, 
+  dichroic, XY galvo, f50/f160 relay, 45° splitter on the axis, detection into a fiber; two layers 
+  under a 3×8 plate
+tags:
+  - opm
+  - miniframe
+  - laser-scanning
+  - flim
+review:
+  - measured from OPM - 0004 - FLIM 488.stp (exported 2026-09-09)
+  - the axis fold is a 25×25×1 splitter in a kinematic mount (`CUBKINSPL45°`), shipped as 
+    `mirror_45`; the f50 and f160 lens cubes ship as `cublend12_7f40` and `tube_lens_1x1` (nearest 
+    records — the EFLs differ)
+  - the detection fiber cube (`CUBECCADJFIBHOL`) ships as a plain cube; the two filter slides 
+    between cubes (`EMIFILSLD`, `EXCFILSLD`) and the galvo-board cube hanging below the plate are 
+    not modelled
+  - the lower layer's plain cubes come from `extra-members`, not from the export
+envelope-grid:
+  - 2
+  - 7
+  - 2
+members:
+  cublend12_7f40:
+    module: openuc2.cube.cublend12_7f40@^0.2
+    cell:
+      - 1
+      - 1
+      - 1
+  tube_lens_1x1:
+    module: openuc2.cube.tube_lens_1x1@^0.1
+    cell:
+      - 1
+      - 5
+      - 1
+  galvo_xy:
+    module: openuc2.cube.galvo_xy@^0.1
+    cell:
+      - 1
+      - 0
+      - 1
+  mirror_45:
+    module: openuc2.cube.mirror_45@^0.1
+    cell:
+      - 1
+      - 6
+      - 1
+  filter_dichroic:
+    module: openuc2.cube.filter_dichroic@^0.1
+    cell:
+      - 0
+      - 0
+      - 1
+  cube_1x1:
+    module: openuc2.cube.cube_1x1@^0.1
+    cell:
+      - 0
+      - 1
+      - 1
+  laser_488:
+    module: openuc2.cube.laser_488@^0.1
+    cell:
+      - -1
+      - 0
+      - 1
+    overhang: true
+  low_00:
+    module: openuc2.cube.cube_1x1@^0.1
+    cell:
+      - 0
+      - 0
+      - 0
+  low_10:
+    module: openuc2.cube.cube_1x1@^0.1
+    cell:
+      - 1
+      - 0
+      - 0
+  low_01:
+    module: openuc2.cube.cube_1x1@^0.1
+    cell:
+      - 0
+      - 1
+      - 0
+  low_11:
+    module: openuc2.cube.cube_1x1@^0.1
+    cell:
+      - 1
+      - 1
+      - 0
+  low_15:
+    module: openuc2.cube.cube_1x1@^0.1
+    cell:
+      - 1
+      - 5
+      - 0
+  low_16:
+    module: openuc2.cube.cube_1x1@^0.1
+    cell:
+      - 1
+      - 6
+      - 0
+structure:
+  plates:
+    top:
+      module: openuc2.cube.plate_3x8@^0.1
+      origin:
+        - 0
+        - -1
+      size:
+        - 3
+        - 8
+    bottom:
+      module: openuc2.cube.plate_3x8@^0.1
+      origin:
+        - 0
+        - -1
+      size:
+        - 3
+        - 8
+  joints: puzzle
+  joint-cells:
+    -   - 0
+        - 0
+        - 1
+    -   - 0
+        - 1
+        - 1
+    -   - 1
+        - 0
+        - 1
+    -   - 1
+        - 1
+        - 1
+    -   - 1
+        - 5
+        - 1
+    -   - 1
+        - 6
+        - 1
+interface:
+  axis:
+    member: mirror_45
+    port: front

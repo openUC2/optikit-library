@@ -1,0 +1,15 @@
+kind: optical_component
+id: openuc2.lens.achromat_starter
+version: 0.1.1
+category: lens
+description: Starter cemented achromatic doublet, Ø25.4 mm, f ≈ 50 mm — the optics-group exemplar
+tags: [starter, lens, lens/achromat]
+effective_focal_length_mm: 50.17
+optics:
+  frames:
+    optical: {z-mm: 0.0, clear-aperture-mm: 22.86}
+    exit: {z-mm: 11.5, clear-aperture-mm: 22.86}
+  ports:
+    front: {frame: optical, direction: -z}
+    back: {frame: exit, direction: +z, after-surface: 2}
+  fragment-file: optics.optiland.yml

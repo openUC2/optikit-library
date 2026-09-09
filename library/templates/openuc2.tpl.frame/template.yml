@@ -1,0 +1,60 @@
+kind: mechanical_template
+id: openuc2.tpl.frame
+version: 0.1.3
+class: fixed
+description: FRAME body — the substructure with the miniFRAME rail bay; stage, arm and electronics 
+  dock on its mounts
+tags:
+  - carrier
+  - frame
+carrier: true
+bays:
+  miniframe:
+    origin-cell:
+      - -1
+      - -7
+      - 0
+    size:
+      - 3
+      - 8
+      - 2
+    axis: +z
+envelope:
+  x-mm: 306.0
+  y-mm: 306.0
+  z-mm: 148.0
+footprint_grid:
+  - 7
+  - 7
+  - 3
+glb: model.glb
+mesh-frame: cube
+review:
+  - 'measured from FRAME #0007 - Microscope incl accessories.step (exported 2026-09-08)'
+  - rail capacity (8 deep) and the arm's cube seats are not measurable from this export — confirm 
+    against the rail drawing
+mounts:
+  stage:
+    pose:
+      translation:
+        offset-mm:
+          x: 0.0
+          y: 0.0
+          z: 134.1
+    accepts: openuc2.frame.stage
+  arm:
+    pose:
+      translation:
+        offset-mm:
+          x: 0.0
+          y: 0.0
+          z: 219.1
+    accepts: openuc2.frame.arm
+  electronics:
+    pose:
+      translation:
+        offset-mm:
+          x: 0.0
+          y: 111.0
+          z: -35.9
+    accepts: openuc2.frame.electronics

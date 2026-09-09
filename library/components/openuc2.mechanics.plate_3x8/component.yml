@@ -1,0 +1,9 @@
+# Solid aluminium sandwich plate — clamps the 3x8 cube stack into one unit.
+kind: optical_component
+id: openuc2.mechanics.plate_3x8
+version: 0.1.0
+category: mechanics
+description: 3x8 aluminium sandwich plate (miniFRAME top/bottom)
+tags: [mechanics, carrier, miniframe, plate]
+review:
+  - hole pattern uses parametric defaults — verify against UC2-GIT/MDK before machining

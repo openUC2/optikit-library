@@ -1,0 +1,28 @@
+kind: optical_component
+id: openuc2.lens.cublend12_7f40
+version: 0.1.1
+category: lens
+description: f = 40 mm Ø12.7 plano-convex lens cube (Inventor import) — the S4 reference
+optics:
+  frames:
+    optical:
+      z-mm: -0.0
+  ports:
+    front:
+      frame: optical
+      direction: -z
+    back:
+      frame: optical
+      direction: +z
+      after-surface: 1
+  fragment-file: optics.optiland.yml
+effective_focal_length_mm: 40.0
+tags:
+  - reference
+review:
+  - "EFL/prescription mismatch: declared 40 mm (the part name says F40) but the
+    authored surfaces — plano-convex, R = -25 mm, N-BK7 — give f = 48.1 mm
+    (optiland's paraxial solve; the thin-lens formula agrees at 48.4). For f = 40
+    the radius would be about -20.7 mm. One of the two is wrong; the Inventor
+    import emits a placeholder radius when it cannot read one, so suspect that
+    first. Surfaced by WP-232's sidecar check, 2026-08-29."

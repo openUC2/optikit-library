@@ -1,0 +1,9 @@
+kind: cube_module
+id: openuc2.cube.puzzle_1x1
+version: 0.1.0
+description: Inter-layer puzzle piece (miniFRAME sandwich joint)
+tags: [carrier, miniframe]
+component: openuc2.mechanics.puzzle_1x1@^0.1
+template: openuc2.tpl.puzzle_1x1@^0.1
+footprint_grid: [1, 1, 1]
+price: 2.0

@@ -1,0 +1,14 @@
+# The starter camera housing — T1 fixed, sensor plane held at the cube
+# center (WP-68). No `frames` block: the sensor pose is the COMPONENT's
+# statement (its port frame); template frames are for optics a fixed insert
+# physically holds (verify-t1 would demand a fragment to hold).
+kind: mechanical_template
+id: openuc2.tpl.camera_basic
+version: 0.1.0
+class: fixed
+description: Starter 1x1 camera housing (sensor plane at the cube center)
+tags: [starter, insert/camera]
+envelope: {x-mm: 50, y-mm: 50, z-mm: 50}
+optical_ports:
+  sensor: {frame: optical, direction: -z}
+footprint_grid: [1, 1, 1]

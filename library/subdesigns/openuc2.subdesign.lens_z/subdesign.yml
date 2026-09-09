@@ -1,0 +1,11 @@
+# Library subdesign: the ±7.5 mm focus lens, WP-227's translation reference.
+#
+# The optical side of openuc2.cube.lens_z, converted from the dof-era
+# spelling: the design input `dz` drives the lens child's pose expression
+# (Go PR #19 machinery) — there is no `dof:` block and no `kinematics:`
+# table, because the moving thing IS a component and motion IS its pose.
+kind: cube_subdesign
+id: openuc2.subdesign.lens_z
+version: 0.1.0
+description: 25 mm achromat on a ±7.5 mm axial focus travel, input-driven
+tags: [subdesign, lens, actuated]

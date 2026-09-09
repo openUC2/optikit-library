@@ -1,0 +1,12 @@
+kind: cube_module
+id: openuc2.cube.cublend12_7f40
+version: 0.2.0
+description: CUBLEND12.7F40 — Inventor datum-marker cube (S4 reference)
+# WP-230: subdesign-backed — dz is the design's input driving the
+# carriage's pose expression (was template dof + kinematics).
+design: openuc2.subdesign.cublend12_7f40@^0.1
+template: openuc2.tpl.cublend12_7f40@^0.2
+footprint_grid:
+  - 1
+  - 1
+  - 1

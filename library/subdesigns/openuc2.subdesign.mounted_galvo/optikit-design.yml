@@ -1,0 +1,117 @@
+# The dual-axis galvo as a design, not as one compressed record (WP-202).
+#
+# Beam path through the design frame: the beam arrives travelling +z, mirror-x
+# folds it to +x, it crosses 6 mm, and mirror-y folds it to +y — the ordinary
+# galvo pair. Each mirror is a TRIVIAL single-surface record (one flat
+# reflective surface, front/reflected ports stating its 45° fold, exactly like
+# openuc2.mirror.flat_45); what makes them a galvo is their POSES, which the
+# design states, and their DOFs, which are ordinary component DOFs.
+#
+# The design-level inputs `tilt-x` / `tilt-y` are the D2 grouping: one input
+# drives one mirror today, but the same mechanism lets a caller drive several
+# components from a single variable (an objective + its z-stage lever), which
+# is what the linker (WP-203) will author.
+optikit-version: v0.0.0-alpha.1
+
+design:
+  name: mounted-galvo
+  version: 0.1.0
+  description: Two steering mirrors on a cube insert, each posed and tilted on its own
+  tags:
+  - insert-mounted
+  - mirror
+  - mirror/galvo
+  - actuated
+  - in/galvo-box
+
+inputs:
+  tilt-x:
+    description: Scan angle of the first (x) mirror about its own axis
+    kind: float64
+    units: deg
+    min: -15.0
+    max: 15.0
+    resolution: 0.01
+    actuation: firmware
+  tilt-y:
+    description: Scan angle of the second (y) mirror about its own axis
+    kind: float64
+    units: deg
+    min: -15.0
+    max: 15.0
+    resolution: 0.01
+    actuation: firmware
+
+components:
+  # The insert body — mechanics only, no optics, no motion.
+  insert:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: insert.glb
+        step: insert.step
+    pose:
+      rotation:
+        kind: grid
+
+  # The x mirror: at the origin, folding the incoming +z beam to +x.
+  mirror-x:
+    kind: primitive
+    category: mirror
+    primitive:
+      static-models:
+        gltf: mirror.glb
+        step: mirror.step
+    optics:
+      fragment:
+        surfaces:
+        - type: standard
+          geometry: {type: StandardGeometry, radius: .inf}
+          interaction_model: {type: refractive_reflective, is_reflective: true}
+          semi_aperture: 5.0
+      frames:
+        optical: {z-mm: 0.0, clear-aperture-mm: 10.0}
+      ports:
+        front: {frame: optical, direction: -z}
+        reflected: {frame: optical, direction: +x, after-surface: 0}
+    pose:
+      # WP-227: the tilt IS the pose — extrinsic-ZXY euler with the
+      # (identity) seat baked in; R = R_seat · R_y(tilt), verified affine.
+      # Go evaluates this and renders the mirror tilted.
+      rotation:
+        kind: euler
+        euler:
+          y: ~ inputs['tilt-x'].value
+
+  # The y mirror: 6 mm downstream, catching the +x beam and folding it to +y.
+  mirror-y:
+    kind: primitive
+    category: mirror
+    primitive:
+      static-models:
+        gltf: mirror.glb
+        step: mirror.step
+    optics:
+      fragment:
+        surfaces:
+        - type: standard
+          geometry: {type: StandardGeometry, radius: .inf}
+          interaction_model: {type: refractive_reflective, is_reflective: true}
+          semi_aperture: 5.0
+      frames:
+        optical: {z-mm: 0.0, clear-aperture-mm: 10.0}
+      ports:
+        front: {frame: optical, direction: -z}
+        reflected: {frame: optical, direction: +x, after-surface: 0}
+    # WP-227: seat (grid z:+x, x:+y) baked into the euler triple —
+    # R = R_seat · R_y(tilt) = extrinsic-ZXY [90, 0, 90 + tilt], verified
+    # affine against the dof-era composition to 1e-9.
+    pose:
+      rotation:
+        kind: euler
+        euler:
+          x: 90.0
+          z: ~ 90.0 + inputs['tilt-y'].value
+      translation:
+        offset-mm: {x: 6.0}

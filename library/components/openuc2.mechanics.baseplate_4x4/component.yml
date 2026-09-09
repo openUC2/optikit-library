@@ -1,0 +1,9 @@
+# WP-45: the classic UC2 baseplate — the carrier cubes puzzle onto.
+kind: optical_component
+id: openuc2.mechanics.baseplate_4x4
+version: 0.1.0
+category: mechanics
+description: 4x4 UC2 baseplate (5 mm, cube pins up)
+tags: [mechanics, carrier, baseplate]
+review:
+  - carrier record without bound mechanics — bind the baseplate STEP

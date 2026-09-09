@@ -1,0 +1,15 @@
+kind: optical_component
+id: openuc2.mechanics.frame_arm
+version: 0.1.0
+category: mechanics
+description: FRAME illumination arm — carries the transmission illumination head and the diffuser
+tags:
+  - frame
+  - mechanics
+review:
+  - 'measured from FRAME #0007 - Microscope incl accessories.step (exported 2026-09-08)'
+  - price is a placeholder — fill the real one
+vendor:
+  name: openUC2
+  price: 650
+  currency: EUR

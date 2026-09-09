@@ -1,0 +1,31 @@
+kind: mechanical_template
+id: openuc2.tpl.cublend12_7f40
+version: 0.2.0
+class: adaptive
+description: Insert template from ASS - 2028 - CUBLEND12.7F40 - V04
+envelope:
+  x-mm: 50.0
+  y-mm: 50.0
+  z-mm: 55.0
+glb: ASS_-_2028_-_CUBLEND12.7F40_-_V04.glb
+footprint_grid:
+  - 1
+  - 1
+  - 1
+optical_ports:
+  front:
+    frame: optical
+    direction: -z
+  back:
+    frame: optical
+    direction: +z
+# WP-192: the MASINS carriage (lens + holders + screws + lock ride along).
+# Axis follows the record's own declared frames (dof z, ports ±z, identity
+# insert-pose). validate answers with W_KIN_TRAVEL_ENVELOPE, and the warning
+# is genuine: the carriage subtree spans ±24.7 mm in file x/z but only
+# -1.8..7.0 mm in file y, so ±7.5 mm of travel fits along y and not along z —
+# the mesh says the slide axis is file y, i.e. the dof axis, optical_ports
+# and (absent) insert-pose are self-consistent statements that are wrong
+# together (DSN-CONTRACT §4d) and want that review. Kept as the pinned
+# real-mesh specimen of the finding (tests/test_kinematics.py); not a
+# `review:` flag because the S4 corpus pins this trio as review-resolved.

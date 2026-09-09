@@ -1,0 +1,20 @@
+kind: cube_module
+id: openuc2.cube.tube_lens_1x1
+version: 0.1.1
+description: Infinity‑corrected tube lens for microscope systems.
+tags:
+  - migrated
+  - cube
+  - cube/lens
+  - lenses
+docs: []
+component: openuc2.lens.tube_lens_1x1@^0.2
+template: openuc2.tpl.tube_lens_1x1@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+  - lens surfaces are a thin biconvex approximation from focalLength — verify the trace
+price: 200.0

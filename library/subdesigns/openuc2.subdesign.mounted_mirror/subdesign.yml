@@ -1,0 +1,11 @@
+# Library subdesign: a mirror disc mounted on a master insert (WP-198).
+#
+# The optical side of openuc2.cube.mirror_45_sub. Identity only — the geometry
+# is the ordinary optikit-design.yml next to this file, which stays
+# byte-compatible with the Go reference (no `kind:` marker inside it), and the
+# variants/inputs it declares are read from there, never restated here (D4).
+kind: cube_subdesign
+id: openuc2.subdesign.mounted_mirror
+version: 0.1.0
+description: Mirror disc on a master insert, seatable at 90° or 45° (variants x / xy)
+tags: [subdesign, mirror, mirror/flat, mirror/single-sided, in/core-box]

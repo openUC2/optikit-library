@@ -1,0 +1,18 @@
+# WP-47: the 1x1 cube that holds the DMD board at 45°. The DMD's own
+# `pattern_index` DOF (WP-42 actuation) is firmware-switchable, so the
+# template declares it actuatable and the module binds it to a CAN object.
+kind: mechanical_template
+id: openuc2.tpl.dmd_45
+version: 0.1.1
+class: fixed
+description: DMD holder at 45° in a 1x1 cube
+tags: [holder, insert/slm]
+envelope: {x-mm: 50, y-mm: 50, z-mm: 50}
+# WP-230: `pattern_index` retired. It was a `kind: parameter` DOF that
+# nothing read — the displayed pattern is a device STATE, not geometry.
+# When the DMD needs it on the wire it belongs in a subdesign's `inputs:`
+# as an int, which is the Go-native spelling for exactly this.
+optical_ports:
+  front: {frame: optical, direction: -z}
+  reflected: {frame: optical, direction: +x}
+footprint_grid: [1, 1, 1]

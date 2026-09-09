@@ -1,0 +1,18 @@
+# Library subdesign: the dual-axis galvo, decomposed (WP-202).
+#
+# The optical side of openuc2.cube.galvo_sub. This is the part that spent
+# three review rounds not fitting the record trio (DOCS/archive/PROPOSAL-MULTI-ELEMENT.md):
+# as ONE optical_component it needed owner-frame datums for per-mirror
+# position, a `surface:` index on each DOF to say which mirror it tilts, a
+# pivot frame per mirror, and orientations that could only be DERIVED from
+# the port bisector chain because a record cannot state them. Here each
+# mirror is an ordinary component with an ordinary pose and an ordinary
+# `dof:` block, and every one of those special cases dissolves.
+kind: cube_subdesign
+id: openuc2.subdesign.mounted_galvo
+version: 0.1.0
+description: Dual-axis galvo scanner, decomposed (two independently posed mirrors)
+tags: [subdesign, mirror, mirror/galvo, actuated, in/galvo-box]
+review:
+  - "placeholder meshes: the mirror and insert bodies reuse the mirror-mount
+     CAD until the real galvo STEP is exported (poses and optics are real)"

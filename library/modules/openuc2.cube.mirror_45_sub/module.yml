@@ -1,0 +1,16 @@
+# Cube module, subdesign-backed (WP-198): the same 45° fold mirror as
+# openuc2.cube.mirror_45, but its optical side is a DECOMPOSITION — the mirror
+# disc and the two master-insert halves as posed children, with the disc's
+# 45° seat spelled as a design variant instead of baked into one record.
+#
+# The compact spelling (openuc2.cube.mirror_45, `component:`) stays supported
+# and shipped: this is the road new multi-element capability lands on, not a
+# replacement for records that already trace correctly.
+kind: cube_module
+id: openuc2.cube.mirror_45_sub
+version: 0.1.0
+description: Flat mirror in a 1x1 cube, decomposed (disc + master insert halves)
+tags: [cube, cube/mirror, subdesign]
+design: openuc2.subdesign.mounted_mirror@^0.1
+template: openuc2.tpl.mirror_mount_1x1@^0.1
+footprint_grid: [1, 1, 1]

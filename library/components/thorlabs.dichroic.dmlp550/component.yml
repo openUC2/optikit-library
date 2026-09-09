@@ -1,0 +1,63 @@
+kind: optical_component
+id: thorlabs.dichroic.dmlp550
+version: 0.1.0
+category: dichroic
+description: 'DMLP550: Dichroic Mirror, Ø25.4 mm, 550 nm, 565 - 800 nm'
+tags:
+  - imported
+  - catalog
+  - catalog/optics-catalog-2026-05-20
+vendor:
+  name: Thorlabs
+  mpn: DMLP550
+  url: https://www.thorlabs.com/longpass-dichroic-mirrorsbeamsplitters?pn=DMLP550
+  price: 214.81
+  currency: USD
+optics:
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0.0
+        thickness: 1.1
+        material_post:
+          type: Material
+          name: N-BK7
+        semi_aperture: 12.7
+        interaction_model:
+          type: refractive_reflective
+          is_reflective: true
+        response:
+          kind: dichroic
+          reflect-bands-um:
+            -   - 
+                - 0.55
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0.0
+        semi_aperture: 12.7
+  frames:
+    optical:
+      z-mm: 0.0
+    exit:
+      z-mm: 1.1
+    mount:
+      z-mm: 0.55
+  ports:
+    front:
+      frame: optical
+      direction: -z
+    transmitted:
+      frame: optical
+      direction: +z
+      after-surface: 1
+    reflected:
+      frame: optical
+      direction: -x
+      after-surface: 0
+review:
+  - prescription derived from the catalog row (confidence derived), not from a vendor .zmx

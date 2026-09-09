@@ -1,0 +1,8 @@
+kind: cube_subdesign
+id: openuc2.subdesign.cublend12_7f40
+version: 0.1.0
+description: Insert template from ASS - 2028 - CUBLEND12.7F40 - V04 (decomposed, WP-229)
+tags: []
+review:
+  - decomposed from openuc2.tpl.cublend12_7f40 by `library decompose` — the optics still live on the
+    module's component record; move them onto the moving child if the optic is what travels

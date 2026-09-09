@@ -1,0 +1,15 @@
+kind: optical_component
+id: openuc2.electronics.frame_box
+version: 0.1.0
+category: electronics
+description: FRAME electronics box — Raspberry Pi 5
+tags:
+  - frame
+  - electronics
+review:
+  - 'measured from FRAME #0007 - Microscope incl accessories.step (exported 2026-09-08)'
+  - price is a placeholder — fill the real one
+vendor:
+  name: openUC2
+  price: 480
+  currency: EUR

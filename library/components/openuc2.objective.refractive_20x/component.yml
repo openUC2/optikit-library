@@ -1,0 +1,25 @@
+kind: optical_component
+id: openuc2.objective.refractive_20x
+version: 0.1.2
+category: objective
+description: 20x objective stand-in - biconvex singlet, f = 9 mm, NA 0.4 (kernel-traceable)
+tags: [objective, objective/stand-in, starter]
+docs: []
+effective_focal_length_mm: 9.0
+objective:
+  magnification: 20
+  numerical_aperture: 0.4
+  tube_lens_f_mm: 180.0
+optics:
+  # The lens sits 41 mm toward the front (-z) of the cube center: a protruding
+  # objective nose. On the 50 mm grid the neighbouring cube's center - the
+  # sample plane - is then 9 mm from the lens, i.e. AT the front focus: epi
+  # excitation focuses onto the sample, and the sample's emission leaves the
+  # objective collimated, ready for a tube lens.
+  frames:
+    optical: {z-mm: -41.0}
+    exit: {z-mm: -39.0}
+  ports:
+    front: {frame: optical, direction: -z}
+    back: {frame: exit, direction: +z, after-surface: 1}
+  fragment-file: optics.optiland.yml

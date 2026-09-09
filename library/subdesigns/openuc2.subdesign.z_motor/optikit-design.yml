@@ -1,0 +1,34 @@
+# WP-230: `dz` is the design's input; the carriage's pose expression IS the
+# motion (was a template `dof:` + `apply_dof_values`). `actuation: firmware`
+# rides the input — the module's axis-map maps that name to CAN 0x6062.
+optikit-version: v0.0.0-alpha.1
+
+design:
+  name: z-motor
+  version: 0.1.0
+  description: Motorized z-stage with ±2.5 mm actuated travel
+
+inputs:
+  dz:
+    description: Actuated axial travel of the stage carriage
+    kind: float64
+    units: mm
+    min: -2.5
+    max: 2.5
+    resolution: 0.01
+    actuation: firmware
+
+components:
+  # The frame that bolts into the cube — does not move.
+  body:
+    kind: primitive
+    category: mechanics
+
+  # What the motor drives. A sample or optic anchored here rides with it.
+  carriage:
+    kind: primitive
+    category: stage
+    pose:
+      translation:
+        offset-mm:
+          z: ~ inputs['dz'].value

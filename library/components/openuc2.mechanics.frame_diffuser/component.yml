@@ -1,0 +1,15 @@
+kind: optical_component
+id: openuc2.mechanics.frame_diffuser
+version: 0.1.0
+category: mechanics
+description: height-adjustable diffuser under the illumination head
+tags:
+  - frame
+  - mechanics
+review:
+  - 'measured from FRAME #0007 - Microscope incl accessories.step (exported 2026-09-08)'
+  - price is a placeholder — fill the real one
+vendor:
+  name: openUC2
+  price: 60
+  currency: EUR

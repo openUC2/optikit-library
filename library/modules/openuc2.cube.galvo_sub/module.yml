@@ -1,0 +1,26 @@
+# Dual-axis galvo cube, subdesign-backed (WP-202).
+#
+# Same instrument as openuc2.cube.galvo, spelled as a decomposition: two
+# posed mirrors, each with its own ordinary rotation DOF, instead of one
+# record carrying two surfaces plus the machinery to say which surface each
+# DOF drives. The compact spelling stays shipped and supported — it traces
+# correctly and nothing about it is wrong; this is the road NEW multi-element
+# capability lands on (PROPOSAL-MULTI-ELEMENT.md, "what we deliberately keep").
+#
+# The firmware map is unchanged in shape, but its `dof` names are now the
+# DESIGN's input variables — one name from the CAN object to the slider to
+# the child mirror's own `tilt`, which the subdesign binds by expression.
+kind: cube_module
+id: openuc2.cube.galvo_sub
+version: 0.1.0
+description: Dual-axis galvo scanner cube, decomposed (x/y steering, firmware-actuated)
+tags: [cube, cube/mirror, cube/galvo, subdesign]
+design: openuc2.subdesign.mounted_galvo@^0.1
+template: openuc2.tpl.galvo_sub@^0.1
+electronics:
+  pcb: "kicad:galvo_driver@1.0"
+  firmware-contract: "uc2:can:galvo_axis@1"
+  axis-map:
+    - {dof: tilt-x, can-object: 0x6070}
+    - {dof: tilt-y, can-object: 0x6071}
+footprint_grid: [1, 1, 1]

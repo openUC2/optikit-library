@@ -1,0 +1,56 @@
+# The focus lens as a design (WP-227): one moving child, one input.
+#
+# `dz` is the design's input variable; the lens component's translation leaf
+# holds the expression, so instantiation IS the motion — our engine and Go's
+# both evaluate it, and apply_dof_values has nothing left to do here.
+#
+# The optics fragment is the achromat's (openuc2.lens.achromat_25mm_f50@2.0.0)
+# verbatim — the F2-ships-verbatim rule; if that record revs, rev this file.
+optikit-version: v0.0.0-alpha.1
+
+design:
+  name: lens-z
+  version: 0.1.0
+  description: 25 mm achromat with input-driven axial focus
+  tags:
+    - insert-mounted
+    - lens
+
+inputs:
+  dz:
+    description: Axial focus travel of the lens along the cube's optical axis
+    kind: float64
+    units: mm
+    min: -7.5
+    max: 7.5
+    resolution: 0.05
+    actuation: firmware
+
+components:
+  lens:
+    kind: primitive
+    category: lens
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry: {type: StandardGeometry, radius: 51.146, conic: 0.0}
+            material_post: {type: Material, name: N-BK7}
+            thickness: 5.0
+            semi_aperture: 10.0
+          - type: standard
+            geometry: {type: StandardGeometry, radius: -51.146, conic: 0.0}
+            semi_aperture: 10.0
+      frames:
+        optical: {z-mm: 0.0, clear-aperture-mm: 20.0}
+        exit: {z-mm: 5.0}
+        mount: {z-mm: 2.6}
+      ports:
+        front: {frame: optical, direction: -z}
+        back: {frame: exit, direction: +z, after-surface: 1}
+    # WP-227: the motion. Rotation is identity and therefore OMITTED
+    # (GO-SYNC §6b — an explicit empty grid trips go3d's report).
+    pose:
+      translation:
+        offset-mm:
+          z: ~ inputs['dz'].value

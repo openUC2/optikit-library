@@ -1,0 +1,10 @@
+# The starter laser cube — binds the dual-line laser source to its fixed
+# housing. Copy this trio when authoring your own source module (WP-68).
+kind: cube_module
+id: openuc2.cube.laser_basic
+version: 0.1.0
+description: Starter dual-line laser (488/635 nm) in a 1x1 cube — the exemplary source trio
+tags: [starter, cube, cube/source]
+component: openuc2.source.laser_basic@^0.1
+template: openuc2.tpl.laser_basic@^0.1
+footprint_grid: [1, 1, 1]
