@@ -2473,7 +2473,7 @@
    "template": {
     "ref": "openuc2.tpl.plate_3x3@^0.1",
     "id": "openuc2.tpl.plate_3x3",
-    "resolved": "0.1.0",
+    "resolved": "0.1.1",
     "class": "generative",
     "actuatable": false,
     "carrier": true,
@@ -2483,10 +2483,10 @@
    },
    "assets": {
     "thumbnail": null,
-    "glb": null,
-    "step": null,
+    "glb": "/v1/library/assets/templates/openuc2.tpl.plate_3x3/model.glb",
+    "step": "/v1/library/assets/templates/openuc2.tpl.plate_3x3/model.step",
     "symbol": null,
-    "mesh_frame": "",
+    "mesh_frame": "cube",
     "mesh_pose_grid": null,
     "mesh_pose_offset_mm": null,
     "mesh_pose_offset_deg": null
@@ -2542,7 +2542,7 @@
    "template": {
     "ref": "openuc2.tpl.plate_3x4@^0.1",
     "id": "openuc2.tpl.plate_3x4",
-    "resolved": "0.1.0",
+    "resolved": "0.1.1",
     "class": "generative",
     "actuatable": false,
     "carrier": true,
@@ -2552,10 +2552,10 @@
    },
    "assets": {
     "thumbnail": null,
-    "glb": null,
-    "step": null,
+    "glb": "/v1/library/assets/templates/openuc2.tpl.plate_3x4/model.glb",
+    "step": "/v1/library/assets/templates/openuc2.tpl.plate_3x4/model.step",
     "symbol": null,
-    "mesh_frame": "",
+    "mesh_frame": "cube",
     "mesh_pose_grid": null,
     "mesh_pose_offset_mm": null,
     "mesh_pose_offset_deg": null
@@ -2611,7 +2611,7 @@
    "template": {
     "ref": "openuc2.tpl.plate_3x5@^0.1",
     "id": "openuc2.tpl.plate_3x5",
-    "resolved": "0.1.0",
+    "resolved": "0.1.1",
     "class": "generative",
     "actuatable": false,
     "carrier": true,
@@ -2621,10 +2621,10 @@
    },
    "assets": {
     "thumbnail": null,
-    "glb": null,
-    "step": null,
+    "glb": "/v1/library/assets/templates/openuc2.tpl.plate_3x5/model.glb",
+    "step": "/v1/library/assets/templates/openuc2.tpl.plate_3x5/model.step",
     "symbol": null,
-    "mesh_frame": "",
+    "mesh_frame": "cube",
     "mesh_pose_grid": null,
     "mesh_pose_offset_mm": null,
     "mesh_pose_offset_deg": null
@@ -2681,7 +2681,7 @@
    "template": {
     "ref": "openuc2.tpl.plate_3x8@^0.1",
     "id": "openuc2.tpl.plate_3x8",
-    "resolved": "0.1.0",
+    "resolved": "0.1.1",
     "class": "generative",
     "actuatable": false,
     "carrier": true,
@@ -2691,10 +2691,10 @@
    },
    "assets": {
     "thumbnail": null,
-    "glb": null,
-    "step": null,
+    "glb": "/v1/library/assets/templates/openuc2.tpl.plate_3x8/model.glb",
+    "step": "/v1/library/assets/templates/openuc2.tpl.plate_3x8/model.step",
     "symbol": null,
-    "mesh_frame": "",
+    "mesh_frame": "cube",
     "mesh_pose_grid": null,
     "mesh_pose_offset_mm": null,
     "mesh_pose_offset_deg": null
