@@ -39,25 +39,5 @@ optics:
       frame: pivot_y
       direction: -y
       after-surface: 1
-  fragment:
-    surfaces:
-      - type: standard
-        geometry:
-          type: StandardGeometry
-          radius: .inf
-          conic: 0
-        thickness: 6
-        interaction_model:
-          type: refractive_reflective
-          is_reflective: true
-        semi_aperture: 12.7
-      - type: standard
-        geometry:
-          type: StandardGeometry
-          radius: .inf
-          conic: 0
-        interaction_model:
-          type: refractive_reflective
-          is_reflective: true
-        semi_aperture: 12.7
+  fragment-file: optics.optiland.yml
 mount_angle_deg: 45

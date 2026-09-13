@@ -1,0 +1,26 @@
+kind: mechanical_template
+id: openuc2.tpl.objective_soptop_hr_4x
+version: 0.1.0
+class: fixed
+description: Soptop High-Rank Plan 4×/0.1 barrel (housing)
+tags:
+  - objective
+  - housing
+glb: model.glb
+mesh-frame: cube
+envelope:
+  x-mm: 26.9
+  y-mm: 27.0
+  z-mm: 34.0
+mesh-pose:
+  rotation:
+    kind: grid
+    grid:
+      z: +y
+      x: +x
+footprint_grid:
+component: openuc2.objective.soptop_hr_4x@^0.1
+review:
+  - mesh converted from soptop_hr_4x.stp — drawn with the sample side along +y, turned into the cube
+    frame by mesh-pose
+  - the barrel's mounting datum is the mesh origin — verify against the thread shoulder

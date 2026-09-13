@@ -1,0 +1,27 @@
+kind: optical_component
+id: openuc2.detector.camera_libra16
+version: 0.1.0
+category: detector
+description: Tucsen Libra16 cooled BSI sCMOS — 95 % QE, best for fluorescence and low-light imaging
+tags: [cameras, detector]
+docs:
+  - https://docs.openuc2.com/cameras/tucsen-libra16
+vendor: {name: Tucsen, mpn: Libra16, url: 'https://docs.openuc2.com/cameras/tucsen-libra16', price: 6500.0, currency: EUR}
+detector:
+  sensor: BSI sCMOS
+  pixel_pitch_um: 3.76
+  resolution: [5120, 5120]
+  sensor_size_mm: [19.25, 19.25]
+  quantum_efficiency: 0.95
+  bit_depth: 16
+  fps_max: 46
+  mount: C-mount
+  cooled: true
+review:
+  - facts from the vendor table — confirm against current vendor data
+  - no CAD yet — a cube module follows the STEP export
+optics:
+  frames:
+    optical: {z-mm: 0.0}
+  ports:
+    sensor: {frame: optical, direction: -z}

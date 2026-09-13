@@ -1,0 +1,127 @@
+# The FRAME #0008 assembly as Inventor exports it — one STEP, the subassembly
+# names below are the browser's own (instance suffix included; the root has
+# none). Contract: DOCS/editor/frame-assembly-contract.md. Rebuild:
+# `optikit-core import assembly library/templates/openuc2.tpl.frame/assembly.yml --step <the STEP>`
+# The export is pruned first (fasteners, cables, boards) — see the contract's
+# "What Bene exports".
+source: "FRAME #0008 - Microscope incl accessories.stp"
+exported: 2026-09-10
+# The FRAME part origin (decision D-F4): the optical axis — x = y = 0 of the
+# export, where the illumination head, the diffuser and the OPM's fold mirror
+# all sit — at the centre of that fold-mirror cube (z measured on
+# `ASS - 2026 - CUBMIR45°TH3 - V04:1`, 35.94 in this export). Every record
+# below is measured from it.
+origin-mm: [0.0, 0.0, 35.9]
+pitch-mm: [50, 50, 55]
+
+parts:
+  - node: "FR110 - 1000 - Substructure:1"
+    template: openuc2.tpl.frame
+    description: FRAME body — the substructure with the miniFRAME rail bay; stage, arm and electronics dock on its mounts
+    carrier: true
+    # The OPM region: 3 wide, up to 8 deep from the axis row toward the front
+    # (-y), two layers. A docked group's `axis` interface member lands on the
+    # carrier's (0, 0) column; the rails engage the 3×3 nearest the axis.
+    bays:
+      miniframe: {origin-cell: [-1, -7, 0], size: [3, 8, 2], axis: +z}
+    # Informational for a carrier: its origin is the axis cube, the body extends both ways.
+    footprint-grid: [7, 7, 3]
+    review:
+      - rail capacity (8 deep) and the arm's cube seats are not measurable from this export — confirm against the rail drawing
+
+  - node: "FR110 - 2000 - Stage:1"
+    template: openuc2.tpl.frame_stage
+    component: {id: openuc2.stage.frame_xyz, category: stage, description: FRAME motorized XYZ sample stage}
+    fits: openuc2.frame.stage
+    mount-on: openuc2.tpl.frame
+    mount: stage
+    carrier: true
+    price: 2400
+    # #0008 ships the stage bare, so the sample seat has no node to measure.
+    # The number is the one #0007 measured on the slide holder that stood
+    # there; `FR110 - 2400 - Stage cover plate:1` is 4 mm below it, which is
+    # the holder's own base.
+    seats:
+      sample: {offset-mm: {x: 0.05, y: 0.0, z: 84.0}, accepts: openuc2.frame.sample}
+    review:
+      - "#0008 ships no sample holder on the stage: the `sample` seat is the height #0007 measured, and `openuc2.tpl.frame_slide_holder` still carries its #0007 mesh"
+
+  - node: "FR110 - 4001 - Kinematic objectives mount:1"
+    template: openuc2.tpl.frame_objective_mount
+    component: {id: openuc2.mechanics.frame_objective_mount, category: mechanics, description: kinematic (magnetic) objective mount for the FRAME stage}
+    fits: openuc2.frame.objectives
+    mount-on: openuc2.tpl.frame_stage
+    mount: objectives
+    price: 180
+    # WP-284: the plate's two positions, measured from the nodes that occupy
+    # them in this export. No record is minted for either occupant — the
+    # objective records come from the vendor table (`import objective`).
+    seats:
+      objectives-1: {node: "FRAME - 4002 - Objective Plan 4x with mount - A:1", accepts: openuc2.frame.objective}
+      objectives-2: {node: "BUY - Objective - Plan APO 20X:1", accepts: openuc2.frame.objective}
+    review:
+      - the plate is 66 mm wide about its own origin and carries two seats 29.8 mm apart in x; seat 1 holds a support-mounted objective (`FRAME - 4002`, whose objective axis lands at x = 1.6), seat 2 a bare threaded one (`Plan APO 20X`, axis at x = 31.4)
+      - neither axis is ON the illumination axis (x = 0) in this export — which of the two is the working position, and where the 1.6 mm comes from, is a CAD question
+      - the four objective carriers in CAD (`FRAME - 4002/4007/4008/4009`) put the objective at (14.9, 0, z) in the carrier frame, z = 28.9 / 28.9 / 24.9 / 28.1 — the parfocal compensation
+
+  - node: "FR110 - 3000 - Illumination arm:1"
+    template: openuc2.tpl.frame_arm
+    component: {id: openuc2.mechanics.frame_arm, category: mechanics, description: FRAME illumination arm — carries the transmission illumination head and the diffuser}
+    fits: openuc2.frame.arm
+    mount-on: openuc2.tpl.frame
+    mount: arm
+    carrier: true
+    price: 650
+
+  - node: "FRAME - 6102 - Illum w_o ring LED with ACL2520U and camera with lighting:1"
+    template: openuc2.tpl.frame_illumination_head_acl2520u
+    component: {id: openuc2.mechanics.frame_illumination_head_acl2520u, category: mechanics, description: transmission illumination head — ACL2520U condenser and a lit overview camera, no ring LED}
+    fits: openuc2.frame.illumination
+    mount-on: openuc2.tpl.frame_arm
+    mount: illumination
+    price: 420
+    review:
+      - the #0008 head variant; `openuc2.tpl.frame_illumination_head` (ring LED + D12 lens, from #0007) also fits this mount and both stay on offer
+      - shipped as ONE housing like its sibling; becomes a group in an arm bay once the arm's cube seats are confirmed co-registered with the FRAME grid
+
+  - node: "FRAME - 6150 - Height-adjustable diffuser:1"
+    template: openuc2.tpl.frame_diffuser
+    component: {id: openuc2.mechanics.frame_diffuser, category: mechanics, description: height-adjustable diffuser under the illumination head}
+    fits: openuc2.frame.diffuser
+    mount-on: openuc2.tpl.frame_arm
+    mount: diffuser
+    price: 60
+
+  - node: "FR110 - 5100 - Electronics box w_o SD drive:1"
+    template: openuc2.tpl.frame_electronics_box
+    component: {id: openuc2.electronics.frame_box, category: electronics, description: FRAME electronics box — Raspberry Pi 5, motor drivers, power}
+    fits: openuc2.frame.electronics
+    mount-on: openuc2.tpl.frame
+    mount: electronics
+    price: 480
+    review:
+      - the boards inside are pruned out of the export; the mesh is the case
+
+groups:
+  - id: openuc2.group.miniframe_brightfield
+    nodes:
+      - "OPM - 0003 - Brightfield:1"
+      - "BUY - HIKROBOT - Camera - MV-CS060-10UC-PRO:1"
+    # CAD subassembly name prefix → the module that IS that cube.
+    members:
+      "ASS - 2026 - CUBMIR45": openuc2.cube.mirror_45
+      "ASS - 2068 - CUBLEND23F180": openuc2.cube.tube_lens_1x1
+      "ASS - 2059 - CUBPHL0.4": openuc2.cube.pinhole_1x1
+      "ASS - 2058 - CUBTBSHOLD28.5": openuc2.cube.cube_1x1
+      "ASS - 2000 - CUB - V04": openuc2.cube.cube_1x1
+      "BUY - HIKROBOT - Camera": openuc2.cube.camera_basic
+    # Members outside the rail region (the camera arm hangs off the front).
+    overhang:
+      - "ASS - 2058 - CUBTBSHOLD28.5"
+      - "BUY - HIKROBOT - Camera"
+    interface:
+      axis: {member: "ASS - 2026 - CUBMIR45", port: front}
+      camera: {member: "BUY - HIKROBOT - Camera", port: sensor}
+    review:
+      - the two `CUBTBSHOLD28.5` tube-holder cubes and the C-mount tubus are shipped as `cube_1x1` + `camera_basic`; the camera body sits 12.5 mm off its cell
+      - the OPM sits 0.5 mm off the illumination axis in this export (y = -0.5); cells are snapped

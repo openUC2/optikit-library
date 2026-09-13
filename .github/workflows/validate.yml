@@ -21,6 +21,7 @@ jobs:
           # The validator parses the GLBs (mesh frames, the plate finder);
           # without LFS it would be reading 130-byte pointer files.
           lfs: true
+          fetch-depth: 0 # the semver-bump check diffs against the base branch
 
       - uses: actions/setup-python@v5
         with:
@@ -38,6 +39,14 @@ jobs:
 
       - name: Validate the record library
         run: optikit-core library validate --root library
+
+      # A changed record must bump its version (moved here from optikit-core
+      # with the records, 2026-09-13).
+      - name: Changed records bump their version
+        if: github.event_name == 'pull_request'
+        run: |
+          git fetch --no-tags origin "${{ github.base_ref }}"
+          python scripts/check_semver_bump.py --base "origin/${{ github.base_ref }}"
 
       - name: Validate every design and setup bundle
         run: |

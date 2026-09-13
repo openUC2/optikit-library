@@ -1,0 +1,45 @@
+kind: optical_component
+id: openuc2.objective.soptop_hr_20x
+version: 0.1.0
+category: objective
+description: Soptop High-Rank Plan 20×/0.4 — 20×/0.4, WD 3 mm (plan-achromat)
+tags:
+  - objective
+  - objective/air
+docs:
+  - https://docs.openuc2.com/objectives/soptop-hr-20x
+vendor:
+  name: Soptop
+  mpn: ''
+  url: https://docs.openuc2.com/objectives/soptop-hr-20x
+  price: 620.0
+  currency: EUR
+effective_focal_length_mm: 9.0
+objective:
+  magnification: 20.0
+  numerical_aperture: 0.4
+  working_distance_mm: 3.0
+  tube_lens_f_mm: 180.0
+  immersion: air
+  thread: M25x0.75
+  parfocal_distance_mm: 45.0
+  field_number_mm: 22.0
+  correction: plan-achromat
+optics:
+  frames:
+    optical:
+      z-mm: 0.0
+      clear-aperture-mm: 7.2
+  ports:
+    front:
+      frame: optical
+      direction: -z
+    back:
+      frame: optical
+      direction: +z
+      after-surface: 0
+  fragment-file: optics.optiland.yml
+review:
+  - facts from the vendor table — confirm against current vendor data
+  - traces as an ideal thin lens at the stated EFL — attach the vendor .zmx for the real 
+    prescription

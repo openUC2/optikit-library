@@ -1,6 +1,6 @@
 kind: mechanical_template
 id: openuc2.tpl.frame_objective_mount
-version: 0.1.2
+version: 0.1.5
 class: fixed
 description: kinematic (magnetic) objective mount for the FRAME stage
 tags:
@@ -10,13 +10,34 @@ mesh-frame: cube
 envelope:
   x-mm: 66.0
   y-mm: 36.0
-  z-mm: 7.6
-carrier: false
+  z-mm: 5.0
+carrier: true
 footprint_grid:
 fits: openuc2.frame.objectives
 component: openuc2.mechanics.frame_objective_mount@^0.1
 review:
-  - 'measured from FRAME #0007 - Microscope incl accessories.step (exported 2026-09-08)'
-  - seat pose taken from the stage's `Base objectives` node origin; whether the kit's own origin 
-    coincides with it when mounted is unverified — check on the next export with the kit in its 
-    working position
+  - 'measured from FRAME #0008 - Microscope incl accessories.stp (exported 2026-09-10)'
+  - the plate is 66 mm wide about its own origin and carries two seats 29.8 mm apart in x; seat 1 
+    holds a support-mounted objective (`FRAME - 4002`, whose objective axis lands at x = 1.6), seat 
+    2 a bare threaded one (`Plan APO 20X`, axis at x = 31.4)
+  - neither axis is ON the illumination axis (x = 0) in this export — which of the two is the 
+    working position, and where the 1.6 mm comes from, is a CAD question
+  - the four objective carriers in CAD (`FRAME - 4002/4007/4008/4009`) put the objective at (14.9, 
+    0, z) in the carrier frame, z = 28.9 / 28.9 / 24.9 / 28.1 — the parfocal compensation
+mounts:
+  objectives-1:
+    pose:
+      translation:
+        offset-mm:
+          x: -29.8
+          y: 0.0
+          z: 0.0
+    accepts: openuc2.frame.objective
+  objectives-2:
+    pose:
+      translation:
+        offset-mm:
+          x: 14.9
+          y: 0.0
+          z: 12.5
+    accepts: openuc2.frame.objective

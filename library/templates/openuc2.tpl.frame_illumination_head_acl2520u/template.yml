@@ -1,0 +1,22 @@
+kind: mechanical_template
+id: openuc2.tpl.frame_illumination_head_acl2520u
+version: 0.1.2
+class: fixed
+description: transmission illumination head — ACL2520U condenser and a lit overview camera
+tags:
+  - frame
+glb: model.glb
+mesh-frame: cube
+envelope:
+  x-mm: 104.0
+  y-mm: 135.3
+  z-mm: 195.7
+carrier: false
+footprint_grid:
+fits: openuc2.frame.illumination
+component: openuc2.mechanics.frame_illumination_head_acl2520u@^0.1
+review:
+  - 'measured from FRAME #0008 - Microscope incl accessories.stp (exported 2026-09-10)'
+  - the
+  - shipped as ONE housing like its sibling; becomes a group in an arm bay once the arm's cube seats
+    are confirmed co-registered with the FRAME grid

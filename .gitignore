@@ -5,3 +5,4 @@ library/dist/
 
 # macOS Finder droppings
 .DS_Store
+/library/archive

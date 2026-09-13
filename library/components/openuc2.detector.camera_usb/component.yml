@@ -1,19 +1,25 @@
 kind: optical_component
 id: openuc2.detector.camera_usb
-version: 0.1.0
+version: 0.2.0
 category: detector
-description: USB camera module for imaging
-tags:
-  - migrated
-  - cameras
-docs: []
+description: HIK MV-CS060 USB3 camera — best all-rounder for high-speed brightfield and live cell imaging
+tags: [cameras, detector]
+docs:
+  - https://docs.openuc2.com/cameras/hik-mvcs060
+vendor: {name: Hikrobot, mpn: MV-CS060-10UC, url: 'https://docs.openuc2.com/cameras/hik-mvcs060', price: 520.0, currency: EUR}
+detector:
+  sensor: IMX174
+  pixel_pitch_um: 3.45
+  resolution: [1920, 1200]
+  sensor_size_mm: [7.07, 4.42]
+  quantum_efficiency: 0.78
+  bit_depth: 12
+  fps_max: 163
+  mount: C-mount
 review:
-  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+  - facts from the vendor table — confirm against current vendor data
 optics:
   frames:
-    optical:
-      z-mm: 0.0
+    optical: {z-mm: 0.0}
   ports:
-    sensor:
-      frame: optical
-      direction: -z
+    sensor: {frame: optical, direction: -z}

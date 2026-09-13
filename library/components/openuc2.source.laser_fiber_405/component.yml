@@ -1,0 +1,20 @@
+# Fiber-combined 405 nm laser: the lines arrive collimated through ONE fiber
+# into the coupler cube. Placeholder record — the line list is the contract,
+# power and beam diameter follow with the datasheet.
+kind: optical_component
+id: openuc2.source.laser_fiber_405
+version: 0.1.0
+category: source
+description: Fiber-combined 405 nm laser (placeholder — served through one fiber)
+tags: [source, source/laser, source/fiber, placeholder]
+review:
+  - "placeholder — CAD and specs pending; served through one fiber"
+optics:
+  frames:
+    optical: {z-mm: 0.0}
+  ports:
+    out: {frame: optical, direction: +z}
+source:
+  wavelengths_um: [0.405]
+  divergence_deg: 1.0
+vendor: {name: openUC2@Boison, mpn: LASER-FIBER-405, price: 900.0, currency: EUR}

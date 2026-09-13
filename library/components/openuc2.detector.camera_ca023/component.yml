@@ -1,0 +1,26 @@
+kind: optical_component
+id: openuc2.detector.camera_ca023
+version: 0.1.0
+category: detector
+description: HIK MV-CA023 USB3 camera — large 5.86 µm pixels, best dynamic range for low-light brightfield
+tags: [cameras, detector]
+docs:
+  - https://docs.openuc2.com/cameras/hik-mvca023
+vendor: {name: Hikrobot, mpn: MV-CA023-10UC, url: 'https://docs.openuc2.com/cameras/hik-mvca023', price: 490.0, currency: EUR}
+detector:
+  sensor: IMX249
+  pixel_pitch_um: 5.86
+  resolution: [1920, 1200]
+  sensor_size_mm: [11.25, 7.03]
+  quantum_efficiency: 0.72
+  bit_depth: 12
+  fps_max: 42
+  mount: C-mount
+review:
+  - facts from the vendor table — confirm against current vendor data
+  - no CAD yet — a cube module follows the STEP export
+optics:
+  frames:
+    optical: {z-mm: 0.0}
+  ports:
+    sensor: {frame: optical, direction: -z}

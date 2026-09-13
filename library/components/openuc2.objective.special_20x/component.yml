@@ -1,0 +1,45 @@
+kind: optical_component
+id: openuc2.objective.special_20x
+version: 0.1.0
+category: objective
+description: Plan Apo 20×/0.75 (Special) — 20×/0.75, WD 1 mm (apochromatic)
+tags:
+  - objective
+  - objective/air
+docs:
+  - https://docs.openuc2.com/objectives/special-20x-075
+vendor:
+  name: openUC2 Special
+  mpn: ''
+  url: https://docs.openuc2.com/objectives/special-20x-075
+  price: 1500.0
+  currency: EUR
+effective_focal_length_mm: 9.0
+objective:
+  magnification: 20.0
+  numerical_aperture: 0.75
+  working_distance_mm: 1.0
+  tube_lens_f_mm: 180.0
+  immersion: air
+  thread: M25x0.75
+  parfocal_distance_mm: 45.0
+  field_number_mm: 22.0
+  correction: apochromatic
+optics:
+  frames:
+    optical:
+      z-mm: 0.0
+      clear-aperture-mm: 13.5
+  ports:
+    front:
+      frame: optical
+      direction: -z
+    back:
+      frame: optical
+      direction: +z
+      after-surface: 0
+  fragment-file: optics.optiland.yml
+review:
+  - facts from the vendor table — confirm against current vendor data
+  - traces as an ideal thin lens at the stated EFL — attach the vendor .zmx for the real 
+    prescription
