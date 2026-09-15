@@ -1,0 +1,12 @@
+kind: cube_module
+id: user.cube.my_next_galvo
+version: 0.1.0
+description: my_next_galvo in a 2x2 cube (bound)
+tags:
+- bound
+template: user.tpl.my_next_galvo@^0.1
+footprint_grid:
+- 2
+- 2
+- 1
+design: user.subdesign.my_next_galvo@^0.1

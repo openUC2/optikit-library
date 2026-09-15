@@ -1,0 +1,12 @@
+kind: cube_module
+id: user.cube.led_fluorescence
+version: 0.1.0
+description: led_fluorescence in a 1x1 cube (bound)
+tags:
+  - bound
+component: user.source.led_fluorescence@^0.1
+template: user.tpl.led_fluorescence@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1

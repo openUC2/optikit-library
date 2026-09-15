@@ -1,0 +1,12 @@
+kind: cube_module
+id: user.cube.my_personal_galvo
+version: 0.1.0
+description: my_personal_galvo in a 2x2 cube (bound)
+tags:
+  - bound
+component: user.mirror.my_personal_galvo@^0.1
+template: user.tpl.my_personal_galvo@^0.1
+footprint_grid:
+  - 2
+  - 2
+  - 1
