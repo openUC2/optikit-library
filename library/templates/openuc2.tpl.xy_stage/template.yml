@@ -1,6 +1,6 @@
 kind: mechanical_template
 id: openuc2.tpl.xy_stage
-version: 0.1.0
+version: 0.1.1
 class: fixed
 description: UC2 XY Stage e.g. for microdiamonds mount (migrated)
 tags:
@@ -19,3 +19,4 @@ review:
 glb: ASS_-_3005_-_CUBMANXYST02DIA.glb
 glb-url: 
   https://raw.githubusercontent.com/beniroquai/openUC2-OptiKit-Store/refs/heads/main/GLB/ASS_-_3005_-_CUBMANXYST02DIA.glb
+locked: true

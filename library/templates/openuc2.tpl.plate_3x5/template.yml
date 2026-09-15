@@ -1,6 +1,6 @@
 kind: mechanical_template
 id: openuc2.tpl.plate_3x5
-version: 0.1.1
+version: 0.1.3
 class: generative
 carrier: true
 description: 3x5 sandwich plate, 4 screw holes per cell on the cube hole circle
@@ -25,3 +25,4 @@ footprint_grid:
 glb: model.glb
 step: model.step
 mesh-frame: cube
+locked: true

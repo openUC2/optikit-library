@@ -1,6 +1,6 @@
 kind: mechanical_template
 id: openuc2.tpl.frame_illumination_head_acl2520u
-version: 0.1.2
+version: 0.1.3
 class: fixed
 description: transmission illumination head — ACL2520U condenser and a lit overview camera
 tags:
@@ -20,3 +20,4 @@ review:
   - the
   - shipped as ONE housing like its sibling; becomes a group in an arm bay once the arm's cube seats
     are confirmed co-registered with the FRAME grid
+locked: true

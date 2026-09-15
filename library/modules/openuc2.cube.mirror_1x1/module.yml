@@ -1,6 +1,6 @@
 kind: cube_module
 id: openuc2.cube.mirror_1x1
-version: 0.1.0
+version: 0.1.1
 description: Mirror module for beam steering
 tags:
   - migrated
@@ -19,3 +19,4 @@ footprint_grid:
 review:
   - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
 price: 50.0
+locked: true

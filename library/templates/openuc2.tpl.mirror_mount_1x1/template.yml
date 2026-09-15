@@ -2,7 +2,7 @@
 # through the part origin (substrate behind it).
 kind: mechanical_template
 id: openuc2.tpl.mirror_mount_1x1
-version: 0.1.0
+version: 0.1.1
 class: fixed
 description: Placeholder flat-mirror mount (reflective plane at z = 0)
 tags: [placeholder, insert/mirror]
@@ -23,3 +23,4 @@ footprint_grid: [1, 1, 1]
 # T1 discrete configurations (Inventor positional representations, WP-34):
 # which plane the reflective surface spans inside the cube.
 states: [XY, YZ]
+locked: true

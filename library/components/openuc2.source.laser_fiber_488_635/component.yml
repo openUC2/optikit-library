@@ -3,7 +3,7 @@
 # power and beam diameter follow with the datasheet.
 kind: optical_component
 id: openuc2.source.laser_fiber_488_635
-version: 0.1.0
+version: 0.1.1
 category: source
 description: Fiber-combined dual-line 488/635 nm laser (placeholder — served through one fiber)
 tags: [source, source/laser, source/fiber, placeholder]
@@ -18,3 +18,4 @@ source:
   wavelengths_um: [0.488, 0.635]
   divergence_deg: 1.0
 vendor: {name: openUC2@Boison, mpn: LASER-FIBER-488-635, price: 1600.0, currency: EUR}
+locked: true

@@ -1,6 +1,6 @@
 kind: mechanical_template
 id: openuc2.tpl.frame_objective_mount
-version: 0.1.5
+version: 0.1.7
 class: fixed
 description: kinematic (magnetic) objective mount for the FRAME stage
 tags:
@@ -18,10 +18,12 @@ component: openuc2.mechanics.frame_objective_mount@^0.1
 review:
   - 'measured from FRAME #0008 - Microscope incl accessories.stp (exported 2026-09-10)'
   - the plate is 66 mm wide about its own origin and carries two seats 29.8 mm apart in x; seat 1 
-    holds a support-mounted objective (`FRAME - 4002`, whose objective axis lands at x = 1.6), seat 
-    2 a bare threaded one (`Plan APO 20X`, axis at x = 31.4)
-  - neither axis is ON the illumination axis (x = 0) in this export — which of the two is the 
-    working position, and where the 1.6 mm comes from, is a CAD question
+    (working, facing the camera) holds a support-mounted objective (`FRAME - 4002`, objective axis 
+    at x = 1.6), seat 2 (parked) a bare threaded one (`Plan APO 20X`, axis at x = 31.4)
+  - seat 1 is STATED (carrier origin -29.8 + the carrier's objective offset 14.9 / 28.9) because the
+    export's node is the carrier, not the objective; its z is the 4x carrier's — a bare objective in
+    seat 1 would sit at seat 2's height (12.5); confirm on the next export
+  - the 1.6 mm between the working axis and the illumination axis (x = 0) is in the CAD
   - the four objective carriers in CAD (`FRAME - 4002/4007/4008/4009`) put the objective at (14.9, 
     0, z) in the carrier frame, z = 28.9 / 28.9 / 24.9 / 28.1 — the parfocal compensation
 mounts:
@@ -29,9 +31,14 @@ mounts:
     pose:
       translation:
         offset-mm:
-          x: -29.8
+          x: -14.9
           y: 0.0
-          z: 0.0
+          z: 28.9
+      rotation:
+        kind: grid
+        grid:
+          z: -z
+          x: +x
     accepts: openuc2.frame.objective
   objectives-2:
     pose:
@@ -40,4 +47,10 @@ mounts:
           x: 14.9
           y: 0.0
           z: 12.5
+      rotation:
+        kind: grid
+        grid:
+          z: -z
+          x: +x
     accepts: openuc2.frame.objective
+locked: true

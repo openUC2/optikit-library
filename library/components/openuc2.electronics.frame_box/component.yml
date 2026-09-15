@@ -1,6 +1,6 @@
 kind: optical_component
 id: openuc2.electronics.frame_box
-version: 0.1.0
+version: 0.1.1
 category: electronics
 description: FRAME electronics box — Raspberry Pi 5
 tags:
@@ -13,3 +13,4 @@ vendor:
   name: openUC2
   price: 480
   currency: EUR
+locked: true

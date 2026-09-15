@@ -1,6 +1,6 @@
 kind: mechanical_template
 id: openuc2.tpl.filter_dichroic
-version: 0.1.0
+version: 0.1.1
 class: fixed
 description: Dichroic Mirror mount (migrated)
 tags:
@@ -19,3 +19,4 @@ review:
 glb: ASS_-_2027_-_CUBDICSPL+EMIFIL_WLS532_-_A.glb
 glb-url: 
   https://raw.githubusercontent.com/beniroquai/openUC2-OptiKit-Store/refs/heads/main/GLB/ASS_-_2027_-_CUBDICSPL+EMIFIL_WLS532_-_A.glb
+locked: true

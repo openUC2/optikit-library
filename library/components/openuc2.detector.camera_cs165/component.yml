@@ -4,7 +4,7 @@
 # the housing's front bore.
 kind: optical_component
 id: openuc2.detector.camera_cs165
-version: 1.1.0
+version: 1.1.1
 category: detector
 description: CS165MU 1.6 MP CMOS camera (sensor datum at z = -10 mm)
 tags: [detector, detector/camera]
@@ -15,3 +15,4 @@ optics:
   ports:
     sensor: {frame: sensor, direction: -z}
 vendor: {name: Thorlabs, mpn: CS165MU}
+locked: true

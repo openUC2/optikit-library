@@ -1,6 +1,6 @@
 kind: cube_group
-id: openuc2.group.miniframe_laserscan
-version: 0.1.2
+id: openuc2.group.opm_laserscan
+version: 0.1.3
 description: miniFRAME laser-scanning (FLIM 488) OPM — fiber-coupled laser on the plate tab, 
   dichroic, XY galvo, f50/f160 relay, 45° splitter on the axis, detection into a fiber; two layers 
   under a 3×8 plate
@@ -144,3 +144,4 @@ interface:
   axis:
     member: mirror_45
     port: front
+locked: true

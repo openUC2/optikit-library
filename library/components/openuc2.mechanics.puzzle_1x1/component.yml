@@ -3,8 +3,9 @@
 # cube pins hold the cube below and above.
 kind: optical_component
 id: openuc2.mechanics.puzzle_1x1
-version: 0.1.0
+version: 0.1.1
 category: mechanics
 description: Puzzle piece joining two cube layers (2 noses + 2 notches, pins both sides)
 tags: [mechanics, carrier, miniframe]
 vendor: {name: openUC2, mpn: PRT-1004-PUZ11, url: ""}
+locked: true

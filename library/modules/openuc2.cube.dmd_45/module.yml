@@ -1,6 +1,6 @@
 kind: cube_module
 id: openuc2.cube.dmd_45
-version: 0.1.1
+version: 0.1.2
 description: DMD structured-illumination cube (45°, pattern over CAN)
 tags: [cube, cube/slm, structured-illumination]
 component: openuc2.slm.dmd_45@^0.1
@@ -15,3 +15,4 @@ electronics:
   axis-map: []
 footprint_grid: [1, 1, 1]
 price: 420.0
+locked: true

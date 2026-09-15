@@ -1,10 +1,9 @@
 kind: cube_group
-id: openuc2.group.miniframe_brightfield
-version: 0.1.6
+id: openuc2.group.opm_brightfield
+version: 0.1.7
 description: miniFRAME brightfield OPM — 3x3x2 cube stack, sandwich plates, camera arm
 tags:
   - opm
-  - miniframe
   - brightfield
 docs:
   - https://docs.openuc2.com/usage/pro/miniframe/miniFRAME_DPC
@@ -163,3 +162,4 @@ interface:
   camera:
     member: camera_basic
     port: sensor
+locked: true

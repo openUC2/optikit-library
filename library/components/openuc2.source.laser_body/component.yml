@@ -4,7 +4,7 @@
 # feeds the WP-74 photon budget.
 kind: optical_component
 id: openuc2.source.laser_body
-version: 0.1.0
+version: 0.1.1
 category: source
 description: Collimated laser module in its own cylindrical body — the S2 bare-housing reference
 tags: [reference, source, source/laser]
@@ -18,3 +18,4 @@ source:
   wavelengths_um: [0.635]
   divergence_deg: 0.5
   power_mw: 1.0
+locked: true

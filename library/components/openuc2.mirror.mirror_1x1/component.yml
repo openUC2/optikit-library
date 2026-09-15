@@ -1,6 +1,6 @@
 kind: optical_component
 id: openuc2.mirror.mirror_1x1
-version: 0.1.1
+version: 0.1.2
 category: mirror
 description: Mirror module for beam steering
 tags:
@@ -29,3 +29,4 @@ vendor:
   name: ""
   mpn: ""
   url: ""
+locked: true

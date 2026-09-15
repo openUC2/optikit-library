@@ -3,7 +3,7 @@
 # object. This is the object the configurator sidebar shows.
 kind: cube_module
 id: openuc2.cube.lens_z
-version: 2.0.0
+version: 2.0.1
 description: Motorizable focus lens cube (25 mm achromat on a ±7.5 mm z insert)
 tags: [cube, cube/lens, cube/motorized]
 # WP-227: subdesign-backed — the design input `dz` drives the lens
@@ -16,3 +16,4 @@ electronics:
   axis-map:
     - {dof: dz, can-object: 0x6062}
 footprint_grid: [1, 1, 1]
+locked: true

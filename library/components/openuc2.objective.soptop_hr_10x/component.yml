@@ -1,6 +1,6 @@
 kind: optical_component
 id: openuc2.objective.soptop_hr_10x
-version: 0.1.0
+version: 0.1.1
 category: objective
 description: Soptop High-Rank Plan 10×/0.3 — 10×/0.3, WD 7.6 mm (plan-achromat)
 tags:
@@ -43,3 +43,4 @@ review:
   - facts from the vendor table — confirm against current vendor data
   - traces as an ideal thin lens at the stated EFL — attach the vendor .zmx for the real 
     prescription
+locked: true

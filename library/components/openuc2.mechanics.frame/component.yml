@@ -3,7 +3,8 @@
 # docked on the body's mounts (templates/openuc2.tpl.frame/assembly.yml).
 kind: optical_component
 id: openuc2.mechanics.frame
-version: 0.1.1
+version: 0.1.2
 category: mechanics
 description: FRAME body — substructure with the miniFRAME rail bay
 tags: [mechanics, carrier, frame]
+locked: true

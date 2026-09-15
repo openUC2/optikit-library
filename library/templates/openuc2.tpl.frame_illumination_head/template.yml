@@ -1,6 +1,6 @@
 kind: mechanical_template
 id: openuc2.tpl.frame_illumination_head
-version: 0.1.2
+version: 0.1.3
 class: fixed
 description: transmission illumination head — ring LED
 tags:
@@ -20,3 +20,4 @@ review:
   - two `CUBREW` cubes (LED/lens on the axis, camera one cell +y) shipped as ONE housing; becomes a 
     group in an arm bay once the arm's cube seats are confirmed co-registered with the FRAME grid 
     (they sit 3.9 mm below layer 6 in this export)
+locked: true

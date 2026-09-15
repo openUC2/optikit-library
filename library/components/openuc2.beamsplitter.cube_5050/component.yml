@@ -1,6 +1,6 @@
 kind: optical_component
 id: openuc2.beamsplitter.cube_5050
-version: 0.1.1
+version: 0.1.2
 category: beamsplitter
 description: Non-polarizing 50/50 beamsplitter cube
 tags: [beamsplitter, beamsplitter/cube, beamsplitter/non-polarizing]
@@ -13,3 +13,4 @@ optics:
     transmitted: {frame: optical, direction: +z, after-surface: 0}
     reflected: {frame: optical, direction: +x, after-surface: 0}
   fragment-file: optics.optiland.yml
+locked: true

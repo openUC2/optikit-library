@@ -1,6 +1,6 @@
 kind: mechanical_template
 id: openuc2.tpl.cublend12_7f40
-version: 0.2.0
+version: 0.2.1
 class: adaptive
 description: Insert template from ASS - 2028 - CUBLEND12.7F40 - V04
 envelope:
@@ -29,3 +29,4 @@ optical_ports:
 # together (DSN-CONTRACT §4d) and want that review. Kept as the pinned
 # real-mesh specimen of the finding (tests/test_kinematics.py); not a
 # `review:` flag because the S4 corpus pins this trio as review-resolved.
+locked: true

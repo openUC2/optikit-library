@@ -1,0 +1,41 @@
+kind: optical_component
+id: thorlabs.lens.lb4030-ab
+version: 0.1.1
+category: lens
+description: LB4223 Bi-Convex - UV Fused Silica, AB coating
+tags:
+  - imported
+  - zmx
+  - catalog
+  - catalog/optics-catalog-2026-09-09
+vendor:
+  name: Thorlabs
+  mpn: LB4030-AB
+  url: 
+    https://www.thorlabs.com/uv-fused-silica-bi-convex-lenses-ar-coated-400---1100-nm?pn=LB4030-AB
+  price: 147.34
+  currency: USD
+optics:
+  frames:
+    optical:
+      z-mm: 0.0
+    exit:
+      z-mm: 6.67
+    mount:
+      z-mm: 3.335
+  ports:
+    front:
+      frame: optical
+      direction: -z
+    back:
+      frame: exit
+      direction: +z
+      after-surface: 1
+  fragment-file: optics.optiland.yml
+review:
+  - 'surface 1: non-database material AbbeMaterial kept verbatim — verify'
+  - prescription from the vendor zmx 
+    https://media.thorlabs.com/globalassets/items/l/lb/lb4/lb4030-ab/ctn021308-s03.zmx?v=0116122326 
+    (sha256 174866bcc3f5…, retrieved 2026-09-14T08:15:59+00:00)
+effective_focal_length_mm: 36.878346
+locked: true

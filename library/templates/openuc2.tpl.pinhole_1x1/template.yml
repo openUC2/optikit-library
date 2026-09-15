@@ -1,6 +1,6 @@
 kind: mechanical_template
 id: openuc2.tpl.pinhole_1x1
-version: 0.1.0
+version: 0.1.1
 class: fixed
 description: Pinhole Aperture 1x1 mount (migrated)
 tags:
@@ -19,3 +19,4 @@ review:
 glb: ASS_-_4001_-_PHNHOL_-_A.glb
 glb-url: 
   https://raw.githubusercontent.com/beniroquai/openUC2-OptiKit-Store/refs/heads/main/GLB/ASS_-_4001_-_PHNHOL_-_A.glb
+locked: true

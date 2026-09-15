@@ -1,0 +1,26 @@
+kind: optical_component
+id: user.source.cublas520
+version: 0.1.0
+category: source
+description: ASS - 2018 - CUBLAS520 - V04 - A
+tags:
+  - authored
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+  price: 80
+  currency: EUR
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  ports:
+    out:
+      frame: optical
+      direction: +z
+source:
+  wavelengths_um:
+    - 0.52
+  divergence_deg: 0
+  beam_diameter_mm: 5

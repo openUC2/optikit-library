@@ -3,7 +3,7 @@
 # center), split into two printable halves with cut-off M3 fastening.
 kind: mechanical_template
 id: openuc2.tpl.holder_ac254_050_a
-version: 0.1.0
+version: 0.1.1
 class: generative
 description: Printable boolean holder for the AC254-050-A doublet (two halves, M3 cut-offs)
 tags: [holder, generated, insert/lens]
@@ -20,3 +20,4 @@ optical_ports:
   front: {frame: optical, direction: -z}
   back: {frame: optical, direction: +z}
 footprint_grid: [1, 1, 1]
+locked: true

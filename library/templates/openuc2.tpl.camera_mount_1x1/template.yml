@@ -2,7 +2,7 @@
 # 10 mm behind the part origin (z = -10 mm), behind the front bore.
 kind: mechanical_template
 id: openuc2.tpl.camera_mount_1x1
-version: 0.1.0
+version: 0.1.1
 class: fixed
 description: Placeholder camera housing (sensor plane at z = -10 mm)
 tags: [placeholder, insert/camera]
@@ -16,3 +16,4 @@ step: model.step
 optical_ports:
   sensor: {frame: sensor, direction: -z}
 footprint_grid: [1, 1, 1]
+locked: true

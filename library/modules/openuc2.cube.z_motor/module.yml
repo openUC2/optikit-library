@@ -4,7 +4,7 @@
 # checks the contract).
 kind: cube_module
 id: openuc2.cube.z_motor
-version: 0.2.0
+version: 0.2.1
 description: Starter motorized z-stage cube — the exemplary firmware-bound trio to copy
 tags: [starter, cube, cube/stage, cube/motorized]
 # WP-230: subdesign-backed — dz is the design input driving the
@@ -17,3 +17,4 @@ electronics:
   axis-map:
     - {dof: dz, can-object: 0x6062}
 footprint_grid: [1, 1, 1]
+locked: true

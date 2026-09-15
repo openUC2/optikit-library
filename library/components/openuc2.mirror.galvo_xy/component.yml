@@ -1,6 +1,6 @@
 kind: optical_component
 id: openuc2.mirror.galvo_xy
-version: 0.1.1
+version: 0.1.2
 category: mirror
 description: Galvo mirrors that can be used for scanning a beam
 tags:
@@ -22,3 +22,4 @@ optics:
       direction: +x
       after-surface: 0
   fragment-file: optics.optiland.yml
+locked: true

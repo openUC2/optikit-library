@@ -5,7 +5,7 @@
 # walk from this point.
 kind: optical_component
 id: openuc2.source.laser_488
-version: 1.2.0
+version: 1.2.1
 category: source
 description: Collimated 488 nm laser diode module (emission datum at z = +20 mm)
 tags: [source, source/laser]
@@ -26,3 +26,4 @@ optics:
     angular: {type: collimated}
     flux: 1.0
 vendor: {name: openUC2, mpn: LASER-488-COL}
+locked: true

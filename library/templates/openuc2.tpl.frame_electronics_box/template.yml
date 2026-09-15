@@ -1,6 +1,6 @@
 kind: mechanical_template
 id: openuc2.tpl.frame_electronics_box
-version: 0.1.5
+version: 0.1.6
 class: fixed
 description: FRAME electronics box — Raspberry Pi 5
 tags:
@@ -18,3 +18,4 @@ component: openuc2.electronics.frame_box@^0.1
 review:
   - 'measured from FRAME #0008 - Microscope incl accessories.stp (exported 2026-09-10)'
   - the boards inside are pruned out of the export; the mesh is the case
+locked: true

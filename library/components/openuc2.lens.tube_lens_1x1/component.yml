@@ -1,6 +1,6 @@
 kind: optical_component
 id: openuc2.lens.tube_lens_1x1
-version: 0.2.1
+version: 0.2.2
 category: lens
 description: Infinity‑corrected tube lens for microscope systems.
 tags:
@@ -29,3 +29,4 @@ optics:
       after-surface: 1
   fragment-file: optics.optiland.yml
 effective_focal_length_mm: 200.0
+locked: true

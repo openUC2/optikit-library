@@ -1,6 +1,6 @@
 kind: mechanical_template
 id: openuc2.tpl.frame_stage
-version: 0.1.5
+version: 0.1.6
 class: fixed
 description: FRAME motorized XYZ sample stage
 tags:
@@ -36,3 +36,4 @@ review:
   - 'measured from FRAME #0008 - Microscope incl accessories.stp (exported 2026-09-10)'
   - "#0008 ships no sample holder on the stage: the `sample` seat is the height #0007 measured, and `openuc2.tpl.frame_slide_holder`
     still carries its #0007 mesh"
+locked: true

@@ -1,6 +1,6 @@
 kind: optical_component
 id: openuc2.lens.starter_50mm
-version: 0.1.1
+version: 0.1.2
 category: lens
 description: Starter biconvex lens, f = 50 mm — the exemplary lens record to copy
 tags: [starter, lens, lens/biconvex]
@@ -13,3 +13,4 @@ optics:
     front: {frame: optical, direction: -z}
     back: {frame: exit, direction: +z, after-surface: 1}
   fragment-file: optics.optiland.yml
+locked: true

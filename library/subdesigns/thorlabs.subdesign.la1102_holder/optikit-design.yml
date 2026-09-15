@@ -1,0 +1,122 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  name: la1102-holder
+  version: 0.1.0
+  description: thorlabs.lens.la1102 in a generated holder, beam along +x
+  tags:
+    - composition/cube-mounted
+components:
+  la1102:
+    kind: primitive
+    category: lens
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: 25.74999999999999
+              conic: 0.0
+            material_post:
+              type: Material
+              name: N-BK7
+            thickness: 7.31
+            is_stop: true
+            semi_aperture: 15.0
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0.0
+            semi_aperture: 15.0
+      frames:
+        optical: {}
+        exit:
+          z-mm: 7.31
+        mount:
+          z-mm: 6.065029
+      ports:
+        front:
+          frame: optical
+          direction: -z
+        back:
+          frame: exit
+          direction: +z
+          after-surface: 1
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +x
+          x: -z
+      translation:
+        offset-mm:
+          x: 7.4324
+          y: -1.5412
+    tags:
+      - procurement/buy
+  cartridge-back:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: model.back.glb
+        step: model.back.step
+    pose:
+      rotation:
+        kind: grid
+    tags:
+      - procurement/3d-print
+  cartridge-front:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: model.front.glb
+        step: model.front.step
+    pose:
+      rotation:
+        kind: grid
+    tags:
+      - procurement/3d-print
+  master-insert-notched:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: model.master_notched.glb
+        step: model.master_notched.step
+    pose:
+      rotation:
+        kind: grid
+    tags:
+      - procurement/buy
+      - in/kit/qbox
+  master-insert-smooth:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: model.master_smooth.glb
+        step: model.master_smooth.step
+    pose:
+      rotation:
+        kind: grid
+    tags:
+      - procurement/buy
+      - in/kit/qbox
+  cube-shell:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: cube-shell.glb
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +z
+          x: +y
+    tags:
+      - procurement/buy
+      - in/kit/qbox

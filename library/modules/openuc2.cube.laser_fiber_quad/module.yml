@@ -1,8 +1,9 @@
 # The fiber-combined quad-line 405/488/532/635 nm laser in the fiber-coupler cube (placeholder).
 kind: cube_module
 id: openuc2.cube.laser_fiber_quad
-version: 0.1.0
-description: Fiber-combined quad-line 405/488/532/635 nm laser in the 1x1 fiber-coupler cube (placeholder)
+version: 0.1.1
+description: Fiber-combined quad-line 405/488/532/635 nm laser in the 1x1 fiber-coupler cube 
+  (placeholder)
 tags: [cube, cube/source, placeholder]
 review:
   - "placeholder — CAD and specs pending; served through one fiber"
@@ -10,3 +11,4 @@ component: openuc2.source.laser_fiber_quad@^0.1
 template: openuc2.tpl.fiber_coupler_1x1@^0.1
 footprint_grid: [1, 1, 1]
 price: 2800.0
+locked: true

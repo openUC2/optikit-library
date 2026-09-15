@@ -4,7 +4,7 @@
 # `emit` frame sits at the FRONT aperture, +20 mm along local z.
 kind: mechanical_template
 id: openuc2.tpl.laser_pointer_1x1
-version: 0.1.0
+version: 0.1.1
 class: fixed
 description: Placeholder laser-pointer housing (emission aperture at z = +20 mm)
 tags: [placeholder, insert/laser]
@@ -18,3 +18,4 @@ step: model.step
 optical_ports:
   out: {frame: emit, direction: +z}
 footprint_grid: [1, 1, 1]
+locked: true

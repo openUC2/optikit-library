@@ -1,6 +1,6 @@
 kind: cube_module
 id: thorlabs.cube.ac254_050_a_holder
-version: 0.1.0
+version: 0.1.1
 description: thorlabs.lens.ac254-050-a in a generated holder
 tags:
   - generated
@@ -10,3 +10,4 @@ footprint_grid:
   - 1
   - 1
   - 1
+locked: true

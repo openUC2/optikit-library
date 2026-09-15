@@ -12,7 +12,7 @@
 # the child mirror's own `tilt`, which the subdesign binds by expression.
 kind: cube_module
 id: openuc2.cube.galvo_sub
-version: 0.1.0
+version: 0.1.1
 description: Dual-axis galvo scanner cube, decomposed (x/y steering, firmware-actuated)
 tags: [cube, cube/mirror, cube/galvo, subdesign]
 design: openuc2.subdesign.mounted_galvo@^0.1
@@ -24,3 +24,4 @@ electronics:
     - {dof: tilt-x, can-object: 0x6070}
     - {dof: tilt-y, can-object: 0x6071}
 footprint_grid: [1, 1, 1]
+locked: true

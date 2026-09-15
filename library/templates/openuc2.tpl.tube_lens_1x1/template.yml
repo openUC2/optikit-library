@@ -1,6 +1,6 @@
 kind: mechanical_template
 id: openuc2.tpl.tube_lens_1x1
-version: 0.1.0
+version: 0.1.1
 class: fixed
 description: Tube Lens mount (migrated)
 tags:
@@ -20,3 +20,4 @@ review:
 glb: ASS_-_2022_-_CUBLEND40F100_-_V04.glb
 glb-url: 
   https://raw.githubusercontent.com/beniroquai/openUC2-OptiKit-Store/refs/heads/main/GLB/ASS_-_2022_-_CUBLEND40F100_-_V04.glb
+locked: true

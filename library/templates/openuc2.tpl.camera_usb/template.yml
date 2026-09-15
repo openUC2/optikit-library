@@ -1,6 +1,6 @@
 kind: mechanical_template
 id: openuc2.tpl.camera_usb
-version: 0.1.0
+version: 0.1.1
 class: fixed
 description: USB Camera with tube lens (CMOUNT), HIK mount (migrated)
 tags:
@@ -16,3 +16,4 @@ footprint_grid:
   - 1
 review:
   - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+locked: true

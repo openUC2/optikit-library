@@ -2,9 +2,10 @@
 # fixed 1x1 mount. Copy this trio when authoring your own module (WP-68).
 kind: cube_module
 id: openuc2.cube.starter_50mm
-version: 0.1.0
+version: 0.1.1
 description: Starter f = 50 mm lens in a 1x1 cube — the exemplary lens trio to copy
 tags: [starter, cube, cube/lens]
 component: openuc2.lens.starter_50mm@^0.1
 template: openuc2.tpl.starter_50mm@^0.1
 footprint_grid: [1, 1, 1]
+locked: true

@@ -10,7 +10,7 @@
 # naming a mesh this record does not hold.
 kind: mechanical_template
 id: openuc2.tpl.mirror_1x1
-version: 0.2.0
+version: 0.2.1
 class: fixed
 description: openUC2 45° mirror cube (Inventor ASS - 2004 - CUBMIR45TH1 - V03)
 tags:
@@ -41,3 +41,4 @@ footprint_grid:
 review:
   - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
   - the mesh is TH1 V03; the migrated record originally named TH2 V04
+locked: true

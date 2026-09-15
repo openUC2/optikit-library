@@ -2,7 +2,7 @@
 # Shared by every fiber-combined laser record; no mesh ships yet.
 kind: mechanical_template
 id: openuc2.tpl.fiber_coupler_1x1
-version: 0.1.0
+version: 0.1.1
 class: fixed
 description: 1x1 fiber-coupler cube (collimated output along +z) — placeholder
 tags: [placeholder, insert/laser, insert/fiber]
@@ -12,3 +12,4 @@ envelope: {x-mm: 50, y-mm: 50, z-mm: 50}
 optical_ports:
   out: {frame: optical, direction: +z}
 footprint_grid: [1, 1, 1]
+locked: true

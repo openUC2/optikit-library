@@ -1,6 +1,6 @@
 kind: mechanical_template
 id: openuc2.tpl.frame
-version: 0.1.6
+version: 0.1.7
 class: fixed
 description: FRAME body — the substructure with the miniFRAME rail bay; stage, arm and electronics 
   dock on its mounts
@@ -58,3 +58,4 @@ mounts:
           y: 111.0
           z: -35.9
     accepts: openuc2.frame.electronics
+locked: true

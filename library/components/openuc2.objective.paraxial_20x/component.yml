@@ -1,6 +1,6 @@
 kind: optical_component
 id: openuc2.objective.paraxial_20x
-version: 0.1.2
+version: 0.1.3
 category: objective
 description: Paraxial 20× objective (black box) — one thin-lens surface, f = 9 mm, NA 0.4
 tags: [starter, objective, objective/paraxial]
@@ -18,3 +18,4 @@ optics:
     front: {frame: optical, direction: -z}
     back: {frame: optical, direction: +z, after-surface: 0}
   fragment-file: optics.optiland.yml
+locked: true

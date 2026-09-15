@@ -3,7 +3,7 @@
 # reference — no optics block; chain inference and optics-DRC skip them.
 kind: optical_component
 id: openuc2.electronics.uc2e_esp32
-version: 1.0.0
+version: 1.0.1
 category: electronics
 description: UC2e ESP32 controller board (CAN master, WiFi/USB, UC2-REST firmware)
 tags: [electronics, controller, esp32]
@@ -14,3 +14,4 @@ vendor:
 electronics:
   firmware: uc2-esp32 (UC2-REST)
   transport: can
+locked: true

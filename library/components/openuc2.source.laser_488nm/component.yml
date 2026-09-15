@@ -1,6 +1,6 @@
 kind: optical_component
 id: openuc2.source.laser_488nm
-version: 0.1.0
+version: 0.1.1
 category: source
 description: 488 nm laser diode module
 tags:
@@ -22,3 +22,4 @@ optics:
     out:
       frame: optical
       direction: +z
+locked: true

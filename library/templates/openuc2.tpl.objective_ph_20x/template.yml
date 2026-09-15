@@ -1,6 +1,6 @@
 kind: mechanical_template
 id: openuc2.tpl.objective_ph_20x
-version: 0.1.0
+version: 0.1.2
 class: fixed
 description: Phase Contrast 20×/0.4 barrel (housing)
 tags:
@@ -19,8 +19,10 @@ mesh-pose:
       z: +y
       x: +x
 footprint_grid:
+fits: openuc2.frame.objective
 component: openuc2.objective.ph_20x@^0.1
 review:
   - mesh converted from ph_20x.stp — drawn with the sample side along +y, turned into the cube frame
     by mesh-pose
   - the barrel's mounting datum is the mesh origin — verify against the thread shoulder
+locked: true

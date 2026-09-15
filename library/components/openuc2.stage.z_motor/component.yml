@@ -4,7 +4,8 @@
 # MODULE binds that DOF to firmware (the WP-42 actuation contract).
 kind: optical_component
 id: openuc2.stage.z_motor
-version: 0.1.0
+version: 0.1.1
 category: stage
 description: Starter motorized z-stage — the exemplary actuated (T2) trio to copy
 tags: [starter, stage, stage/z]
+locked: true

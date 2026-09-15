@@ -4,7 +4,7 @@
 # full-angle divergence (a bare LED is nothing like collimated).
 kind: optical_component
 id: openuc2.source.led_basic
-version: 0.1.0
+version: 0.1.1
 category: source
 description: Starter broadband LED (nominal 550 nm, wide angle) — copy for LED sources
 tags: [starter, source, source/led]
@@ -16,3 +16,4 @@ optics:
 source:
   wavelengths_um: [0.55]
   divergence_deg: 60.0
+locked: true

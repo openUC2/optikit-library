@@ -1,6 +1,6 @@
 kind: optical_component
 id: openuc2.objective.low_20x
-version: 0.1.0
+version: 0.1.1
 category: objective
 description: Low-Rank Achromat 20×/0.35 — 20×/0.35, WD 5 mm (achromatic)
 tags:
@@ -43,3 +43,4 @@ review:
   - facts from the vendor table — confirm against current vendor data
   - traces as an ideal thin lens at the stated EFL — attach the vendor .zmx for the real 
     prescription
+locked: true

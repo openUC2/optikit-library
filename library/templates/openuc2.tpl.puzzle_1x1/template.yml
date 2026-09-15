@@ -3,7 +3,7 @@
 # neighbors; between layers, one piece per cell.
 kind: mechanical_template
 id: openuc2.tpl.puzzle_1x1
-version: 0.1.0
+version: 0.1.1
 class: fixed
 carrier: true
 description: Layer-joint puzzle piece (1x1 cell, 5 mm, noses overhang the cell)
@@ -16,3 +16,4 @@ mesh-frame: record
 glb: model.glb
 step: model.step
 footprint_grid: [1, 1, 1]
+locked: true

@@ -1,6 +1,6 @@
 kind: optical_component
 id: openuc2.electronics.electronics_v3
-version: 0.1.0
+version: 0.1.1
 category: electronics
 description: This is the electronics to drive all kinds of actuators, sensors and indicators
 tags:
@@ -12,3 +12,4 @@ docs: []
 symbol: symbol.svg
 review:
   - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+locked: true

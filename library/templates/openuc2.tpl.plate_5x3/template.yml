@@ -1,0 +1,27 @@
+kind: mechanical_template
+id: openuc2.tpl.plate_5x3
+version: 0.1.0
+class: generative
+carrier: true
+description: 5x3 sandwich plate, 4 screw holes per cell on the cube hole circle
+tags:
+  - carrier
+  - miniframe
+  - plate
+  - generated
+envelope:
+  x-mm: 250
+  y-mm: 150
+  z-mm: 5
+generator:
+  script: generators/plate_nxm.py
+  params:
+    nx: 5
+    ny: 3
+footprint_grid:
+  - 5
+  - 3
+  - 1
+glb: model.glb
+step: model.step
+mesh-frame: cube

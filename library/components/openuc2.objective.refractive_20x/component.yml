@@ -1,6 +1,6 @@
 kind: optical_component
 id: openuc2.objective.refractive_20x
-version: 0.1.2
+version: 0.1.3
 category: objective
 description: 20x objective stand-in - biconvex singlet, f = 9 mm, NA 0.4 (kernel-traceable)
 tags: [objective, objective/stand-in, starter]
@@ -23,3 +23,4 @@ optics:
     front: {frame: optical, direction: -z}
     back: {frame: exit, direction: +z, after-surface: 1}
   fragment-file: optics.optiland.yml
+locked: true

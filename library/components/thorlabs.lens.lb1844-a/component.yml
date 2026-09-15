@@ -1,0 +1,39 @@
+kind: optical_component
+id: thorlabs.lens.lb1844-a
+version: 0.1.1
+category: lens
+description: LB1844 Bi-Convex - N-BK7
+tags:
+  - imported
+  - zmx
+  - catalog
+  - catalog/optics-catalog-2026-09-09
+vendor:
+  name: Thorlabs
+  mpn: LB1844-A
+  url: https://www.thorlabs.com/n-bk7-bi-convex-lenses-ar-coating-350---700-nm?pn=LB1844-A
+  price: 38.13
+  currency: USD
+optics:
+  frames:
+    optical:
+      z-mm: 0.0
+    exit:
+      z-mm: 2.59
+    mount:
+      z-mm: 1.295
+  ports:
+    front:
+      frame: optical
+      direction: -z
+    back:
+      frame: exit
+      direction: +z
+      after-surface: 1
+  fragment-file: optics.optiland.yml
+effective_focal_length_mm: 49.830911
+review:
+  - prescription from the vendor zmx 
+    https://media.thorlabs.com/globalassets/items/l/lb/lb1/lb1844-a/4632-s03.zmx?v=0116122238 
+    (sha256 b56938e5a290…, retrieved 2026-09-14T18:30:28+00:00)
+locked: true

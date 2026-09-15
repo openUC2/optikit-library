@@ -1,6 +1,6 @@
 kind: cube_module
 id: openuc2.cube.camera_usb
-version: 0.1.1
+version: 0.1.2
 description: USB camera module for imaging
 tags:
   - migrated
@@ -17,3 +17,4 @@ footprint_grid:
 review:
   - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
 price: 1000.0
+locked: true

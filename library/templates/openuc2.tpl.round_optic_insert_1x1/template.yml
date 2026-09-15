@@ -4,7 +4,7 @@
 # the insert interface is fixed, measured from the MASINS reference geometry.
 kind: mechanical_template
 id: openuc2.tpl.round_optic_insert_1x1
-version: 0.1.1
+version: 0.1.2
 class: generative
 description: Parametric round-optic insert (clear aperture / optic diameter / edge thickness)
 tags: [insert, insert/round-optic, generated]
@@ -24,3 +24,4 @@ optical_ports:
   front: {frame: optical, direction: -z}
   back: {frame: optical, direction: +z}
 footprint_grid: [1, 1, 1]
+locked: true

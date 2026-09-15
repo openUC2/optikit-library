@@ -1,6 +1,6 @@
 kind: optical_component
 id: openuc2.mirror.flat_45
-version: 1.0.1
+version: 1.0.2
 category: mirror
 description: Flat first-surface mirror mounted at 45°
 tags: [mirror, mirror/flat, mirror/single-sided]
@@ -14,3 +14,4 @@ optics:
     front: {frame: optical, direction: -z}
     reflected: {frame: optical, direction: +x, after-surface: 0}
   fragment-file: optics.optiland.yml
+locked: true

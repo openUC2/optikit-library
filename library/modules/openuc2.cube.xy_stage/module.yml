@@ -1,6 +1,6 @@
 kind: cube_module
 id: openuc2.cube.xy_stage
-version: 0.1.0
+version: 0.1.1
 description: 'XY Stage '
 tags:
   - migrated
@@ -17,3 +17,4 @@ footprint_grid:
 review:
   - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
 price: 60.0
+locked: true

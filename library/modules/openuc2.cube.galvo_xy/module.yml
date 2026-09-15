@@ -1,6 +1,6 @@
 kind: cube_module
 id: openuc2.cube.galvo_xy
-version: 0.1.0
+version: 0.1.1
 description: Galvo mirrors that can be used for scanning a beam
 tags:
   - migrated
@@ -17,3 +17,4 @@ footprint_grid:
 review:
   - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
 price: 500.0
+locked: true

@@ -3,7 +3,7 @@
 # template declares it actuatable and the module binds it to a CAN object.
 kind: mechanical_template
 id: openuc2.tpl.dmd_45
-version: 0.1.1
+version: 0.1.2
 class: fixed
 description: DMD holder at 45° in a 1x1 cube
 tags: [holder, insert/slm]
@@ -16,3 +16,4 @@ optical_ports:
   front: {frame: optical, direction: -z}
   reflected: {frame: optical, direction: +x}
 footprint_grid: [1, 1, 1]
+locked: true

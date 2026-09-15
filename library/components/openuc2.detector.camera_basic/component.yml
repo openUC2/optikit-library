@@ -4,7 +4,7 @@
 # terminates here — WP-29 port conventions).
 kind: optical_component
 id: openuc2.detector.camera_basic
-version: 0.1.0
+version: 0.1.1
 category: detector
 description: Starter CMOS camera (sensor plane at the cube center) — copy for detectors
 tags: [starter, detector, detector/camera]
@@ -13,3 +13,4 @@ optics:
     optical: {z-mm: 0.0}
   ports:
     sensor: {frame: optical, direction: -z}
+locked: true

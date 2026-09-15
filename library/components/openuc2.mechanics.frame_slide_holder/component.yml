@@ -1,6 +1,6 @@
 kind: optical_component
 id: openuc2.mechanics.frame_slide_holder
-version: 0.1.0
+version: 0.1.1
 category: mechanics
 description: slide holder insert for the FRAME stage
 tags:
@@ -13,3 +13,4 @@ vendor:
   name: openUC2
   price: 90
   currency: EUR
+locked: true

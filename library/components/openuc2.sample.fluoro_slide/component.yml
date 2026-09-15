@@ -7,7 +7,7 @@ kind: optical_component
 # excitation beam passes the sample position freely while the emission path
 # traces from here through the dichroic's transmitted arm to the camera.
 id: openuc2.sample.fluoro_slide
-version: 0.1.0
+version: 0.1.1
 category: sample
 description: Fluorescent sample - emits 520 nm into a 0.4 NA cone (secondary source)
 tags: [sample, sample/fluorescent, fluorescence]
@@ -24,3 +24,4 @@ optics:
     spatial: {type: disc, radius_mm: 0.1}
     angular: {type: cone, half_angle_deg: 23.6}
     flux: 1.0
+locked: true

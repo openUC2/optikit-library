@@ -1,7 +1,7 @@
 # The FRAME #0008 assembly as Inventor exports it — one STEP, the subassembly
 # names below are the browser's own (instance suffix included; the root has
 # none). Contract: DOCS/editor/frame-assembly-contract.md. Rebuild:
-# `optikit-core import assembly library/templates/openuc2.tpl.frame/assembly.yml --step <the STEP>`
+# `optikit-core import assembly <this file> --step <the STEP>` (the #0008 export is on the Windows machine)
 # The export is pruned first (fasteners, cables, boards) — see the contract's
 # "What Bene exports".
 source: "FRAME #0008 - Microscope incl accessories.stp"
@@ -53,15 +53,22 @@ parts:
     mount-on: openuc2.tpl.frame_stage
     mount: objectives
     price: 180
-    # WP-284: the plate's two positions, measured from the nodes that occupy
-    # them in this export. No record is minted for either occupant — the
-    # objective records come from the vendor table (`import objective`).
+    # The plate's two positions. `objectives-1` is the WORKING position (Bene,
+    # 2026-09-14): the objective facing the camera, on the axis at x = 1.6.
+    # Its node in this export is the 4x objective's CARRIER (`FRAME - 4002`,
+    # origin at x = -29.8 on the plate), which holds the objective at
+    # (14.9, 0, 28.9) in its own frame — so the seat is stated as the sum.
+    # `objectives-2` is the parked position, measured from the bare objective
+    # standing there. Both turn the occupant to look up (inverted microscope).
+    # No record is minted for either occupant — the objective records come
+    # from the vendor table (`import objective`).
     seats:
-      objectives-1: {node: "FRAME - 4002 - Objective Plan 4x with mount - A:1", accepts: openuc2.frame.objective}
-      objectives-2: {node: "BUY - Objective - Plan APO 20X:1", accepts: openuc2.frame.objective}
+      objectives-1: {offset-mm: {x: -14.9, y: 0.0, z: 28.9}, grid: [-z, +x], accepts: openuc2.frame.objective}
+      objectives-2: {node: "BUY - Objective - Plan APO 20X:1", grid: [-z, +x], accepts: openuc2.frame.objective}
     review:
-      - the plate is 66 mm wide about its own origin and carries two seats 29.8 mm apart in x; seat 1 holds a support-mounted objective (`FRAME - 4002`, whose objective axis lands at x = 1.6), seat 2 a bare threaded one (`Plan APO 20X`, axis at x = 31.4)
-      - neither axis is ON the illumination axis (x = 0) in this export — which of the two is the working position, and where the 1.6 mm comes from, is a CAD question
+      - the plate is 66 mm wide about its own origin and carries two seats 29.8 mm apart in x; seat 1 (working, facing the camera) holds a support-mounted objective (`FRAME - 4002`, objective axis at x = 1.6), seat 2 (parked) a bare threaded one (`Plan APO 20X`, axis at x = 31.4)
+      - seat 1 is STATED (carrier origin -29.8 + the carrier's objective offset 14.9 / 28.9) because the export's node is the carrier, not the objective; its z is the 4x carrier's — a bare objective in seat 1 would sit at seat 2's height (12.5); confirm on the next export
+      - the 1.6 mm between the working axis and the illumination axis (x = 0) is in the CAD
       - the four objective carriers in CAD (`FRAME - 4002/4007/4008/4009`) put the objective at (14.9, 0, z) in the carrier frame, z = 28.9 / 28.9 / 24.9 / 28.1 — the parfocal compensation
 
   - node: "FR110 - 3000 - Illumination arm:1"
@@ -103,7 +110,7 @@ parts:
       - the boards inside are pruned out of the export; the mesh is the case
 
 groups:
-  - id: openuc2.group.miniframe_brightfield
+  - id: openuc2.group.opm_brightfield
     nodes:
       - "OPM - 0003 - Brightfield:1"
       - "BUY - HIKROBOT - Camera - MV-CS060-10UC-PRO:1"

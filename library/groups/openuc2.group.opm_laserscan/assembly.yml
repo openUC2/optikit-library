@@ -1,5 +1,5 @@
 # OPM - 0004 - FLIM 488 as Inventor exports it (STEP AP214, mm). Rebuild:
-# `optikit-core import assembly library/groups/openuc2.group.miniframe_laserscan/assembly.yml --step "OPM - 0004 - FLIM 488.stp"`
+# `optikit-core import assembly library/groups/openuc2.group.opm_laserscan/assembly.yml --step "OPM - 0004 - FLIM 488.stp"`
 # The record: DOCS/editor/frame-assembly-contract.md.
 source: "OPM - 0004 - FLIM 488.stp"
 exported: 2026-09-09
@@ -10,7 +10,7 @@ origin-mm: [100.0, 350.6, 0.0]
 pitch-mm: [50, 50, 55]
 
 groups:
-  - id: openuc2.group.miniframe_laserscan
+  - id: openuc2.group.opm_laserscan
     description: miniFRAME laser-scanning (FLIM 488) OPM — fiber-coupled laser on the plate tab, dichroic, XY galvo, f50/f160 relay, 45° splitter on the axis, detection into a fiber; two layers under a 3×8 plate
     tags: [opm, miniframe, laser-scanning, flim]
     nodes: ["OPM - 0004 - FLIM 488"]

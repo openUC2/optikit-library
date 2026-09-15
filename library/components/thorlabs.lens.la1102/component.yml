@@ -1,0 +1,56 @@
+kind: optical_component
+id: thorlabs.lens.la1102
+version: 0.1.0
+category: lens
+description: LA1102 Plano-Convex - N-BK7
+tags:
+  - imported
+  - zmx
+  - catalog
+  - catalog/optics-catalog-2026-09-09
+vendor:
+  name: Thorlabs
+  mpn: LA1102
+  url: https://www.thorlabs.com/n-bk7-plano-convex-lenses-uncoated?pn=LA1102
+  price: 31.53
+  currency: USD
+optics:
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: 25.74999999999999
+          conic: 0.0
+        material_post:
+          type: Material
+          name: N-BK7
+        thickness: 7.31
+        is_stop: true
+        semi_aperture: 15.0
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0.0
+        semi_aperture: 15.0
+  frames:
+    optical:
+      z-mm: 0.0
+    exit:
+      z-mm: 7.31
+    mount:
+      z-mm: 6.065029
+  ports:
+    front:
+      frame: optical
+      direction: -z
+    back:
+      frame: exit
+      direction: +z
+      after-surface: 1
+effective_focal_length_mm: 49.826002
+review:
+  - prescription from the vendor zmx 
+    https://media.thorlabs.com/globalassets/items/l/la/la1/la1102/3264-s03.zmx?v=0116120404 (sha256 
+    40cf82348aee…, retrieved 2026-09-15T11:13:04+00:00)
