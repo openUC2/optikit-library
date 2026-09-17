@@ -1,0 +1,21 @@
+kind: mechanical_template
+id: openuc2.tpl.xyz_openflexure_1x1
+version: 0.1.0
+class: fixed
+description: OpenFlexure XYZ Stage (motorized) mount (migrated)
+tags:
+  - migrated
+  - stages
+envelope:
+  x-mm: 150.0
+  y-mm: 100.0
+  z-mm: 50.0
+footprint_grid:
+  - 3
+  - 2
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+glb: openflexure.glb
+glb-url: 
+  https://raw.githubusercontent.com/beniroquai/openUC2-OptiKit-Store/refs/heads/main/GLB/openflexure.glb

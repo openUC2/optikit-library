@@ -5,7 +5,7 @@ id: openuc2.cube.emission_525
 version: 0.1.1
 description: Band-pass emission filter (510–560 nm) in a 1x1 cube
 tags: [reference, cube, cube/filter]
-component: openuc2.filter.emission_525@^0.1
 template: openuc2.tpl.emission_525@^0.1
 footprint_grid: [1, 1, 1]
 locked: true
+design: openuc2.subdesign.emission_525@^0.1

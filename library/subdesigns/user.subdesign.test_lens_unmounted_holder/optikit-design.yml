@@ -30,13 +30,6 @@ components:
             semi_aperture: 12.7
       frames:
         optical: {}
-      ports:
-        front:
-          frame: optical
-          direction: -z
-        back:
-          frame: optical
-          direction: +z
     pose:
       rotation:
         kind: grid

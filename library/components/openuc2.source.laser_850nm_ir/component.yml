@@ -11,8 +11,6 @@ review:
 optics:
   frames:
     optical: {z-mm: 0.0}
-  ports:
-    out: {frame: optical, direction: +z}
 source:
   wavelengths_um: [0.85]
   divergence_deg: 0.5

@@ -1,0 +1,20 @@
+kind: optical_component
+id: openuc2.detector.spectrometer_fiber_1x1
+version: 0.1.0
+category: detector
+description: Array spectrometer with SMA905 fiber input for 200–1000 nm measurements; suitable for 
+  irradiance and transmission/absorbance.
+tags:
+  - migrated
+  - detector
+docs: []
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+optics:
+  frames:
+    optical:
+      z-mm: 0.0
+  ports:
+    sensor:
+      frame: optical
+      direction: -z

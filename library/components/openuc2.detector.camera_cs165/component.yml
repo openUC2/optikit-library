@@ -10,9 +10,7 @@ description: CS165MU 1.6 MP CMOS camera (sensor datum at z = -10 mm)
 tags: [detector, detector/camera]
 optics:
   frames:
-    optical: {z-mm: 0.0}
-    sensor: {z-mm: -10.0}
-  ports:
-    sensor: {frame: sensor, direction: -z}
+    optical:
+      z-mm: -10.0
 vendor: {name: Thorlabs, mpn: CS165MU}
 locked: true

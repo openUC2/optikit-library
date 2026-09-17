@@ -78,6 +78,9 @@ surface_group:
       semi_aperture: 12.7
       is_stop: false
       aperture:
+      response:
+        kind: sampler
+        transmit-ratio: 0.5
     - type: Surface
       geometry:
         type: StandardGeometry

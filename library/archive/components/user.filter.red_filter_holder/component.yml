@@ -1,0 +1,45 @@
+kind: optical_component
+id: user.filter.red_filter_holder
+version: 0.1.0
+category: filter
+description: ""
+tags:
+  - authored
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  ports:
+    front:
+      frame: optical
+      direction: -z
+    back:
+      frame: optical
+      direction: +z
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0
+        material_post:
+          type: Material
+          name: N-BK7
+        thickness: 3
+        semi_aperture: 12.7
+        response:
+          kind: absorptive
+          transmit-bands-um:
+            - - 0.58
+              - null
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0
+        semi_aperture: 12.7

@@ -13,10 +13,6 @@ optics:
   frames:
     optical:
       z-mm: 0
-  ports:
-    sensor:
-      frame: optical
-      direction: -z
 detector:
   sensor_mm:
     - 11.3

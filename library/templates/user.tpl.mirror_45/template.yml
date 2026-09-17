@@ -12,20 +12,6 @@ envelope:
 step: ASS - 2016 - CUBMIR45°90° - V04 - C.stp
 glb: ASS - 2016 - CUBMIR45°90° - V04 - C.glb
 mesh-frame: cube
-optical_ports:
-  front:
-    frame: optical
-    direction:
-    - 0.707
-    - -0.707
-    - 0
-  reflected:
-    frame: optical
-    direction:
-    - -0.707
-    - -0.707
-    - 0
-    after-surface: 0
 footprint_grid:
 - 1
 - 1

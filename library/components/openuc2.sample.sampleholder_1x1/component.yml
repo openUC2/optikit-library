@@ -13,9 +13,5 @@ optics:
   frames:
     optical:
       z-mm: 0.0
-  ports:
-    front:
-      frame: optical
-      direction: -z
   passthrough: true
 locked: true

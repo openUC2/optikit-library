@@ -16,8 +16,5 @@ generator:
     clearance_mm: 0.15
     split_plane: xz
     body_height_mm: 30
-optical_ports:
-  front: {frame: optical, direction: -z}
-  back: {frame: optical, direction: +z}
 footprint_grid: [1, 1, 1]
 locked: true

@@ -20,13 +20,6 @@ mesh-pose:
     grid:
       z: -y
       x: +z
-optical_ports:
-  front:
-    frame: optical
-    direction: +z
-  back:
-    frame: optical
-    direction: -z
 footprint_grid:
 insert-pose:
   rotation:

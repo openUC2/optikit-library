@@ -16,6 +16,4 @@ step: laser_body.step
 # renderers stop guessing from a node-rotation sniff.
 mesh-frame: record
 glb: laser_body.glb
-optical_ports:
-  out: {frame: optical, direction: +z}
 locked: true

@@ -127,8 +127,8 @@ groups:
       - "ASS - 2058 - CUBTBSHOLD28.5"
       - "BUY - HIKROBOT - Camera"
     interface:
-      axis: {member: "ASS - 2026 - CUBMIR45", port: front}
-      camera: {member: "BUY - HIKROBOT - Camera", port: sensor}
+      axis: {member: "ASS - 2026 - CUBMIR45"}
+      camera: {member: "BUY - HIKROBOT - Camera"}
     review:
       - the two `CUBTBSHOLD28.5` tube-holder cubes and the C-mount tubus are shipped as `cube_1x1` + `camera_basic`; the camera body sits 12.5 mm off its cell
       - the OPM sits 0.5 mm off the illumination axis in this export (y = -0.5); cells are snapped

@@ -1,0 +1,19 @@
+kind: cube_module
+id: openuc2.cube.diffuser_1x1
+version: 0.1.0
+description: Opal/glass diffuser for uniform illumination.
+tags:
+  - migrated
+  - cube
+  - cube/source
+  - illumination
+docs: []
+component: openuc2.source.diffuser_1x1@^0.1
+template: openuc2.tpl.diffuser_1x1@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 50.0

@@ -1,0 +1,11 @@
+kind: optical_component
+id: openuc2.mechanics.rotation_stage_1x1
+version: 0.1.0
+category: mechanics
+description: 360° rotation with vernier for polarizer/optic alignment.
+tags:
+  - migrated
+  - stages
+docs: []
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record

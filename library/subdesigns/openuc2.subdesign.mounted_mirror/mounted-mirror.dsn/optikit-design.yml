@@ -22,7 +22,8 @@ design:
   - in/core-box
 
 components:
-  # The disc: the optic itself, and the only child a variant turns.
+  # The disc: the optic itself, and the only child a variant turns. Its pose
+  # carries the 45° fold; the mesh is a flat plate, normal along its z.
   inner-insert:
     kind: primitive
     category: mirror
@@ -38,12 +39,11 @@ components:
           interaction_model: {type: refractive_reflective, is_reflective: true}
       frames:
         optical: {z-mm: 0.0, clear-aperture-mm: 22.0}
-      ports:
-        front: {frame: optical, direction: -z}
-        reflected: {frame: optical, direction: +x, after-surface: 0}
     pose:
       rotation:
-        kind: grid
+        kind: uc2
+        offset-deg:
+          y: -45.0
   master-insert-top:
     kind: primitive
     category: mechanics
@@ -79,5 +79,6 @@ variants:
       inner-insert:
         pose:
           rotation:
+            # an euler variant replaces the base rotation (Go): the fold rides along
             kind: euler
-            euler: {z: 45}
+            euler: {y: -45, z: 45}

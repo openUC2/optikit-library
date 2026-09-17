@@ -1,0 +1,21 @@
+kind: mechanical_template
+id: openuc2.tpl.fiber_combiner
+version: 0.1.0
+class: fixed
+description: Fiber Combiner for Galvo system mount (migrated)
+tags:
+  - migrated
+  - optics
+envelope:
+  x-mm: 100.0
+  y-mm: 100.0
+  z-mm: 50.0
+footprint_grid:
+  - 2
+  - 2
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+glb: ASS_-_GalvoScanner_-_beamsplitter_-_offcentered.glb
+glb-url: 
+  https://raw.githubusercontent.com/beniroquai/openUC2-OptiKit-Store/refs/heads/main/GLB/ASS_-_GalvoScanner_-_beamsplitter_-_offcentered.glb

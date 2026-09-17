@@ -1,0 +1,19 @@
+kind: cube_module
+id: openuc2.cube.kinematicmirror_90_1x1
+version: 0.1.0
+description: Right‑angle kinematic mirror mount for beam folding.
+tags:
+  - migrated
+  - cube
+  - cube/mirror
+  - mirror
+docs: []
+component: openuc2.mirror.kinematicmirror_90_1x1@^0.1
+template: openuc2.tpl.kinematicmirror_90_1x1@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 80.0

@@ -17,10 +17,13 @@ step: model.step
 # passes through the cube center — the PLN - OPT marker pose.
 frames:
   optical: {z-mm: 0.0}
-optical_ports:
-  front: {frame: optical, direction: -z}
 footprint_grid: [1, 1, 1]
 # T1 discrete configurations (Inventor positional representations, WP-34):
 # which plane the reflective surface spans inside the cube.
 states: [XY, YZ]
 locked: true
+insert-pose:
+  rotation:
+    kind: uc2
+    offset-deg:
+      y: -45.0

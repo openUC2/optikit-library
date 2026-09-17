@@ -49,14 +49,6 @@ components:
           z-mm: 11.5
         mount:
           z-mm: 6.868213
-      ports:
-        front:
-          frame: optical
-          direction: -z
-        back:
-          frame: exit
-          direction: +z
-          after-surface: 2
     pose:
       translation:
         offset-mm:

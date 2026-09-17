@@ -37,18 +37,14 @@ components:
           x-mm: 0.0
           y-mm: 0.0
           z-mm: 0.0
-      ports:
-        front:
-          frame: optical
-          direction: -x
-        reflected:
-          frame: optical
-          direction: +z
-          after-surface: 0
     pose:
       rotation:
-        kind: uc2
+        kind: grid
+        grid:
+          z: -z
+          x: +x
         offset-deg:
+          y: 45.0
           x: ~ inputs['tilt_x'].value
   mirror-1:
     kind: primitive
@@ -70,19 +66,15 @@ components:
           x-mm: 0.0
           y-mm: 0.0
           z-mm: 0.0
-      ports:
-        front:
-          frame: optical
-          direction: -z
-        reflected:
-          frame: optical
-          direction: -y
-          after-surface: 0
     pose:
       translation:
         offset-mm:
           z: 7.0
       rotation:
-        kind: uc2
+        kind: grid
+        grid:
+          z: +y
+          x: +x
         offset-deg:
-          y: ~ inputs['tilt_y'].value
+          x: 45.0
+          z: ~ inputs['tilt_y'].value

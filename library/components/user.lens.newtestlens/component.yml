@@ -13,12 +13,5 @@ optics:
   frames:
     optical:
       z-mm: 0
-  ports:
-    front:
-      frame: optical
-      direction: -z
-    back:
-      frame: optical
-      direction: +z
   fragment-file: optics.optiland.yml
 effective_focal_length_mm: 49.043

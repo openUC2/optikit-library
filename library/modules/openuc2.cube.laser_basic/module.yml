@@ -5,7 +5,7 @@ id: openuc2.cube.laser_basic
 version: 0.1.1
 description: Starter dual-line laser (488/635 nm) in a 1x1 cube — the exemplary source trio
 tags: [starter, cube, cube/source]
-component: openuc2.source.laser_basic@^0.1
 template: openuc2.tpl.laser_basic@^0.1
 footprint_grid: [1, 1, 1]
 locked: true
+design: openuc2.subdesign.laser_basic@^0.1

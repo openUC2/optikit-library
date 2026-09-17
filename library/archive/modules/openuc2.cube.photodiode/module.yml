@@ -1,0 +1,19 @@
+kind: cube_module
+id: openuc2.cube.photodiode
+version: 0.1.0
+description: Silicon photodiode detector for power measurement and alignment.
+tags:
+  - migrated
+  - cube
+  - cube/detector
+  - detector
+docs: []
+component: openuc2.detector.photodiode@^0.1
+template: openuc2.tpl.photodiode@^0.1
+footprint_grid:
+  - 2
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 75.0

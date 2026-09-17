@@ -15,7 +15,6 @@ components:
     category: source
     optics:
       emission:
-        port: out
         spectrum:
         - wavelength_um: 0.532
           weight: 1
@@ -27,21 +26,12 @@ components:
         flux: 1
       frames:
         optical:
-          x-mm: 0
-          y-mm: -20
-          z-mm: 0
-        out:
-          x-mm: 0
-          y-mm: -20
-          z-mm: 0
-      ports:
-        out:
-          frame: out
-          direction: -y
+          z-mm: 20.0
     pose:
       rotation:
         kind: grid
         grid:
+          z: +x
           x: +y
       translation:
         offset-grid:
@@ -73,6 +63,9 @@ components:
             type: refractive_reflective
             is_reflective: true
           semi_aperture: 12.7
+          response:
+            kind: sampler
+            transmit-ratio: 0.5
         - type: standard
           geometry:
             type: StandardGeometry
@@ -84,23 +77,14 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction: +y
-        transmitted:
-          frame: optical
-          direction: -y
-          after-surface: 1
-        reflected:
-          frame: optical
-          direction: -x
-          after-surface: 0
     pose:
       rotation:
         kind: grid
         grid:
-          x: +y
+          z: +y
+          x: +x
+        offset-deg:
+          y: 45.0
       translation:
         offset-grid:
           x: 2
@@ -138,25 +122,12 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction:
-          - 0.707
-          - 0.707
-          - 0
-        reflected:
-          frame: optical
-          direction:
-          - 0.707
-          - -0.707
-          - 0
-          after-surface: 0
     pose:
       rotation:
         kind: grid
         grid:
-          x: -x
+          z: +x
+          x: +y
       translation:
         offset-grid:
           x: 3
@@ -194,25 +165,12 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction:
-          - 0.707
-          - 0.707
-          - 0
-        reflected:
-          frame: optical
-          direction:
-          - 0.707
-          - -0.707
-          - 0
-          after-surface: 0
     pose:
       rotation:
         kind: grid
         grid:
-          x: +y
+          z: -y
+          x: +x
       translation:
         offset-grid:
           x: 2
@@ -230,13 +188,6 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction: -x
-        back:
-          frame: optical
-          direction: +x
     pose:
       rotation:
         kind: grid
@@ -257,13 +208,6 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction: -x
-        back:
-          frame: optical
-          direction: +x
     pose:
       rotation:
         kind: grid
@@ -283,13 +227,6 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction: -x
-        back:
-          frame: optical
-          direction: +x
     pose:
       rotation:
         kind: grid
@@ -310,13 +247,6 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction: -x
-        back:
-          frame: optical
-          direction: +x
     pose:
       rotation:
         kind: grid
@@ -338,13 +268,6 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction: -x
-        back:
-          frame: optical
-          direction: +x
     pose:
       rotation:
         kind: grid
@@ -365,13 +288,6 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction: -x
-        back:
-          frame: optical
-          direction: +x
     pose:
       rotation:
         kind: grid
@@ -393,13 +309,6 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction: -x
-        back:
-          frame: optical
-          direction: +x
     pose:
       rotation:
         kind: grid
@@ -420,13 +329,6 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction: -x
-        back:
-          frame: optical
-          direction: +x
     pose:
       rotation:
         kind: grid
@@ -448,13 +350,6 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction: -x
-        back:
-          frame: optical
-          direction: +x
     pose:
       rotation:
         kind: grid
@@ -475,13 +370,6 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction: -x
-        back:
-          frame: optical
-          direction: +x
     pose:
       rotation:
         kind: grid
@@ -503,13 +391,6 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction: -x
-        back:
-          frame: optical
-          direction: +x
     pose:
       rotation:
         kind: grid
@@ -530,13 +411,6 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction: -x
-        back:
-          frame: optical
-          direction: +x
     pose:
       rotation:
         kind: grid
@@ -558,13 +432,6 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction: -x
-        back:
-          frame: optical
-          direction: +x
     pose:
       rotation:
         kind: grid
@@ -584,13 +451,6 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction: -x
-        back:
-          frame: optical
-          direction: +x
     pose:
       rotation:
         kind: grid

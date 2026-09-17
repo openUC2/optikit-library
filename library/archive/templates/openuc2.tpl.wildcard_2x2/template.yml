@@ -1,0 +1,21 @@
+kind: mechanical_template
+id: openuc2.tpl.wildcard_2x2
+version: 0.1.0
+class: fixed
+description: Wild Card 2x2 mount (migrated)
+tags:
+  - migrated
+  - wildcard
+envelope:
+  x-mm: 100.0
+  y-mm: 100.0
+  z-mm: 50.0
+footprint_grid:
+  - 2
+  - 2
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+glb: ASS_-_2035_-_CUBMAG_-_V04.glb
+glb-url: 
+  https://raw.githubusercontent.com/beniroquai/openUC2-OptiKit-Store/refs/heads/main/GLB/ASS_-_2035_-_CUBMAG_-_V04.glb

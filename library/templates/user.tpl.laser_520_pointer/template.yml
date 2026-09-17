@@ -12,10 +12,6 @@ envelope:
 step: ASS - 2018 - CUBLAS520 - V04 - A.stp
 glb: ASS - 2018 - CUBLAS520 - V04 - A.glb
 mesh-frame: cube
-optical_ports:
-  out:
-    frame: optical
-    direction: -y
 footprint_grid:
 - 1
 - 2

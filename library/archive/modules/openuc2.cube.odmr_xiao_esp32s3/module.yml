@@ -1,0 +1,20 @@
+kind: cube_module
+id: openuc2.cube.odmr_xiao_esp32s3
+version: 0.1.0
+description: ODMR detection board based on Xiao ESP32-S3
+tags:
+  - migrated
+  - cube
+  - cube/electronics
+  - electronics
+docs:
+  - https://docs.openuc2.com/modules/odmr
+component: openuc2.electronics.odmr_xiao_esp32s3@^0.1
+template: openuc2.tpl.odmr_xiao_esp32s3@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 45.0

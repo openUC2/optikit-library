@@ -21,18 +21,6 @@ optics:
       z-mm: 1.1
     mount:
       z-mm: 0.55
-  ports:
-    front:
-      frame: optical
-      direction: -z
-    transmitted:
-      frame: optical
-      direction: +z
-      after-surface: 1
-    reflected:
-      frame: optical
-      direction: -x
-      after-surface: 0
   fragment-file: optics.optiland.yml
 review:
   - prescription derived from the catalog row (confidence derived), not from a vendor .zmx

@@ -1,0 +1,20 @@
+kind: cube_module
+id: openuc2.cube.frame_single_led
+version: 0.1.0
+description: Single white LED for basic transmitted illumination
+tags:
+  - migrated
+  - cube
+  - cube/source
+  - illumination
+docs:
+  - https://docs.openuc2.com/frame/single-led
+component: openuc2.source.frame_single_led@^0.1
+template: openuc2.tpl.frame_single_led@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 30.0

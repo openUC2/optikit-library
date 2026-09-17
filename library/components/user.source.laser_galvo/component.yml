@@ -14,10 +14,6 @@ optics:
     optical:
       z-mm: 0
       clear-aperture-mm: 5
-  ports:
-    out:
-      frame: optical
-      direction: +z
 source:
   wavelengths_um:
     - 0.532

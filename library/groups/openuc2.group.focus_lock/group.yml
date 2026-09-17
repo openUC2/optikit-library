@@ -21,6 +21,6 @@ members:
   xy_stage: {module: openuc2.cube.xy_stage@^0.1, cell: [0, 2, 0], overhang: true}
 interface:
   # `axis` names the member a carrier bay puts on its optical axis.
-  axis: {member: dichroic, port: reflected}
-  to_objective: {member: dichroic, port: reflected}
+  axis: {member: dichroic}
+  to_objective: {member: dichroic}
 locked: true

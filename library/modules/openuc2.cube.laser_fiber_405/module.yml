@@ -5,9 +5,9 @@ version: 0.1.1
 description: Fiber-combined 405 nm laser in the 1x1 fiber-coupler cube (placeholder)
 tags: [cube, cube/source, placeholder]
 review:
-  - "placeholder — CAD and specs pending; served through one fiber"
-component: openuc2.source.laser_fiber_405@^0.1
+- "placeholder — CAD and specs pending; served through one fiber"
 template: openuc2.tpl.fiber_coupler_1x1@^0.1
 footprint_grid: [1, 1, 1]
 price: 900.0
 locked: true
+design: openuc2.subdesign.laser_fiber_405@^0.1

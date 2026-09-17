@@ -10,9 +10,6 @@ optics:
     optical: {z-mm: 0.0}
     exit: {z-mm: 5.0}
     mount: {z-mm: 2.6}
-  ports:
-    front: {frame: optical, direction: -z}
-    back: {frame: exit, direction: +z, after-surface: 1}
   fragment-file: optics.optiland.yml
 vendor: {name: Thorlabs, mpn: AC254-050-A}
 locked: true

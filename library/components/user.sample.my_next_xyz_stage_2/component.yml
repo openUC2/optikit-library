@@ -13,8 +13,4 @@ optics:
   frames:
     optical:
       z-mm: 0
-  ports:
-    plane:
-      frame: optical
-      direction: +z
   passthrough: true

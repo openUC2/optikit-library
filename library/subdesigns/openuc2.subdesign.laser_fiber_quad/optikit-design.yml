@@ -1,0 +1,259 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  name: laser-fiber-quad
+  version: 0.1.0
+  description: openuc2.source.laser_fiber_quad in a cube — 24 seat(s)
+inputs: {}
+components:
+  laser-fiber-quad:
+    kind: primitive
+    category: source
+    optics:
+      frames:
+        optical: {}
+    source:
+      wavelengths_um:
+        - 0.405
+        - 0.488
+        - 0.532
+        - 0.635
+      divergence_deg: 1.0
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +x
+          x: +y
+variants:
+  seat-pz-px:
+    description: as authored — the insert's home seat
+  seat-px-py:
+    description: insert seated +x / +y
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +y
+              x: +z
+  seat-px-my:
+    description: insert seated +x / -y
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -y
+              x: -z
+  seat-px-pz:
+    description: insert seated +x / +z
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +z
+              x: -y
+  seat-px-mz:
+    description: insert seated +x / -z
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -z
+              x: +y
+  seat-mx-py:
+    description: insert seated -x / +y
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +y
+              x: -z
+  seat-mx-my:
+    description: insert seated -x / -y
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -y
+              x: +z
+  seat-mx-pz:
+    description: insert seated -x / +z
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +z
+              x: +y
+  seat-mx-mz:
+    description: insert seated -x / -z
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -z
+              x: -y
+  seat-py-px:
+    description: insert seated +y / +x
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +x
+              x: -z
+  seat-py-mx:
+    description: insert seated +y / -x
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -x
+              x: +z
+  seat-py-pz:
+    description: insert seated +y / +z
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +z
+              x: +x
+  seat-py-mz:
+    description: insert seated +y / -z
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -z
+              x: -x
+  seat-my-px:
+    description: insert seated -y / +x
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +x
+              x: +z
+  seat-my-mx:
+    description: insert seated -y / -x
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -x
+              x: -z
+  seat-my-pz:
+    description: insert seated -y / +z
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +z
+              x: -x
+  seat-my-mz:
+    description: insert seated -y / -z
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -z
+              x: +x
+  seat-pz-mx:
+    description: insert seated +z / -x
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -x
+              x: -y
+  seat-pz-py:
+    description: insert seated +z / +y
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +y
+              x: -x
+  seat-pz-my:
+    description: insert seated +z / -y
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -y
+              x: +x
+  seat-mz-px:
+    description: insert seated -z / +x
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +x
+              x: -y
+  seat-mz-mx:
+    description: insert seated -z / -x
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -x
+              x: +y
+  seat-mz-py:
+    description: insert seated -z / +y
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +y
+              x: +x
+  seat-mz-my:
+    description: insert seated -z / -y
+    components:
+      laser-fiber-quad:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -y
+              x: -x

@@ -20,8 +20,5 @@ generator:
     clear_aperture_mm: 22.0
     optic_diameter_mm: 25.4
     edge_thickness_mm: 2.0
-optical_ports:
-  front: {frame: optical, direction: -z}
-  back: {frame: optical, direction: +z}
 footprint_grid: [1, 1, 1]
 locked: true

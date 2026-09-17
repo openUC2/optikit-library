@@ -21,8 +21,8 @@ components:
               type: Material
               name: N-BAF10
             thickness: 9.0
-            is_stop: true
             semi_aperture: 12.7
+            is_stop: true
           - type: standard
             geometry:
               type: StandardGeometry
@@ -45,20 +45,16 @@ components:
           z-mm: 11.5
         mount:
           z-mm: 6.868213
-      ports:
-        front:
-          frame: optical
-          direction: -z
-        back:
-          frame: exit
-          direction: +z
-          after-surface: 2
     pose:
       rotation:
         kind: grid
         grid:
           z: +x
           x: -z
+      translation:
+        offset-mm:
+          x: 1.221
+          y: 1.5359
     tags:
       - procurement/buy
   cartridge-back:

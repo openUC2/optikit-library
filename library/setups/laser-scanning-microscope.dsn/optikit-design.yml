@@ -6,63 +6,6 @@ design:
   - laser scanning
   - confocal
 components:
-  galvo-mirror:
-    kind: primitive
-    primitive:
-      static-models:
-        gltf: user.cube.galvo_mirror
-    category: mirror
-    optics:
-      fragment:
-        surfaces:
-        - type: standard
-          geometry:
-            type: StandardGeometry
-            radius: .inf
-            conic: 0
-          thickness: 6
-          interaction_model:
-            type: refractive_reflective
-            is_reflective: true
-          semi_aperture: 5
-        - type: standard
-          geometry:
-            type: StandardGeometry
-            radius: .inf
-            conic: 0
-          interaction_model:
-            type: refractive_reflective
-            is_reflective: true
-          semi_aperture: 5
-      frames:
-        optical:
-          x-mm: 0
-          y-mm: 0
-          z-mm: 0
-        reflected:
-          x-mm: 0
-          y-mm: 0
-          z-mm: 7
-      ports:
-        front:
-          frame: optical
-          direction: -x
-        fold:
-          frame: optical
-          direction: +z
-          after-surface: 0
-        reflected:
-          frame: reflected
-          direction: -y
-          after-surface: 1
-    pose:
-      rotation:
-        kind: grid
-        grid:
-          x: -y
-      translation:
-        offset-grid:
-          y: 1
   laser-galvo:
     kind: primitive
     primitive:
@@ -71,7 +14,6 @@ components:
     category: source
     optics:
       emission:
-        port: out
         spectrum:
         - wavelength_um: 0.532
           weight: 1
@@ -83,23 +25,15 @@ components:
         flux: 1
       frames:
         optical:
-          x-mm: 0
-          y-mm: 18
-          z-mm: 7
-        out:
-          x-mm: 0
-          y-mm: 18
-          z-mm: 7
+          y-mm: -7.0
+          z-mm: 18.0
           clear-aperture-mm: 5
-      ports:
-        out:
-          frame: out
-          direction: +y
     pose:
       rotation:
         kind: grid
         grid:
-          x: -y
+          z: +x
+          x: +y
       translation:
         offset-grid:
           x: -2
@@ -138,19 +72,12 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction: +y
-        back:
-          frame: optical
-          direction: -y
-          after-surface: 1
     pose:
       rotation:
         kind: grid
         grid:
-          x: -x
+          z: +y
+          x: +x
       translation:
         offset-grid:
           y: 2
@@ -192,17 +119,12 @@ components:
           x-mm: 0
           y-mm: 10
           z-mm: 0
-      ports:
-        front:
-          frame: front
-          direction: -y
-        back:
-          frame: back
-          direction: +y
-          after-surface: 1
     pose:
       rotation:
         kind: grid
+        grid:
+          z: +y
+          x: +x
       translation:
         offset-grid:
           y: 6
@@ -228,6 +150,9 @@ components:
             type: refractive_reflective
             is_reflective: true
           semi_aperture: 12.7
+          response:
+            kind: sampler
+            transmit-ratio: 0.5
         - type: standard
           geometry:
             type: StandardGeometry
@@ -239,23 +164,14 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction: +y
-        transmitted:
-          frame: optical
-          direction: -y
-          after-surface: 1
-        reflected:
-          frame: optical
-          direction: -x
-          after-surface: 0
     pose:
       rotation:
         kind: grid
         grid:
-          x: +y
+          z: +y
+          x: +x
+        offset-deg:
+          y: 45.0
       translation:
         offset-grid:
           y: 8
@@ -291,17 +207,12 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        front:
-          frame: optical
-          direction: +z
-        back:
-          frame: optical
-          direction: -z
-          after-surface: 1
     pose:
       rotation:
         kind: grid
+        grid:
+          z: -z
+          x: +x
       translation:
         offset-grid:
           y: 8
@@ -318,10 +229,6 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        sensor:
-          frame: optical
-          direction: -z
     pose:
       rotation:
         kind: grid
@@ -344,10 +251,6 @@ components:
           x-mm: 0
           y-mm: 0
           z-mm: 0
-      ports:
-        plane:
-          frame: optical
-          direction: +z
     pose:
       rotation:
         kind: grid
@@ -357,14 +260,72 @@ components:
         offset-grid:
           y: 8
           z: 3
+  galvo-mirror-0:
+    kind: primitive
+    primitive:
+      static-models:
+        gltf: user.cube.galvo_mirror
+    category: mirror
+    optics:
+      fragment:
+        surfaces:
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: .inf
+            conic: 0
+          interaction_model:
+            type: refractive_reflective
+            is_reflective: true
+          semi_aperture: 5
+      frames:
+        optical:
+          z-mm: 0.0
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: -y
+          x: +z
+        offset-deg:
+          y: -45.0
+      translation:
+        offset-grid:
+          y: 1
+        offset-mm: {}
+  galvo-mirror-1:
+    kind: primitive
+    category: mirror
+    optics:
+      fragment:
+        surfaces:
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: .inf
+            conic: 0
+          interaction_model:
+            type: refractive_reflective
+            is_reflective: true
+          semi_aperture: 5
+      frames:
+        optical:
+          z-mm: 0.0
+    pose:
+      translation:
+        offset-mm:
+          z: 7.0
+        offset-grid:
+          y: 1
+      rotation:
+        kind: grid
+        grid:
+          z: +x
+          x: +z
+        offset-deg:
+          y: 45.0
 paths:
   from-laser-galvo:
-    chain:
-    - laser-galvo.out
-    - galvo-mirror.reflected>front
-    - lens-galvo-50.front>back
-    - lens-galvo-160.front>back
-    - beamsplitter-cube-50.reflected>front
-    - objective-4x.back>front
-    - camera-basic.sensor
+    from: laser-galvo
+    to: camera-basic
 instantiation: {}

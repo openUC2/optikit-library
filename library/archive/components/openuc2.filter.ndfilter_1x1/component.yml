@@ -1,0 +1,23 @@
+kind: optical_component
+id: openuc2.filter.ndfilter_1x1
+version: 0.1.0
+category: filter
+description: Selectable neutral‑density filters for precise attenuation.
+tags:
+  - migrated
+  - optics
+docs: []
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+optics:
+  frames:
+    optical:
+      z-mm: 0.0
+  ports:
+    front:
+      frame: optical
+      direction: -z
+    back:
+      frame: optical
+      direction: +z
+  passthrough: true

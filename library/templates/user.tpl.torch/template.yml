@@ -24,10 +24,6 @@ mesh-pose:
   translation:
     offset-mm:
       z: 30
-optical_ports:
-  out:
-    frame: optical
-    direction: -z
 footprint_grid:
 insert-pose:
   rotation:

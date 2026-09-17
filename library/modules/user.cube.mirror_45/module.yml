@@ -4,7 +4,7 @@ version: 0.1.0
 description: mirror_45 in a 1x1 cube (bound)
 tags:
   - bound
-component: user.mirror.mirror_45@^0.1
+component: openuc2.mirror.flat@^1
 template: user.tpl.mirror_45@^0.1
 footprint_grid:
   - 1

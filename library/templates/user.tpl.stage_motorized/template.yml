@@ -19,13 +19,6 @@ mesh-pose:
     grid:
       z: -z
       x: +y
-optical_ports:
-  front:
-    frame: optical
-    direction: -z
-  back:
-    frame: optical
-    direction: +z
 footprint_grid:
 - 3
 - 1

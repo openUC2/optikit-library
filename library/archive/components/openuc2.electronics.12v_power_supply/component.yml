@@ -1,0 +1,11 @@
+kind: optical_component
+id: openuc2.electronics.12v_power_supply
+version: 0.1.0
+category: electronics
+description: Power Supply
+tags:
+  - migrated
+  - electronics
+docs: []
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record

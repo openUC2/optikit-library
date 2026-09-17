@@ -1,0 +1,20 @@
+kind: cube_module
+id: openuc2.cube.frame_led_matrix
+version: 0.1.0
+description: 8×8 LED matrix for programmable illumination patterns
+tags:
+  - migrated
+  - cube
+  - cube/source
+  - illumination
+docs:
+  - https://docs.openuc2.com/frame/led-matrix
+component: openuc2.source.frame_led_matrix@^0.1
+template: openuc2.tpl.frame_led_matrix@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 150.0

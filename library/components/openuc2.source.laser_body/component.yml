@@ -10,10 +10,9 @@ description: Collimated laser module in its own cylindrical body — the S2 bare
 tags: [reference, source, source/laser]
 optics:
   frames:
-    optical: {z-mm: 0.0}
-    emission: {z-mm: 50.0, clear-aperture-mm: 10.0}
-  ports:
-    out: {frame: emission, direction: +z}
+    optical:
+      z-mm: 50.0
+      clear-aperture-mm: 10.0
 source:
   wavelengths_um: [0.635]
   divergence_deg: 0.5

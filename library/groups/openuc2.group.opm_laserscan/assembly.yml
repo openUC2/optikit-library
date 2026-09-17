@@ -42,7 +42,7 @@ groups:
         top:    {module: openuc2.cube.plate_3x8, origin: [0, -1], size: [3, 8]}
         bottom: {module: openuc2.cube.plate_3x8, origin: [0, -1], size: [3, 8]}
     interface:
-      axis: {member: "ASS - 2077 - CUBKINSPL45", port: front}
+      axis: {member: "ASS - 2077 - CUBKINSPL45"}
     review:
       - the axis fold is a 25×25×1 splitter in a kinematic mount (`CUBKINSPL45°`), shipped as `mirror_45`; the f50 and f160 lens cubes ship as `cublend12_7f40` and `tube_lens_1x1` (nearest records — the EFLs differ)
       - the detection fiber cube (`CUBECCADJFIBHOL`) ships as a plain cube; the two filter slides between cubes (`EMIFILSLD`, `EXCFILSLD`) and the galvo-board cube hanging below the plate are not modelled

@@ -12,14 +12,6 @@ envelope:
 step: ASS - 3004 - CUBMANSTGR10 - V04.stp
 glb: ASS - 3004 - CUBMANSTGR10 - V04.glb
 mesh-frame: cube
-optical_ports:
-  front:
-    frame: optical
-    direction: -z
-  back:
-    frame: exit
-    direction: +z
-    after-surface: 1
 footprint_grid:
 - 1
 - 2

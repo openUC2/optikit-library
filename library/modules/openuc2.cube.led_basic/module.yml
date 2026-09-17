@@ -5,7 +5,7 @@ id: openuc2.cube.led_basic
 version: 0.1.1
 description: Starter broadband LED in a 1x1 cube — the exemplary LED trio to copy
 tags: [starter, cube, cube/source]
-component: openuc2.source.led_basic@^0.1
 template: openuc2.tpl.led_basic@^0.1
 footprint_grid: [1, 1, 1]
 locked: true
+design: openuc2.subdesign.led_basic@^0.1

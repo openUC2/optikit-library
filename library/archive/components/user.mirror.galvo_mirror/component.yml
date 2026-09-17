@@ -1,0 +1,21 @@
+kind: optical_component
+id: user.mirror.galvo_mirror
+version: 0.1.1
+category: mirror
+description: ""
+tags:
+  - authored
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+optics:
+  frames:
+    optical:
+      z-mm: 0
+    pivot_x:
+      z-mm: 0
+    pivot_y:
+      z-mm: 7
+  fragment-file: optics.optiland.yml
+mount_angle_deg: 45

@@ -12,6 +12,5 @@ envelope:
 step: PRT - 1004 - PUZ11 - V04 - A.stp
 glb: PRT - 1004 - PUZ11 - V04 - A.glb
 mesh-frame: cube
-optical_ports: {}
-footprint_grid: null
+footprint_grid:
 component: user.mechanics.puzzle@^0.1

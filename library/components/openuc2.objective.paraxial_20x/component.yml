@@ -14,8 +14,5 @@ objective:
 optics:
   frames:
     optical: {z-mm: 0.0, clear-aperture-mm: 11.3}
-  ports:
-    front: {frame: optical, direction: -z}
-    back: {frame: optical, direction: +z, after-surface: 0}
   fragment-file: optics.optiland.yml
 locked: true

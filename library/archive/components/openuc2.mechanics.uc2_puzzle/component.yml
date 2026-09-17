@@ -1,0 +1,11 @@
+kind: optical_component
+id: openuc2.mechanics.uc2_puzzle
+version: 0.1.0
+category: mechanics
+description: Puzzle
+tags:
+  - migrated
+  - stages
+docs: []
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record

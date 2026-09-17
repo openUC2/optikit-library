@@ -1,0 +1,19 @@
+kind: cube_module
+id: openuc2.cube.lambdahalf_1x1
+version: 0.1.0
+description: Rotatable linear polarizing filter module.
+tags:
+  - migrated
+  - cube
+  - cube/mechanics
+  - optics
+docs: []
+component: openuc2.mechanics.lambdahalf_1x1@^0.1
+template: openuc2.tpl.lambdahalf_1x1@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 150.0

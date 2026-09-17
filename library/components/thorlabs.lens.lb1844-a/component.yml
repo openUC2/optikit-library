@@ -22,18 +22,8 @@ optics:
       z-mm: 2.59
     mount:
       z-mm: 1.295
-  ports:
-    front:
-      frame: optical
-      direction: -z
-    back:
-      frame: exit
-      direction: +z
-      after-surface: 1
   fragment-file: optics.optiland.yml
 effective_focal_length_mm: 49.830911
 review:
-  - prescription from the vendor zmx 
-    https://media.thorlabs.com/globalassets/items/l/lb/lb1/lb1844-a/4632-s03.zmx?v=0116122238 
-    (sha256 b56938e5a290…, retrieved 2026-09-14T18:30:28+00:00)
+  - prescription from the vendor zmx https://media.thorlabs.com/globalassets/items/l/lb/lb1/lb1844-a/4632-s03.zmx?v=0116122238 (sha256 b56938e5a290…, retrieved 2026-09-14T18:30:28+00:00)
 locked: true

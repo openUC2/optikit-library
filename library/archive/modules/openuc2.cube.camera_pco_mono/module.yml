@@ -1,0 +1,18 @@
+kind: cube_module
+id: openuc2.cube.camera_pco_mono
+version: 0.1.0
+description: PCO scientific camera
+tags:
+  - migrated
+  - cube
+  - cube/detector
+  - cameras
+docs: []
+component: openuc2.detector.camera_pco_mono@^0.1
+template: openuc2.tpl.camera_pco_mono@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record

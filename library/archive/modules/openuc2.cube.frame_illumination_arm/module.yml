@@ -1,0 +1,20 @@
+kind: cube_module
+id: openuc2.cube.frame_illumination_arm
+version: 0.1.0
+description: Transmitted illumination arm for the UC2 FRAME
+tags:
+  - migrated
+  - cube
+  - cube/source
+  - illumination
+docs:
+  - https://docs.openuc2.com/frame/illumination-arm
+component: openuc2.source.frame_illumination_arm@^0.1
+template: openuc2.tpl.frame_illumination_arm@^0.1
+footprint_grid:
+  - 3
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 200.0

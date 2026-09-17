@@ -1,0 +1,19 @@
+kind: cube_module
+id: openuc2.cube.ndfilter_1x1
+version: 0.1.0
+description: Selectable neutral‑density filters for precise attenuation.
+tags:
+  - migrated
+  - cube
+  - cube/filter
+  - optics
+docs: []
+component: openuc2.filter.ndfilter_1x1@^0.1
+template: openuc2.tpl.ndfilter_1x1@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 50.0

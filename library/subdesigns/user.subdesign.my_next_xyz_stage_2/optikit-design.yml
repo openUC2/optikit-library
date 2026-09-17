@@ -23,10 +23,6 @@ components:
     optics:
       frames:
         optical: {}
-      ports:
-        plane:
-          frame: optical
-          direction: +z
       passthrough: true
     pose:
       rotation:

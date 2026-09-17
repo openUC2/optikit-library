@@ -11,7 +11,3 @@ tags: [detector, detector/camera]
 optics:
   frames:
     optical: {z-mm: 0.0}
-  ports:
-    # `roles` is what trace-first discovery terminates on; without it the
-    # camera is invisible to path finding.
-    sensor: {frame: optical, direction: -z, roles: [sensor]}

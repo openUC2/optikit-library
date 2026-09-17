@@ -11,8 +11,6 @@ tags: [starter, source, source/led]
 optics:
   frames:
     optical: {z-mm: 0.0}
-  ports:
-    out: {frame: optical, direction: +z}
 source:
   wavelengths_um: [0.55]
   divergence_deg: 60.0

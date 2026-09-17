@@ -1,0 +1,21 @@
+kind: mechanical_template
+id: openuc2.tpl.raspberrypi_controller_1x1
+version: 0.1.0
+class: fixed
+description: Raspberry Pi Controller mount (migrated)
+tags:
+  - migrated
+  - electronics
+envelope:
+  x-mm: 100.0
+  y-mm: 100.0
+  z-mm: 50.0
+footprint_grid:
+  - 2
+  - 2
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+glb: ASS_-_RASPI5_-_RAS-25-01.glb
+glb-url: 
+  https://raw.githubusercontent.com/beniroquai/openUC2-OptiKit-Store/refs/heads/main/GLB/ASS_-_RASPI5_-_RAS-25-01.glb

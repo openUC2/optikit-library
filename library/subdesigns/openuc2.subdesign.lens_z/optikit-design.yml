@@ -45,9 +45,6 @@ components:
         optical: {z-mm: 0.0, clear-aperture-mm: 20.0}
         exit: {z-mm: 5.0}
         mount: {z-mm: 2.6}
-      ports:
-        front: {frame: optical, direction: -z}
-        back: {frame: exit, direction: +z, after-surface: 1}
     # WP-227: the motion. Rotation is identity and therefore OMITTED
     # (GO-SYNC §6b — an explicit empty grid trips go3d's report).
     pose:

@@ -1,0 +1,18 @@
+kind: mechanical_template
+id: openuc2.tpl.objective_holder_rms_1x1
+version: 0.1.0
+class: fixed
+description: Objective Holder (RMS) mount (migrated)
+tags:
+  - migrated
+  - optics
+envelope:
+  x-mm: 50.0
+  y-mm: 50.0
+  z-mm: 50.0
+footprint_grid:
+  - 1
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record

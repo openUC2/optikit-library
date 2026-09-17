@@ -1,0 +1,12 @@
+kind: optical_component
+id: openuc2.electronics.odmr_xiao_esp32s3
+version: 0.1.0
+category: electronics
+description: ODMR detection board based on Xiao ESP32-S3
+tags:
+  - migrated
+  - electronics
+docs:
+  - https://docs.openuc2.com/modules/odmr
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record

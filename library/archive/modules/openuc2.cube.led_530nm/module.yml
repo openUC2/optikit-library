@@ -1,0 +1,19 @@
+kind: cube_module
+id: openuc2.cube.led_530nm
+version: 0.1.0
+description: Green LED 530nm for fluorescence excitation
+tags:
+  - migrated
+  - cube
+  - cube/source
+  - fluorescence
+docs: []
+component: openuc2.source.led_530nm@^0.1
+template: openuc2.tpl.led_530nm@^0.1
+footprint_grid:
+  - 2
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 250.0

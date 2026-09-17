@@ -45,14 +45,6 @@ components:
           z-mm: 14.0
         mount:
           z-mm: 8.643364
-      ports:
-        front:
-          frame: optical
-          direction: -z
-        back:
-          frame: exit
-          direction: +z
-          after-surface: 2
     pose:
       rotation:
         kind: grid

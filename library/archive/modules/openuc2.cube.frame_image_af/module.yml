@@ -1,0 +1,20 @@
+kind: cube_module
+id: openuc2.cube.frame_image_af
+version: 0.1.0
+description: Software-based autofocus using image contrast analysis
+tags:
+  - migrated
+  - cube
+  - cube/electronics
+  - electronics
+docs:
+  - https://docs.openuc2.com/frame/image-autofocus
+component: openuc2.electronics.frame_image_af@^0.1
+template: openuc2.tpl.frame_image_af@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 0.0

@@ -17,14 +17,6 @@ optics:
       z-mm: 14.0
     mount:
       z-mm: 8.643364
-  ports:
-    front:
-      frame: optical
-      direction: -z
-    back:
-      frame: exit
-      direction: +z
-      after-surface: 2
   fragment-file: optics.optiland.yml
 effective_focal_length_mm: 30.000192
 locked: true

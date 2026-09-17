@@ -1,0 +1,12 @@
+kind: optical_component
+id: openuc2.electronics.dial_control
+version: 0.1.0
+category: electronics
+description: CAN-bus rotary encoder jog dial for manual stage control
+tags:
+  - migrated
+  - electronics
+docs:
+  - https://docs.openuc2.com/modules/dial-control
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record

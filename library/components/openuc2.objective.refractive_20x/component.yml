@@ -19,8 +19,5 @@ optics:
   frames:
     optical: {z-mm: -41.0}
     exit: {z-mm: -39.0}
-  ports:
-    front: {frame: optical, direction: -z}
-    back: {frame: exit, direction: +z, after-surface: 1}
   fragment-file: optics.optiland.yml
 locked: true

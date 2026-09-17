@@ -1,0 +1,12 @@
+kind: cube_subdesign
+id: openuc2.subdesign.laser_fiber_532
+version: 0.1.0
+description: 'openuc2.source.laser_fiber_532, seats as variants: seat-pz-px, seat-px-py, seat-px-my, seat-px-pz,
+  seat-px-mz, seat-mx-py, seat-mx-my, seat-mx-pz, seat-mx-mz, seat-py-px, seat-py-mx, seat-py-pz, seat-py-mz,
+  seat-my-px, seat-my-mx, seat-my-pz, seat-my-mz, seat-pz-mx, seat-pz-py, seat-pz-my, seat-mz-px, seat-mz-mx,
+  seat-mz-py, seat-mz-my'
+component: openuc2.source.laser_fiber_532@^0.1
+tags:
+  - subdesign
+  - seats
+review: []

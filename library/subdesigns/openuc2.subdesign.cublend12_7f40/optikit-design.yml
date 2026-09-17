@@ -32,9 +32,6 @@ components:
             semi_aperture: 6.35
       frames:
         optical: {z-mm: -0.0, clear-aperture-mm: 12.7}
-      ports:
-        front: {frame: optical, direction: -z}
-        back: {frame: optical, direction: +z, after-surface: 1}
     pose:
       translation:
         offset-mm:

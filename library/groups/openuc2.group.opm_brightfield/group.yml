@@ -9,8 +9,7 @@ docs:
   - https://docs.openuc2.com/usage/pro/miniframe/miniFRAME_DPC
 review:
   - 'measured from FRAME #0008 - Microscope incl accessories.stp (exported 2026-09-10)'
-  - the two `CUBTBSHOLD28.5` tube-holder cubes and the C-mount tubus are shipped as `cube_1x1` + 
-    `camera_basic`; the camera body sits 12.5 mm off its cell
+  - the two `CUBTBSHOLD28.5` tube-holder cubes and the C-mount tubus are shipped as `cube_1x1` + `camera_basic`; the camera body sits 12.5 mm off its cell
   - the OPM sits 0.5 mm off the illumination axis in this export (y = -0.5); cells are snapped
   - "'BUY - HIKROBOT - Camera - MV-CS060-10UC-PRO:1' sits 11.8 mm off its cell"
 envelope-grid:
@@ -158,8 +157,6 @@ structure:
 interface:
   axis:
     member: mirror_45
-    port: front
   camera:
     member: camera_basic
-    port: sensor
 locked: true

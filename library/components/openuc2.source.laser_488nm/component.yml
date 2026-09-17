@@ -18,8 +18,4 @@ optics:
   frames:
     optical:
       z-mm: 0.0
-  ports:
-    out:
-      frame: optical
-      direction: +z
 locked: true

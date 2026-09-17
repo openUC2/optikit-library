@@ -24,6 +24,9 @@ components:
               name: N-BK7
             thickness: 1
             semi_aperture: 12.7
+            response:
+              kind: sampler
+              transmit-ratio: 0.5
           - type: standard
             geometry:
               type: StandardGeometry
@@ -32,24 +35,14 @@ components:
             semi_aperture: 12.7
       frames:
         optical: {}
-      ports:
-        front:
-          frame: optical
-          direction: -z
-        transmitted:
-          frame: optical
-          direction: +z
-          after-surface: 1
-        reflected:
-          frame: optical
-          direction: -x
-          after-surface: 0
     pose:
       rotation:
         kind: grid
         grid:
           z: -y
           x: +x
+        offset-deg:
+          y: 45.0
 variants:
   seat-pz-px:
     description: as authored — the insert's home seat

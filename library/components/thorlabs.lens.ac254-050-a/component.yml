@@ -17,14 +17,6 @@ optics:
       z-mm: 11.5
     mount:
       z-mm: 6.868213
-  ports:
-    front:
-      frame: optical
-      direction: -z
-    back:
-      frame: exit
-      direction: +z
-      after-surface: 2
   fragment-file: optics.optiland.yml
 review:
   - "surface 2: glass 'SF10' normalized to database name 'N-SF10' via optiland's search — verify"

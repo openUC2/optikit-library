@@ -6,8 +6,7 @@ description: Tucsen Libra16 cooled BSI sCMOS — 95 % QE, best for fluorescence 
 tags: [cameras, detector]
 docs:
   - https://docs.openuc2.com/cameras/tucsen-libra16
-vendor: {name: Tucsen, mpn: Libra16, url: 'https://docs.openuc2.com/cameras/tucsen-libra16', price: 
-    6500.0, currency: EUR}
+vendor: {name: Tucsen, mpn: Libra16, url: 'https://docs.openuc2.com/cameras/tucsen-libra16', price: 6500.0, currency: EUR}
 detector:
   sensor: BSI sCMOS
   pixel_pitch_um: 3.76
@@ -24,6 +23,4 @@ review:
 optics:
   frames:
     optical: {z-mm: 0.0}
-  ports:
-    sensor: {frame: optical, direction: -z}
 locked: true

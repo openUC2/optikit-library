@@ -32,8 +32,6 @@ provenance: whole-module
 # W_NO_INSERT_FRAME and its "OK" is vacuous — it never compares a pose.
 frames:
   optical: {z-mm: 0.0}
-optical_ports:
-  front: {frame: optical, direction: -z}
 footprint_grid:
   - 1
   - 1
@@ -42,3 +40,8 @@ review:
   - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
   - the mesh is TH1 V03; the migrated record originally named TH2 V04
 locked: true
+insert-pose:
+  rotation:
+    kind: uc2
+    offset-deg:
+      y: -45.0

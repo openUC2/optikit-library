@@ -25,20 +25,14 @@ components:
             semi_aperture: 12.7
       frames:
         optical: {}
-      ports:
-        front:
-          frame: optical
-          direction: -z
-        reflected:
-          frame: optical
-          direction: -x
-          after-surface: 0
     pose:
       rotation:
         kind: grid
         grid:
           z: -x
           x: +y
+        offset-deg:
+          y: 45.0
 variants:
   seat-pz-px:
     description: as authored — the insert's home seat

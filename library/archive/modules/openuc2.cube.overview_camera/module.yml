@@ -1,0 +1,20 @@
+kind: cube_module
+id: openuc2.cube.overview_camera
+version: 0.1.0
+description: Low-magnification overview camera for sample navigation
+tags:
+  - migrated
+  - cube
+  - cube/detector
+  - cameras
+docs:
+  - https://docs.openuc2.com/modules/overview-camera
+component: openuc2.detector.overview_camera@^0.1
+template: openuc2.tpl.overview_camera@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 150.0

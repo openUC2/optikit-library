@@ -11,6 +11,4 @@ tags: [starter, detector, detector/camera]
 optics:
   frames:
     optical: {z-mm: 0.0}
-  ports:
-    sensor: {frame: optical, direction: -z}
 locked: true

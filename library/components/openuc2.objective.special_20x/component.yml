@@ -30,17 +30,8 @@ optics:
     optical:
       z-mm: 0.0
       clear-aperture-mm: 13.5
-  ports:
-    front:
-      frame: optical
-      direction: -z
-    back:
-      frame: optical
-      direction: +z
-      after-surface: 0
   fragment-file: optics.optiland.yml
 review:
   - facts from the vendor table — confirm against current vendor data
-  - traces as an ideal thin lens at the stated EFL — attach the vendor .zmx for the real 
-    prescription
+  - traces as an ideal thin lens at the stated EFL — attach the vendor .zmx for the real prescription
 locked: true

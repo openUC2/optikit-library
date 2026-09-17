@@ -1,0 +1,19 @@
+kind: cube_module
+id: openuc2.cube.stage_z
+version: 0.1.0
+description: Z-axis focus stage
+tags:
+  - migrated
+  - cube
+  - cube/mechanics
+  - stages
+docs: []
+component: openuc2.mechanics.stage_z@^0.1
+template: openuc2.tpl.stage_z@^0.1
+footprint_grid:
+  - 2
+  - 2
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 100.0

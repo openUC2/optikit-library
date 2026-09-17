@@ -1,0 +1,272 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  name: starter-50mm
+  version: 0.1.0
+  description: openuc2.lens.starter_50mm in a cube — 24 seat(s)
+inputs: {}
+components:
+  starter-50mm:
+    kind: primitive
+    category: lens
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: 51.0593
+              conic: 0.0
+            material_post:
+              type: Material
+              name: N-BK7
+            thickness: 3.6
+            semi_aperture: 12.5
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: -51.0593
+              conic: 0.0
+            semi_aperture: 12.5
+      frames:
+        optical: {}
+        exit:
+          z-mm: 3.6
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +x
+          x: +y
+variants:
+  seat-pz-px:
+    description: as authored — the insert's home seat
+  seat-px-py:
+    description: insert seated +x / +y
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +y
+              x: +z
+  seat-px-my:
+    description: insert seated +x / -y
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -y
+              x: -z
+  seat-px-pz:
+    description: insert seated +x / +z
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +z
+              x: -y
+  seat-px-mz:
+    description: insert seated +x / -z
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -z
+              x: +y
+  seat-mx-py:
+    description: insert seated -x / +y
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +y
+              x: -z
+  seat-mx-my:
+    description: insert seated -x / -y
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -y
+              x: +z
+  seat-mx-pz:
+    description: insert seated -x / +z
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +z
+              x: +y
+  seat-mx-mz:
+    description: insert seated -x / -z
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -z
+              x: -y
+  seat-py-px:
+    description: insert seated +y / +x
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +x
+              x: -z
+  seat-py-mx:
+    description: insert seated +y / -x
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -x
+              x: +z
+  seat-py-pz:
+    description: insert seated +y / +z
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +z
+              x: +x
+  seat-py-mz:
+    description: insert seated +y / -z
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -z
+              x: -x
+  seat-my-px:
+    description: insert seated -y / +x
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +x
+              x: +z
+  seat-my-mx:
+    description: insert seated -y / -x
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -x
+              x: -z
+  seat-my-pz:
+    description: insert seated -y / +z
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +z
+              x: -x
+  seat-my-mz:
+    description: insert seated -y / -z
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -z
+              x: +x
+  seat-pz-mx:
+    description: insert seated +z / -x
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -x
+              x: -y
+  seat-pz-py:
+    description: insert seated +z / +y
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +y
+              x: -x
+  seat-pz-my:
+    description: insert seated +z / -y
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -y
+              x: +x
+  seat-mz-px:
+    description: insert seated -z / +x
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +x
+              x: -y
+  seat-mz-mx:
+    description: insert seated -z / -x
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -x
+              x: +y
+  seat-mz-py:
+    description: insert seated -z / +y
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +y
+              x: +x
+  seat-mz-my:
+    description: insert seated -z / -y
+    components:
+      starter-50mm:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -y
+              x: -x

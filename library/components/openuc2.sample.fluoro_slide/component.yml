@@ -15,10 +15,7 @@ docs: []
 optics:
   frames:
     optical: {z-mm: 0.0}
-  ports:
-    plane: {frame: optical, direction: +z}
   emission:
-    port: plane
     spectrum:
       - {wavelength_um: 0.520, weight: 1.0}
     spatial: {type: disc, radius_mm: 0.1}

@@ -1,0 +1,19 @@
+kind: cube_module
+id: openuc2.cube.wildcard_2x2
+version: 0.1.0
+description: Customizable 2x2 module
+tags:
+  - migrated
+  - cube
+  - cube/mechanics
+  - wildcard
+docs: []
+component: openuc2.mechanics.wildcard_2x2@^0.1
+template: openuc2.tpl.wildcard_2x2@^0.1
+footprint_grid:
+  - 2
+  - 2
+  - 1
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+price: 0.0

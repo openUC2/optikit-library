@@ -12,7 +12,6 @@ envelope:
 step: ASS - 2079 - CUBGLVBRD - V04.stp
 glb: ASS - 2079 - CUBGLVBRD - V04.glb
 mesh-frame: cube
-optical_ports: {}
 footprint_grid:
 - 2
 - 1

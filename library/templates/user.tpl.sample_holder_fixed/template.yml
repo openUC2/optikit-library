@@ -12,10 +12,6 @@ envelope:
 step: ASS - 2024 - CUBSAMHOL - V04.stp
 glb: ASS - 2024 - CUBSAMHOL - V04.glb
 mesh-frame: cube
-optical_ports:
-  plane:
-    frame: optical
-    direction: +z
 footprint_grid:
 - 1
 - 1

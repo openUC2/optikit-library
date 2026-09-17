@@ -6,14 +6,11 @@
 kind: cube_group
 id: openuc2.group.opm_fluo
 version: 0.1.1
-description: miniFRAME LED-fluorescence OPM — dichroic on the axis, emission filter, tube lens, 
-  camera arm
+description: miniFRAME LED-fluorescence OPM — dichroic on the axis, emission filter, tube lens, camera arm
 tags: [opm, miniframe, fluorescence]
 review:
-  - layout authored from the flyer, not from CAD — verify cells, the dichroic's seat and the beam 
-    path
-  - the excitation source is `led_basic`; a laser variant swaps it for `laser_488`, and the dichroic
-    follows the chosen wavelengths (WP-272)
+  - layout authored from the flyer, not from CAD — verify cells, the dichroic's seat and the beam path
+  - the excitation source is `led_basic`; a laser variant swaps it for `laser_488`, and the dichroic follows the chosen wavelengths (WP-272)
 envelope-grid: [3, 3, 2]
 members:
   # ── layer 1, under the objective: excitation in from -x, dichroic on the axis ──
@@ -52,6 +49,6 @@ structure:
     - [2, 2, 1]
 interface:
   # `axis` names the member a carrier bay puts on its optical axis.
-  axis: {member: fold_mirror, port: front}
-  camera: {member: camera, port: sensor}
+  axis: {member: fold_mirror}
+  camera: {member: camera}
 locked: true

@@ -1,0 +1,23 @@
+kind: optical_component
+id: openuc2.filter.filter_bandpass
+version: 0.1.0
+category: filter
+description: Bandpass optical filter module
+tags:
+  - migrated
+  - fluorescence
+docs: []
+review:
+  - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
+optics:
+  frames:
+    optical:
+      z-mm: 0.0
+  ports:
+    front:
+      frame: optical
+      direction: -z
+    back:
+      frame: optical
+      direction: +z
+  passthrough: true

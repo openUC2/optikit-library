@@ -8,7 +8,9 @@ generator:
   params:
     fit_clearance_mm: 0.15
     beam_axis: +x
-    part_position_mm: {}
+    part_position_mm:
+      x: 1.5359
+      z: 1.221
     part_rotation_deg:
       z: -90
     part_prescription:
@@ -22,8 +24,8 @@ generator:
             type: Material
             name: N-BAF10
           thickness: 9
-          is_stop: true
           semi_aperture: 12.7
+          is_stop: true
         - type: standard
           geometry:
             type: StandardGeometry

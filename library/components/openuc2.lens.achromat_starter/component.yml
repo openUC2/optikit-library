@@ -9,8 +9,5 @@ optics:
   frames:
     optical: {z-mm: 0.0, clear-aperture-mm: 22.86}
     exit: {z-mm: 11.5, clear-aperture-mm: 22.86}
-  ports:
-    front: {frame: optical, direction: -z}
-    back: {frame: exit, direction: +z, after-surface: 2}
   fragment-file: optics.optiland.yml
 locked: true

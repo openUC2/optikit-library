@@ -8,8 +8,5 @@ docs: []
 optics:
   frames:
     optical: {z-mm: 0.0}
-  ports:
-    front: {frame: optical, direction: -z}
-    back: {frame: optical, direction: +z, after-surface: 0}
   fragment-file: optics.optiland.yml
 locked: true

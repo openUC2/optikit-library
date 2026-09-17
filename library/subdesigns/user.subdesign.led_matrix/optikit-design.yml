@@ -11,10 +11,6 @@ components:
     optics:
       frames:
         optical: {}
-      ports:
-        out:
-          frame: optical
-          direction: +z
     source:
       wavelengths_um:
         - 0.532
