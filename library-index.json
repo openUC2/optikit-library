@@ -30,194 +30,122 @@
           {
             "id": "seat-mx-my",
             "description": "insert seated -x / -y",
-            "seat": [
-              "-x",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-mz",
             "description": "insert seated -x / -z",
-            "seat": [
-              "-x",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-py",
             "description": "insert seated -x / +y",
-            "seat": [
-              "-x",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-pz",
             "description": "insert seated -x / +z",
-            "seat": [
-              "-x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-mx",
             "description": "insert seated -y / -x",
-            "seat": [
-              "-y",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-mz",
             "description": "insert seated -y / -z",
-            "seat": [
-              "-y",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-px",
             "description": "insert seated -y / +x",
-            "seat": [
-              "-y",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-pz",
             "description": "insert seated -y / +z",
-            "seat": [
-              "-y",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-mx",
             "description": "insert seated -z / -x",
-            "seat": [
-              "-z",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-my",
             "description": "insert seated -z / -y",
-            "seat": [
-              "-z",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-px",
             "description": "insert seated -z / +x",
-            "seat": [
-              "-z",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-py",
             "description": "insert seated -z / +y",
-            "seat": [
-              "-z",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-my",
             "description": "insert seated +x / -y",
-            "seat": [
-              "+x",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-mz",
             "description": "insert seated +x / -z",
-            "seat": [
-              "+x",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-py",
             "description": "insert seated +x / +y",
-            "seat": [
-              "+x",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-pz",
             "description": "insert seated +x / +z",
-            "seat": [
-              "+x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-mx",
             "description": "insert seated +y / -x",
-            "seat": [
-              "+y",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-mz",
             "description": "insert seated +y / -z",
-            "seat": [
-              "+y",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-px",
             "description": "insert seated +y / +x",
-            "seat": [
-              "+y",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-pz",
             "description": "insert seated +y / +z",
-            "seat": [
-              "+y",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-mx",
             "description": "insert seated +z / -x",
-            "seat": [
-              "+z",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-my",
             "description": "insert seated +z / -y",
-            "seat": [
-              "+z",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-px",
             "description": "as authored \u2014 the insert's home seat",
-            "seat": [
-              "+z",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-py",
             "description": "insert seated +z / +y",
-            "seat": [
-              "+z",
-              "+y"
-            ]
+            "seat": null
           }
         ],
         "inputs": {},
@@ -236,9 +164,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "openuc2.detector.camera_basic@^0.1",
@@ -255,6 +184,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -274,17 +204,14 @@
         "glb": null,
         "step": null,
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
+      "ports": [],
+      "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.5,
         0.5,
@@ -343,9 +270,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "",
@@ -356,6 +284,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -375,23 +304,15 @@
         "glb": "/v1/library/assets/templates/openuc2.tpl.cublend12_7f40/ASS_-_2028_-_CUBLEND12.7F40_-_V04.glb",
         "step": null,
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      "insert_rot_xyzw": [
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
+      "ports": [],
+      "frames": {},
+      "ports_frame": "record",
+      "insert_rot_xyzw": null,
       "electronics": null
     },
     {
@@ -431,6 +352,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -472,11 +394,14 @@
         "glb": null,
         "step": null,
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": null,
       "electronics": {
         "pcb": "",
@@ -512,194 +437,122 @@
           {
             "id": "seat-mx-my",
             "description": "insert seated -x / -y",
-            "seat": [
-              "-x",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-mz",
             "description": "insert seated -x / -z",
-            "seat": [
-              "-x",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-py",
             "description": "insert seated -x / +y",
-            "seat": [
-              "-x",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-pz",
             "description": "insert seated -x / +z",
-            "seat": [
-              "-x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-mx",
             "description": "insert seated -y / -x",
-            "seat": [
-              "-y",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-mz",
             "description": "insert seated -y / -z",
-            "seat": [
-              "-y",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-px",
             "description": "insert seated -y / +x",
-            "seat": [
-              "-y",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-pz",
             "description": "insert seated -y / +z",
-            "seat": [
-              "-y",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-mx",
             "description": "insert seated -z / -x",
-            "seat": [
-              "-z",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-my",
             "description": "insert seated -z / -y",
-            "seat": [
-              "-z",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-px",
             "description": "insert seated -z / +x",
-            "seat": [
-              "-z",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-py",
             "description": "insert seated -z / +y",
-            "seat": [
-              "-z",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-my",
             "description": "insert seated +x / -y",
-            "seat": [
-              "+x",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-mz",
             "description": "insert seated +x / -z",
-            "seat": [
-              "+x",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-py",
             "description": "insert seated +x / +y",
-            "seat": [
-              "+x",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-pz",
             "description": "insert seated +x / +z",
-            "seat": [
-              "+x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-mx",
             "description": "insert seated +y / -x",
-            "seat": [
-              "+y",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-mz",
             "description": "insert seated +y / -z",
-            "seat": [
-              "+y",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-px",
             "description": "insert seated +y / +x",
-            "seat": [
-              "+y",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-pz",
             "description": "insert seated +y / +z",
-            "seat": [
-              "+y",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-mx",
             "description": "insert seated +z / -x",
-            "seat": [
-              "+z",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-my",
             "description": "insert seated +z / -y",
-            "seat": [
-              "+z",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-px",
             "description": "as authored \u2014 the insert's home seat",
-            "seat": [
-              "+z",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-py",
             "description": "insert seated +z / +y",
-            "seat": [
-              "+z",
-              "+y"
-            ]
+            "seat": null
           }
         ],
         "inputs": {},
@@ -718,9 +571,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "openuc2.filter.emission_525@^0.1",
@@ -737,6 +591,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -776,17 +631,14 @@
         "glb": null,
         "step": null,
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
+      "ports": [],
+      "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.5,
         0.5,
@@ -834,6 +686,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -907,11 +760,14 @@
         "glb": "/v1/library/assets/templates/openuc2.tpl.frame/model.glb",
         "step": null,
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": null,
       "electronics": null
     },
@@ -943,194 +799,122 @@
           {
             "id": "seat-mx-my",
             "description": "insert seated -x / -y",
-            "seat": [
-              "-x",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-mz",
             "description": "insert seated -x / -z",
-            "seat": [
-              "-x",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-py",
             "description": "insert seated -x / +y",
-            "seat": [
-              "-x",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-pz",
             "description": "insert seated -x / +z",
-            "seat": [
-              "-x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-mx",
             "description": "insert seated -y / -x",
-            "seat": [
-              "-y",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-mz",
             "description": "insert seated -y / -z",
-            "seat": [
-              "-y",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-px",
             "description": "insert seated -y / +x",
-            "seat": [
-              "-y",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-pz",
             "description": "insert seated -y / +z",
-            "seat": [
-              "-y",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-mx",
             "description": "insert seated -z / -x",
-            "seat": [
-              "-z",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-my",
             "description": "insert seated -z / -y",
-            "seat": [
-              "-z",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-px",
             "description": "insert seated -z / +x",
-            "seat": [
-              "-z",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-py",
             "description": "insert seated -z / +y",
-            "seat": [
-              "-z",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-my",
             "description": "insert seated +x / -y",
-            "seat": [
-              "+x",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-mz",
             "description": "insert seated +x / -z",
-            "seat": [
-              "+x",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-py",
             "description": "insert seated +x / +y",
-            "seat": [
-              "+x",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-pz",
             "description": "insert seated +x / +z",
-            "seat": [
-              "+x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-mx",
             "description": "insert seated +y / -x",
-            "seat": [
-              "+y",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-mz",
             "description": "insert seated +y / -z",
-            "seat": [
-              "+y",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-px",
             "description": "insert seated +y / +x",
-            "seat": [
-              "+y",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-pz",
             "description": "insert seated +y / +z",
-            "seat": [
-              "+y",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-mx",
             "description": "insert seated +z / -x",
-            "seat": [
-              "+z",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-my",
             "description": "insert seated +z / -y",
-            "seat": [
-              "+z",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-px",
             "description": "as authored \u2014 the insert's home seat",
-            "seat": [
-              "+z",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-py",
             "description": "insert seated +z / +y",
-            "seat": [
-              "+z",
-              "+y"
-            ]
+            "seat": null
           }
         ],
         "inputs": {},
@@ -1149,9 +933,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "openuc2.source.laser_basic@^0.1",
@@ -1171,6 +956,7 @@
         "divergence_deg": 1.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -1190,17 +976,14 @@
         "glb": null,
         "step": null,
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
+      "ports": [],
+      "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.5,
         0.5,
@@ -1237,194 +1020,122 @@
           {
             "id": "seat-mx-my",
             "description": "insert seated -x / -y",
-            "seat": [
-              "-x",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-mz",
             "description": "insert seated -x / -z",
-            "seat": [
-              "-x",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-py",
             "description": "insert seated -x / +y",
-            "seat": [
-              "-x",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-pz",
             "description": "insert seated -x / +z",
-            "seat": [
-              "-x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-mx",
             "description": "insert seated -y / -x",
-            "seat": [
-              "-y",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-mz",
             "description": "insert seated -y / -z",
-            "seat": [
-              "-y",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-px",
             "description": "insert seated -y / +x",
-            "seat": [
-              "-y",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-pz",
             "description": "insert seated -y / +z",
-            "seat": [
-              "-y",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-mx",
             "description": "insert seated -z / -x",
-            "seat": [
-              "-z",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-my",
             "description": "insert seated -z / -y",
-            "seat": [
-              "-z",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-px",
             "description": "insert seated -z / +x",
-            "seat": [
-              "-z",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-py",
             "description": "insert seated -z / +y",
-            "seat": [
-              "-z",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-my",
             "description": "insert seated +x / -y",
-            "seat": [
-              "+x",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-mz",
             "description": "insert seated +x / -z",
-            "seat": [
-              "+x",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-py",
             "description": "insert seated +x / +y",
-            "seat": [
-              "+x",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-pz",
             "description": "insert seated +x / +z",
-            "seat": [
-              "+x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-mx",
             "description": "insert seated +y / -x",
-            "seat": [
-              "+y",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-mz",
             "description": "insert seated +y / -z",
-            "seat": [
-              "+y",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-px",
             "description": "insert seated +y / +x",
-            "seat": [
-              "+y",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-pz",
             "description": "insert seated +y / +z",
-            "seat": [
-              "+y",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-mx",
             "description": "insert seated +z / -x",
-            "seat": [
-              "+z",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-my",
             "description": "insert seated +z / -y",
-            "seat": [
-              "+z",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-px",
             "description": "as authored \u2014 the insert's home seat",
-            "seat": [
-              "+z",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-py",
             "description": "insert seated +z / +y",
-            "seat": [
-              "+z",
-              "+y"
-            ]
+            "seat": null
           }
         ],
         "inputs": {},
@@ -1443,9 +1154,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "openuc2.source.led_basic@^0.1",
@@ -1464,6 +1176,7 @@
         "divergence_deg": 60.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -1483,17 +1196,14 @@
         "glb": null,
         "step": null,
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
+      "ports": [],
+      "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.5,
         0.5,
@@ -1553,9 +1263,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "",
@@ -1566,6 +1277,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -1585,33 +1297,15 @@
         "glb": null,
         "step": null,
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "exit": [
-          0.0,
-          0.0,
-          5.0
-        ],
-        "mount": [
-          0.0,
-          0.0,
-          2.6
-        ]
-      },
-      "insert_rot_xyzw": [
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
+      "ports": [],
+      "frames": {},
+      "ports_frame": "record",
+      "insert_rot_xyzw": null,
       "electronics": {
         "pcb": "kicad:z_stage_driver@2.1",
         "firmware-contract": "uc2:can:motor_axis@1",
@@ -1658,194 +1352,122 @@
           {
             "id": "seat-mx-my",
             "description": "insert seated -x / -y",
-            "seat": [
-              "-x",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-mz",
             "description": "insert seated -x / -z",
-            "seat": [
-              "-x",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-py",
             "description": "insert seated -x / +y",
-            "seat": [
-              "-x",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-pz",
             "description": "insert seated -x / +z",
-            "seat": [
-              "-x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-mx",
             "description": "insert seated -y / -x",
-            "seat": [
-              "-y",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-mz",
             "description": "insert seated -y / -z",
-            "seat": [
-              "-y",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-px",
             "description": "insert seated -y / +x",
-            "seat": [
-              "-y",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-pz",
             "description": "insert seated -y / +z",
-            "seat": [
-              "-y",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-mx",
             "description": "insert seated -z / -x",
-            "seat": [
-              "-z",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-my",
             "description": "insert seated -z / -y",
-            "seat": [
-              "-z",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-px",
             "description": "insert seated -z / +x",
-            "seat": [
-              "-z",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-py",
             "description": "insert seated -z / +y",
-            "seat": [
-              "-z",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-my",
             "description": "insert seated +x / -y",
-            "seat": [
-              "+x",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-mz",
             "description": "insert seated +x / -z",
-            "seat": [
-              "+x",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-py",
             "description": "insert seated +x / +y",
-            "seat": [
-              "+x",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-pz",
             "description": "insert seated +x / +z",
-            "seat": [
-              "+x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-mx",
             "description": "insert seated +y / -x",
-            "seat": [
-              "+y",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-mz",
             "description": "insert seated +y / -z",
-            "seat": [
-              "+y",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-px",
             "description": "insert seated +y / +x",
-            "seat": [
-              "+y",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-pz",
             "description": "insert seated +y / +z",
-            "seat": [
-              "+y",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-mx",
             "description": "insert seated +z / -x",
-            "seat": [
-              "+z",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-my",
             "description": "insert seated +z / -y",
-            "seat": [
-              "+z",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-px",
             "description": "as authored \u2014 the insert's home seat",
-            "seat": [
-              "+z",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-py",
             "description": "insert seated +z / +y",
-            "seat": [
-              "+z",
-              "+y"
-            ]
+            "seat": null
           }
         ],
         "inputs": {},
@@ -1863,9 +1485,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "openuc2.mirror.mirror_1x1@^0.1",
@@ -1885,6 +1508,7 @@
           25.4,
           25.4
         ],
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -1924,10 +1548,12 @@
         "glb": "/v1/library/assets/templates/openuc2.tpl.mirror_1x1/ASS_-_2004_-_CUBMIR45\u00b0TH1_-_V03.glb",
         "step": null,
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           0.0,
@@ -1935,6 +1561,7 @@
           0.0
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
         -0.382683,
@@ -1971,18 +1598,12 @@
           {
             "id": "x",
             "description": "Base direction in the x-axis for the normal vector of the mirror before any off-axis deflection",
-            "seat": [
-              "+z",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "z",
             "description": "Base direction in the z-axis for the normal vector of the mirror before any off-axis deflection",
-            "seat": [
-              "+y",
-              "+z"
-            ]
+            "seat": null
           }
         ],
         "inputs": {
@@ -2003,12 +1624,12 @@
               "rotation": {
                 "kind": "grid",
                 "offset-deg": {
-                  "y": -44.99999999999999
+                  "y": -45.0
                 }
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           },
           {
             "id": "mounted-mirror/master-insert-bottom",
@@ -2048,7 +1669,8 @@
             "moving_nodes": [],
             "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "",
@@ -2059,6 +1681,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -2078,22 +1701,19 @@
         "glb": "/v1/library/assets/templates/user.tpl.cube_base/ASS - 2000 - CUB - V04.glb",
         "step": "/v1/library/assets/templates/user.tpl.cube_base/ASS - 2000 - CUB - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
+      "ports": [],
+      "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
-        -0.382683,
         0.0,
-        0.92388
+        0.0,
+        1.0
       ],
       "electronics": null
     },
@@ -2136,6 +1756,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -2155,11 +1776,14 @@
         "glb": "/v1/library/assets/templates/openuc2.tpl.plate_3x3/model.glb",
         "step": "/v1/library/assets/templates/openuc2.tpl.plate_3x3/model.step",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": null,
       "electronics": null
     },
@@ -2202,6 +1826,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -2221,11 +1846,14 @@
         "glb": "/v1/library/assets/templates/openuc2.tpl.plate_3x4/model.glb",
         "step": "/v1/library/assets/templates/openuc2.tpl.plate_3x4/model.step",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": null,
       "electronics": null
     },
@@ -2268,6 +1896,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -2287,11 +1916,14 @@
         "glb": "/v1/library/assets/templates/openuc2.tpl.plate_3x5/model.glb",
         "step": "/v1/library/assets/templates/openuc2.tpl.plate_3x5/model.step",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": null,
       "electronics": null
     },
@@ -2335,6 +1967,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -2354,11 +1987,14 @@
         "glb": "/v1/library/assets/templates/openuc2.tpl.plate_3x8/model.glb",
         "step": "/v1/library/assets/templates/openuc2.tpl.plate_3x8/model.step",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": null,
       "electronics": null
     },
@@ -2403,6 +2039,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -2422,11 +2059,14 @@
         "glb": "/v1/library/assets/templates/openuc2.tpl.plate_4x6/model.glb",
         "step": "/v1/library/assets/templates/openuc2.tpl.plate_4x6/model.step",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": null,
       "electronics": null
     },
@@ -2470,6 +2110,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -2489,11 +2130,14 @@
         "glb": "/v1/library/assets/templates/openuc2.tpl.plate_5x3/model.glb",
         "step": "/v1/library/assets/templates/openuc2.tpl.plate_5x3/model.step",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": null,
       "electronics": null
     },
@@ -2533,6 +2177,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -2552,6 +2197,7 @@
         "glb": "/v1/library/assets/templates/openuc2.tpl.puzzle_1x1/model.glb",
         "step": "/v1/library/assets/templates/openuc2.tpl.puzzle_1x1/model.step",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": [
           "-y",
           "+x"
@@ -2559,7 +2205,9 @@
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": null,
       "electronics": null
     },
@@ -2591,194 +2239,122 @@
           {
             "id": "seat-mx-my",
             "description": "insert seated -x / -y",
-            "seat": [
-              "-x",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-mz",
             "description": "insert seated -x / -z",
-            "seat": [
-              "-x",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-py",
             "description": "insert seated -x / +y",
-            "seat": [
-              "-x",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-pz",
             "description": "insert seated -x / +z",
-            "seat": [
-              "-x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-mx",
             "description": "insert seated -y / -x",
-            "seat": [
-              "-y",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-mz",
             "description": "insert seated -y / -z",
-            "seat": [
-              "-y",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-px",
             "description": "insert seated -y / +x",
-            "seat": [
-              "-y",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-pz",
             "description": "insert seated -y / +z",
-            "seat": [
-              "-y",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-mx",
             "description": "insert seated -z / -x",
-            "seat": [
-              "-z",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-my",
             "description": "insert seated -z / -y",
-            "seat": [
-              "-z",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-px",
             "description": "insert seated -z / +x",
-            "seat": [
-              "-z",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-py",
             "description": "insert seated -z / +y",
-            "seat": [
-              "-z",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-my",
             "description": "insert seated +x / -y",
-            "seat": [
-              "+x",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-mz",
             "description": "insert seated +x / -z",
-            "seat": [
-              "+x",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-py",
             "description": "insert seated +x / +y",
-            "seat": [
-              "+x",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-pz",
             "description": "insert seated +x / +z",
-            "seat": [
-              "+x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-mx",
             "description": "insert seated +y / -x",
-            "seat": [
-              "+y",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-mz",
             "description": "insert seated +y / -z",
-            "seat": [
-              "+y",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-px",
             "description": "insert seated +y / +x",
-            "seat": [
-              "+y",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-pz",
             "description": "insert seated +y / +z",
-            "seat": [
-              "+y",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-mx",
             "description": "insert seated +z / -x",
-            "seat": [
-              "+z",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-my",
             "description": "insert seated +z / -y",
-            "seat": [
-              "+z",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-px",
             "description": "as authored \u2014 the insert's home seat",
-            "seat": [
-              "+z",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-py",
             "description": "insert seated +z / +y",
-            "seat": [
-              "+z",
-              "+y"
-            ]
+            "seat": null
           }
         ],
         "inputs": {},
@@ -2797,9 +2373,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "openuc2.lens.starter_50mm@^0.1",
@@ -2816,6 +2393,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -2859,22 +2437,20 @@
         "glb": null,
         "step": null,
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           0.0,
           0.0,
           0.0
-        ],
-        "exit": [
-          3.6,
-          0.0,
-          0.0
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.5,
         0.5,
@@ -2943,7 +2519,8 @@
             "moving_nodes": [],
             "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "",
@@ -2954,6 +2531,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -2973,11 +2551,14 @@
         "glb": null,
         "step": null,
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": null,
       "electronics": {
         "pcb": "kicad:z_stage_driver@2.1",
@@ -3035,7 +2616,7 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           },
           {
             "id": "cartridge-back",
@@ -3101,7 +2682,8 @@
             "moving_nodes": [],
             "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "thorlabs.lens.ac254-030-a@^0.1",
@@ -3118,6 +2700,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -3176,32 +2759,19 @@
         "glb": "/v1/library/assets/subdesigns/thorlabs.subdesign.ac254_030_a_holder/_objects.glb",
         "step": "/v1/library/assets/templates/user.tpl.cube_base/ASS - 2000 - CUB - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
-      "frames": {
-        "optical": [
-          -0.2267,
-          -0.6936,
-          0.0
-        ],
-        "exit": [
-          13.7733,
-          -0.6936,
-          0.0
-        ],
-        "mount": [
-          8.416664,
-          -0.6936,
-          0.0
-        ]
-      },
+      "ports": [],
+      "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
-        0.707107,
         0.0,
-        0.707107
+        0.0,
+        1.0
       ],
       "electronics": null
     },
@@ -3252,7 +2822,7 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           },
           {
             "id": "cartridge-back",
@@ -3318,7 +2888,8 @@
             "moving_nodes": [],
             "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "thorlabs.lens.ac254-050-a@^0.1",
@@ -3335,6 +2906,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -3393,32 +2965,19 @@
         "glb": "/v1/library/assets/subdesigns/thorlabs.subdesign.ac254_050_a_holder/_objects.glb",
         "step": "/v1/library/assets/templates/user.tpl.cube_base/ASS - 2000 - CUB - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
-      "frames": {
-        "optical": [
-          1.221,
-          1.5359,
-          0.0
-        ],
-        "exit": [
-          12.721,
-          1.5359,
-          0.0
-        ],
-        "mount": [
-          8.089213,
-          1.5359,
-          0.0
-        ]
-      },
+      "ports": [],
+      "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
-        0.707107,
         0.0,
-        0.707107
+        0.0,
+        1.0
       ],
       "electronics": null
     },
@@ -3509,7 +3068,7 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           },
           {
             "id": "master-insert-notched",
@@ -3535,7 +3094,8 @@
             "moving_nodes": [],
             "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "thorlabs.lens.la1102@^0.1",
@@ -3552,6 +3112,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -3596,32 +3157,19 @@
         "glb": "/v1/library/assets/subdesigns/thorlabs.subdesign.la1102_holder/_objects.glb",
         "step": "/v1/library/assets/templates/user.tpl.cube_base/ASS - 2000 - CUB - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
-      "frames": {
-        "optical": [
-          7.4324,
-          -1.5412,
-          0.0
-        ],
-        "exit": [
-          14.7424,
-          -1.5412,
-          0.0
-        ],
-        "mount": [
-          13.497429,
-          -1.5412,
-          0.0
-        ]
-      },
+      "ports": [],
+      "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
-        0.707107,
         0.0,
-        0.707107
+        0.0,
+        1.0
       ],
       "electronics": null
     },
@@ -3679,9 +3227,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "thorlabs.lens.ac254-050-a-ml@^0.1",
@@ -3698,6 +3247,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -3756,6 +3306,7 @@
         "glb": "/v1/library/assets/templates/user.tpl.stage_motorized/ASS - 3002 - CASAUTSTGR22 - A.glb",
         "step": "/v1/library/assets/templates/user.tpl.stage_motorized/ASS - 3002 - CASAUTSTGR22 - A.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": [
           "-z",
           "+y"
@@ -3763,28 +3314,20 @@
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           -50.0,
           0.0,
-          -20.0
-        ],
-        "exit": [
-          -38.5,
-          0.0,
-          -20.0
-        ],
-        "mount": [
-          -43.131787,
-          0.0,
-          -20.0
+          -10.0
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
-        0.707107,
         0.0,
-        0.707107
+        1.0,
+        0.0
       ],
       "electronics": null
     },
@@ -3815,18 +3358,12 @@
           {
             "id": "seat-my-px",
             "description": "insert seated -y / +x",
-            "seat": [
-              "-y",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-px",
             "description": "as authored \u2014 the insert's home seat",
-            "seat": [
-              "+z",
-              "+x"
-            ]
+            "seat": null
           }
         ],
         "inputs": {},
@@ -3848,9 +3385,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "user.beamsplitter.beamsplitter_cube_50@^0.1",
@@ -3867,6 +3405,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -3918,10 +3457,12 @@
         "glb": "/v1/library/assets/templates/user.tpl.beamsplitter_cube_50/ASS - 2011 - CUBSPLCUB - V04 - A.glb",
         "step": "/v1/library/assets/templates/user.tpl.beamsplitter_cube_50/ASS - 2011 - CUBSPLCUB - V04 - A.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           0.0,
@@ -3929,11 +3470,12 @@
           0.0
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
-        0.653281,
-        0.270598,
-        0.270598,
-        0.653281
+        0.707107,
+        0.0,
+        0.0,
+        0.707107
       ],
       "electronics": null
     },
@@ -3965,194 +3507,122 @@
           {
             "id": "seat-mx-my",
             "description": "insert seated -x / -y",
-            "seat": [
-              "-x",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-mz",
             "description": "insert seated -x / -z",
-            "seat": [
-              "-x",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-py",
             "description": "insert seated -x / +y",
-            "seat": [
-              "-x",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-pz",
             "description": "insert seated -x / +z",
-            "seat": [
-              "-x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-mx",
             "description": "insert seated -y / -x",
-            "seat": [
-              "-y",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-mz",
             "description": "insert seated -y / -z",
-            "seat": [
-              "-y",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-px",
             "description": "insert seated -y / +x",
-            "seat": [
-              "-y",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-pz",
             "description": "insert seated -y / +z",
-            "seat": [
-              "-y",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-mx",
             "description": "insert seated -z / -x",
-            "seat": [
-              "-z",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-my",
             "description": "insert seated -z / -y",
-            "seat": [
-              "-z",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-px",
             "description": "insert seated -z / +x",
-            "seat": [
-              "-z",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-py",
             "description": "insert seated -z / +y",
-            "seat": [
-              "-z",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-my",
             "description": "insert seated +x / -y",
-            "seat": [
-              "+x",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-mz",
             "description": "insert seated +x / -z",
-            "seat": [
-              "+x",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-py",
             "description": "insert seated +x / +y",
-            "seat": [
-              "+x",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-pz",
             "description": "insert seated +x / +z",
-            "seat": [
-              "+x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-mx",
             "description": "insert seated +y / -x",
-            "seat": [
-              "+y",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-mz",
             "description": "insert seated +y / -z",
-            "seat": [
-              "+y",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-px",
             "description": "insert seated +y / +x",
-            "seat": [
-              "+y",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-pz",
             "description": "insert seated +y / +z",
-            "seat": [
-              "+y",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-mx",
             "description": "insert seated +z / -x",
-            "seat": [
-              "+z",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-my",
             "description": "insert seated +z / -y",
-            "seat": [
-              "+z",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-px",
             "description": "as authored \u2014 the insert's home seat",
-            "seat": [
-              "+z",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-py",
             "description": "insert seated +z / +y",
-            "seat": [
-              "+z",
-              "+y"
-            ]
+            "seat": null
           }
         ],
         "inputs": {},
@@ -4171,9 +3641,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "user.detector.camera_basic@^0.1",
@@ -4190,6 +3661,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -4209,17 +3681,14 @@
         "glb": null,
         "step": null,
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
+      "ports": [],
+      "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.5,
         0.5,
@@ -4278,6 +3747,7 @@
           ]
         },
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -4297,6 +3767,7 @@
         "glb": "/v1/library/assets/templates/user.tpl.camera_hik/ASS - 4003 - CAM+OBJ.glb",
         "step": "/v1/library/assets/templates/user.tpl.camera_hik/ASS - 4003 - CAM+OBJ.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": [
           "-z",
           "+x"
@@ -4304,6 +3775,7 @@
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           -40.0,
@@ -4311,6 +3783,7 @@
           0.0
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
         0.707107,
@@ -4346,34 +3819,22 @@
           {
             "id": "seat-mx-pz",
             "description": "insert seated -x / +z",
-            "seat": [
-              "-x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-mx",
             "description": "insert seated -y / -x",
-            "seat": [
-              "-y",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-px",
             "description": "insert seated +y / +x",
-            "seat": [
-              "+y",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-px",
             "description": "as authored \u2014 the insert's home seat",
-            "seat": [
-              "+z",
-              "+x"
-            ]
+            "seat": null
           }
         ],
         "inputs": {},
@@ -4395,9 +3856,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "",
@@ -4408,6 +3870,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -4427,6 +3890,7 @@
         "glb": "/v1/library/assets/templates/user.tpl.cube_45_fixed/ASS - 2020 - CUBMIR45\u00b0TH2 - V04.glb",
         "step": "/v1/library/assets/templates/user.tpl.cube_45_fixed/ASS - 2020 - CUBMIR45\u00b0TH2 - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": [
           "-y",
           "+x"
@@ -4434,6 +3898,7 @@
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           0.0,
@@ -4441,11 +3906,12 @@
           0.0
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
-        -0.653281,
-        -0.270598,
-        0.270598,
-        0.653281
+        -0.5,
+        -0.5,
+        0.5,
+        0.5
       ],
       "electronics": null
     },
@@ -4484,6 +3950,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -4503,11 +3970,14 @@
         "glb": "/v1/library/assets/templates/user.tpl.cube_base/ASS - 2000 - CUB - V04.glb",
         "step": "/v1/library/assets/templates/user.tpl.cube_base/ASS - 2000 - CUB - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
         0.0,
@@ -4553,6 +4023,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": 5.0,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -4572,6 +4043,7 @@
         "glb": "/v1/library/assets/templates/user.tpl.cublas520/ASS - 2018 - CUBLAS520 - V04 - A.glb",
         "step": "/v1/library/assets/templates/user.tpl.cublas520/ASS - 2018 - CUBLAS520 - V04 - A.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": [
           "+z",
           "+x"
@@ -4579,6 +4051,7 @@
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           8.64,
@@ -4586,6 +4059,7 @@
           -4.25
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.707107,
         0.0,
@@ -4629,6 +4103,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -4648,11 +4123,14 @@
         "glb": "/v1/library/assets/templates/user.tpl.electronic_galvo/ASS - 2079 - CUBGLVBRD - V04.glb",
         "step": "/v1/library/assets/templates/user.tpl.electronic_galvo/ASS - 2079 - CUBGLVBRD - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
         0.0,
@@ -4696,6 +4174,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -4739,10 +4218,12 @@
         "glb": "/v1/library/assets/templates/user.tpl.eyepiece/ASS - 2025 - CUBEYEPCE - V04.glb",
         "step": "/v1/library/assets/templates/user.tpl.eyepiece/ASS - 2025 - CUBEYEPCE - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           0.0,
@@ -4750,6 +4231,7 @@
           0.0
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
         0.0,
@@ -4795,6 +4277,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": 5.0,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -4814,10 +4297,12 @@
         "glb": "/v1/library/assets/templates/user.tpl.laser_520_pointer/ASS - 2018 - CUBLAS520 - V04 - A.glb",
         "step": "/v1/library/assets/templates/user.tpl.laser_520_pointer/ASS - 2018 - CUBLAS520 - V04 - A.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           0.0,
@@ -4825,6 +4310,7 @@
           0.0
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.707107,
         0.0,
@@ -4870,6 +4356,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": 5.0,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -4889,6 +4376,7 @@
         "glb": "/v1/library/assets/templates/user.tpl.laser_galvo/ASS - 2081 - CUBLAS650ECC - V04.glb",
         "step": "/v1/library/assets/templates/user.tpl.laser_galvo/ASS - 2081 - CUBLAS650ECC - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": [
           "+z",
           "-x"
@@ -4896,6 +4384,7 @@
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           0.0,
@@ -4903,6 +4392,7 @@
           7.0
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         -0.707107,
         0.0,
@@ -4938,18 +4428,12 @@
           {
             "id": "seat-mz-px",
             "description": "insert seated -z / +x",
-            "seat": [
-              "-z",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-px",
             "description": "as authored \u2014 the insert's home seat",
-            "seat": [
-              "+z",
-              "+x"
-            ]
+            "seat": null
           }
         ],
         "inputs": {},
@@ -4968,9 +4452,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "user.source.led_matrix@^0.1",
@@ -4989,6 +4474,7 @@
         "divergence_deg": 1.0,
         "beam_diameter_mm": 20.0,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -5008,6 +4494,7 @@
         "glb": "/v1/library/assets/templates/user.tpl.led_matrix/ASS - 2046 - CUBLEDMTX - V04.glb",
         "step": "/v1/library/assets/templates/user.tpl.led_matrix/ASS - 2046 - CUBLEDMTX - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": [
           "-z",
           "+x"
@@ -5015,6 +4502,7 @@
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           0.0,
@@ -5022,6 +4510,7 @@
           0.0
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
         0.0,
@@ -5057,18 +4546,12 @@
           {
             "id": "seat-mx-pz",
             "description": "insert seated -x / +z",
-            "seat": [
-              "-x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-px",
             "description": "as authored \u2014 the insert's home seat",
-            "seat": [
-              "+z",
-              "+x"
-            ]
+            "seat": null
           }
         ],
         "inputs": {},
@@ -5087,9 +4570,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "user.lens.lens_100mm_simple@^0.1",
@@ -5106,6 +4590,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -5149,10 +4634,12 @@
         "glb": "/v1/library/assets/templates/user.tpl.lens_100mm_simple/ASS - 2022 - CUBLEND40F100 - V04.glb",
         "step": "/v1/library/assets/templates/user.tpl.lens_100mm_simple/ASS - 2022 - CUBLEND40F100 - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           0.0,
@@ -5160,6 +4647,7 @@
           0.0
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
         0.0,
@@ -5195,18 +4683,12 @@
           {
             "id": "seat-mx-pz",
             "description": "insert seated -x / +z",
-            "seat": [
-              "-x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-px",
             "description": "as authored \u2014 the insert's home seat",
-            "seat": [
-              "+z",
-              "+x"
-            ]
+            "seat": null
           }
         ],
         "inputs": {},
@@ -5225,9 +4707,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "user.lens.lens_50mm_simple@^0.1",
@@ -5244,6 +4727,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -5287,10 +4771,12 @@
         "glb": "/v1/library/assets/templates/user.tpl.lens_50mm_simple/ASS - 2021 - CUBLEND40F50 - V04.glb",
         "step": "/v1/library/assets/templates/user.tpl.lens_50mm_simple/ASS - 2021 - CUBLEND40F50 - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           0.0,
@@ -5298,6 +4784,7 @@
           0.0
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
         0.0,
@@ -5341,6 +4828,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -5384,10 +4872,12 @@
         "glb": "/v1/library/assets/templates/user.tpl.lens_galvo_160/ASS - 2074 - CUBLEND25F160 - V04.glb",
         "step": "/v1/library/assets/templates/user.tpl.lens_galvo_160/ASS - 2074 - CUBLEND25F160 - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           0.0,
@@ -5395,6 +4885,7 @@
           0.0
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.5,
         0.5,
@@ -5438,6 +4929,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -5481,10 +4973,12 @@
         "glb": "/v1/library/assets/templates/user.tpl.lens_galvo_50/ASS - 2073 - CUBLEND25F50 - V04.glb",
         "step": "/v1/library/assets/templates/user.tpl.lens_galvo_50/ASS - 2073 - CUBLEND25F50 - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           0.0,
@@ -5492,6 +4986,7 @@
           0.0
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.707107,
         0.0,
@@ -5581,7 +5076,7 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           },
           {
             "id": "master-insert-notched",
@@ -5607,7 +5102,8 @@
             "moving_nodes": [],
             "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "user.lens.lens_to_cubify@^0.1",
@@ -5624,6 +5120,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -5667,22 +5164,19 @@
         "glb": "/v1/library/assets/templates/user.tpl.cube_base/ASS - 2000 - CUB - V04.glb",
         "step": "/v1/library/assets/templates/user.tpl.cube_base/ASS - 2000 - CUB - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
-      "frames": {
-        "optical": [
-          -2.7213,
-          4.0342,
-          0.0
-        ]
-      },
+      "ports": [],
+      "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
-        0.707107,
         0.0,
-        0.707107
+        0.0,
+        1.0
       ],
       "electronics": null
     },
@@ -5713,194 +5207,122 @@
           {
             "id": "seat-mx-my",
             "description": "insert seated -x / -y",
-            "seat": [
-              "-x",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-mz",
             "description": "insert seated -x / -z",
-            "seat": [
-              "-x",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-py",
             "description": "insert seated -x / +y",
-            "seat": [
-              "-x",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-pz",
             "description": "insert seated -x / +z",
-            "seat": [
-              "-x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-mx",
             "description": "insert seated -y / -x",
-            "seat": [
-              "-y",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-mz",
             "description": "insert seated -y / -z",
-            "seat": [
-              "-y",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-px",
             "description": "insert seated -y / +x",
-            "seat": [
-              "-y",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-pz",
             "description": "insert seated -y / +z",
-            "seat": [
-              "-y",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-mx",
             "description": "insert seated -z / -x",
-            "seat": [
-              "-z",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-my",
             "description": "insert seated -z / -y",
-            "seat": [
-              "-z",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-px",
             "description": "insert seated -z / +x",
-            "seat": [
-              "-z",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-py",
             "description": "insert seated -z / +y",
-            "seat": [
-              "-z",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-my",
             "description": "insert seated +x / -y",
-            "seat": [
-              "+x",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-mz",
             "description": "insert seated +x / -z",
-            "seat": [
-              "+x",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-py",
             "description": "insert seated +x / +y",
-            "seat": [
-              "+x",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-pz",
             "description": "insert seated +x / +z",
-            "seat": [
-              "+x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-mx",
             "description": "insert seated +y / -x",
-            "seat": [
-              "+y",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-mz",
             "description": "insert seated +y / -z",
-            "seat": [
-              "+y",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-px",
             "description": "insert seated +y / +x",
-            "seat": [
-              "+y",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-pz",
             "description": "insert seated +y / +z",
-            "seat": [
-              "+y",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-mx",
             "description": "insert seated +z / -x",
-            "seat": [
-              "+z",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-my",
             "description": "insert seated +z / -y",
-            "seat": [
-              "+z",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-px",
             "description": "as authored \u2014 the insert's home seat",
-            "seat": [
-              "+z",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-py",
             "description": "insert seated +z / +y",
-            "seat": [
-              "+z",
-              "+y"
-            ]
+            "seat": null
           }
         ],
         "inputs": {},
@@ -5922,9 +5344,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "openuc2.mirror.flat@^1.1",
@@ -5941,6 +5364,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -5974,10 +5398,12 @@
         "glb": "/v1/library/assets/templates/user.tpl.mirror_45/ASS - 2016 - CUBMIR45\u00b090\u00b0 - V04 - C.glb",
         "step": "/v1/library/assets/templates/user.tpl.mirror_45/ASS - 2016 - CUBMIR45\u00b090\u00b0 - V04 - C.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           0.0,
@@ -5985,6 +5411,7 @@
           0.0
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         -0.653281,
         -0.270598,
@@ -6020,194 +5447,122 @@
           {
             "id": "seat-mx-my",
             "description": "insert seated -x / -y",
-            "seat": [
-              "-x",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-mz",
             "description": "insert seated -x / -z",
-            "seat": [
-              "-x",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-py",
             "description": "insert seated -x / +y",
-            "seat": [
-              "-x",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mx-pz",
             "description": "insert seated -x / +z",
-            "seat": [
-              "-x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-mx",
             "description": "insert seated -y / -x",
-            "seat": [
-              "-y",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-mz",
             "description": "insert seated -y / -z",
-            "seat": [
-              "-y",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-px",
             "description": "insert seated -y / +x",
-            "seat": [
-              "-y",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-my-pz",
             "description": "insert seated -y / +z",
-            "seat": [
-              "-y",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-mx",
             "description": "insert seated -z / -x",
-            "seat": [
-              "-z",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-my",
             "description": "insert seated -z / -y",
-            "seat": [
-              "-z",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-px",
             "description": "insert seated -z / +x",
-            "seat": [
-              "-z",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-mz-py",
             "description": "insert seated -z / +y",
-            "seat": [
-              "-z",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-my",
             "description": "insert seated +x / -y",
-            "seat": [
-              "+x",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-mz",
             "description": "insert seated +x / -z",
-            "seat": [
-              "+x",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-py",
             "description": "insert seated +x / +y",
-            "seat": [
-              "+x",
-              "+y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-px-pz",
             "description": "insert seated +x / +z",
-            "seat": [
-              "+x",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-mx",
             "description": "insert seated +y / -x",
-            "seat": [
-              "+y",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-mz",
             "description": "insert seated +y / -z",
-            "seat": [
-              "+y",
-              "-z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-px",
             "description": "insert seated +y / +x",
-            "seat": [
-              "+y",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-py-pz",
             "description": "insert seated +y / +z",
-            "seat": [
-              "+y",
-              "+z"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-mx",
             "description": "insert seated +z / -x",
-            "seat": [
-              "+z",
-              "-x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-my",
             "description": "insert seated +z / -y",
-            "seat": [
-              "+z",
-              "-y"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-px",
             "description": "as authored \u2014 the insert's home seat",
-            "seat": [
-              "+z",
-              "+x"
-            ]
+            "seat": null
           },
           {
             "id": "seat-pz-py",
             "description": "insert seated +z / +y",
-            "seat": [
-              "+z",
-              "+y"
-            ]
+            "seat": null
           }
         ],
         "inputs": {},
@@ -6229,9 +5584,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "openuc2.mirror.flat@^1.1",
@@ -6248,6 +5604,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -6281,10 +5638,12 @@
         "glb": "/v1/library/assets/templates/user.tpl.mirror_kinematic/ASS - 2013 - CUBKINMIR45\u00b090\u00b0 - V04 - B.glb",
         "step": "/v1/library/assets/templates/user.tpl.mirror_kinematic/ASS - 2013 - CUBKINMIR45\u00b090\u00b0 - V04 - B.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           0.0,
@@ -6292,6 +5651,7 @@
           0.0
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         -0.270598,
         -0.653281,
@@ -6361,9 +5721,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "user.sample.my_next_xyz_stage_2@^0.1",
@@ -6380,6 +5741,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -6399,10 +5761,12 @@
         "glb": "/v1/library/assets/templates/user.tpl.my_next_xyz_stage_2/ASS - 3006 - AUTXYZSTG - V04 - A__for OST.glb",
         "step": "/v1/library/assets/templates/user.tpl.my_next_xyz_stage_2/ASS - 3006 - AUTXYZSTG - V04 - A__for OST.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           0.36,
@@ -6410,6 +5774,7 @@
           64.88
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
         0.0,
@@ -6527,9 +5892,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "user.lens.newtestlens@^0.1",
@@ -6546,6 +5912,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -6589,22 +5956,19 @@
         "glb": "/v1/library/assets/subdesigns/user.subdesign.newtestlens_holder/_objects.glb",
         "step": "/v1/library/assets/templates/user.tpl.cube_base/ASS - 2000 - CUB - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
-      "frames": {
-        "optical": [
-          9.8016,
-          0.3969,
-          0.0
-        ]
-      },
+      "ports": [],
+      "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
-        0.707107,
         0.0,
-        0.707107
+        0.0,
+        1.0
       ],
       "electronics": null
     },
@@ -6643,6 +6007,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [],
         "programmable": null
       },
@@ -6662,10 +6027,12 @@
         "glb": "/v1/library/assets/templates/user.tpl.sample_holder_fixed/ASS - 2024 - CUBSAMHOL - V04.glb",
         "step": "/v1/library/assets/templates/user.tpl.sample_holder_fixed/ASS - 2024 - CUBSAMHOL - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           0.0,
@@ -6673,6 +6040,7 @@
           0.0
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
         0.0,
@@ -6790,9 +6158,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "user.lens.somenastylens@^0.1",
@@ -6809,6 +6178,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -6852,22 +6222,19 @@
         "glb": "/v1/library/assets/subdesigns/user.subdesign.somenastylens_holder/_objects.glb",
         "step": "/v1/library/assets/templates/user.tpl.cube_base/ASS - 2000 - CUB - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
-      "frames": {
-        "optical": [
-          3.3958,
-          0.3261,
-          0.0
-        ]
-      },
+      "ports": [],
+      "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
-        0.707107,
         0.0,
-        0.707107
+        0.0,
+        1.0
       ],
       "electronics": null
     },
@@ -6906,6 +6273,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -6949,10 +6317,12 @@
         "glb": "/v1/library/assets/templates/user.tpl.stage_manual/ASS - 3004 - CUBMANSTGR10 - V04.glb",
         "step": "/v1/library/assets/templates/user.tpl.stage_manual/ASS - 3004 - CUBMANSTGR10 - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           0.0,
@@ -6965,6 +6335,7 @@
           4.0
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
         0.0,
@@ -7008,6 +6379,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -7051,6 +6423,7 @@
         "glb": "/v1/library/assets/templates/user.tpl.stage_motorized/ASS - 3002 - CASAUTSTGR22 - A.glb",
         "step": "/v1/library/assets/templates/user.tpl.stage_motorized/ASS - 3002 - CASAUTSTGR22 - A.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": [
           "-z",
           "+y"
@@ -7058,6 +6431,7 @@
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
+      "ports": [],
       "frames": {
         "optical": [
           -50.0,
@@ -7065,6 +6439,7 @@
           -10.0
         ]
       },
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
         0.0,
@@ -7178,9 +6553,10 @@
               }
             },
             "moving_nodes": [],
-            "optical": true
+            "optical": false
           }
-        ]
+        ],
+        "motions": []
       },
       "component": {
         "ref": "user.lens.test_lens_unmounted@^0.1",
@@ -7197,6 +6573,7 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
+        "mirror_elements": null,
         "fragment_surfaces": [
           {
             "type": "standard",
@@ -7240,22 +6617,19 @@
         "glb": "/v1/library/assets/templates/user.tpl.cube_base/ASS - 2000 - CUB - V04.glb",
         "step": "/v1/library/assets/templates/user.tpl.cube_base/ASS - 2000 - CUB - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
-      "frames": {
-        "optical": [
-          3.4181,
-          2.4931,
-          0.0
-        ]
-      },
+      "ports": [],
+      "frames": {},
+      "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
-        0.707107,
         0.0,
-        0.707107
+        0.0,
+        1.0
       ],
       "electronics": null
     }
@@ -7283,6 +6657,7 @@
       "n_surfaces": 1,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -7306,13 +6681,7 @@
           }
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.detector.camera_basic",
@@ -7336,18 +6705,13 @@
       "n_surfaces": 0,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.detector.camera_ca023",
@@ -7370,6 +6734,7 @@
       "n_surfaces": 0,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -7392,13 +6757,7 @@
       },
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.detector.camera_cs165",
@@ -7421,18 +6780,13 @@
       "n_surfaces": 0,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          -10.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.detector.camera_libra16",
@@ -7455,6 +6809,7 @@
       "n_surfaces": 0,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -7477,13 +6832,7 @@
       },
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.dichroic.filter_dichroic",
@@ -7506,6 +6855,7 @@
       "n_surfaces": 1,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -7532,13 +6882,7 @@
           }
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.electronics.electronics_v3",
@@ -7561,12 +6905,13 @@
       "n_surfaces": 0,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": "/v1/library/assets/components/openuc2.electronics.electronics_v3/symbol.svg",
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "openuc2.electronics.frame_box",
@@ -7589,12 +6934,13 @@
       "n_surfaces": 0,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "openuc2.electronics.motor_driver_28byj",
@@ -7617,12 +6963,13 @@
       "n_surfaces": 0,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "openuc2.electronics.uc2e_esp32",
@@ -7646,12 +6993,13 @@
       "n_surfaces": 0,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "openuc2.filter.emission_525",
@@ -7674,6 +7022,7 @@
       "n_surfaces": 1,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -7699,13 +7048,7 @@
           }
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.lens.achromat_25mm_f50",
@@ -7728,6 +7071,7 @@
       "n_surfaces": 2,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -7757,23 +7101,7 @@
           "semi_aperture": 10.0
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "exit": [
-          0.0,
-          0.0,
-          5.0
-        ],
-        "mount": [
-          0.0,
-          0.0,
-          2.6
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.lens.achromat_starter",
@@ -7797,6 +7125,7 @@
       "n_surfaces": 3,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -7841,18 +7170,7 @@
           "semi_aperture": 12.7
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "exit": [
-          0.0,
-          0.0,
-          11.5
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.lens.cublend12_7f40",
@@ -7874,6 +7192,7 @@
       "n_surfaces": 2,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -7902,13 +7221,7 @@
           "semi_aperture": 6.35
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          -0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.lens.starter_50mm",
@@ -7932,6 +7245,7 @@
       "n_surfaces": 2,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -7961,18 +7275,7 @@
           "semi_aperture": 12.5
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "exit": [
-          0.0,
-          0.0,
-          3.6
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.mechanics.frame",
@@ -7996,12 +7299,13 @@
       "n_surfaces": 0,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "openuc2.mechanics.frame_arm",
@@ -8024,12 +7328,13 @@
       "n_surfaces": 0,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "openuc2.mechanics.frame_diffuser",
@@ -8052,12 +7357,13 @@
       "n_surfaces": 0,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "openuc2.mechanics.frame_illumination_head",
@@ -8080,12 +7386,13 @@
       "n_surfaces": 0,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "openuc2.mechanics.frame_illumination_head_acl2520u",
@@ -8108,12 +7415,13 @@
       "n_surfaces": 0,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "openuc2.mechanics.frame_objective_mount",
@@ -8136,12 +7444,13 @@
       "n_surfaces": 0,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "openuc2.mechanics.frame_slide_holder",
@@ -8164,12 +7473,13 @@
       "n_surfaces": 0,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "openuc2.mechanics.plate_3x3",
@@ -8194,12 +7504,13 @@
       "n_surfaces": 0,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "openuc2.mechanics.plate_3x4",
@@ -8224,12 +7535,13 @@
       "n_surfaces": 0,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "openuc2.mechanics.plate_3x5",
@@ -8254,12 +7566,13 @@
       "n_surfaces": 0,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "openuc2.mechanics.plate_3x8",
@@ -8284,12 +7597,13 @@
       "n_surfaces": 0,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "openuc2.mechanics.plate_4x6",
@@ -8314,12 +7628,13 @@
       "n_surfaces": 0,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "openuc2.mechanics.plate_5x3",
@@ -8344,12 +7659,13 @@
       "n_surfaces": 0,
       "review": true,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "openuc2.mechanics.puzzle_1x1",
@@ -8373,12 +7689,13 @@
       "n_surfaces": 0,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "openuc2.mirror.flat",
@@ -8402,6 +7719,7 @@
       "n_surfaces": 1,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -8421,13 +7739,7 @@
           "semi_aperture": 12.5
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.mirror.mirror_1x1",
@@ -8450,6 +7762,7 @@
       "n_surfaces": 1,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -8475,13 +7788,7 @@
           }
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.objective.low_10x",
@@ -8504,6 +7811,7 @@
       "n_surfaces": 1,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -8535,13 +7843,7 @@
           "is_stop": true
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.objective.low_20x",
@@ -8564,6 +7866,7 @@
       "n_surfaces": 1,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -8595,13 +7898,7 @@
           "is_stop": true
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.objective.low_4x",
@@ -8624,6 +7921,7 @@
       "n_surfaces": 1,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -8655,13 +7953,7 @@
           "is_stop": true
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.objective.paraxial_20x",
@@ -8685,6 +7977,7 @@
       "n_surfaces": 1,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -8716,13 +8009,7 @@
           "is_stop": true
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.objective.ph_10x",
@@ -8745,6 +8032,7 @@
       "n_surfaces": 1,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -8776,13 +8064,7 @@
           "is_stop": true
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.objective.ph_20x",
@@ -8805,6 +8087,7 @@
       "n_surfaces": 1,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -8836,13 +8119,7 @@
           "is_stop": true
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.objective.ph_4x",
@@ -8865,6 +8142,7 @@
       "n_surfaces": 1,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -8896,13 +8174,7 @@
           "is_stop": true
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.objective.refractive_20x",
@@ -8926,6 +8198,7 @@
       "n_surfaces": 2,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -8967,18 +8240,7 @@
           "semi_aperture": 3.6
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          -41.0
-        ],
-        "exit": [
-          0.0,
-          0.0,
-          -39.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.objective.soptop_hr_10x",
@@ -9001,6 +8263,7 @@
       "n_surfaces": 1,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -9032,13 +8295,7 @@
           "is_stop": true
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.objective.soptop_hr_20x",
@@ -9061,6 +8318,7 @@
       "n_surfaces": 1,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -9092,13 +8350,7 @@
           "is_stop": true
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.objective.soptop_hr_40x",
@@ -9121,6 +8373,7 @@
       "n_surfaces": 1,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -9152,13 +8405,7 @@
           "is_stop": true
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.objective.soptop_hr_4x",
@@ -9181,6 +8428,7 @@
       "n_surfaces": 1,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -9212,13 +8460,7 @@
           "is_stop": true
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.objective.special_20x",
@@ -9241,6 +8483,7 @@
       "n_surfaces": 1,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -9272,13 +8515,7 @@
           "is_stop": true
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.sample.fluoro_slide",
@@ -9302,6 +8539,7 @@
       "n_surfaces": 0,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [
         0.52
       ],
@@ -9309,13 +8547,7 @@
       "beam_diameter_mm": 0.2,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.slm.dmd_45",
@@ -9340,6 +8572,7 @@
       "n_surfaces": 1,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -9359,13 +8592,7 @@
           "semi_aperture": 6.6
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.source.laser_488",
@@ -9388,6 +8615,7 @@
       "n_surfaces": 0,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [
         0.488
       ],
@@ -9395,13 +8623,7 @@
       "beam_diameter_mm": 2.0,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          20.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.source.laser_850nm_ir",
@@ -9425,6 +8647,7 @@
       "n_surfaces": 0,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [
         0.85
       ],
@@ -9432,13 +8655,7 @@
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.source.laser_basic",
@@ -9462,6 +8679,7 @@
       "n_surfaces": 0,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [
         0.488,
         0.635
@@ -9470,13 +8688,7 @@
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.source.laser_body",
@@ -9500,6 +8712,7 @@
       "n_surfaces": 0,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [
         0.635
       ],
@@ -9507,13 +8720,7 @@
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          50.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.source.led_basic",
@@ -9537,6 +8744,7 @@
       "n_surfaces": 0,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [
         0.55
       ],
@@ -9544,13 +8752,7 @@
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "openuc2.stage.frame_xyz",
@@ -9573,12 +8775,13 @@
       "n_surfaces": 0,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "openuc2.stage.z_motor",
@@ -9602,12 +8805,13 @@
       "n_surfaces": 0,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "selfdesign.lens.eyepiece",
@@ -9629,6 +8833,7 @@
       "n_surfaces": 5,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -9697,18 +8902,7 @@
           "semi_aperture": 11
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "exit": [
-          0.0,
-          0.0,
-          4.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "thorlabs.dichroic.dmlp550",
@@ -9732,6 +8926,7 @@
       "n_surfaces": 2,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -9774,23 +8969,7 @@
           "semi_aperture": 12.7
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "exit": [
-          0.0,
-          0.0,
-          1.1
-        ],
-        "mount": [
-          0.0,
-          0.0,
-          0.55
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "thorlabs.lens.ac254-030-a",
@@ -9813,6 +8992,7 @@
       "n_surfaces": 3,
       "review": false,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -9857,23 +9037,7 @@
           "semi_aperture": 12.7
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "exit": [
-          0.0,
-          0.0,
-          14.0
-        ],
-        "mount": [
-          0.0,
-          0.0,
-          8.643364
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "thorlabs.lens.ac254-050-a",
@@ -9896,6 +9060,7 @@
       "n_surfaces": 3,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -9940,23 +9105,7 @@
           "semi_aperture": 12.7
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "exit": [
-          0.0,
-          0.0,
-          11.5
-        ],
-        "mount": [
-          0.0,
-          0.0,
-          6.868213
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "thorlabs.lens.ac254-050-a-ml",
@@ -9979,6 +9128,7 @@
       "n_surfaces": 3,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -10023,23 +9173,7 @@
           "semi_aperture": 12.7
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "exit": [
-          0.0,
-          0.0,
-          11.5
-        ],
-        "mount": [
-          0.0,
-          0.0,
-          6.868213
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "thorlabs.lens.ac254-075-a-ml",
@@ -10062,6 +9196,7 @@
       "n_surfaces": 3,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -10106,23 +9241,7 @@
           "semi_aperture": 12.7
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "exit": [
-          0.0,
-          0.0,
-          9.5
-        ],
-        "mount": [
-          0.0,
-          0.0,
-          5.209235
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "thorlabs.lens.la1102",
@@ -10147,6 +9266,7 @@
       "n_surfaces": 2,
       "review": true,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -10177,23 +9297,7 @@
           "semi_aperture": 15.0
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "exit": [
-          0.0,
-          0.0,
-          7.31
-        ],
-        "mount": [
-          0.0,
-          0.0,
-          6.065029
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "thorlabs.lens.lb1844-a",
@@ -10218,6 +9322,7 @@
       "n_surfaces": 2,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -10248,23 +9353,7 @@
           "semi_aperture": 6.35
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "exit": [
-          0.0,
-          0.0,
-          2.59
-        ],
-        "mount": [
-          0.0,
-          0.0,
-          1.295
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "thorlabs.lens.lb4030-ab",
@@ -10289,6 +9378,7 @@
       "n_surfaces": 2,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -10315,23 +9405,7 @@
           "semi_aperture": 12.7
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "exit": [
-          0.0,
-          0.0,
-          6.67
-        ],
-        "mount": [
-          0.0,
-          0.0,
-          3.335
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "thorlabs.mirror.pf10-03-f01",
@@ -10355,6 +9429,7 @@
       "n_surfaces": 2,
       "review": true,
       "locked": true,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -10391,23 +9466,7 @@
           "semi_aperture": 12.7
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "exit": [
-          0.0,
-          0.0,
-          6.0
-        ],
-        "mount": [
-          0.0,
-          0.0,
-          3.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.beamsplitter.beamsplitter_cube_50",
@@ -10429,6 +9488,7 @@
       "n_surfaces": 2,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -10466,13 +9526,7 @@
           "semi_aperture": 12.7
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.detector.camera_basic",
@@ -10495,18 +9549,13 @@
       "n_surfaces": 0,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.detector.camera_hik",
@@ -10528,6 +9577,7 @@
       "n_surfaces": 0,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -10548,13 +9598,7 @@
       },
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.electronics.electronic_galvo",
@@ -10576,12 +9620,13 @@
       "n_surfaces": 0,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "user.lens.eyepiece",
@@ -10603,6 +9648,7 @@
       "n_surfaces": 2,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -10632,18 +9678,7 @@
           "semi_aperture": 12.7
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "exit": [
-          0.0,
-          0.0,
-          4.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.lens.lens_100mm_simple",
@@ -10665,6 +9700,7 @@
       "n_surfaces": 2,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -10694,13 +9730,7 @@
           "semi_aperture": 20
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.lens.lens_50mm_simple",
@@ -10722,6 +9752,7 @@
       "n_surfaces": 2,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -10751,13 +9782,7 @@
           "semi_aperture": 20
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.lens.lens_galvo_160",
@@ -10779,6 +9804,7 @@
       "n_surfaces": 2,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -10808,13 +9834,7 @@
           "semi_aperture": 12.7
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.lens.lens_galvo_50",
@@ -10836,6 +9856,7 @@
       "n_surfaces": 2,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -10865,13 +9886,7 @@
           "semi_aperture": 12.7
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.lens.lens_to_cubify",
@@ -10893,6 +9908,7 @@
       "n_surfaces": 2,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -10922,13 +9938,7 @@
           "semi_aperture": 12.7
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.lens.newtestlens",
@@ -10950,6 +9960,7 @@
       "n_surfaces": 2,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -10979,13 +9990,7 @@
           "semi_aperture": 12.7
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.lens.objective_4x",
@@ -11007,6 +10012,7 @@
       "n_surfaces": 2,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -11036,18 +10042,7 @@
           "semi_aperture": 5
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "exit": [
-          0.0,
-          0.0,
-          4.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.lens.somenastylens",
@@ -11069,6 +10064,7 @@
       "n_surfaces": 2,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -11098,13 +10094,7 @@
           "semi_aperture": 12.7
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.lens.stage_manual",
@@ -11126,6 +10116,7 @@
       "n_surfaces": 2,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -11155,18 +10146,7 @@
           "semi_aperture": 12.7
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "exit": [
-          0.0,
-          0.0,
-          4.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.lens.stage_motorized",
@@ -11188,6 +10168,7 @@
       "n_surfaces": 2,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -11217,13 +10198,7 @@
           "semi_aperture": 12.7
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.lens.test_lens_unmounted",
@@ -11245,6 +10220,7 @@
       "n_surfaces": 2,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
@@ -11274,13 +10250,7 @@
           "semi_aperture": 12.7
         }
       ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.mechanics.cube_base",
@@ -11302,12 +10272,13 @@
       "n_surfaces": 0,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "user.mechanics.puzzle",
@@ -11329,12 +10300,13 @@
       "n_surfaces": 0,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     },
     {
       "id": "user.sample.my_next_xyz_stage_2",
@@ -11356,18 +10328,13 @@
       "n_surfaces": 0,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.sample.sample_holder_fixed",
@@ -11389,18 +10356,13 @@
       "n_surfaces": 0,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.source.cublas520",
@@ -11422,6 +10384,7 @@
       "n_surfaces": 0,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [
         0.52
       ],
@@ -11429,13 +10392,7 @@
       "beam_diameter_mm": 5.0,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.source.laser_520_pointer",
@@ -11457,6 +10414,7 @@
       "n_surfaces": 0,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [
         0.532
       ],
@@ -11464,13 +10422,7 @@
       "beam_diameter_mm": 5.0,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.source.laser_galvo",
@@ -11492,6 +10444,7 @@
       "n_surfaces": 0,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [
         0.532
       ],
@@ -11499,13 +10452,7 @@
       "beam_diameter_mm": 5.0,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.source.led_matrix",
@@ -11527,6 +10474,7 @@
       "n_surfaces": 0,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [
         0.532
       ],
@@ -11534,13 +10482,7 @@
       "beam_diameter_mm": 20.0,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     },
     {
       "id": "user.source.torch",
@@ -11562,6 +10504,7 @@
       "n_surfaces": 0,
       "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [
         0.532
       ],
@@ -11569,13 +10512,7 @@
       "beam_diameter_mm": 20.0,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "mirror_elements": null
     }
   ],
   "groups": [],
@@ -11630,14 +10567,15 @@
       "fits": "openuc2.frame.arm",
       "assets": {
         "thumbnail": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null,
         "glb": "/v1/library/assets/templates/openuc2.tpl.frame_arm/model.glb",
         "step": null
       },
-      "insert_rot_xyzw": null,
-      "frames": {}
+      "ports": [],
+      "ports_frame": "record"
     },
     {
       "id": "openuc2.tpl.frame_diffuser",
@@ -11662,14 +10600,15 @@
       "fits": "openuc2.frame.diffuser",
       "assets": {
         "thumbnail": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null,
         "glb": "/v1/library/assets/templates/openuc2.tpl.frame_diffuser/model.glb",
         "step": null
       },
-      "insert_rot_xyzw": null,
-      "frames": {}
+      "ports": [],
+      "ports_frame": "record"
     },
     {
       "id": "openuc2.tpl.frame_electronics_box",
@@ -11694,14 +10633,15 @@
       "fits": "openuc2.frame.electronics",
       "assets": {
         "thumbnail": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null,
         "glb": "/v1/library/assets/templates/openuc2.tpl.frame_electronics_box/model.glb",
         "step": null
       },
-      "insert_rot_xyzw": null,
-      "frames": {}
+      "ports": [],
+      "ports_frame": "record"
     },
     {
       "id": "openuc2.tpl.frame_illumination_head",
@@ -11726,14 +10666,15 @@
       "fits": "openuc2.frame.illumination",
       "assets": {
         "thumbnail": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null,
         "glb": "/v1/library/assets/templates/openuc2.tpl.frame_illumination_head/model.glb",
         "step": null
       },
-      "insert_rot_xyzw": null,
-      "frames": {}
+      "ports": [],
+      "ports_frame": "record"
     },
     {
       "id": "openuc2.tpl.frame_illumination_head_acl2520u",
@@ -11758,14 +10699,15 @@
       "fits": "openuc2.frame.illumination",
       "assets": {
         "thumbnail": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null,
         "glb": "/v1/library/assets/templates/openuc2.tpl.frame_illumination_head_acl2520u/model.glb",
         "step": null
       },
-      "insert_rot_xyzw": null,
-      "frames": {}
+      "ports": [],
+      "ports_frame": "record"
     },
     {
       "id": "openuc2.tpl.frame_objective_mount",
@@ -11817,14 +10759,15 @@
       "fits": "openuc2.frame.objectives",
       "assets": {
         "thumbnail": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null,
         "glb": "/v1/library/assets/templates/openuc2.tpl.frame_objective_mount/model.glb",
         "step": null
       },
-      "insert_rot_xyzw": null,
-      "frames": {}
+      "ports": [],
+      "ports_frame": "record"
     },
     {
       "id": "openuc2.tpl.frame_slide_holder",
@@ -11849,14 +10792,15 @@
       "fits": "openuc2.frame.sample",
       "assets": {
         "thumbnail": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null,
         "glb": "/v1/library/assets/templates/openuc2.tpl.frame_slide_holder/model.glb",
         "step": null
       },
-      "insert_rot_xyzw": null,
-      "frames": {}
+      "ports": [],
+      "ports_frame": "record"
     },
     {
       "id": "openuc2.tpl.frame_stage",
@@ -11908,14 +10852,15 @@
       "fits": "openuc2.frame.stage",
       "assets": {
         "thumbnail": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null,
         "glb": "/v1/library/assets/templates/openuc2.tpl.frame_stage/model.glb",
         "step": null
       },
-      "insert_rot_xyzw": null,
-      "frames": {}
+      "ports": [],
+      "ports_frame": "record"
     },
     {
       "id": "openuc2.tpl.laser_body",
@@ -11941,6 +10886,7 @@
       "fits": "",
       "assets": {
         "thumbnail": null,
+        "mesh_frame": "",
         "mesh_pose_grid": [
           "-y",
           "+x"
@@ -11950,14 +10896,8 @@
         "glb": "/v1/library/assets/templates/openuc2.tpl.laser_body/laser_body.glb",
         "step": "/v1/library/assets/templates/openuc2.tpl.laser_body/laser_body.step"
       },
-      "insert_rot_xyzw": null,
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          50.0
-        ]
-      }
+      "ports": [],
+      "ports_frame": "record"
     },
     {
       "id": "openuc2.tpl.objective_low_10x",
@@ -11983,6 +10923,7 @@
       "fits": "openuc2.frame.objective",
       "assets": {
         "thumbnail": null,
+        "mesh_frame": "",
         "mesh_pose_grid": [
           "+y",
           "+x"
@@ -11992,14 +10933,8 @@
         "glb": "/v1/library/assets/templates/openuc2.tpl.objective_low_10x/model.glb",
         "step": null
       },
-      "insert_rot_xyzw": null,
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "ports": [],
+      "ports_frame": "record"
     },
     {
       "id": "openuc2.tpl.objective_low_4x",
@@ -12025,6 +10960,7 @@
       "fits": "openuc2.frame.objective",
       "assets": {
         "thumbnail": null,
+        "mesh_frame": "",
         "mesh_pose_grid": [
           "+y",
           "+x"
@@ -12034,14 +10970,8 @@
         "glb": "/v1/library/assets/templates/openuc2.tpl.objective_low_4x/model.glb",
         "step": null
       },
-      "insert_rot_xyzw": null,
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "ports": [],
+      "ports_frame": "record"
     },
     {
       "id": "openuc2.tpl.objective_ph_20x",
@@ -12067,6 +10997,7 @@
       "fits": "openuc2.frame.objective",
       "assets": {
         "thumbnail": null,
+        "mesh_frame": "",
         "mesh_pose_grid": [
           "+y",
           "+x"
@@ -12076,14 +11007,8 @@
         "glb": "/v1/library/assets/templates/openuc2.tpl.objective_ph_20x/model.glb",
         "step": null
       },
-      "insert_rot_xyzw": null,
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "ports": [],
+      "ports_frame": "record"
     },
     {
       "id": "openuc2.tpl.objective_soptop_hr_20x",
@@ -12109,6 +11034,7 @@
       "fits": "openuc2.frame.objective",
       "assets": {
         "thumbnail": null,
+        "mesh_frame": "",
         "mesh_pose_grid": [
           "+y",
           "+x"
@@ -12118,14 +11044,8 @@
         "glb": "/v1/library/assets/templates/openuc2.tpl.objective_soptop_hr_20x/model.glb",
         "step": null
       },
-      "insert_rot_xyzw": null,
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "ports": [],
+      "ports_frame": "record"
     },
     {
       "id": "openuc2.tpl.objective_soptop_hr_4x",
@@ -12151,6 +11071,7 @@
       "fits": "openuc2.frame.objective",
       "assets": {
         "thumbnail": null,
+        "mesh_frame": "",
         "mesh_pose_grid": [
           "+y",
           "+x"
@@ -12160,14 +11081,8 @@
         "glb": "/v1/library/assets/templates/openuc2.tpl.objective_soptop_hr_4x/model.glb",
         "step": null
       },
-      "insert_rot_xyzw": null,
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "ports": [],
+      "ports_frame": "record"
     },
     {
       "id": "openuc2.tpl.objective_special_20x",
@@ -12193,6 +11108,7 @@
       "fits": "openuc2.frame.objective",
       "assets": {
         "thumbnail": null,
+        "mesh_frame": "",
         "mesh_pose_grid": [
           "+y",
           "+x"
@@ -12202,14 +11118,8 @@
         "glb": "/v1/library/assets/templates/openuc2.tpl.objective_special_20x/model.glb",
         "step": null
       },
-      "insert_rot_xyzw": null,
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
+      "ports": [],
+      "ports_frame": "record"
     },
     {
       "id": "user.tpl.objective_4x",
@@ -12234,6 +11144,7 @@
       "fits": "",
       "assets": {
         "thumbnail": null,
+        "mesh_frame": "",
         "mesh_pose_grid": [
           "-y",
           "+z"
@@ -12243,24 +11154,8 @@
         "glb": "/v1/library/assets/templates/user.tpl.objective_4x/BUY - Objectiv 4x - XXX__mit Geh\u00e4use.glb",
         "step": "/v1/library/assets/templates/user.tpl.objective_4x/BUY - Objectiv 4x - XXX__mit Geh\u00e4use.stp"
       },
-      "insert_rot_xyzw": [
-        0.0,
-        1.0,
-        0.0,
-        0.0
-      ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "exit": [
-          0.0,
-          0.0,
-          -4.0
-        ]
-      }
+      "ports": [],
+      "ports_frame": "record"
     },
     {
       "id": "user.tpl.puzzle",
@@ -12285,14 +11180,15 @@
       "fits": "",
       "assets": {
         "thumbnail": null,
+        "mesh_frame": "",
         "mesh_pose_grid": null,
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null,
         "glb": "/v1/library/assets/templates/user.tpl.puzzle/PRT - 1004 - PUZ11 - V04 - A.glb",
         "step": "/v1/library/assets/templates/user.tpl.puzzle/PRT - 1004 - PUZ11 - V04 - A.stp"
       },
-      "insert_rot_xyzw": null,
-      "frames": {}
+      "ports": [],
+      "ports_frame": "record"
     },
     {
       "id": "user.tpl.torch",
@@ -12317,6 +11213,7 @@
       "fits": "",
       "assets": {
         "thumbnail": null,
+        "mesh_frame": "",
         "mesh_pose_grid": [
           "+z",
           "+x"
@@ -12330,19 +11227,8 @@
         "glb": "/v1/library/assets/templates/user.tpl.torch/ASS - 4004 - TOR+BAT.glb",
         "step": "/v1/library/assets/templates/user.tpl.torch/ASS - 4004 - TOR+BAT.stp"
       },
-      "insert_rot_xyzw": [
-        1.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "frames": {
-        "optical": [
-          0.0,
-          0.0,
-          -20.0
-        ]
-      }
+      "ports": [],
+      "ports_frame": "record"
     }
   ],
   "setups": [
