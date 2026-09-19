@@ -11,7 +11,6 @@ envelope:
   z-mm: 53.8
 step: ASS - 2020 - CUBMIR45°TH2 - V04.stp
 glb: ASS - 2020 - CUBMIR45°TH2 - V04.glb
-mesh-frame: record
 footprint_grid:
 - 1
 - 1
@@ -30,3 +29,9 @@ frames:
     x-mm: 0
     y-mm: 0
     z-mm: 0
+mesh-pose:
+  rotation:
+    kind: grid
+    grid:
+      z: -y
+      x: +x

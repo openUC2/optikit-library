@@ -14,6 +14,11 @@ step: laser_body.step
 # WP-146: this export is y-up (the wrapper-node convention) — the file's
 # +y is the cube's +z. Declaring it makes every mesh check exact and the
 # renderers stop guessing from a node-rotation sniff.
-mesh-frame: record
 glb: laser_body.glb
 locked: true
+mesh-pose:
+  rotation:
+    kind: grid
+    grid:
+      z: -y
+      x: +x

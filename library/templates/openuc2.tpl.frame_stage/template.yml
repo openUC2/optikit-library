@@ -4,9 +4,8 @@ version: 0.1.6
 class: fixed
 description: FRAME motorized XYZ sample stage
 tags:
-  - frame
+- frame
 glb: model.glb
-mesh-frame: cube
 envelope:
   x-mm: 310.0
   y-mm: 313.6
@@ -33,7 +32,6 @@ mounts:
 fits: openuc2.frame.stage
 component: openuc2.stage.frame_xyz@^0.1
 review:
-  - 'measured from FRAME #0008 - Microscope incl accessories.stp (exported 2026-09-10)'
-  - "#0008 ships no sample holder on the stage: the `sample` seat is the height #0007 measured, and `openuc2.tpl.frame_slide_holder`
-    still carries its #0007 mesh"
+- 'measured from FRAME #0008 - Microscope incl accessories.stp (exported 2026-09-10)'
+- "#0008 ships no sample holder on the stage: the `sample` seat is the height #0007 measured, and `openuc2.tpl.frame_slide_holder` still carries its #0007 mesh"
 locked: true

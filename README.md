@@ -5,16 +5,13 @@ optikit-core service at it.
 
 ```
 library/
-  components/    optical prescriptions — frames, ports, surfaces (F2)
+  components/    optical prescriptions — frames, surfaces (F2)
   templates/     mechanical housings/inserts — mesh, envelope, mounting (F3)
   modules/       one placeable cube: binds a component (or subdesign) + template
   subdesigns/    multi-part optics as a nested design (galvo pairs, stages)
   groups/        multi-cube arrangements placed as one rigid unit
-  archive/       retired records, kept so a design that names one can be repaired
   setups/        designs saved from the running app ("save setup" in the editor)
   dist/index.json   `library build`'s local output — gitignored, not fetched
-designs/     hand-authored reference instruments
-setups/      curated complete builds, each with a preview image
 library-index.json   the committed index — what mounting this repo fetches
              (CI regenerates it from library/ on every push to main)
 ```
@@ -25,7 +22,7 @@ The wire format is Go's `.dsn` (`openUC2/optikit`, `optikit-design.yml`) — see
 [DSN-CONTRACT.md](https://github.com/openUC2/optikit-v2/blob/main/DOCS/DSN-CONTRACT.md)
 in optikit-core for the normative spec. Two kinds of thing live here:
 
-- **`designs/`, `setups/`, and `library/setups/` are literal Go documents** —
+- **`library/setups/` holds literal Go documents** —
   an `optikit-design.yml` with `components:`, `inputs:`, `paths:`, nothing
   library-specific. Open one in Go's own tooling; it needs nothing from us.
 - **`library/{components,templates,modules,subdesigns,groups}/` are our
@@ -33,7 +30,7 @@ in optikit-core for the normative spec. Two kinds of thing live here:
   (`namespace.category.slug@version`) that a design's `components.<id>` can
   reference instead of inlining. Each `kind:` maps onto the model differently:
   - `optical_component` — the `optics:` block a placed `kind: primitive`
-    component carries (ports, frames, surfaces). Pure prescription, no mesh.
+    component carries (frames, surfaces). Pure prescription, no mesh.
   - `mechanical_template` — the mesh + the F2→F3 binding (`insert-pose`,
     `mesh-pose`, `footprint_grid`) that seats a component's optics inside a
     cube. Our extension; Go has no separate mounting record.
@@ -51,10 +48,9 @@ in optikit-core for the normative spec. Two kinds of thing live here:
     Go has no equivalent; it flattens to plain sibling components on export.
 
 `library-index.json` is **not** DSN — it is our derived, read-only catalog:
-components, templates and modules resolved into flat entries (ports folded
-into the mounted frame, a subdesign's declared inputs and per-mirror
-motions precomputed) so the configurator can populate the palette without
-re-deriving any of it.
+components, templates and modules resolved into flat entries (record
+frames as mounted, a subdesign's declared inputs and seats precomputed) so
+the configurator can populate the palette without re-deriving any of it.
 
 # Why? 
 
@@ -106,9 +102,9 @@ decoration: the prescription may be an importer's guess.
 
 The configurator badges them everywhere they appear. Clearing the badge means
 opening the record in the component editor, checking it against the physical
-part, and deleting the note. Anything that still had an importer's `review:`
-block at reset time is in `library/archive/` instead, and
-`optikit-core library restore <id>` brings a trio back.
+part, and deleting the note. Legacy and placeholder records were removed on
+2026-09-17 (`scripts/remove_legacy.sh`); real parts come back through the
+wizards and the insert designer, never from an archive.
 
 The 18 `starter` records are exempt and always were — they are the exemplars
 people copy, so a flag on them would mean the thing being copied is itself

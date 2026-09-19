@@ -4,9 +4,8 @@ version: 0.1.6
 class: fixed
 description: height-adjustable diffuser under the illumination head
 tags:
-  - frame
+- frame
 glb: model.glb
-mesh-frame: cube
 envelope:
   x-mm: 54.0
   y-mm: 54.0
@@ -16,5 +15,5 @@ footprint_grid:
 fits: openuc2.frame.diffuser
 component: openuc2.mechanics.frame_diffuser@^0.1
 review:
-  - 'measured from FRAME #0008 - Microscope incl accessories.stp (exported 2026-09-10)'
+- 'measured from FRAME #0008 - Microscope incl accessories.stp (exported 2026-09-10)'
 locked: true

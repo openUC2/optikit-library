@@ -11,7 +11,6 @@ envelope:
   z-mm: 97.6
 step: ASS - 3004 - CUBMANSTGR10 - V04.stp
 glb: ASS - 3004 - CUBMANSTGR10 - V04.glb
-mesh-frame: cube
 footprint_grid:
 - 1
 - 2

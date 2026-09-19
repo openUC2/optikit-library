@@ -4,9 +4,8 @@ version: 0.1.7
 class: fixed
 description: kinematic (magnetic) objective mount for the FRAME stage
 tags:
-  - frame
+- frame
 glb: model.glb
-mesh-frame: cube
 envelope:
   x-mm: 66.0
   y-mm: 36.0
@@ -16,16 +15,11 @@ footprint_grid:
 fits: openuc2.frame.objectives
 component: openuc2.mechanics.frame_objective_mount@^0.1
 review:
-  - 'measured from FRAME #0008 - Microscope incl accessories.stp (exported 2026-09-10)'
-  - the plate is 66 mm wide about its own origin and carries two seats 29.8 mm apart in x; seat 1 
-    (working, facing the camera) holds a support-mounted objective (`FRAME - 4002`, objective axis 
-    at x = 1.6), seat 2 (parked) a bare threaded one (`Plan APO 20X`, axis at x = 31.4)
-  - seat 1 is STATED (carrier origin -29.8 + the carrier's objective offset 14.9 / 28.9) because the
-    export's node is the carrier, not the objective; its z is the 4x carrier's — a bare objective in
-    seat 1 would sit at seat 2's height (12.5); confirm on the next export
-  - the 1.6 mm between the working axis and the illumination axis (x = 0) is in the CAD
-  - the four objective carriers in CAD (`FRAME - 4002/4007/4008/4009`) put the objective at (14.9, 
-    0, z) in the carrier frame, z = 28.9 / 28.9 / 24.9 / 28.1 — the parfocal compensation
+- 'measured from FRAME #0008 - Microscope incl accessories.stp (exported 2026-09-10)'
+- the plate is 66 mm wide about its own origin and carries two seats 29.8 mm apart in x; seat 1 (working, facing the camera) holds a support-mounted objective (`FRAME - 4002`, objective axis at x = 1.6), seat 2 (parked) a bare threaded one (`Plan APO 20X`, axis at x = 31.4)
+- seat 1 is STATED (carrier origin -29.8 + the carrier's objective offset 14.9 / 28.9) because the export's node is the carrier, not the objective; its z is the 4x carrier's — a bare objective in seat 1 would sit at seat 2's height (12.5); confirm on the next export
+- the 1.6 mm between the working axis and the illumination axis (x = 0) is in the CAD
+- the four objective carriers in CAD (`FRAME - 4002/4007/4008/4009`) put the objective at (14.9, 0, z) in the carrier frame, z = 28.9 / 28.9 / 24.9 / 28.1 — the parfocal compensation
 mounts:
   objectives-1:
     pose:

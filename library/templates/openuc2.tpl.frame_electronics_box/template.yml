@@ -4,9 +4,8 @@ version: 0.1.6
 class: fixed
 description: FRAME electronics box — Raspberry Pi 5
 tags:
-  - frame
+- frame
 glb: model.glb
-mesh-frame: cube
 envelope:
   x-mm: 221.5
   y-mm: 94.0
@@ -16,6 +15,6 @@ footprint_grid:
 fits: openuc2.frame.electronics
 component: openuc2.electronics.frame_box@^0.1
 review:
-  - 'measured from FRAME #0008 - Microscope incl accessories.stp (exported 2026-09-10)'
-  - the boards inside are pruned out of the export; the mesh is the case
+- 'measured from FRAME #0008 - Microscope incl accessories.stp (exported 2026-09-10)'
+- the boards inside are pruned out of the export; the mesh is the case
 locked: true

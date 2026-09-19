@@ -4,10 +4,9 @@ version: 0.1.2
 class: fixed
 description: Plan Apo 20×/0.75 (Special) barrel (housing)
 tags:
-  - objective
-  - housing
+- objective
+- housing
 glb: model.glb
-mesh-frame: cube
 envelope:
   x-mm: 32.4
   y-mm: 32.5
@@ -22,7 +21,6 @@ footprint_grid:
 fits: openuc2.frame.objective
 component: openuc2.objective.special_20x@^0.1
 review:
-  - mesh converted from special_20x.stp — drawn with the sample side along +y, turned into the cube 
-    frame by mesh-pose
-  - the barrel's mounting datum is the mesh origin — verify against the thread shoulder
+- mesh converted from special_20x.stp — drawn with the sample side along +y, turned into the cube frame by mesh-pose
+- the barrel's mounting datum is the mesh origin — verify against the thread shoulder
 locked: true

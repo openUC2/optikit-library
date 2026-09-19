@@ -11,7 +11,6 @@ envelope:
   z-mm: 53.8
 step: ASS - 2073 - CUBLEND25F50 - V04.stp
 glb: ASS - 2073 - CUBLEND25F50 - V04.glb
-mesh-frame: cube
 footprint_grid:
 - 1
 - 1

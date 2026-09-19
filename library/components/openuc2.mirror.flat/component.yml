@@ -4,8 +4,6 @@ version: 1.1.0
 category: mirror
 description: Flat first-surface mirror (plain glass — the mount's insert-pose sets the fold)
 tags: [mirror, mirror/flat, mirror/single-sided]
-mechanics:
-  template: openuc2.tpl.mirror_mount_1x1
 optics:
   frames:
     optical: {z-mm: 0.0}

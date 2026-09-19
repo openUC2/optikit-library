@@ -1,12 +1,13 @@
 kind: cube_module
 id: user.cube.mirror_45
-version: 0.1.0
+version: 0.2.0
 description: mirror_45 in a 1x1 cube (bound)
 tags:
   - bound
-component: openuc2.mirror.flat@^1
+  - subdesign
 template: user.tpl.mirror_45@^0.1
 footprint_grid:
   - 1
   - 1
   - 1
+design: user.subdesign.mirror_45@^0.1

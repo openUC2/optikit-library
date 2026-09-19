@@ -11,7 +11,6 @@ envelope:
   z-mm: 53.8
 step: ASS - 2025 - CUBEYEPCE - V04.stp
 glb: ASS - 2025 - CUBEYEPCE - V04.glb
-mesh-frame: cube
 footprint_grid:
 - 1
 - 1

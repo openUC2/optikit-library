@@ -1,0 +1,313 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  name: mirror-1x1
+  version: 0.1.0
+  description: openuc2.mirror.mirror_1x1 in a cube — 24 seat(s)
+inputs: {}
+components:
+  mirror-1x1:
+    kind: primitive
+    category: mirror
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0.0
+            interaction_model:
+              type: refractive_reflective
+              is_reflective: true
+            aperture:
+              type: RectangularAperture
+              x_min: -12.7
+              x_max: 12.7
+              y_min: -12.7
+              y_max: 12.7
+      frames:
+        optical: {}
+    pose:
+      rotation:
+        kind: uc2
+        offset-deg:
+          y: -45.0
+variants:
+  seat-pz-px:
+    description: as authored — the insert's home seat
+  seat-px-py:
+    description: insert seated +x / +y
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +x
+              x: +y
+            offset-deg:
+              y: -45.0
+  seat-px-my:
+    description: insert seated +x / -y
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +x
+              x: -y
+            offset-deg:
+              y: -45.0
+  seat-px-pz:
+    description: insert seated +x / +z
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +x
+              x: +z
+            offset-deg:
+              y: -45.0
+  seat-px-mz:
+    description: insert seated +x / -z
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +x
+              x: -z
+            offset-deg:
+              y: -45.0
+  seat-mx-py:
+    description: insert seated -x / +y
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -x
+              x: +y
+            offset-deg:
+              y: -45.0
+  seat-mx-my:
+    description: insert seated -x / -y
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -x
+              x: -y
+            offset-deg:
+              y: -45.0
+  seat-mx-pz:
+    description: insert seated -x / +z
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -x
+              x: +z
+            offset-deg:
+              y: -45.0
+  seat-mx-mz:
+    description: insert seated -x / -z
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -x
+              x: -z
+            offset-deg:
+              y: -45.0
+  seat-py-px:
+    description: insert seated +y / +x
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +y
+              x: +x
+            offset-deg:
+              y: -45.0
+  seat-py-mx:
+    description: insert seated +y / -x
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +y
+              x: -x
+            offset-deg:
+              y: -45.0
+  seat-py-pz:
+    description: insert seated +y / +z
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +y
+              x: +z
+            offset-deg:
+              y: -45.0
+  seat-py-mz:
+    description: insert seated +y / -z
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +y
+              x: -z
+            offset-deg:
+              y: -45.0
+  seat-my-px:
+    description: insert seated -y / +x
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -y
+              x: +x
+            offset-deg:
+              y: -45.0
+  seat-my-mx:
+    description: insert seated -y / -x
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -y
+              x: -x
+            offset-deg:
+              y: -45.0
+  seat-my-pz:
+    description: insert seated -y / +z
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -y
+              x: +z
+            offset-deg:
+              y: -45.0
+  seat-my-mz:
+    description: insert seated -y / -z
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -y
+              x: -z
+            offset-deg:
+              y: -45.0
+  seat-pz-mx:
+    description: insert seated +z / -x
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +z
+              x: -x
+            offset-deg:
+              y: -45.0
+  seat-pz-py:
+    description: insert seated +z / +y
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +z
+              x: +y
+            offset-deg:
+              y: -45.0
+  seat-pz-my:
+    description: insert seated +z / -y
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +z
+              x: -y
+            offset-deg:
+              y: -45.0
+  seat-mz-px:
+    description: insert seated -z / +x
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -z
+              x: +x
+            offset-deg:
+              y: -45.0
+  seat-mz-mx:
+    description: insert seated -z / -x
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -z
+              x: -x
+            offset-deg:
+              y: -45.0
+  seat-mz-py:
+    description: insert seated -z / +y
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -z
+              x: +y
+            offset-deg:
+              y: -45.0
+  seat-mz-my:
+    description: insert seated -z / -y
+    components:
+      mirror-1x1:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -z
+              x: -y
+            offset-deg:
+              y: -45.0

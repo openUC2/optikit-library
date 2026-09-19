@@ -5,10 +5,10 @@ class: generative
 carrier: true
 description: 4x6 sandwich plate, 4 screw holes per cell on the cube hole circle
 tags:
-  - carrier
-  - miniframe
-  - plate
-  - generated
+- carrier
+- miniframe
+- plate
+- generated
 envelope:
   x-mm: 200
   y-mm: 300
@@ -19,12 +19,11 @@ generator:
     nx: 4
     ny: 6
 footprint_grid:
-  - 4
-  - 6
-  - 1
+- 4
+- 6
+- 1
 review:
-  - 'mesh not generated here: generator script not found: /Users/bene/Downloads/OPTIKIT/optikit-library/generators/plate_nxm.py'
+- 'mesh not generated here: generator script not found: /Users/bene/Downloads/OPTIKIT/optikit-library/generators/plate_nxm.py'
 glb: model.glb
 step: model.step
-mesh-frame: cube
 locked: true

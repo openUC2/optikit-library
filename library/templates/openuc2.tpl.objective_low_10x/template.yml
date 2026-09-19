@@ -4,10 +4,9 @@ version: 0.1.2
 class: fixed
 description: Low-Rank Achromat 10×/0.25 barrel (housing)
 tags:
-  - objective
-  - housing
+- objective
+- housing
 glb: model.glb
-mesh-frame: cube
 envelope:
   x-mm: 26.9
   y-mm: 27.0
@@ -22,7 +21,6 @@ footprint_grid:
 fits: openuc2.frame.objective
 component: openuc2.objective.low_10x@^0.1
 review:
-  - mesh converted from low_10x.stp — drawn with the sample side along +y, turned into the cube 
-    frame by mesh-pose
-  - the barrel's mounting datum is the mesh origin — verify against the thread shoulder
+- mesh converted from low_10x.stp — drawn with the sample side along +y, turned into the cube frame by mesh-pose
+- the barrel's mounting datum is the mesh origin — verify against the thread shoulder
 locked: true
