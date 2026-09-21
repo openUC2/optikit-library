@@ -7,9 +7,11 @@ optikit-core service at it.
 library/
   components/    optical prescriptions — frames, surfaces (F2)
   templates/     mechanical housings/inserts — mesh, envelope, mounting (F3)
-  modules/       one placeable cube: binds a component (or subdesign) + template
-  subdesigns/    multi-part optics as a nested design (galvo pairs, stages)
-  groups/        multi-cube arrangements placed as one rigid unit
+  designs/       Go designs, placed as `designs/<name>` — every module is one
+                 (`module.yml` beside its `optikit-design.yml`: body mesh +
+                 optic child, seats as variants, motion as inputs), plus
+                 arrangements — the OPM: modules at grid cells, plates and
+                 joints — and the design a moving housing binds
   setups/        designs saved from the running app ("save setup" in the editor)
   dist/index.json   `library build`'s local output — gitignored, not fetched
 library-index.json   the committed index — what mounting this repo fetches
@@ -25,27 +27,29 @@ in optikit-core for the normative spec. Two kinds of thing live here:
 - **`library/setups/` holds literal Go documents** —
   an `optikit-design.yml` with `components:`, `inputs:`, `paths:`, nothing
   library-specific. Open one in Go's own tooling; it needs nothing from us.
-- **`library/{components,templates,modules,subdesigns,groups}/` are our
-  catalog layer on top** — versioned, addressable records
-  (`namespace.category.slug@version`) that a design's `components.<id>` can
-  reference instead of inlining. Each `kind:` maps onto the model differently:
-  - `optical_component` — the `optics:` block a placed `kind: primitive`
-    component carries (frames, surfaces). Pure prescription, no mesh.
+- **`library/designs/` holds plain Go designs** — `designs/<name>/optikit-design.yml`,
+  nothing around it; a setup reaches one through its `designs` symlink
+  (Go's own `primitives -> ../../primitives/` convention). **Every module is
+  one**: `designs/<module id>/` holds the design (a `body` child — the
+  template mesh through the folder's `templates -> ../../templates` link,
+  posed by `mesh-pose` — and the optic child with the component's optics
+  seated by `insert-pose`; seats as `variants`, motion as `inputs`) and
+  `module.yml`, the catalog record beside it (`template`, `component`,
+  footprint, price, electronics, review). A placement anywhere is Go's own
+  `kind: design` + `design: designs/<module id>`.
+- **`library/{components,templates}/` are our catalog layer** — versioned,
+  addressable records (`namespace.category.slug@version`):
+  - `optical_component` — the `optics:` block a module's optic child (or a
+    placed bare optic) carries (frames, surfaces). Pure prescription, no mesh.
   - `mechanical_template` — the mesh + the F2→F3 binding (`insert-pose`,
     `mesh-pose`, `footprint_grid`) that seats a component's optics inside a
     cube. Our extension; Go has no separate mounting record.
-  - `cube_module` — the one thing the palette places. Resolves to a single
-    Go component: `kind: primitive` (mesh + inlined `optics:`) for a
-    component-backed module, or `kind: design` (a nested-design reference)
-    for a subdesign-backed one.
-  - `cube_subdesign` — a `cube_module`'s `design:` target when its optics
-    can't be one record (e.g. a galvo's two independently-tilting mirrors).
-    Its `optikit-design.yml` **is** an ordinary nested Go design; the
-    `subdesign.yml` wrapper only adds the library id/version and,
-    optionally, which `optical_component` it was decomposed from
-    (`library decompose`, so the compact record's editors still resolve it).
-  - `cube_group` — several modules placed together, sharing one transform.
-    Go has no equivalent; it flattens to plain sibling components on export.
+- The other designs under `designs/`: an **arrangement** — the OPM — whose
+  components place modules at grid cells the way the schematic places them,
+  plates and puzzle joints between the layers, the component tagged
+  `interface/axis` the one a FRAME bay puts on its optical axis; and the
+  design a moving housing binds (the FRAME stage: `dx/dy/dz` inputs move
+  the `carriage` its `sample` mount rides, `mounts.sample.on: carriage`).
 
 `library-index.json` is **not** DSN — it is our derived, read-only catalog:
 components, templates and modules resolved into flat entries (record

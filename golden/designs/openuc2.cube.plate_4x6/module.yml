@@ -1,0 +1,17 @@
+kind: cube_module
+id: openuc2.cube.plate_4x6
+version: 0.1.1
+description: 4x6 aluminium sandwich plate (miniFRAME)
+tags:
+- carrier
+- miniframe
+- plate
+component: openuc2.mechanics.plate_4x6@^0.1
+template: openuc2.tpl.plate_4x6@^0.1
+footprint_grid:
+- 4
+- 6
+- 1
+review:
+- generated for a 4x6 optical module — verify the hole pattern before machining
+locked: true

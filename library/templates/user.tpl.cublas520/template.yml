@@ -4,37 +4,29 @@ version: 0.1.0
 class: fixed
 description: mount for user.source.cublas520 (bound from ASS - 2018 - CUBLAS520 - V04 - A.stp)
 tags:
-- bound
+  - bound
 envelope:
   x-mm: 49.8
   y-mm: 87.5
   z-mm: 53.8
 step: ASS - 2018 - CUBLAS520 - V04 - A.stp
 glb: ASS - 2018 - CUBLAS520 - V04 - A.glb
-mesh-pose:
-  rotation:
-    kind: grid
-    grid:
-      z: +z
-      x: +x
 footprint_grid:
-- 1
-- 2
-- 1
+  - 1
+  - 2
+  - 1
 insert-pose:
   rotation:
     kind: grid
     grid:
-      z: -y
-      x: +x
+      z: +y
+      x: -z
   translation:
     offset-mm:
-      x: 8.64
-      y: -3.04
-      z: -4.25
+      y: -22
 provenance: whole-module
 frames:
   optical:
-    x-mm: 8.64
-    y-mm: -3.04
-    z-mm: -4.25
+    x-mm: 0
+    y-mm: -22
+    z-mm: 0

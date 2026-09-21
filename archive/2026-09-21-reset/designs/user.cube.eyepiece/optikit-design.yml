@@ -1,0 +1,48 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: eyepiece in a 1x1 cube (bound)
+  tags:
+    - cube-module
+components:
+  body:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: templates/user.tpl.eyepiece/ASS - 2025 - CUBEYEPCE - V04.glb
+        step: templates/user.tpl.eyepiece/ASS - 2025 - CUBEYEPCE - V04.stp
+    pose:
+      rotation:
+        kind: grid
+  optic:
+    kind: primitive
+    category: lens
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: 50.0
+              conic: 0.0
+            material_post:
+              type: Material
+              name: N-BK7
+            thickness: 4
+            semi_aperture: 12.7
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: -50.0
+              conic: 0.0
+            semi_aperture: 12.7
+      frames:
+        optical: {}
+        exit:
+          z-mm: 4.0
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +z
+          x: +x

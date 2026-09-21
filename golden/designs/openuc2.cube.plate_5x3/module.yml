@@ -1,0 +1,16 @@
+kind: cube_module
+id: openuc2.cube.plate_5x3
+version: 0.1.0
+description: 5x3 aluminium sandwich plate (miniFRAME)
+tags:
+- carrier
+- miniframe
+- plate
+component: openuc2.mechanics.plate_5x3@^0.1
+template: openuc2.tpl.plate_5x3@^0.1
+footprint_grid:
+- 5
+- 3
+- 1
+review:
+- generated for a 5x3 optical module — verify the hole pattern before machining

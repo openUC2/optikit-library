@@ -1,0 +1,36 @@
+kind: optical_component
+id: user.mirror.cubmir45_th2
+version: 0.1.0
+category: mirror
+description: ASS - 2020 - CUBMIR45°TH2 - V04
+tags:
+  - authored
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0
+        material_post:
+          type: Material
+          name: N-BK7
+        thickness: 3
+        interaction_model:
+          type: refractive_reflective
+          is_reflective: true
+        semi_aperture: 12.7
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0
+        semi_aperture: 12.7

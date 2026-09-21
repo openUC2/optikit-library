@@ -1,0 +1,39 @@
+kind: mechanical_template
+id: openuc2.tpl.frame_stage
+version: 0.2.0
+class: fixed
+description: FRAME motorized XYZ sample stage
+tags:
+- frame
+glb: model.glb
+envelope:
+  x-mm: 310.0
+  y-mm: 313.6
+  z-mm: 125.0
+carrier: true
+footprint_grid:
+mounts:
+  objectives:
+    pose:
+      translation:
+        offset-mm:
+          x: 16.5
+          y: 0.0
+          z: 12.3
+    accepts: openuc2.frame.objectives
+  sample:
+    pose:
+      translation:
+        offset-mm:
+          x: 0.05
+          y: 0.0
+          z: 84.0
+    accepts: openuc2.frame.sample
+    on: carriage
+fits: openuc2.frame.stage
+component: openuc2.stage.frame_xyz@^0.1
+design: designs/openuc2.frame_xyz
+review:
+- 'measured from FRAME #0008 - Microscope incl accessories.stp (exported 2026-09-10)'
+- "#0008 ships no sample holder on the stage: the `sample` seat is the height #0007 measured, and `openuc2.tpl.frame_slide_holder` still carries its #0007 mesh"
+locked: true

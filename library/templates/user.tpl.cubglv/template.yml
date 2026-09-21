@@ -1,0 +1,39 @@
+kind: mechanical_template
+id: user.tpl.cubglv
+version: 0.1.0
+class: adaptive
+description: mount for user.mirror.cubglv (bound from ASS - 2075 - CUBGLV - V04.stp)
+tags:
+  - bound
+envelope:
+  x-mm: 83.723
+  y-mm: 70.55
+  z-mm: 85.23
+step: ASS - 2075 - CUBGLV - V04.stp
+glb: ASS - 2075 - CUBGLV - V04.glb
+mesh-pose:
+  rotation:
+    kind: grid
+    grid:
+      z: +z
+      x: +x
+footprint_grid:
+  - 2
+  - 2
+  - 1
+insert-pose:
+  rotation:
+    kind: grid
+    grid:
+      z: +x
+      x: -z
+    offset-deg:
+      y: -45
+  translation:
+    offset-mm: {}
+provenance: whole-module
+frames:
+  optical:
+    x-mm: 0
+    y-mm: 0
+    z-mm: 0

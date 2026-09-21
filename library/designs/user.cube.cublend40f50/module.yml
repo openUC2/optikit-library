@@ -1,0 +1,12 @@
+kind: cube_module
+id: user.cube.cublend40f50
+version: 0.1.0
+description: cublend40f50 in a 1x1 cube (bound)
+tags:
+  - bound
+component: user.lens.cublend40f50@^0.1
+template: user.tpl.cublend40f50@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1

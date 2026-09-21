@@ -1,0 +1,42 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: cublend43f_50 in a 1x1 cube (bound)
+  tags:
+    - cube-module
+components:
+  body:
+    kind: primitive
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+  optic:
+    kind: primitive
+    category: lens
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: -50
+              conic: 0
+            material_post:
+              type: Material
+              name: N-BK7
+            thickness: 4
+            semi_aperture: 12.7
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: 50
+              conic: 0
+            semi_aperture: 12.7
+      frames:
+        optical: {}
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +y
+          x: +z

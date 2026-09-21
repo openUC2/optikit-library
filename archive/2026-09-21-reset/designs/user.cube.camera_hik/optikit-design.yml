@@ -1,0 +1,34 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: camera_hik in a 3x1 cube (bound)
+  tags:
+    - cube-module
+components:
+  body:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: templates/user.tpl.camera_hik/ASS - 4003 - CAM+OBJ.glb
+        step: templates/user.tpl.camera_hik/ASS - 4003 - CAM+OBJ.stp
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: -z
+          x: +x
+  optic:
+    kind: primitive
+    category: detector
+    optics:
+      frames:
+        optical: {}
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +x
+          x: -z
+      translation:
+        offset-mm:
+          x: -40

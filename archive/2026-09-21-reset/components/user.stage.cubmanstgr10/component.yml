@@ -1,0 +1,11 @@
+kind: optical_component
+id: user.stage.cubmanstgr10
+version: 0.1.0
+category: stage
+description: ASS - 3004 - CUBMANSTGR10 - V04
+tags:
+  - authored
+vendor:
+  name: ""
+  mpn: ""
+  url: ""

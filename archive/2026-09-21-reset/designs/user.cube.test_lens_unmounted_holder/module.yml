@@ -1,0 +1,12 @@
+kind: cube_module
+id: user.cube.test_lens_unmounted_holder
+version: 0.1.0
+description: user.lens.test_lens_unmounted in a generated holder
+tags:
+- generated
+template: user.tpl.cube_base@^0.1
+footprint_grid:
+- 1
+- 1
+- 1
+component: user.lens.test_lens_unmounted@^0.1

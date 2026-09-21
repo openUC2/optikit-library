@@ -1,0 +1,42 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: laser_galvo in a 1x2 cube (bound)
+  tags:
+    - cube-module
+components:
+  body:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: templates/user.tpl.laser_galvo/ASS - 2081 - CUBLAS650ECC - V04.glb
+        step: templates/user.tpl.laser_galvo/ASS - 2081 - CUBLAS650ECC - V04.stp
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +z
+          x: -x
+  optic:
+    kind: primitive
+    category: source
+    optics:
+      frames:
+        optical:
+          clear-aperture-mm: 5
+      emission:
+        spectrum:
+          - wavelength_um: 0.532
+        spatial:
+          type: disc
+          radius_mm: 2.5
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +y
+          x: +x
+      translation:
+        offset-mm:
+          y: 18
+          z: 7

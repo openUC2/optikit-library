@@ -1,6 +1,6 @@
 kind: optical_component
 id: user.source.cublas520
-version: 0.1.0
+version: 0.1.1
 category: source
 description: ASS - 2018 - CUBLAS520 - V04 - A
 tags:
@@ -9,14 +9,19 @@ vendor:
   name: ""
   mpn: ""
   url: ""
-  price: 80
+  price: 100
   currency: EUR
 optics:
   frames:
     optical:
       z-mm: 0
-source:
-  wavelengths_um:
-    - 0.52
-  divergence_deg: 0
-  beam_diameter_mm: 5
+  emission:
+    spectrum:
+      - wavelength_um: 0.52
+        weight: 1
+    spatial:
+      type: disc
+      radius_mm: 2.5
+    angular:
+      type: cone
+      half_angle_deg: 0.5

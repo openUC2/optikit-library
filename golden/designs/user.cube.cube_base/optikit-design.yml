@@ -1,0 +1,16 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: cube_base in a 1x1 cube (bound)
+  tags:
+    - cube-module
+components:
+  body:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: templates/user.tpl.cube_base/ASS - 2000 - CUB - V04.glb
+        step: templates/user.tpl.cube_base/ASS - 2000 - CUB - V04.stp
+    pose:
+      rotation:
+        kind: grid

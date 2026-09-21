@@ -1,0 +1,12 @@
+kind: cube_module
+id: thorlabs.cube.la1102_holder
+version: 0.1.0
+description: thorlabs.lens.la1102 in a generated holder
+tags:
+- generated
+template: user.tpl.cube_base@^0.1
+footprint_grid:
+- 1
+- 1
+- 1
+component: thorlabs.lens.la1102@^0.1

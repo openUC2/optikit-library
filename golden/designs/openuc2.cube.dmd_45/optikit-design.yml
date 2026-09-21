@@ -1,0 +1,29 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: DMD structured-illumination cube (45°, pattern over CAN)
+  tags:
+    - cube-module
+components:
+  body:
+    kind: primitive
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+  optic:
+    kind: primitive
+    category: slm
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0.0
+            interaction_model:
+              type: refractive_reflective
+              is_reflective: true
+            semi_aperture: 6.6
+      frames:
+        optical: {}

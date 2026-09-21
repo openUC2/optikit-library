@@ -1,0 +1,51 @@
+optikit-version: v0.0.0-alpha.1
+
+design:
+  description: FRAME motorized XYZ sample stage (dx/dy/dz)
+
+  tags:
+  - frame
+  - stage
+  - actuated
+inputs:
+  dx:
+    description: Sample travel along x
+    kind: float64
+    units: mm
+    min: -10.0
+    max: 10.0
+    resolution: 0.01
+    actuation: firmware
+  dy:
+    description: Sample travel along y
+    kind: float64
+    units: mm
+    min: -10.0
+    max: 10.0
+    resolution: 0.01
+    actuation: firmware
+  dz:
+    description: Sample travel along z (focus)
+    kind: float64
+    units: mm
+    min: -5.0
+    max: 5.0
+    resolution: 0.01
+    actuation: firmware
+
+components:
+  # Bolted to the FRAME — does not move.
+  body:
+    kind: primitive
+    category: mechanics
+
+  # What the three axes drive. The sample mount rides here.
+  carriage:
+    kind: primitive
+    category: stage
+    pose:
+      translation:
+        offset-mm:
+          x: ~ inputs['dx'].value
+          y: ~ inputs['dy'].value
+          z: ~ inputs['dz'].value

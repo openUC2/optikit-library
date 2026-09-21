@@ -1,0 +1,129 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: user.mirror.cubglv, decomposed (motion as inputs)
+  tags:
+    - decomposed
+inputs:
+  tilt-x:
+    kind: float64
+    units: deg
+    min: -15.0
+    max: 15.0
+    resolution: 0.01
+    actuation: firmware
+  tilt-y:
+    kind: float64
+    units: deg
+    min: -15.0
+    max: 15.0
+    resolution: 0.01
+    actuation: firmware
+components:
+  mirror-0:
+    kind: primitive
+    category: mirror
+    optics:
+      frames:
+        optical:
+          z-mm: 0
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0
+            material_post:
+              type: Material
+              name: N-BK7
+            interaction_model:
+              type: refractive_reflective
+              is_reflective: true
+            semi_aperture: 12.7
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +x
+          x: -z
+        offset-deg:
+          y: -45.0
+          z: ~ inputs['tilt-x'].value
+  mirror-0-mesh:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: mirror-0.glb
+    moving-nodes:
+      - PRT - TMP - Mirror Galvo Moving:1
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +z
+          x: +x
+        offset-deg:
+          x: ~ inputs['tilt-x'].value
+  mirror-1:
+    kind: primitive
+    category: mirror
+    optics:
+      frames:
+        optical:
+          z-mm: 0
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0
+            interaction_model:
+              type: refractive_reflective
+              is_reflective: true
+            semi_aperture: 12.7
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +x
+          x: -z
+        offset-deg:
+          y: ~ -45 + inputs['tilt-y'].value
+      translation:
+        offset-mm:
+          x: 0.707107
+          z: 0.707107
+  mirror-1-mesh:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: mirror-1.glb
+    moving-nodes:
+      - PRT - TMP - Mirror Galvo Moving:2
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +z
+          x: +x
+        offset-deg:
+          y: ~ inputs['tilt-y'].value
+      translation:
+        offset-mm:
+          x: 0.707107
+          z: 0.707107
+  static:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: static.glb
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +z
+          x: +x
