@@ -1,0 +1,38 @@
+kind: mechanical_template
+id: user.tpl.cam_obj
+version: 0.1.0
+class: fixed
+description: mount for user.detector.cam_obj (bound from ASS - 4003 - CAM+OBJ.stp)
+tags:
+  - bound
+envelope:
+  x-mm: 49.8
+  y-mm: 107.96
+  z-mm: 53.2
+step: ASS - 4003 - CAM+OBJ.stp
+glb: ASS - 4003 - CAM+OBJ.glb
+mesh-pose:
+  rotation:
+    kind: grid
+    grid:
+      z: +z
+      x: +y
+footprint_grid:
+  - 3
+  - 1
+  - 1
+insert-pose:
+  rotation:
+    kind: grid
+    grid:
+      z: +x
+      x: -z
+  translation:
+    offset-mm:
+      x: -50
+provenance: whole-module
+frames:
+  optical:
+    x-mm: -50
+    y-mm: 0
+    z-mm: 0

@@ -1,0 +1,12 @@
+kind: cube_module
+id: user.cube.cam_obj
+version: 0.1.0
+description: cam_obj in a 3x1 cube (bound)
+tags:
+  - bound
+component: user.detector.cam_obj@^0.1
+template: user.tpl.cam_obj@^0.1
+footprint_grid:
+  - 3
+  - 1
+  - 1

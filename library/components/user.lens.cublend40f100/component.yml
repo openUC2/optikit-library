@@ -1,0 +1,36 @@
+kind: optical_component
+id: user.lens.cublend40f100
+version: 0.1.0
+category: lens
+description: ASS - 2022 - CUBLEND40F100 - v04
+tags:
+  - authored
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+  price: 50
+  currency: EUR
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: 50
+          conic: 0
+        material_post:
+          type: Material
+          name: N-BK7
+        thickness: 4
+        semi_aperture: 12.7
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: -50
+          conic: 0
+        semi_aperture: 12.7
+effective_focal_length_mm: 49.043

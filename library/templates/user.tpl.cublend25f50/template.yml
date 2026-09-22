@@ -1,0 +1,31 @@
+kind: mechanical_template
+id: user.tpl.cublend25f50
+version: 0.1.0
+class: fixed
+description: mount for user.lens.cublend25f50 (bound from ASS - 2073 - CUBLEND25F50 - V04.stp)
+tags:
+  - bound
+envelope:
+  x-mm: 49.8
+  y-mm: 49.8
+  z-mm: 53.8
+step: ASS - 2073 - CUBLEND25F50 - V04.stp
+glb: ASS - 2073 - CUBLEND25F50 - V04.glb
+footprint_grid:
+  - 1
+  - 1
+  - 1
+insert-pose:
+  rotation:
+    kind: grid
+    grid:
+      z: -y
+      x: +x
+  translation:
+    offset-mm: {}
+provenance: whole-module
+frames:
+  optical:
+    x-mm: 0
+    y-mm: 0
+    z-mm: 0

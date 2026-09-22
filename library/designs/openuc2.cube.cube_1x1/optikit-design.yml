@@ -1,0 +1,16 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: empty cube (skeleton only, for stiffening)
+  tags:
+    - cube-module
+components:
+  body:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: templates/openuc2.tpl.cube_1x1/ASS - 2000 - CUB - V04.glb
+        step: templates/openuc2.tpl.cube_1x1/ASS - 2000 - CUB - V04.stp
+    pose:
+      rotation:
+        kind: grid

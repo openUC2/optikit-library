@@ -1,0 +1,94 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  name: Smartphone Microscope
+  description: ""
+  tags:
+    - Microscope
+    - Smartphone
+    - Finite Corrected
+    - Brightfield
+components:
+  cubmir45-th2:
+    kind: design
+    design: designs/openuc2.cube.cubmir45_th2
+    category: mirror
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          x: -y
+      translation:
+        offset-grid:
+          x: -6
+          y: 5
+    instantiation:
+      variant: seat-mx-py
+  cubmir45-th2-2:
+    kind: design
+    design: designs/openuc2.cube.cubmir45_th2
+    category: mirror
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          x: -y
+      translation:
+        offset-grid:
+          x: -4
+          y: 5
+    instantiation:
+      variant: seat-mx-pz
+  cubmanstgr10:
+    kind: design
+    design: designs/user.cube.cubmanstgr10
+    category: lens
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          x: +y
+      translation:
+        offset-grid:
+          x: -7
+          y: 5
+          z: 1
+  cubledmtx:
+    kind: design
+    design: designs/user.cube.cubledmtx
+    category: source
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: -6
+          y: 5
+          z: 4
+    instantiation:
+      variant: seat-mz-px
+  cubeyepce:
+    kind: design
+    design: designs/user.cube.cubeyepce
+    category: lens
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: -4
+          y: 5
+          z: 1
+  cubsamhol:
+    kind: design
+    design: designs/user.cube.cubsamhol
+    category: sample
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          x: +y
+      translation:
+        offset-grid:
+          x: -6
+          y: 5
+          z: 2

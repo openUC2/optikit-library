@@ -1,0 +1,23 @@
+# Inventor geometry (PRT - 1004 - PUZ11 - V04 - A): 55.6 x 55.6 x 5 mm — the
+# noses overhang the 50 mm cell to puzzle into the neighbours; between layers,
+# one piece per cell. The file is cube-frame, the piece 27.5 mm below the cube
+# centre: the 5 mm zone under cube-layer z, which is the joint's cell (groups.py).
+kind: mechanical_template
+id: openuc2.tpl.puzzle_1x1
+version: 0.2.0
+class: fixed
+carrier: true
+description: inter-layer puzzle piece (miniFRAME sandwich joint)
+tags:
+  - bound
+  - carrier
+envelope:
+  x-mm: 55.6
+  y-mm: 55.6
+  z-mm: 5
+step: PRT - 1004 - PUZ11 - V04 - A.stp
+glb: PRT - 1004 - PUZ11 - V04 - A.glb
+footprint_grid:
+  - 1
+  - 1
+  - 1

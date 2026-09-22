@@ -1,0 +1,258 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: cubsamhol in a 1x1 cube (bound)
+  tags:
+    - cube-module
+components:
+  body:
+    kind: primitive
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+  optic:
+    kind: primitive
+    category: sample
+    optics:
+      frames:
+        optical: {}
+      passthrough: true
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +z
+          x: +x
+variants:
+  seat-pz-px:
+    description: as authored — the insert's home seat
+  seat-px-py:
+    description: insert seated +x / +y
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +x
+              x: +y
+  seat-px-pz:
+    description: insert seated +x / +z
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +x
+              x: +z
+  seat-px-my:
+    description: insert seated +x / -y
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +x
+              x: -y
+  seat-px-mz:
+    description: insert seated +x / -z
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +x
+              x: -z
+  seat-py-px:
+    description: insert seated +y / +x
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +y
+              x: +x
+  seat-py-pz:
+    description: insert seated +y / +z
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +y
+              x: +z
+  seat-py-mx:
+    description: insert seated +y / -x
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +y
+              x: -x
+  seat-py-mz:
+    description: insert seated +y / -z
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +y
+              x: -z
+  seat-pz-py:
+    description: insert seated +z / +y
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +z
+              x: +y
+  seat-pz-mx:
+    description: insert seated +z / -x
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +z
+              x: -x
+  seat-pz-my:
+    description: insert seated +z / -y
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +z
+              x: -y
+  seat-mx-py:
+    description: insert seated -x / +y
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -x
+              x: +y
+  seat-mx-pz:
+    description: insert seated -x / +z
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -x
+              x: +z
+  seat-mx-my:
+    description: insert seated -x / -y
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -x
+              x: -y
+  seat-mx-mz:
+    description: insert seated -x / -z
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -x
+              x: -z
+  seat-my-px:
+    description: insert seated -y / +x
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -y
+              x: +x
+  seat-my-pz:
+    description: insert seated -y / +z
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -y
+              x: +z
+  seat-my-mx:
+    description: insert seated -y / -x
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -y
+              x: -x
+  seat-my-mz:
+    description: insert seated -y / -z
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -y
+              x: -z
+  seat-mz-px:
+    description: insert seated -z / +x
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -z
+              x: +x
+  seat-mz-py:
+    description: insert seated -z / +y
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -z
+              x: +y
+  seat-mz-mx:
+    description: insert seated -z / -x
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -z
+              x: -x
+  seat-mz-my:
+    description: insert seated -z / -y
+    components:
+      optic:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -z
+              x: -y
