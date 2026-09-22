@@ -1,7 +1,112 @@
 {
   "schema": "optikit-library-index/v0",
-  "count": 3,
+  "count": 6,
   "modules": [
+    {
+      "id": "openuc2.cube.cubmir45_th2",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "cubmir45_th2 in a 1x1 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "mirror",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "locked": false,
+      "review": false,
+      "review_notes": [],
+      "design": null,
+      "component": {
+        "ref": "openuc2.mirror.cubmir45_th2@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": "",
+          "price": null,
+          "currency": "EUR"
+        },
+        "efl_mm": null,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": 1e999,
+              "conic": 0
+            },
+            "material_post": {
+              "type": "Material",
+              "name": "N-BK7"
+            },
+            "thickness": 6,
+            "interaction_model": {
+              "type": "refractive_reflective",
+              "is_reflective": true
+            },
+            "semi_aperture": 12.7
+          },
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": 1e999,
+              "conic": 0
+            },
+            "semi_aperture": 12.7
+          }
+        ],
+        "programmable": null
+      },
+      "template": {
+        "ref": "openuc2.tpl.cubmir45_th2@^0.1",
+        "id": "openuc2.tpl.cubmir45_th2",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {},
+        "mounts": {},
+        "fits": ""
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/openuc2.tpl.cubmir45_th2/ASS - 2020 - CUBMIR45\u00b0TH2 - V04.glb",
+        "step": "/v1/library/assets/templates/openuc2.tpl.cubmir45_th2/ASS - 2020 - CUBMIR45\u00b0TH2 - V04.stp",
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [],
+      "frames": {
+        "optical": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "ports_frame": "record",
+      "insert_rot_xyzw": [
+        -0.653281,
+        0.270598,
+        0.653281,
+        0.270598
+      ],
+      "electronics": null
+    },
     {
       "id": "user.cube.cubglv",
       "version": "0.1.0",
@@ -50,7 +155,7 @@
               "type": "Material",
               "name": "N-BK7"
             },
-            "thickness": 1,
+            "thickness": 6,
             "interaction_model": {
               "type": "refractive_reflective",
               "is_reflective": true
@@ -91,7 +196,7 @@
         "symbol": null,
         "mesh_frame": "",
         "mesh_pose_grid": [
-          "+z",
+          "-z",
           "+x"
         ],
         "mesh_pose_offset_mm": null,
@@ -108,9 +213,9 @@
       "ports_frame": "record",
       "insert_rot_xyzw": [
         0.0,
-        0.382683,
         0.0,
-        0.92388
+        0.0,
+        1.0
       ],
       "electronics": null
     },
@@ -187,9 +292,91 @@
       "ports_frame": "record",
       "insert_rot_xyzw": [
         -0.5,
+        -0.5,
         0.5,
-        0.5,
-        0.5
+        -0.5
+      ],
+      "electronics": null
+    },
+    {
+      "id": "user.cube.cublas650ecc",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "cublas650ecc in a 1x2 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "source",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        2,
+        1
+      ],
+      "price": null,
+      "locked": false,
+      "review": false,
+      "review_notes": [],
+      "design": null,
+      "component": {
+        "ref": "user.source.cublas650ecc@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": "",
+          "price": 100.0,
+          "currency": "EUR"
+        },
+        "efl_mm": null,
+        "wavelengths_um": [
+          0.65
+        ],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [],
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.cublas650ecc@^0.1",
+        "id": "user.tpl.cublas650ecc",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {},
+        "mounts": {},
+        "fits": ""
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.cublas650ecc/ASS - 2081 - CUBLAS650ECC - V04.glb",
+        "step": "/v1/library/assets/templates/user.tpl.cublas650ecc/ASS - 2081 - CUBLAS650ECC - V04.stp",
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": [
+          "-z",
+          "+x"
+        ],
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [],
+      "frames": {
+        "optical": [
+          0.0,
+          -48.25,
+          -8.0
+        ]
+      },
+      "ports_frame": "record",
+      "insert_rot_xyzw": [
+        -0.707107,
+        0.0,
+        0.0,
+        0.707107
       ],
       "electronics": null
     },
@@ -293,15 +480,224 @@
         0.0
       ],
       "electronics": null
+    },
+    {
+      "id": "user.cube.cubmanstgr10",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "cubmanstgr10 in a 1x2 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "lens",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        2,
+        1
+      ],
+      "price": null,
+      "locked": false,
+      "review": false,
+      "review_notes": [],
+      "design": null,
+      "component": {
+        "ref": "user.lens.cubmanstgr10@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": "",
+          "price": null,
+          "currency": "EUR"
+        },
+        "efl_mm": 49.043,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": 50,
+              "conic": 0
+            },
+            "material_post": {
+              "type": "Material",
+              "name": "N-BK7"
+            },
+            "thickness": 4,
+            "semi_aperture": 12.7
+          },
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": -50,
+              "conic": 0
+            },
+            "semi_aperture": 12.7
+          }
+        ],
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.cubmanstgr10@^0.1",
+        "id": "user.tpl.cubmanstgr10",
+        "resolved": "0.1.0",
+        "class": "adaptive",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {},
+        "mounts": {},
+        "fits": ""
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.cubmanstgr10/ASS - 3004 - CUBMANSTGR10 - V04.glb",
+        "step": "/v1/library/assets/templates/user.tpl.cubmanstgr10/ASS - 3004 - CUBMANSTGR10 - V04.stp",
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [],
+      "frames": {
+        "optical": [
+          0.0,
+          -50.0,
+          0.0
+        ]
+      },
+      "ports_frame": "record",
+      "insert_rot_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "electronics": null
     }
   ],
   "components": [
+    {
+      "id": "openuc2.mirror.cubmir45_th2",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "mirror",
+      "description": "ASS - 2020 - CUBMIR45\u00b0TH2 - V04",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": "",
+        "price": null,
+        "currency": "EUR"
+      },
+      "efl_mm": null,
+      "n_surfaces": 2,
+      "review": false,
+      "locked": false,
+      "ports": [],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 1e999,
+            "conic": 0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-BK7"
+          },
+          "thickness": 6,
+          "interaction_model": {
+            "type": "refractive_reflective",
+            "is_reflective": true
+          },
+          "semi_aperture": 12.7
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 1e999,
+            "conic": 0
+          },
+          "semi_aperture": 12.7
+        }
+      ],
+      "mirror_elements": null
+    },
     {
       "id": "user.lens.cublend40f50",
       "version": "0.1.0",
       "kind": "optical_component",
       "category": "lens",
       "description": "ASS - 2021 - CUBLEND40F50 - V04",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": "",
+        "price": null,
+        "currency": "EUR"
+      },
+      "efl_mm": 49.043,
+      "n_surfaces": 2,
+      "review": false,
+      "locked": false,
+      "ports": [],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 50,
+            "conic": 0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-BK7"
+          },
+          "thickness": 4,
+          "semi_aperture": 12.7
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": -50,
+            "conic": 0
+          },
+          "semi_aperture": 12.7
+        }
+      ],
+      "mirror_elements": null
+    },
+    {
+      "id": "user.lens.cubmanstgr10",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "lens",
+      "description": "ASS - 3004 - CUBMANSTGR10 - V04",
       "tags": [
         "authored"
       ],
@@ -385,7 +781,7 @@
             "type": "Material",
             "name": "N-BK7"
           },
-          "thickness": 1,
+          "thickness": 6,
           "interaction_model": {
             "type": "refractive_reflective",
             "is_reflective": true
@@ -434,6 +830,36 @@
       ],
       "divergence_deg": 1.0,
       "beam_diameter_mm": 5.0,
+      "symbol": null,
+      "fragment_surfaces": [],
+      "mirror_elements": null
+    },
+    {
+      "id": "user.source.cublas650ecc",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "source",
+      "description": "ASS - 2081 - CUBLAS650ECC - V04",
+      "tags": [
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": "",
+        "price": 100.0,
+        "currency": "EUR"
+      },
+      "efl_mm": null,
+      "n_surfaces": 0,
+      "review": false,
+      "locked": false,
+      "ports": [],
+      "wavelengths_um": [
+        0.65
+      ],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
       "symbol": null,
       "fragment_surfaces": [],
       "mirror_elements": null
