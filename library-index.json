@@ -1,623 +1,29 @@
 {
   "schema": "optikit-library-index/v0",
-  "count": 8,
+  "count": 3,
   "modules": [
     {
-      "id": "openuc2.cube.frame",
-      "version": "0.1.2",
-      "kind": "cube_module",
-      "description": "FRAME body \u2014 the substructure with the miniFRAME rail bay; stage, arm and electronics dock on its mounts",
-      "tags": [
-        "carrier",
-        "frame"
-      ],
-      "category": "mechanics",
-      "thumbnail": null,
-      "footprint_grid": [
-        7,
-        7,
-        3
-      ],
-      "price": 1500.0,
-      "locked": true,
-      "review": true,
-      "review_notes": [
-        "template: measured from FRAME #0008 - Microscope incl accessories.stp (exported 2026-09-10)",
-        "template: rail capacity (8 deep) and the arm's cube seats are not measurable from this export \u2014 confirm against the rail drawing"
-      ],
-      "design": {
-        "ref": "designs/openuc2.cube.frame",
-        "name": "openuc2.cube.frame",
-        "variants": [],
-        "inputs": {},
-        "children": [
-          {
-            "id": "body",
-            "category": "mechanics",
-            "glb": "/v1/library/assets/designs/openuc2.cube.frame/templates/openuc2.tpl.frame/model.glb",
-            "pose": {
-              "rotation": {
-                "kind": "grid"
-              }
-            },
-            "moving_nodes": [],
-            "optical": false
-          }
-        ]
-      },
-      "component": {
-        "ref": "openuc2.mechanics.frame@^0.1",
-        "resolved": "0.1.2",
-        "vendor": {
-          "name": "",
-          "mpn": "",
-          "url": "",
-          "price": null,
-          "currency": "EUR"
-        },
-        "efl_mm": null,
-        "wavelengths_um": [],
-        "divergence_deg": 0.0,
-        "beam_diameter_mm": null,
-        "mirror_rect_mm": null,
-        "fragment_surfaces": [],
-        "programmable": null
-      },
-      "template": {
-        "ref": "openuc2.tpl.frame@^0.1",
-        "id": "openuc2.tpl.frame",
-        "resolved": "0.1.7",
-        "class": "fixed",
-        "actuatable": false,
-        "carrier": true,
-        "bays": {
-          "miniframe": {
-            "origin_cell": [
-              -1,
-              -7,
-              0
-            ],
-            "size": [
-              3,
-              8,
-              2
-            ],
-            "axis": "+z"
-          }
-        },
-        "mounts": {
-          "stage": {
-            "offset_mm": [
-              0.0,
-              0.0,
-              134.1
-            ],
-            "grid": [
-              "+z",
-              "+x"
-            ],
-            "offset_deg": null,
-            "accepts": "openuc2.frame.stage",
-            "on": ""
-          },
-          "arm": {
-            "offset_mm": [
-              0.0,
-              0.0,
-              219.1
-            ],
-            "grid": [
-              "+z",
-              "+x"
-            ],
-            "offset_deg": null,
-            "accepts": "openuc2.frame.arm",
-            "on": ""
-          },
-          "electronics": {
-            "offset_mm": [
-              0.0,
-              111.0,
-              -35.9
-            ],
-            "grid": [
-              "+z",
-              "+x"
-            ],
-            "offset_deg": null,
-            "accepts": "openuc2.frame.electronics",
-            "on": ""
-          }
-        },
-        "fits": ""
-      },
-      "assets": {
-        "thumbnail": null,
-        "glb": "/v1/library/assets/templates/openuc2.tpl.frame/model.glb",
-        "step": null,
-        "symbol": null,
-        "mesh_pose_grid": null,
-        "mesh_pose_offset_mm": null,
-        "mesh_pose_offset_deg": null
-      },
-      "frames": {},
-      "insert_rot_xyzw": null,
-      "electronics": null
-    },
-    {
-      "id": "openuc2.cube.plate_3x3",
-      "version": "0.1.1",
-      "kind": "cube_module",
-      "description": "3x3 aluminium sandwich plate (miniFRAME)",
-      "tags": [
-        "carrier",
-        "miniframe",
-        "plate"
-      ],
-      "category": "mechanics",
-      "thumbnail": null,
-      "footprint_grid": [
-        3,
-        3,
-        1
-      ],
-      "price": 45.0,
-      "locked": true,
-      "review": true,
-      "review_notes": [
-        "component: hole pattern uses parametric defaults \u2014 verify against UC2-GIT/MDK before machining"
-      ],
-      "design": {
-        "ref": "designs/openuc2.cube.plate_3x3",
-        "name": "openuc2.cube.plate_3x3",
-        "variants": [],
-        "inputs": {},
-        "children": [
-          {
-            "id": "body",
-            "category": "mechanics",
-            "glb": "/v1/library/assets/designs/openuc2.cube.plate_3x3/templates/openuc2.tpl.plate_3x3/model.glb",
-            "pose": {
-              "rotation": {
-                "kind": "grid"
-              }
-            },
-            "moving_nodes": [],
-            "optical": false
-          }
-        ]
-      },
-      "component": {
-        "ref": "openuc2.mechanics.plate_3x3@^0.1",
-        "resolved": "0.1.1",
-        "vendor": {
-          "name": "",
-          "mpn": "",
-          "url": "",
-          "price": null,
-          "currency": "EUR"
-        },
-        "efl_mm": null,
-        "wavelengths_um": [],
-        "divergence_deg": 0.0,
-        "beam_diameter_mm": null,
-        "mirror_rect_mm": null,
-        "fragment_surfaces": [],
-        "programmable": null
-      },
-      "template": {
-        "ref": "openuc2.tpl.plate_3x3@^0.1",
-        "id": "openuc2.tpl.plate_3x3",
-        "resolved": "0.1.3",
-        "class": "generative",
-        "actuatable": false,
-        "carrier": true,
-        "bays": {},
-        "mounts": {},
-        "fits": ""
-      },
-      "assets": {
-        "thumbnail": null,
-        "glb": "/v1/library/assets/templates/openuc2.tpl.plate_3x3/model.glb",
-        "step": "/v1/library/assets/templates/openuc2.tpl.plate_3x3/model.step",
-        "symbol": null,
-        "mesh_pose_grid": null,
-        "mesh_pose_offset_mm": null,
-        "mesh_pose_offset_deg": null
-      },
-      "frames": {},
-      "insert_rot_xyzw": null,
-      "electronics": null
-    },
-    {
-      "id": "openuc2.cube.plate_3x4",
-      "version": "0.1.1",
-      "kind": "cube_module",
-      "description": "3x4 aluminium sandwich plate (miniFRAME)",
-      "tags": [
-        "carrier",
-        "miniframe",
-        "plate"
-      ],
-      "category": "mechanics",
-      "thumbnail": null,
-      "footprint_grid": [
-        3,
-        4,
-        1
-      ],
-      "price": 45.0,
-      "locked": true,
-      "review": true,
-      "review_notes": [
-        "component: hole pattern uses parametric defaults \u2014 verify against UC2-GIT/MDK before machining"
-      ],
-      "design": {
-        "ref": "designs/openuc2.cube.plate_3x4",
-        "name": "openuc2.cube.plate_3x4",
-        "variants": [],
-        "inputs": {},
-        "children": [
-          {
-            "id": "body",
-            "category": "mechanics",
-            "glb": "/v1/library/assets/designs/openuc2.cube.plate_3x4/templates/openuc2.tpl.plate_3x4/model.glb",
-            "pose": {
-              "rotation": {
-                "kind": "grid"
-              }
-            },
-            "moving_nodes": [],
-            "optical": false
-          }
-        ]
-      },
-      "component": {
-        "ref": "openuc2.mechanics.plate_3x4@^0.1",
-        "resolved": "0.1.1",
-        "vendor": {
-          "name": "",
-          "mpn": "",
-          "url": "",
-          "price": null,
-          "currency": "EUR"
-        },
-        "efl_mm": null,
-        "wavelengths_um": [],
-        "divergence_deg": 0.0,
-        "beam_diameter_mm": null,
-        "mirror_rect_mm": null,
-        "fragment_surfaces": [],
-        "programmable": null
-      },
-      "template": {
-        "ref": "openuc2.tpl.plate_3x4@^0.1",
-        "id": "openuc2.tpl.plate_3x4",
-        "resolved": "0.1.3",
-        "class": "generative",
-        "actuatable": false,
-        "carrier": true,
-        "bays": {},
-        "mounts": {},
-        "fits": ""
-      },
-      "assets": {
-        "thumbnail": null,
-        "glb": "/v1/library/assets/templates/openuc2.tpl.plate_3x4/model.glb",
-        "step": "/v1/library/assets/templates/openuc2.tpl.plate_3x4/model.step",
-        "symbol": null,
-        "mesh_pose_grid": null,
-        "mesh_pose_offset_mm": null,
-        "mesh_pose_offset_deg": null
-      },
-      "frames": {},
-      "insert_rot_xyzw": null,
-      "electronics": null
-    },
-    {
-      "id": "openuc2.cube.plate_3x5",
-      "version": "0.1.1",
-      "kind": "cube_module",
-      "description": "3x5 aluminium sandwich plate (miniFRAME)",
-      "tags": [
-        "carrier",
-        "miniframe",
-        "plate"
-      ],
-      "category": "mechanics",
-      "thumbnail": null,
-      "footprint_grid": [
-        3,
-        5,
-        1
-      ],
-      "price": 45.0,
-      "locked": true,
-      "review": true,
-      "review_notes": [
-        "component: hole pattern uses parametric defaults \u2014 verify against UC2-GIT/MDK before machining"
-      ],
-      "design": {
-        "ref": "designs/openuc2.cube.plate_3x5",
-        "name": "openuc2.cube.plate_3x5",
-        "variants": [],
-        "inputs": {},
-        "children": [
-          {
-            "id": "body",
-            "category": "mechanics",
-            "glb": "/v1/library/assets/designs/openuc2.cube.plate_3x5/templates/openuc2.tpl.plate_3x5/model.glb",
-            "pose": {
-              "rotation": {
-                "kind": "grid"
-              }
-            },
-            "moving_nodes": [],
-            "optical": false
-          }
-        ]
-      },
-      "component": {
-        "ref": "openuc2.mechanics.plate_3x5@^0.1",
-        "resolved": "0.1.1",
-        "vendor": {
-          "name": "",
-          "mpn": "",
-          "url": "",
-          "price": null,
-          "currency": "EUR"
-        },
-        "efl_mm": null,
-        "wavelengths_um": [],
-        "divergence_deg": 0.0,
-        "beam_diameter_mm": null,
-        "mirror_rect_mm": null,
-        "fragment_surfaces": [],
-        "programmable": null
-      },
-      "template": {
-        "ref": "openuc2.tpl.plate_3x5@^0.1",
-        "id": "openuc2.tpl.plate_3x5",
-        "resolved": "0.1.3",
-        "class": "generative",
-        "actuatable": false,
-        "carrier": true,
-        "bays": {},
-        "mounts": {},
-        "fits": ""
-      },
-      "assets": {
-        "thumbnail": null,
-        "glb": "/v1/library/assets/templates/openuc2.tpl.plate_3x5/model.glb",
-        "step": "/v1/library/assets/templates/openuc2.tpl.plate_3x5/model.step",
-        "symbol": null,
-        "mesh_pose_grid": null,
-        "mesh_pose_offset_mm": null,
-        "mesh_pose_offset_deg": null
-      },
-      "frames": {},
-      "insert_rot_xyzw": null,
-      "electronics": null
-    },
-    {
-      "id": "openuc2.cube.plate_3x8",
-      "version": "0.1.1",
-      "kind": "cube_module",
-      "description": "3x8 aluminium sandwich plate (miniFRAME laser-scanning OPM)",
-      "tags": [
-        "carrier",
-        "miniframe",
-        "plate"
-      ],
-      "category": "mechanics",
-      "thumbnail": null,
-      "footprint_grid": [
-        3,
-        8,
-        1
-      ],
-      "price": 95.0,
-      "locked": true,
-      "review": true,
-      "review_notes": [
-        "module: price is a placeholder \u2014 fill the real one",
-        "component: hole pattern uses parametric defaults \u2014 verify against UC2-GIT/MDK before machining"
-      ],
-      "design": {
-        "ref": "designs/openuc2.cube.plate_3x8",
-        "name": "openuc2.cube.plate_3x8",
-        "variants": [],
-        "inputs": {},
-        "children": [
-          {
-            "id": "body",
-            "category": "mechanics",
-            "glb": "/v1/library/assets/designs/openuc2.cube.plate_3x8/templates/openuc2.tpl.plate_3x8/model.glb",
-            "pose": {
-              "rotation": {
-                "kind": "grid"
-              }
-            },
-            "moving_nodes": [],
-            "optical": false
-          }
-        ]
-      },
-      "component": {
-        "ref": "openuc2.mechanics.plate_3x8@^0.1",
-        "resolved": "0.1.1",
-        "vendor": {
-          "name": "",
-          "mpn": "",
-          "url": "",
-          "price": null,
-          "currency": "EUR"
-        },
-        "efl_mm": null,
-        "wavelengths_um": [],
-        "divergence_deg": 0.0,
-        "beam_diameter_mm": null,
-        "mirror_rect_mm": null,
-        "fragment_surfaces": [],
-        "programmable": null
-      },
-      "template": {
-        "ref": "openuc2.tpl.plate_3x8@^0.1",
-        "id": "openuc2.tpl.plate_3x8",
-        "resolved": "0.1.3",
-        "class": "generative",
-        "actuatable": false,
-        "carrier": true,
-        "bays": {},
-        "mounts": {},
-        "fits": ""
-      },
-      "assets": {
-        "thumbnail": null,
-        "glb": "/v1/library/assets/templates/openuc2.tpl.plate_3x8/model.glb",
-        "step": "/v1/library/assets/templates/openuc2.tpl.plate_3x8/model.step",
-        "symbol": null,
-        "mesh_pose_grid": null,
-        "mesh_pose_offset_mm": null,
-        "mesh_pose_offset_deg": null
-      },
-      "frames": {},
-      "insert_rot_xyzw": null,
-      "electronics": null
-    },
-    {
-      "id": "openuc2.cube.plate_4x6",
-      "version": "0.1.1",
-      "kind": "cube_module",
-      "description": "4x6 aluminium sandwich plate (miniFRAME)",
-      "tags": [
-        "carrier",
-        "miniframe",
-        "plate"
-      ],
-      "category": "mechanics",
-      "thumbnail": null,
-      "footprint_grid": [
-        4,
-        6,
-        1
-      ],
-      "price": null,
-      "locked": true,
-      "review": true,
-      "review_notes": [
-        "module: generated for a 4x6 optical module \u2014 verify the hole pattern before machining",
-        "component: generated for a 4x6 optical module \u2014 verify the hole pattern before machining",
-        "template: mesh not generated here: generator script not found: /Users/bene/Downloads/OPTIKIT/optikit-library/generators/plate_nxm.py"
-      ],
-      "design": {
-        "ref": "designs/openuc2.cube.plate_4x6",
-        "name": "openuc2.cube.plate_4x6",
-        "variants": [],
-        "inputs": {},
-        "children": [
-          {
-            "id": "body",
-            "category": "mechanics",
-            "glb": "/v1/library/assets/designs/openuc2.cube.plate_4x6/templates/openuc2.tpl.plate_4x6/model.glb",
-            "pose": {
-              "rotation": {
-                "kind": "grid"
-              }
-            },
-            "moving_nodes": [],
-            "optical": false
-          }
-        ]
-      },
-      "component": {
-        "ref": "openuc2.mechanics.plate_4x6@^0.1",
-        "resolved": "0.1.1",
-        "vendor": {
-          "name": "",
-          "mpn": "",
-          "url": "",
-          "price": null,
-          "currency": "EUR"
-        },
-        "efl_mm": null,
-        "wavelengths_um": [],
-        "divergence_deg": 0.0,
-        "beam_diameter_mm": null,
-        "mirror_rect_mm": null,
-        "fragment_surfaces": [],
-        "programmable": null
-      },
-      "template": {
-        "ref": "openuc2.tpl.plate_4x6@^0.1",
-        "id": "openuc2.tpl.plate_4x6",
-        "resolved": "0.1.2",
-        "class": "generative",
-        "actuatable": false,
-        "carrier": true,
-        "bays": {},
-        "mounts": {},
-        "fits": ""
-      },
-      "assets": {
-        "thumbnail": null,
-        "glb": "/v1/library/assets/templates/openuc2.tpl.plate_4x6/model.glb",
-        "step": "/v1/library/assets/templates/openuc2.tpl.plate_4x6/model.step",
-        "symbol": null,
-        "mesh_pose_grid": null,
-        "mesh_pose_offset_mm": null,
-        "mesh_pose_offset_deg": null
-      },
-      "frames": {},
-      "insert_rot_xyzw": null,
-      "electronics": null
-    },
-    {
-      "id": "openuc2.cube.plate_5x3",
+      "id": "user.cube.cubglv",
       "version": "0.1.0",
       "kind": "cube_module",
-      "description": "5x3 aluminium sandwich plate (miniFRAME)",
+      "description": "cubglv in a 2x2 cube (bound)",
       "tags": [
-        "carrier",
-        "miniframe",
-        "plate"
+        "bound"
       ],
-      "category": "mechanics",
+      "category": "mirror",
       "thumbnail": null,
       "footprint_grid": [
-        5,
-        3,
+        2,
+        2,
         1
       ],
       "price": null,
       "locked": false,
-      "review": true,
-      "review_notes": [
-        "module: generated for a 5x3 optical module \u2014 verify the hole pattern before machining",
-        "component: generated for a 5x3 optical module \u2014 verify the hole pattern before machining"
-      ],
-      "design": {
-        "ref": "designs/openuc2.cube.plate_5x3",
-        "name": "openuc2.cube.plate_5x3",
-        "variants": [],
-        "inputs": {},
-        "children": [
-          {
-            "id": "body",
-            "category": "mechanics",
-            "glb": "/v1/library/assets/designs/openuc2.cube.plate_5x3/templates/openuc2.tpl.plate_5x3/model.glb",
-            "pose": {
-              "rotation": {
-                "kind": "grid"
-              }
-            },
-            "moving_nodes": [],
-            "optical": false
-          }
-        ]
-      },
+      "review": false,
+      "review_notes": [],
+      "design": null,
       "component": {
-        "ref": "openuc2.mechanics.plate_5x3@^0.1",
+        "ref": "user.mirror.cubglv@^0.1",
         "resolved": "0.1.0",
         "vendor": {
           "name": "",
@@ -631,314 +37,325 @@
         "divergence_deg": 0.0,
         "beam_diameter_mm": null,
         "mirror_rect_mm": null,
-        "fragment_surfaces": [],
-        "programmable": null
-      },
-      "template": {
-        "ref": "openuc2.tpl.plate_5x3@^0.1",
-        "id": "openuc2.tpl.plate_5x3",
-        "resolved": "0.1.0",
-        "class": "generative",
-        "actuatable": false,
-        "carrier": true,
-        "bays": {},
-        "mounts": {},
-        "fits": ""
-      },
-      "assets": {
-        "thumbnail": null,
-        "glb": "/v1/library/assets/templates/openuc2.tpl.plate_5x3/model.glb",
-        "step": "/v1/library/assets/templates/openuc2.tpl.plate_5x3/model.step",
-        "symbol": null,
-        "mesh_pose_grid": null,
-        "mesh_pose_offset_mm": null,
-        "mesh_pose_offset_deg": null
-      },
-      "frames": {},
-      "insert_rot_xyzw": null,
-      "electronics": null
-    },
-    {
-      "id": "openuc2.cube.puzzle_1x1",
-      "version": "0.1.1",
-      "kind": "cube_module",
-      "description": "Inter-layer puzzle piece (miniFRAME sandwich joint)",
-      "tags": [
-        "carrier",
-        "miniframe"
-      ],
-      "category": "mechanics",
-      "thumbnail": null,
-      "footprint_grid": [
-        1,
-        1,
-        1
-      ],
-      "price": 2.0,
-      "locked": true,
-      "review": false,
-      "review_notes": [],
-      "design": {
-        "ref": "designs/openuc2.cube.puzzle_1x1",
-        "name": "openuc2.cube.puzzle_1x1",
-        "variants": [],
-        "inputs": {},
-        "children": [
+        "mirror_elements": null,
+        "fragment_surfaces": [
           {
-            "id": "body",
-            "category": "mechanics",
-            "glb": "/v1/library/assets/designs/openuc2.cube.puzzle_1x1/templates/openuc2.tpl.puzzle_1x1/model.glb",
-            "pose": {
-              "rotation": {
-                "kind": "grid",
-                "grid": {
-                  "z": "-y",
-                  "x": "+x"
-                }
-              }
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": 1e999,
+              "conic": 0
             },
-            "moving_nodes": [],
-            "optical": false
+            "material_post": {
+              "type": "Material",
+              "name": "N-BK7"
+            },
+            "thickness": 1,
+            "interaction_model": {
+              "type": "refractive_reflective",
+              "is_reflective": true
+            },
+            "semi_aperture": 12.7
+          },
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": 1e999,
+              "conic": 0
+            },
+            "interaction_model": {
+              "type": "refractive_reflective",
+              "is_reflective": true
+            },
+            "semi_aperture": 12.7
           }
-        ]
-      },
-      "component": {
-        "ref": "openuc2.mechanics.puzzle_1x1@^0.1",
-        "resolved": "0.1.1",
-        "vendor": {
-          "name": "openUC2",
-          "mpn": "PRT-1004-PUZ11",
-          "url": "",
-          "price": null,
-          "currency": "EUR"
-        },
-        "efl_mm": null,
-        "wavelengths_um": [],
-        "divergence_deg": 0.0,
-        "beam_diameter_mm": null,
-        "mirror_rect_mm": null,
-        "fragment_surfaces": [],
+        ],
         "programmable": null
       },
       "template": {
-        "ref": "openuc2.tpl.puzzle_1x1@^0.1",
-        "id": "openuc2.tpl.puzzle_1x1",
-        "resolved": "0.1.1",
-        "class": "fixed",
+        "ref": "user.tpl.cubglv@^0.1",
+        "id": "user.tpl.cubglv",
+        "resolved": "0.1.0",
+        "class": "adaptive",
         "actuatable": false,
-        "carrier": true,
+        "carrier": false,
         "bays": {},
         "mounts": {},
         "fits": ""
       },
       "assets": {
         "thumbnail": null,
-        "glb": "/v1/library/assets/templates/openuc2.tpl.puzzle_1x1/model.glb",
-        "step": "/v1/library/assets/templates/openuc2.tpl.puzzle_1x1/model.step",
+        "glb": "/v1/library/assets/templates/user.tpl.cubglv/ASS - 2075 - CUBGLV - V04.glb",
+        "step": "/v1/library/assets/templates/user.tpl.cubglv/ASS - 2075 - CUBGLV - V04.stp",
         "symbol": null,
+        "mesh_frame": "",
         "mesh_pose_grid": [
-          "-y",
+          "+z",
           "+x"
         ],
         "mesh_pose_offset_mm": null,
         "mesh_pose_offset_deg": null
       },
-      "frames": {},
-      "insert_rot_xyzw": null,
+      "ports": [],
+      "frames": {
+        "optical": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "ports_frame": "record",
+      "insert_rot_xyzw": [
+        0.0,
+        0.382683,
+        0.0,
+        0.92388
+      ],
+      "electronics": null
+    },
+    {
+      "id": "user.cube.cublas520",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "cublas520 in a 1x2 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "source",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        2,
+        1
+      ],
+      "price": null,
+      "locked": false,
+      "review": false,
+      "review_notes": [],
+      "design": null,
+      "component": {
+        "ref": "user.source.cublas520@^0.1",
+        "resolved": "0.1.1",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": "",
+          "price": 100.0,
+          "currency": "EUR"
+        },
+        "efl_mm": null,
+        "wavelengths_um": [
+          0.52
+        ],
+        "divergence_deg": 1.0,
+        "beam_diameter_mm": 5.0,
+        "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [],
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.cublas520@^0.1",
+        "id": "user.tpl.cublas520",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {},
+        "mounts": {},
+        "fits": ""
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.cublas520/ASS - 2018 - CUBLAS520 - V04 - A.glb",
+        "step": "/v1/library/assets/templates/user.tpl.cublas520/ASS - 2018 - CUBLAS520 - V04 - A.stp",
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [],
+      "frames": {
+        "optical": [
+          0.0,
+          -22.0,
+          0.0
+        ]
+      },
+      "ports_frame": "record",
+      "insert_rot_xyzw": [
+        -0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "electronics": null
+    },
+    {
+      "id": "user.cube.cublend40f50",
+      "version": "0.1.0",
+      "kind": "cube_module",
+      "description": "cublend40f50 in a 1x1 cube (bound)",
+      "tags": [
+        "bound"
+      ],
+      "category": "lens",
+      "thumbnail": null,
+      "footprint_grid": [
+        1,
+        1,
+        1
+      ],
+      "price": null,
+      "locked": false,
+      "review": false,
+      "review_notes": [],
+      "design": null,
+      "component": {
+        "ref": "user.lens.cublend40f50@^0.1",
+        "resolved": "0.1.0",
+        "vendor": {
+          "name": "",
+          "mpn": "",
+          "url": "",
+          "price": null,
+          "currency": "EUR"
+        },
+        "efl_mm": 49.043,
+        "wavelengths_um": [],
+        "divergence_deg": 0.0,
+        "beam_diameter_mm": null,
+        "mirror_rect_mm": null,
+        "mirror_elements": null,
+        "fragment_surfaces": [
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": 50,
+              "conic": 0
+            },
+            "material_post": {
+              "type": "Material",
+              "name": "N-BK7"
+            },
+            "thickness": 4,
+            "semi_aperture": 12.7
+          },
+          {
+            "type": "standard",
+            "geometry": {
+              "type": "StandardGeometry",
+              "radius": -50,
+              "conic": 0
+            },
+            "semi_aperture": 12.7
+          }
+        ],
+        "programmable": null
+      },
+      "template": {
+        "ref": "user.tpl.cublend40f50@^0.1",
+        "id": "user.tpl.cublend40f50",
+        "resolved": "0.1.0",
+        "class": "fixed",
+        "actuatable": false,
+        "carrier": false,
+        "bays": {},
+        "mounts": {},
+        "fits": ""
+      },
+      "assets": {
+        "thumbnail": null,
+        "glb": "/v1/library/assets/templates/user.tpl.cublend40f50/ASS - 2021 - CUBLEND40F50 - V04.glb",
+        "step": "/v1/library/assets/templates/user.tpl.cublend40f50/ASS - 2021 - CUBLEND40F50 - V04.stp",
+        "symbol": null,
+        "mesh_frame": "",
+        "mesh_pose_grid": null,
+        "mesh_pose_offset_mm": null,
+        "mesh_pose_offset_deg": null
+      },
+      "ports": [],
+      "frames": {
+        "optical": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "ports_frame": "record",
+      "insert_rot_xyzw": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
       "electronics": null
     }
   ],
   "components": [
     {
-      "id": "openuc2.mechanics.frame",
-      "version": "0.1.2",
-      "kind": "optical_component",
-      "category": "mechanics",
-      "description": "FRAME body \u2014 substructure with the miniFRAME rail bay",
-      "tags": [
-        "mechanics",
-        "carrier",
-        "frame"
-      ],
-      "vendor": {
-        "name": "",
-        "mpn": "",
-        "url": "",
-        "price": null,
-        "currency": "EUR"
-      },
-      "efl_mm": null,
-      "n_surfaces": 0,
-      "review": false,
-      "locked": true,
-      "wavelengths_um": [],
-      "divergence_deg": 0.0,
-      "beam_diameter_mm": null,
-      "symbol": null,
-      "fragment_surfaces": [],
-      "frames": {}
-    },
-    {
-      "id": "openuc2.mechanics.plate_3x3",
-      "version": "0.1.1",
-      "kind": "optical_component",
-      "category": "mechanics",
-      "description": "3x3 aluminium sandwich plate (miniFRAME top/bottom)",
-      "tags": [
-        "mechanics",
-        "carrier",
-        "miniframe",
-        "plate"
-      ],
-      "vendor": {
-        "name": "",
-        "mpn": "",
-        "url": "",
-        "price": null,
-        "currency": "EUR"
-      },
-      "efl_mm": null,
-      "n_surfaces": 0,
-      "review": true,
-      "locked": true,
-      "wavelengths_um": [],
-      "divergence_deg": 0.0,
-      "beam_diameter_mm": null,
-      "symbol": null,
-      "fragment_surfaces": [],
-      "frames": {}
-    },
-    {
-      "id": "openuc2.mechanics.plate_3x4",
-      "version": "0.1.1",
-      "kind": "optical_component",
-      "category": "mechanics",
-      "description": "3x4 aluminium sandwich plate (miniFRAME top/bottom)",
-      "tags": [
-        "mechanics",
-        "carrier",
-        "miniframe",
-        "plate"
-      ],
-      "vendor": {
-        "name": "",
-        "mpn": "",
-        "url": "",
-        "price": null,
-        "currency": "EUR"
-      },
-      "efl_mm": null,
-      "n_surfaces": 0,
-      "review": true,
-      "locked": true,
-      "wavelengths_um": [],
-      "divergence_deg": 0.0,
-      "beam_diameter_mm": null,
-      "symbol": null,
-      "fragment_surfaces": [],
-      "frames": {}
-    },
-    {
-      "id": "openuc2.mechanics.plate_3x5",
-      "version": "0.1.1",
-      "kind": "optical_component",
-      "category": "mechanics",
-      "description": "3x5 aluminium sandwich plate (miniFRAME top/bottom)",
-      "tags": [
-        "mechanics",
-        "carrier",
-        "miniframe",
-        "plate"
-      ],
-      "vendor": {
-        "name": "",
-        "mpn": "",
-        "url": "",
-        "price": null,
-        "currency": "EUR"
-      },
-      "efl_mm": null,
-      "n_surfaces": 0,
-      "review": true,
-      "locked": true,
-      "wavelengths_um": [],
-      "divergence_deg": 0.0,
-      "beam_diameter_mm": null,
-      "symbol": null,
-      "fragment_surfaces": [],
-      "frames": {}
-    },
-    {
-      "id": "openuc2.mechanics.plate_3x8",
-      "version": "0.1.1",
-      "kind": "optical_component",
-      "category": "mechanics",
-      "description": "3x8 aluminium sandwich plate (miniFRAME top/bottom)",
-      "tags": [
-        "mechanics",
-        "carrier",
-        "miniframe",
-        "plate"
-      ],
-      "vendor": {
-        "name": "",
-        "mpn": "",
-        "url": "",
-        "price": null,
-        "currency": "EUR"
-      },
-      "efl_mm": null,
-      "n_surfaces": 0,
-      "review": true,
-      "locked": true,
-      "wavelengths_um": [],
-      "divergence_deg": 0.0,
-      "beam_diameter_mm": null,
-      "symbol": null,
-      "fragment_surfaces": [],
-      "frames": {}
-    },
-    {
-      "id": "openuc2.mechanics.plate_4x6",
-      "version": "0.1.1",
-      "kind": "optical_component",
-      "category": "mechanics",
-      "description": "4x6 aluminium sandwich plate (miniFRAME top/bottom)",
-      "tags": [
-        "mechanics",
-        "carrier",
-        "miniframe",
-        "plate"
-      ],
-      "vendor": {
-        "name": "",
-        "mpn": "",
-        "url": "",
-        "price": null,
-        "currency": "EUR"
-      },
-      "efl_mm": null,
-      "n_surfaces": 0,
-      "review": true,
-      "locked": true,
-      "wavelengths_um": [],
-      "divergence_deg": 0.0,
-      "beam_diameter_mm": null,
-      "symbol": null,
-      "fragment_surfaces": [],
-      "frames": {}
-    },
-    {
-      "id": "openuc2.mechanics.plate_5x3",
+      "id": "user.lens.cublend40f50",
       "version": "0.1.0",
       "kind": "optical_component",
-      "category": "mechanics",
-      "description": "5x3 aluminium sandwich plate (miniFRAME top/bottom)",
+      "category": "lens",
+      "description": "ASS - 2021 - CUBLEND40F50 - V04",
       "tags": [
-        "mechanics",
-        "carrier",
-        "miniframe",
-        "plate"
+        "authored"
+      ],
+      "vendor": {
+        "name": "",
+        "mpn": "",
+        "url": "",
+        "price": null,
+        "currency": "EUR"
+      },
+      "efl_mm": 49.043,
+      "n_surfaces": 2,
+      "review": false,
+      "locked": false,
+      "ports": [],
+      "wavelengths_um": [],
+      "divergence_deg": 0.0,
+      "beam_diameter_mm": null,
+      "symbol": null,
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 50,
+            "conic": 0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-BK7"
+          },
+          "thickness": 4,
+          "semi_aperture": 12.7
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": -50,
+            "conic": 0
+          },
+          "semi_aperture": 12.7
+        }
+      ],
+      "mirror_elements": null
+    },
+    {
+      "id": "user.mirror.cubglv",
+      "version": "0.1.0",
+      "kind": "optical_component",
+      "category": "mirror",
+      "description": "ASS - 2075 - CUBGLV - V04",
+      "tags": [
+        "authored"
       ],
       "vendor": {
         "name": "",
@@ -948,44 +365,78 @@
         "currency": "EUR"
       },
       "efl_mm": null,
-      "n_surfaces": 0,
-      "review": true,
+      "n_surfaces": 2,
+      "review": false,
       "locked": false,
+      "ports": [],
       "wavelengths_um": [],
       "divergence_deg": 0.0,
       "beam_diameter_mm": null,
       "symbol": null,
-      "fragment_surfaces": [],
-      "frames": {}
+      "fragment_surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 1e999,
+            "conic": 0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-BK7"
+          },
+          "thickness": 1,
+          "interaction_model": {
+            "type": "refractive_reflective",
+            "is_reflective": true
+          },
+          "semi_aperture": 12.7
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 1e999,
+            "conic": 0
+          },
+          "interaction_model": {
+            "type": "refractive_reflective",
+            "is_reflective": true
+          },
+          "semi_aperture": 12.7
+        }
+      ],
+      "mirror_elements": null
     },
     {
-      "id": "openuc2.mechanics.puzzle_1x1",
+      "id": "user.source.cublas520",
       "version": "0.1.1",
       "kind": "optical_component",
-      "category": "mechanics",
-      "description": "Puzzle piece joining two cube layers (2 noses + 2 notches, pins both sides)",
+      "category": "source",
+      "description": "ASS - 2018 - CUBLAS520 - V04 - A",
       "tags": [
-        "mechanics",
-        "carrier",
-        "miniframe"
+        "authored"
       ],
       "vendor": {
-        "name": "openUC2",
-        "mpn": "PRT-1004-PUZ11",
+        "name": "",
+        "mpn": "",
         "url": "",
-        "price": null,
+        "price": 100.0,
         "currency": "EUR"
       },
       "efl_mm": null,
       "n_surfaces": 0,
       "review": false,
-      "locked": true,
-      "wavelengths_um": [],
-      "divergence_deg": 0.0,
-      "beam_diameter_mm": null,
+      "locked": false,
+      "ports": [],
+      "wavelengths_um": [
+        0.52
+      ],
+      "divergence_deg": 1.0,
+      "beam_diameter_mm": 5.0,
       "symbol": null,
       "fragment_surfaces": [],
-      "frames": {}
+      "mirror_elements": null
     }
   ],
   "groups": [],
