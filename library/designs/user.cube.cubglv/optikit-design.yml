@@ -44,11 +44,13 @@ components:
       rotation:
         kind: grid
         grid:
-          z: +x
-          x: -z
+          z: +y
+          x: -x
         offset-deg:
-          y: -45.0
-          z: ~ inputs['tilt-x'].value
+          x: ~ -45 + -inputs['tilt-x'].value
+      translation:
+        offset-mm:
+          z: 8.0
   mirror-0-mesh:
     kind: primitive
     category: mechanics
@@ -61,10 +63,13 @@ components:
       rotation:
         kind: grid
         grid:
-          z: +z
+          z: -z
           x: +x
         offset-deg:
           x: ~ inputs['tilt-x'].value
+      translation:
+        offset-mm:
+          z: 8.0
   mirror-1:
     kind: primitive
     category: mirror
@@ -90,11 +95,7 @@ components:
           z: +x
           x: -z
         offset-deg:
-          y: ~ -45 + inputs['tilt-y'].value
-      translation:
-        offset-mm:
-          x: 0.707107
-          z: 0.707107
+          y: ~ 45 + inputs['tilt-y'].value
   mirror-1-mesh:
     kind: primitive
     category: mechanics
@@ -107,14 +108,10 @@ components:
       rotation:
         kind: grid
         grid:
-          z: +z
+          z: -z
           x: +x
         offset-deg:
-          y: ~ inputs['tilt-y'].value
-      translation:
-        offset-mm:
-          x: 0.707107
-          z: 0.707107
+          y: ~ -inputs['tilt-y'].value
   static:
     kind: primitive
     category: mechanics
@@ -125,5 +122,5 @@ components:
       rotation:
         kind: grid
         grid:
-          z: +z
+          z: -z
           x: +x

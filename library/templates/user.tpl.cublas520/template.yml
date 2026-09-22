@@ -19,7 +19,7 @@ insert-pose:
   rotation:
     kind: grid
     grid:
-      z: +y
+      z: -y
       x: -z
   translation:
     offset-mm:

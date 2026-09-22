@@ -1,8 +1,8 @@
 kind: optical_component
-id: user.mirror.cubglv
+id: user.lens.cubmanstgr10
 version: 0.1.0
-category: mirror
-description: ASS - 2075 - CUBGLV - V04
+category: lens
+description: ASS - 3004 - CUBMANSTGR10 - V04
 tags:
   - authored
 vendor:
@@ -18,22 +18,17 @@ optics:
       - type: standard
         geometry:
           type: StandardGeometry
-          radius: .inf
+          radius: 50
           conic: 0
         material_post:
           type: Material
           name: N-BK7
-        thickness: 6
-        interaction_model:
-          type: refractive_reflective
-          is_reflective: true
+        thickness: 4
         semi_aperture: 12.7
       - type: standard
         geometry:
           type: StandardGeometry
-          radius: .inf
+          radius: -50
           conic: 0
-        interaction_model:
-          type: refractive_reflective
-          is_reflective: true
         semi_aperture: 12.7
+effective_focal_length_mm: 49.043

@@ -1,0 +1,39 @@
+kind: mechanical_template
+id: user.tpl.cublas650ecc
+version: 0.1.0
+class: fixed
+description: mount for user.source.cublas650ecc (bound from ASS - 2081 - CUBLAS650ECC - V04.stp)
+tags:
+  - bound
+envelope:
+  x-mm: 49.8
+  y-mm: 73.5
+  z-mm: 53.8
+step: ASS - 2081 - CUBLAS650ECC - V04.stp
+glb: ASS - 2081 - CUBLAS650ECC - V04.glb
+mesh-pose:
+  rotation:
+    kind: grid
+    grid:
+      z: -z
+      x: +x
+footprint_grid:
+  - 1
+  - 2
+  - 1
+insert-pose:
+  rotation:
+    kind: grid
+    grid:
+      z: +y
+      x: +x
+  translation:
+    offset-mm:
+      y: -48.25
+      z: -8
+provenance: whole-module
+frames:
+  optical:
+    x-mm: 0
+    y-mm: -48.25
+    z-mm: -8

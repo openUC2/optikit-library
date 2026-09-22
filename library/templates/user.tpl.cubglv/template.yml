@@ -15,7 +15,7 @@ mesh-pose:
   rotation:
     kind: grid
     grid:
-      z: +z
+      z: -z
       x: +x
 footprint_grid:
   - 2
@@ -25,10 +25,8 @@ insert-pose:
   rotation:
     kind: grid
     grid:
-      z: +x
-      x: -z
-    offset-deg:
-      y: -45
+      z: +z
+      x: +x
   translation:
     offset-mm: {}
 provenance: whole-module

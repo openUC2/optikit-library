@@ -1,43 +1,50 @@
 optikit-version: v0.0.0-alpha.1
 design:
-  description: cublas520 in a 1x2 cube (bound)
+  description: cubmir45_th2 in a 1x1 cube (bound)
   tags:
     - cube-module
 components:
   body:
     kind: primitive
     category: mechanics
-    primitive:
-      static-models:
-        gltf: templates/user.tpl.cublas520/ASS - 2018 - CUBLAS520 - V04 - A.glb
-        step: templates/user.tpl.cublas520/ASS - 2018 - CUBLAS520 - V04 - A.stp
     pose:
       rotation:
         kind: grid
   optic:
     kind: primitive
-    category: source
+    category: mirror
     optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0
+            material_post:
+              type: Material
+              name: N-BK7
+            thickness: 6
+            interaction_model:
+              type: refractive_reflective
+              is_reflective: true
+            semi_aperture: 12.7
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0
+            semi_aperture: 12.7
       frames:
         optical: {}
-      emission:
-        spectrum:
-          - wavelength_um: 0.52
-        spatial:
-          type: disc
-          radius_mm: 2.5
-        angular:
-          type: cone
-          half_angle_deg: 0.5
     pose:
       rotation:
         kind: grid
         grid:
-          z: -y
+          z: -x
           x: -z
-      translation:
-        offset-mm:
-          y: -22
+        offset-deg:
+          x: 45
 variants:
   seat-pz-px:
     description: as authored — the insert's home seat
@@ -49,8 +56,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: -z
+              z: -y
               x: -x
+            offset-deg:
+              x: 45.0
   seat-px-pz:
     description: insert seated +x / +z
     components:
@@ -59,8 +68,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: +y
+              z: -z
               x: -x
+            offset-deg:
+              x: 45.0
   seat-px-my:
     description: insert seated +x / -y
     components:
@@ -69,8 +80,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: +z
+              z: +y
               x: -x
+            offset-deg:
+              x: 45.0
   seat-px-mz:
     description: insert seated +x / -z
     components:
@@ -79,8 +92,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: -y
+              z: +z
               x: -x
+            offset-deg:
+              x: 45.0
   seat-py-px:
     description: insert seated +y / +x
     components:
@@ -89,8 +104,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: +z
+              z: -x
               x: -y
+            offset-deg:
+              x: 45.0
   seat-py-pz:
     description: insert seated +y / +z
     components:
@@ -99,8 +116,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: -x
+              z: -z
               x: -y
+            offset-deg:
+              x: 45.0
   seat-py-mx:
     description: insert seated +y / -x
     components:
@@ -109,8 +128,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: -z
+              z: +x
               x: -y
+            offset-deg:
+              x: 45.0
   seat-py-mz:
     description: insert seated +y / -z
     components:
@@ -119,8 +140,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: +x
+              z: +z
               x: -y
+            offset-deg:
+              x: 45.0
   seat-pz-py:
     description: insert seated +z / +y
     components:
@@ -129,8 +152,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: +x
+              z: -y
               x: -z
+            offset-deg:
+              x: 45.0
   seat-pz-mx:
     description: insert seated +z / -x
     components:
@@ -139,8 +164,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: +y
+              z: +x
               x: -z
+            offset-deg:
+              x: 45.0
   seat-pz-my:
     description: insert seated +z / -y
     components:
@@ -149,8 +176,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: -x
+              z: +y
               x: -z
+            offset-deg:
+              x: 45.0
   seat-mx-py:
     description: insert seated -x / +y
     components:
@@ -159,8 +188,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: +z
+              z: -y
               x: +x
+            offset-deg:
+              x: 45.0
   seat-mx-pz:
     description: insert seated -x / +z
     components:
@@ -169,8 +200,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: -y
+              z: -z
               x: +x
+            offset-deg:
+              x: 45.0
   seat-mx-my:
     description: insert seated -x / -y
     components:
@@ -179,8 +212,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: -z
+              z: +y
               x: +x
+            offset-deg:
+              x: 45.0
   seat-mx-mz:
     description: insert seated -x / -z
     components:
@@ -189,8 +224,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: +y
+              z: +z
               x: +x
+            offset-deg:
+              x: 45.0
   seat-my-px:
     description: insert seated -y / +x
     components:
@@ -199,8 +236,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: -z
+              z: -x
               x: +y
+            offset-deg:
+              x: 45.0
   seat-my-pz:
     description: insert seated -y / +z
     components:
@@ -209,8 +248,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: +x
+              z: -z
               x: +y
+            offset-deg:
+              x: 45.0
   seat-my-mx:
     description: insert seated -y / -x
     components:
@@ -219,8 +260,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: +z
+              z: +x
               x: +y
+            offset-deg:
+              x: 45.0
   seat-my-mz:
     description: insert seated -y / -z
     components:
@@ -229,8 +272,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: -x
+              z: +z
               x: +y
+            offset-deg:
+              x: 45.0
   seat-mz-px:
     description: insert seated -z / +x
     components:
@@ -239,8 +284,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: +y
+              z: -x
               x: +z
+            offset-deg:
+              x: 45.0
   seat-mz-py:
     description: insert seated -z / +y
     components:
@@ -249,8 +296,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: -x
+              z: -y
               x: +z
+            offset-deg:
+              x: 45.0
   seat-mz-mx:
     description: insert seated -z / -x
     components:
@@ -259,8 +308,10 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: -y
+              z: +x
               x: +z
+            offset-deg:
+              x: 45.0
   seat-mz-my:
     description: insert seated -z / -y
     components:
@@ -269,5 +320,7 @@ variants:
           rotation:
             kind: grid
             grid:
-              z: +x
+              z: +y
               x: +z
+            offset-deg:
+              x: 45.0

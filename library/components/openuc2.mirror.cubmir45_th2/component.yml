@@ -1,8 +1,8 @@
 kind: optical_component
-id: user.mirror.cubglv
+id: openuc2.mirror.cubmir45_th2
 version: 0.1.0
 category: mirror
-description: ASS - 2075 - CUBGLV - V04
+description: ASS - 2020 - CUBMIR45°TH2 - V04
 tags:
   - authored
 vendor:
@@ -33,7 +33,4 @@ optics:
           type: StandardGeometry
           radius: .inf
           conic: 0
-        interaction_model:
-          type: refractive_reflective
-          is_reflective: true
         semi_aperture: 12.7
