@@ -1,0 +1,10 @@
+kind: optical_component
+id: openuc2.mechanics.plate_3x3_p1x1_at_1_n2_p1x1_at_1_n1
+version: 0.1.0
+category: mechanics
+description: 3x3+1x1@1,-2+1x1@1,-1 optical-module base plate (V04 aluminium sandwich)
+tags:
+  - mechanics
+  - carrier
+  - miniframe
+  - plate

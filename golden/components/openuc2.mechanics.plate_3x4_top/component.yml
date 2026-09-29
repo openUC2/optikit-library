@@ -1,0 +1,10 @@
+kind: optical_component
+id: openuc2.mechanics.plate_3x4_top
+version: 0.1.0
+category: mechanics
+description: 3x4 optical-module top plate (V04 aluminium sandwich)
+tags:
+  - mechanics
+  - carrier
+  - miniframe
+  - plate
