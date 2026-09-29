@@ -1,0 +1,12 @@
+kind: cube_module
+id: user.cube.excfilsldd25wls485
+version: 0.1.0
+description: excfilsldd25wls485 in a 2x2 cube (bound)
+tags:
+  - bound
+component: user.beamsplitter.excfilsldd25wls485@^0.1
+template: user.tpl.excfilsldd25wls485@^0.1
+footprint_grid:
+  - 2
+  - 2
+  - 1

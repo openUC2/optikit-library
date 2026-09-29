@@ -1,0 +1,12 @@
+kind: cube_module
+id: openuc2.cube.cubeccadjfibhol_shlfillckver
+version: 0.1.0
+description: cubeccadjfibhol_shlfillckver in a 1x2 cube (bound)
+tags:
+  - bound
+component: openuc2.source.cubeccadjfibhol_shlfillckver@^0.1
+template: openuc2.tpl.cubeccadjfibhol_shlfillckver@^0.1
+footprint_grid:
+  - 1
+  - 2
+  - 1
