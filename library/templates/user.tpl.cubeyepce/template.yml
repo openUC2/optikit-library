@@ -1,10 +1,15 @@
 kind: mechanical_template
 id: user.tpl.cubeyepce
-version: 0.1.0
+version: 0.1.1
+title: Eyepiece
 class: fixed
 description: mount for user.lens.cubeyepce (bound from ASS - 2025 - CUBEYEPCE - V04.stp)
 tags:
   - bound
+  - eyepiece
+  - ocular
+  - wf10x
+  - core
 envelope:
   x-mm: 50.1
   y-mm: 49.8

@@ -1,10 +1,18 @@
 kind: optical_component
 id: user.source.cublas650ecc
-version: 0.1.0
+version: 0.1.1
+title: Dot laser 650 nm (red), eccentric
 category: source
-description: ASS - 2081 - CUBLAS650ECC - V04
+description: Cube (1x1x1) with dot laser 650 nm (red) eccentric (ASS - 2081 - CUBLAS650ECC - V04)
 tags:
   - authored
+  - laser
+  - source
+  - dot
+  - 650nm
+  - red
+  - eccentric
+  - picotronic
 vendor:
   name: ""
   mpn: ""

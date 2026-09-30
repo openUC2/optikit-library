@@ -1,10 +1,21 @@
 kind: optical_component
 id: user.beamsplitter.excfilsldd25wls485
-version: 0.1.0
+version: 0.1.1
+title: Dichroic splitter 45°, kinematic, 485 nm
 category: beamsplitter
-description: SUB - 0093 - EXCFILSLDD25WLS485 Dichroic Offcenter
+description: Cube (1x1x1) with kinematic dicroic splitter 45° 25x25x1 (ASS - 2078 - CUBKINDICSPL45° 
+  - V04)
 tags:
   - authored
+  - dichroic
+  - splitter
+  - beamsplitter
+  - kinematic
+  - 45°
+  - 485nm
+  - emission-filter
+  - fluorescence
+  - flim
 vendor:
   name: ""
   mpn: ""

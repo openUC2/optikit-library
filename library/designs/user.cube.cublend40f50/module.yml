@@ -1,9 +1,14 @@
 kind: cube_module
 id: user.cube.cublend40f50
-version: 0.1.0
-description: cublend40f50 in a 1x1 cube (bound)
+version: 0.1.1
+title: Lens Ø40, f = 50 mm
+description: Cube (1x1x1) with lens dm 40 and f = 50 mm (ASS - 2021 - CUBLEND40F50 - V04)
 tags:
   - bound
+  - lens
+  - d40
+  - f50
+  - core
 component: user.lens.cublend40f50@^0.1
 template: user.tpl.cublend40f50@^0.1
 footprint_grid:

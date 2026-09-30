@@ -1,10 +1,16 @@
 kind: mechanical_template
 id: openuc2.tpl.cubmir45_th2
-version: 0.1.0
+version: 0.1.1
+title: Mirror 45°, 2 mm
 class: fixed
 description: mount for openuc2.mirror.cubmir45_th2 (bound from ASS - 2020 - CUBMIR45°TH2 - V04.stp)
 tags:
   - bound
+  - mirror
+  - 45°
+  - fold
+  - flat
+  - quantum
 envelope:
   x-mm: 49.8
   y-mm: 49.8

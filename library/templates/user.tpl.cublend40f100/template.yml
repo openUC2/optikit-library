@@ -1,10 +1,15 @@
 kind: mechanical_template
 id: user.tpl.cublend40f100
-version: 0.1.0
+version: 0.1.1
+title: Lens Ø40, f = 100 mm
 class: fixed
 description: mount for user.lens.cublend40f100 (bound from ASS - 2022 - CUBLEND40F100 - V04.stp)
 tags:
   - bound
+  - lens
+  - d40
+  - f100
+  - core
 envelope:
   x-mm: 49.8
   y-mm: 49.8

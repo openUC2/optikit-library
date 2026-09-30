@@ -1,10 +1,18 @@
 kind: mechanical_template
 id: user.tpl.cublas520
-version: 0.1.0
+version: 0.1.1
+title: Dot laser 520 nm (green)
 class: fixed
 description: mount for user.source.cublas520 (bound from ASS - 2018 - CUBLAS520 - V04 - A.stp)
 tags:
   - bound
+  - laser
+  - source
+  - dot
+  - 520nm
+  - green
+  - picotronic
+  - quantum
 envelope:
   x-mm: 49.8
   y-mm: 87.5

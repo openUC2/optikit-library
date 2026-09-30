@@ -1,10 +1,18 @@
 kind: optical_component
 id: user.mirror.cubglv
-version: 0.1.0
+version: 0.1.1
+title: Galvo scanner XY
 category: mirror
-description: ASS - 2075 - CUBGLV - V04
+description: Cube with galvanometer scanner (ASS - 2075 - CUBGLV - V04)
 tags:
   - authored
+  - galvo
+  - galvanometer
+  - scanner
+  - mirror
+  - xy
+  - motorized
+  - flim
 vendor:
   name: ""
   mpn: ""

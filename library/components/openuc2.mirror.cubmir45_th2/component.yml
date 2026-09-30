@@ -1,10 +1,16 @@
 kind: optical_component
 id: openuc2.mirror.cubmir45_th2
-version: 0.1.0
+version: 0.1.1
+title: Mirror 45°, 2 mm
 category: mirror
-description: ASS - 2020 - CUBMIR45°TH2 - V04
+description: Cube (1x1x1) with mirror 45°, thickness 2,0 mm (ASS - 2020 - CUBMIR45°TH2 - V04)
 tags:
   - authored
+  - mirror
+  - 45°
+  - fold
+  - flat
+  - quantum
 vendor:
   name: ""
   mpn: ""

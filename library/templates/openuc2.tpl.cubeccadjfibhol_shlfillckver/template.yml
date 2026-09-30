@@ -1,11 +1,22 @@
 kind: mechanical_template
 id: openuc2.tpl.cubeccadjfibhol_shlfillckver
-version: 0.1.0
+version: 0.1.1
+title: Fiber holder, eccentric adjustable + filter slot
 class: fixed
-description: mount for openuc2.source.cubeccadjfibhol_shlfillckver (bound from ASS - 2084 -
+description: mount for openuc2.source.cubeccadjfibhol_shlfillckver (bound from ASS - 2084 - 
   CUBECCADJFIBHOL+SHLFILLCKVER - V04.stp)
 tags:
   - bound
+  - fiber
+  - collimator
+  - laser
+  - source
+  - fc-pc
+  - eccentric
+  - adjustable
+  - filter
+  - removable
+  - flim
 envelope:
   x-mm: 49.8
   y-mm: 73.5

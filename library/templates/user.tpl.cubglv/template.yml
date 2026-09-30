@@ -1,10 +1,18 @@
 kind: mechanical_template
 id: user.tpl.cubglv
-version: 0.1.0
+version: 0.1.1
+title: Galvo scanner XY
 class: adaptive
 description: mount for user.mirror.cubglv (bound from ASS - 2075 - CUBGLV - V04.stp)
 tags:
   - bound
+  - galvo
+  - galvanometer
+  - scanner
+  - mirror
+  - xy
+  - motorized
+  - flim
 envelope:
   x-mm: 83.723
   y-mm: 70.55
