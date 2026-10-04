@@ -1,6 +1,6 @@
 kind: mechanical_template
 id: openuc2.tpl.cube_1x1
-version: 0.1.0
+version: 0.1.1
 class: fixed
 description: Basic Cube mount (migrated)
 tags:
@@ -14,6 +14,18 @@ footprint_grid:
   - 1
   - 1
   - 1
+# Measured on PRT-1003 (CUBHLF111), from the cube centre along the axis a part
+# stacks on: the notches, and what fits before the end frames (D-E6).
+grooves:
+  pitch-mm: 5.0
+  count: 7
+  center-mm: 0.0
+limits:
+  insert-mm: 17.0
+  round-mm: 18.6
+  round-radius-mm: 19.2
+  window-mm: 34.0
+  joint-mm: 13.0
 review:
   - auto-migrated from the legacy CSV palette (WP-43) — confirm the record
 glb: ASS_-_2000_-_CUB_-_V04.glb
