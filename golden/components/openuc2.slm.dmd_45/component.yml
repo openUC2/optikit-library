@@ -1,0 +1,19 @@
+kind: optical_component
+id: openuc2.slm.dmd_45
+version: 0.1.2
+category: slm
+description: DLP digital micromirror device at 45° (0.47" 1920x1080, 5.4 µm pitch)
+tags: [slm, dmd, structured-illumination, programmable]
+vendor:
+  name: Texas Instruments
+  mpn: DLP4710
+programmable:
+  mode: reflective
+  pixel-pitch-um: 5.4
+  resolution: [1920, 1080]
+  fill-factor: 0.92
+optics:
+  frames:
+    optical: {z-mm: 0.0}
+  fragment-file: optics.optiland.yml
+locked: true

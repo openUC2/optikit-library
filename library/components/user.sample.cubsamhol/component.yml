@@ -1,0 +1,21 @@
+kind: optical_component
+id: user.sample.cubsamhol
+version: 0.1.1
+title: Sample holder
+category: sample
+description: Cube (1x1x1) with sample holder (ASS - 2024 - CUBSAMHOL - V04)
+tags:
+  - authored
+  - sample
+  - holder
+  - magnet
+  - core
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  passthrough: true

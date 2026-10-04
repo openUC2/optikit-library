@@ -1,0 +1,22 @@
+kind: optical_component
+id: thorlabs.lens.ac254-030-a
+version: 0.1.1
+category: lens
+description: 'AC254-030-A AC254-030-A POSITIVE VISIBLE ACHROMATS: Infinite 30'
+tags:
+  - imported
+  - zmx
+vendor:
+  name: Thorlabs
+  mpn: AC254-030-A
+optics:
+  frames:
+    optical:
+      z-mm: 0.0
+    exit:
+      z-mm: 14.0
+    mount:
+      z-mm: 8.643364
+  fragment-file: optics.optiland.yml
+effective_focal_length_mm: 30.000192
+locked: true

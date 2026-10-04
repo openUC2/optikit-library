@@ -1,0 +1,20 @@
+kind: cube_module
+id: user.cube.cubglv
+version: 0.1.1
+title: Galvo scanner XY
+description: Cube with galvanometer scanner (ASS - 2075 - CUBGLV - V04)
+tags:
+  - bound
+  - galvo
+  - galvanometer
+  - scanner
+  - mirror
+  - xy
+  - motorized
+  - flim
+component: user.mirror.cubglv@^0.1
+template: user.tpl.cubglv@^0.1
+footprint_grid:
+  - 2
+  - 2
+  - 1

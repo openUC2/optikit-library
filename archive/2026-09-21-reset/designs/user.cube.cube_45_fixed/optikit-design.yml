@@ -1,0 +1,81 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: user.mirror.cube_45_fixed in a cube — 4 seat(s)
+  tags:
+    - seats
+inputs: {}
+components:
+  cube-45-fixed:
+    kind: primitive
+    category: mirror
+    optics:
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0.0
+            interaction_model:
+              type: refractive_reflective
+              is_reflective: true
+            material_post:
+              type: Material
+              name: N-BK7
+            semi_aperture: 12.7
+      frames:
+        optical: {}
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: -x
+          x: +y
+        offset-deg:
+          y: 45.0
+  body:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: templates/user.tpl.cube_45_fixed/ASS - 2020 - CUBMIR45°TH2 - V04.glb
+        step: templates/user.tpl.cube_45_fixed/ASS - 2020 - CUBMIR45°TH2 - V04.stp
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: -y
+          x: +x
+variants:
+  seat-pz-px:
+    description: as authored — the insert's home seat
+  seat-mx-pz:
+    description: insert seated -x / +z
+    components:
+      cube-45-fixed:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -z
+              x: +y
+  seat-py-px:
+    description: insert seated +y / +x
+    components:
+      cube-45-fixed:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: -x
+              x: -z
+  seat-my-mx:
+    description: insert seated -y / -x
+    components:
+      cube-45-fixed:
+        pose:
+          rotation:
+            kind: grid
+            grid:
+              z: +x
+              x: -z

@@ -1,0 +1,37 @@
+kind: optical_component
+id: openuc2.source.cubeccadjfibhol_shlfillckver
+version: 0.1.1
+title: Fiber holder, eccentric adjustable + filter slot
+category: source
+description: Cube (1x1x1) with eccentric adjustable fiber holder and shell removable filter locked 
+  vertical (ASS - 2084 - CUBECCADJFIBHOL+SHLFILLCKVER - V04)
+tags:
+  - authored
+  - fiber
+  - collimator
+  - laser
+  - source
+  - fc-pc
+  - eccentric
+  - adjustable
+  - filter
+  - removable
+  - flim
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  emission:
+    spectrum:
+      - wavelength_um: 0.532
+        weight: 1
+    spatial:
+      type: disc
+      radius_mm: 5
+    angular:
+      type: collimated
+    power_mw: 10

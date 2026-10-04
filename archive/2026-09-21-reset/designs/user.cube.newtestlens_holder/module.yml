@@ -1,0 +1,12 @@
+kind: cube_module
+id: user.cube.newtestlens_holder
+version: 0.1.0
+description: user.lens.newtestlens in a generated holder
+tags:
+- generated
+template: user.tpl.cube_base@^0.1
+footprint_grid:
+- 1
+- 1
+- 1
+component: user.lens.newtestlens@^0.1

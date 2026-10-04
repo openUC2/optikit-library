@@ -1,0 +1,35 @@
+kind: optical_component
+id: user.source.cublas520
+version: 0.1.2
+title: Dot laser 520 nm (green)
+category: source
+description: Cube (1x1x1) with dot laser 520 nm (grn) (ASS - 2018 - CUBLAS520 - V04 - A)
+tags:
+  - authored
+  - laser
+  - source
+  - dot
+  - 520nm
+  - green
+  - picotronic
+  - quantum
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+  price: 100
+  currency: EUR
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  emission:
+    spectrum:
+      - wavelength_um: 0.52
+        weight: 1
+    spatial:
+      type: disc
+      radius_mm: 2.5
+    angular:
+      type: cone
+      half_angle_deg: 0.5

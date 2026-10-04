@@ -1,0 +1,56 @@
+{
+  "script": "generators/lens_cartridge_v4.py",
+  "params": {
+    "fit_clearance_mm": 0.15,
+    "beam_axis": "+x",
+    "part_position_mm": {
+      "x": 5.1427,
+      "z": 3.0093
+    },
+    "part_rotation_deg": {
+      "z": -90
+    },
+    "part_prescription": {
+      "surfaces": [
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": 34.92998606355697,
+            "conic": 0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-BAF10"
+          },
+          "thickness": 9,
+          "is_stop": true,
+          "semi_aperture": 12.7
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": -28.765972504938613,
+            "conic": 0
+          },
+          "material_post": {
+            "type": "Material",
+            "name": "N-SF6"
+          },
+          "thickness": 3.5,
+          "semi_aperture": 12.7
+        },
+        {
+          "type": "standard",
+          "geometry": {
+            "type": "StandardGeometry",
+            "radius": -137.53457132648708,
+            "conic": 0
+          },
+          "semi_aperture": 12.7
+        }
+      ]
+    }
+  }
+}

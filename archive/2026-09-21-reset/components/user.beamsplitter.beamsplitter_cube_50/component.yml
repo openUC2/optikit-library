@@ -1,0 +1,16 @@
+kind: optical_component
+id: user.beamsplitter.beamsplitter_cube_50
+version: 0.1.0
+category: beamsplitter
+description: ""
+tags:
+  - authored
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  fragment-file: optics.optiland.yml

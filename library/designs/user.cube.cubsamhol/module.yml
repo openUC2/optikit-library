@@ -1,0 +1,17 @@
+kind: cube_module
+id: user.cube.cubsamhol
+version: 0.1.1
+title: Sample holder
+description: Cube (1x1x1) with sample holder (ASS - 2024 - CUBSAMHOL - V04)
+tags:
+  - bound
+  - sample
+  - holder
+  - magnet
+  - core
+component: user.sample.cubsamhol@^0.1
+template: user.tpl.cubsamhol@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1

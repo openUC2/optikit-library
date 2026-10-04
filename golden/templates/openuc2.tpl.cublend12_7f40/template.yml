@@ -1,0 +1,15 @@
+kind: mechanical_template
+id: openuc2.tpl.cublend12_7f40
+version: 0.2.1
+class: adaptive
+description: Insert template from ASS - 2028 - CUBLEND12.7F40 - V04
+envelope:
+  x-mm: 50.0
+  y-mm: 50.0
+  z-mm: 55.0
+glb: ASS_-_2028_-_CUBLEND12.7F40_-_V04.glb
+footprint_grid:
+  - 1
+  - 1
+  - 1
+locked: true

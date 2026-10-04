@@ -1,0 +1,39 @@
+kind: optical_component
+id: user.lens.cublend25f50
+version: 0.1.1
+title: Lens Ø25, f = 50 mm
+category: lens
+description: Cube (1x1x1) with lens diameter 25, f = 50 mm (ASS - 2073 - CUBLEND25F50 - V04)
+tags:
+  - authored
+  - lens
+  - d25
+  - f50
+  - flim
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: 50
+          conic: 0
+        material_post:
+          type: Material
+          name: N-BK7
+        thickness: 4
+        semi_aperture: 12.7
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: -50
+          conic: 0
+        semi_aperture: 12.7
+effective_focal_length_mm: 49.043

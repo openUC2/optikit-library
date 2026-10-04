@@ -1,0 +1,198 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  name: miniFLIM
+  description: Small laser scanning setup that works with flimlabs cards
+  tags:
+    - FLIM
+    - laserscanning
+    - microscopy
+components:
+  cubmanstgr10:
+    kind: design
+    design: designs/user.cube.cubmanstgr10
+    category: lens
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          x: +y
+      translation:
+        offset-grid:
+          x: 2
+          y: -2
+          z: 1
+  cubmir45-th2:
+    kind: design
+    design: designs/openuc2.cube.cubmir45_th2
+    category: mirror
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 1
+          y: -2
+    instantiation:
+      variant: seat-mz-px
+  cubglv:
+    kind: design
+    design: designs/user.cube.cubglv
+    category: mirror
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 2
+          y: 3
+  excfilsldd25wls485:
+    kind: design
+    design: designs/user.cube.excfilsldd25wls485
+    category: beamsplitter
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          x: -x
+      translation:
+        offset-grid:
+          x: 1
+          y: 3
+  cubeccadjfibhol-shlfillckver:
+    kind: design
+    design: designs/openuc2.cube.cubeccadjfibhol_shlfillckver
+    category: source
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          x: -y
+      translation:
+        offset-grid:
+          x: -1
+          y: 3
+  cubeccadjfibhol-shlfillckver-3:
+    kind: design
+    design: designs/openuc2.cube.cubeccadjfibhol_shlfillckver
+    category: source
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          x: -x
+      translation:
+        offset-grid:
+          x: 1
+          y: 5
+  cublend25f50:
+    kind: design
+    design: designs/user.cube.cublend25f50
+    category: lens
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 2
+          y: 2
+  cublend25f160:
+    kind: design
+    design: designs/user.cube.cublend25f160
+    category: lens
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 1
+          y: -1
+  cubmir45-th2-2:
+    kind: design
+    design: designs/openuc2.cube.cubmir45_th2
+    category: mirror
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          x: -x
+      translation:
+        offset-grid:
+          x: 2
+          y: 1
+  cubmir45-th3:
+    kind: design
+    design: designs/openuc2.cube.cubmir45_th2
+    category: mirror
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 1
+          y: 1
+  cubmir45-th4:
+    kind: design
+    design: designs/openuc2.cube.cubmir45_th2
+    category: mirror
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 3
+          y: -2
+    instantiation:
+      variant: seat-py-pz
+  cube-1x1:
+    kind: design
+    design: designs/openuc2.cube.cube_1x1
+    category: other
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 2
+          y: -1
+  cube-1x1-2:
+    kind: design
+    design: designs/openuc2.cube.cube_1x1
+    category: other
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 1
+  cube-1x1-3:
+    kind: design
+    design: designs/openuc2.cube.cube_1x1
+    category: other
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 2
+  cube-1x1-4:
+    kind: design
+    design: designs/openuc2.cube.cube_1x1
+    category: other
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 2
+          y: -2
+  cube-1x1-5:
+    kind: design
+    design: designs/openuc2.cube.cube_1x1
+    category: other
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 3
+          y: 5

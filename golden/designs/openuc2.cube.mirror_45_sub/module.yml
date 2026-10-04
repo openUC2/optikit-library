@@ -1,0 +1,13 @@
+# Cube module, subdesign-backed: the 45° fold mirror as a DECOMPOSITION — the
+# mirror disc and the master insert as posed children, the disc's 45° seat a
+# design variant. The template is the real cube shell (ASS - 2000 - CUB - V04).
+kind: cube_module
+id: openuc2.cube.mirror_45_sub
+version: 0.1.2
+description: Flat mirror in a 1x1 cube, decomposed (disc + master insert halves)
+tags:
+- cube
+- cube/mirror
+template: user.tpl.cube_base@^0.1
+footprint_grid: [1, 1, 1]
+locked: true

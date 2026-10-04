@@ -1,0 +1,42 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: cublas520 in a 1x2 cube (bound)
+  tags:
+    - cube-module
+components:
+  body:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: templates/user.tpl.cublas520/ASS - 2018 - CUBLAS520 - V04 - A.glb
+        step: templates/user.tpl.cublas520/ASS - 2018 - CUBLAS520 - V04 - A.stp
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +z
+          x: +x
+  optic:
+    kind: primitive
+    category: source
+    optics:
+      frames:
+        optical: {}
+      emission:
+        spectrum:
+          - wavelength_um: 0.52
+        spatial:
+          type: disc
+          radius_mm: 2.5
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: -y
+          x: +x
+      translation:
+        offset-mm:
+          x: 8.64
+          y: -3.04
+          z: -4.25

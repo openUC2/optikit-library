@@ -1,9 +1,0 @@
-kind: cube_module
-id: openuc2.cube.baseplate_4x4
-version: 0.1.0
-description: 4x4 UC2 baseplate
-tags: [carrier, baseplate]
-component: openuc2.mechanics.baseplate_4x4@^0.1
-template: openuc2.tpl.baseplate_4x4@^0.1
-footprint_grid: [4, 4, 1]
-price: 25.0

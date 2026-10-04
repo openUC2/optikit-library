@@ -1,0 +1,16 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: 3x3 optical-module top plate (V04 aluminium sandwich)
+  tags:
+    - cube-module
+components:
+  body:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: templates/openuc2.tpl.plate_3x3_port_1_2_top/model.glb
+        step: templates/openuc2.tpl.plate_3x3_port_1_2_top/model.step
+    pose:
+      rotation:
+        kind: grid

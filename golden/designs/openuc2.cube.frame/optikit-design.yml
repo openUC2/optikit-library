@@ -1,0 +1,16 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: FRAME body — the substructure with the miniFRAME rail bay; stage, arm and electronics
+    dock on its mounts
+  tags:
+    - cube-module
+components:
+  body:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: templates/openuc2.tpl.frame/model.glb
+    pose:
+      rotation:
+        kind: grid

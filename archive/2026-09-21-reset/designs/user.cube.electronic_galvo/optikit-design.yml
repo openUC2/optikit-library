@@ -1,0 +1,16 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: electronic_galvo in a 2x1 cube (bound)
+  tags:
+    - cube-module
+components:
+  body:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: templates/user.tpl.electronic_galvo/ASS - 2079 - CUBGLVBRD - V04.glb
+        step: templates/user.tpl.electronic_galvo/ASS - 2079 - CUBGLVBRD - V04.stp
+    pose:
+      rotation:
+        kind: grid

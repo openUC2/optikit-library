@@ -1,9 +1,0 @@
-kind: cube_module
-id: openuc2.cube.laser_850nm_ir
-version: 0.1.0
-description: IR focus-lock probe laser (~850 nm)
-tags: [source, ir, focus-lock]
-component: openuc2.source.laser_850nm_ir@^0.1
-template: openuc2.tpl.laser_850nm_ir@^0.1
-footprint_grid: [1, 1, 1]
-price: 120.0

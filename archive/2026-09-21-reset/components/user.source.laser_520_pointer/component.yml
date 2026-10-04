@@ -1,0 +1,22 @@
+kind: optical_component
+id: user.source.laser_520_pointer
+version: 0.1.0
+category: source
+description: ""
+tags:
+- authored
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  emission:
+    spectrum:
+    - wavelength_um: 0.532
+      weight: 1.0
+    spatial:
+      type: disc
+      radius_mm: 2.5

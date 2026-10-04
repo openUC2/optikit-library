@@ -1,0 +1,28 @@
+kind: optical_component
+id: user.detector.cam_obj
+version: 0.1.1
+title: Camera CE060 + objective CLENS-100TEL
+category: detector
+description: Camera CE060 + objectiv CLENS-100TEL (ASS - 4003 - CAM+OBJ)
+tags:
+  - authored
+  - camera
+  - detector
+  - objective
+  - hikrobot
+  - mv-ce060
+  - infinity
+  - frame
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+optics:
+  frames:
+    optical:
+      z-mm: 0
+detector:
+  sensor_mm:
+    - 11.3
+    - 7.1
+  pixel_pitch_um: 3.45

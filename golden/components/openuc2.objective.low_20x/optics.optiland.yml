@@ -1,0 +1,60 @@
+# GENERATED stand-in for openuc2.objective.low_20x: an ideal thin lens at the vendor EFL.
+# Replace by re-importing with the vendor .zmx when one exists.
+version: 1.0
+name: openuc2.objective.low_20x
+aperture:
+  type: EPD
+  value: 6.3
+fields:
+  fields:
+    - {x: 0.0, y: 0.0, vx: 0.0, vy: 0.0, weight: 1.0}
+  telecentric: false
+  field_definition: {field_type: AngleField}
+wavelengths:
+  polarization: ignore
+  wavelengths:
+    - {value: 0.532, unit: um, is_primary: true, weight: 1.0}
+apodization:
+pickups: []
+solves:
+  solves: []
+surface_group:
+  surfaces:
+    - type: ObjectSurface
+      geometry:
+        type: Plane
+        cs: {x: 0.0, y: 0.0, z: -1000000000.0, rx: 0.0, ry: 0.0, rz: 0.0, reference_cs: }
+        radius: .inf
+      material_post: {type: IdealMaterial, index: 1.0, absorb_coeff: 0.0}
+      comment: 'object: at infinity (placeholder — the design decides)'
+    - type: Surface
+      geometry:
+        type: StandardGeometry
+        radius: .inf
+        conic: 0.0
+        cs: {x: 0.0, y: 0.0, z: 0.0, rx: 0.0, ry: 0.0, rz: 0.0, reference_cs: }
+      interaction_model:
+        type: ThinLensInteractionModel
+        focal_length: 9.0
+        is_reflective: false
+        coating:
+        bsdf:
+      is_stop: true
+      semi_aperture: 3.15
+      material_post:
+        type: IdealMaterial
+        propagation_model: {class: HomogeneousPropagation}
+        index: 1.0
+        absorp: 0.0
+      aperture:
+    - type: Surface
+      thickness: 0.0
+      geometry:
+        type: Plane
+        cs: {x: 0.0, y: 0.0, z: 9.0, rx: 0.0, ry: 0.0, rz: 0.0, reference_cs: }
+        radius: .inf
+      material_post: {type: IdealMaterial, index: 1.0, absorb_coeff: 0.0}
+      is_stop: false
+      aperture:
+      comment: "image: at the record's EFL (placeholder)"
+      interaction_model: {type: RefractiveReflectiveModel, is_reflective: false}

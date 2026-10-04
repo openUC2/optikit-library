@@ -1,0 +1,12 @@
+kind: cube_module
+id: openuc2.cube.cublend43f_50
+version: 0.1.0
+description: cublend43f_50 in a 1x1 cube (bound)
+tags:
+  - bound
+component: openuc2.lens.cublend43f_50@^0.1
+template: openuc2.tpl.cublend43f_50@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1

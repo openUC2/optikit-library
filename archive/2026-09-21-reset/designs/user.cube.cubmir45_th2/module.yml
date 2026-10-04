@@ -1,0 +1,12 @@
+kind: cube_module
+id: user.cube.cubmir45_th2
+version: 0.1.0
+description: cubmir45_th2 in a 1x1 cube (bound)
+tags:
+  - bound
+component: user.mirror.cubmir45_th2@^0.1
+template: user.tpl.cubmir45_th2@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1

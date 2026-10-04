@@ -1,0 +1,31 @@
+kind: mechanical_template
+id: openuc2.tpl.plate_4x6
+version: 0.1.3
+class: generative
+carrier: true
+description: '4x6 optical-module base plate (V04 aluminium sandwich): 4 M3 holes per cell at 22 mm, 38
+  mm pockets, tie rods by the V04 rule'
+tags:
+  - carrier
+  - miniframe
+  - plate
+  - generated
+envelope:
+  x-mm: 200.0
+  y-mm: 300.6
+  z-mm: 5
+generator:
+  script: generators/opm_plates.py
+  params:
+    layout: 4x6
+    plate: base
+    pitch_mm:
+      - 50.0
+      - 50.1
+footprint_grid:
+  - 4
+  - 6
+  - 1
+glb: model.glb
+step: model.step
+locked: true

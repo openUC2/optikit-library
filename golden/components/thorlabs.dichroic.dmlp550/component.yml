@@ -1,0 +1,27 @@
+kind: optical_component
+id: thorlabs.dichroic.dmlp550
+version: 0.1.1
+category: dichroic
+description: 'DMLP550: Dichroic Mirror, Ø25.4 mm, 550 nm, 565 - 800 nm'
+tags:
+  - imported
+  - catalog
+  - catalog/optics-catalog-2026-05-20
+vendor:
+  name: Thorlabs
+  mpn: DMLP550
+  url: https://www.thorlabs.com/longpass-dichroic-mirrorsbeamsplitters?pn=DMLP550
+  price: 214.81
+  currency: USD
+optics:
+  frames:
+    optical:
+      z-mm: 0.0
+    exit:
+      z-mm: 1.1
+    mount:
+      z-mm: 0.55
+  fragment-file: optics.optiland.yml
+review:
+  - prescription derived from the catalog row (confidence derived), not from a vendor .zmx
+locked: true

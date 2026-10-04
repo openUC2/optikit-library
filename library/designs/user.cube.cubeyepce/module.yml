@@ -1,0 +1,17 @@
+kind: cube_module
+id: user.cube.cubeyepce
+version: 0.1.1
+title: Eyepiece
+description: Cube (1x1x1) with eye piece (occular) (ASS - 2025 - CUBEYEPCE - V04)
+tags:
+  - bound
+  - eyepiece
+  - ocular
+  - wf10x
+  - core
+component: user.lens.cubeyepce@^0.1
+template: user.tpl.cubeyepce@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1

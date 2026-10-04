@@ -1,0 +1,23 @@
+kind: cube_module
+id: user.cube.excfilsldd25wls485
+version: 0.1.1
+title: Dichroic splitter 45°, kinematic, 485 nm
+description: Cube (1x1x1) with kinematic dicroic splitter 45° 25x25x1 (ASS - 2078 - CUBKINDICSPL45° 
+  - V04)
+tags:
+  - bound
+  - dichroic
+  - splitter
+  - beamsplitter
+  - kinematic
+  - 45°
+  - 485nm
+  - emission-filter
+  - fluorescence
+  - flim
+component: user.beamsplitter.excfilsldd25wls485@^0.1
+template: user.tpl.excfilsldd25wls485@^0.1
+footprint_grid:
+  - 2
+  - 2
+  - 1

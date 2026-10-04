@@ -1,0 +1,15 @@
+kind: optical_component
+id: openuc2.dichroic.filter_dichroic
+version: 0.1.2
+category: dichroic
+description: Long-pass dichroic (cut-on 505 nm) for fluorescence separation
+tags:
+  - fluorescence
+  - reference
+docs: []
+optics:
+  frames:
+    optical:
+      z-mm: 0.0
+  fragment-file: optics.optiland.yml
+locked: true

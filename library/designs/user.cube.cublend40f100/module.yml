@@ -1,0 +1,17 @@
+kind: cube_module
+id: user.cube.cublend40f100
+version: 0.1.1
+title: Lens Ø40, f = 100 mm
+description: Cube (1x1x1) with lens dm 40 and f = 100 mm (ASS - 2022 - CUBLEND40F100 - V04)
+tags:
+  - bound
+  - lens
+  - d40
+  - f100
+  - core
+component: user.lens.cublend40f100@^0.1
+template: user.tpl.cublend40f100@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1

@@ -1,0 +1,200 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  name: Laser Scanning Microscope
+  description: This is a simple laser scanning microscope with a 2D camera
+  tags:
+  - laser scanning
+  - confocal
+components:
+  laser-galvo:
+    kind: design
+    category: source
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +x
+          x: +y
+      translation:
+        offset-grid:
+          x: -2
+          y: 1
+    design: designs/user.cube.laser_galvo
+  lens-galvo-50:
+    kind: design
+    category: lens
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +y
+          x: +x
+      translation:
+        offset-grid:
+          y: 2
+    design: designs/user.cube.lens_galvo_50
+  lens-galvo-160:
+    kind: design
+    category: lens
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +y
+          x: +x
+      translation:
+        offset-grid:
+          y: 6
+    design: designs/user.cube.lens_galvo_160
+  beamsplitter-cube-50:
+    kind: design
+    category: beamsplitter
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +y
+          x: +x
+        offset-deg:
+          y: 45.0
+      translation:
+        offset-grid:
+          y: 8
+    instantiation:
+      variant: seat-my-px
+    design: designs/user.cube.beamsplitter_cube_50
+  objective-4x:
+    kind: primitive
+    primitive:
+      static-models:
+        gltf: user.lens.objective_4x
+    category: lens
+    optics:
+      fragment:
+        surfaces:
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: 30
+            conic: 0
+          material_post:
+            type: Material
+            name: N-BK7
+          thickness: 4
+          semi_aperture: 5
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: -30
+            conic: 0
+          semi_aperture: 5
+      frames:
+        optical:
+          x-mm: 0
+          y-mm: 0
+          z-mm: 0
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: -z
+          x: +x
+      translation:
+        offset-grid:
+          y: 8
+          z: 2
+  camera-basic:
+    kind: design
+    category: detector
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          y: 8
+          z: -1
+    instantiation:
+      variant: seat-mz-mx
+    design: designs/user.cube.camera_basic
+  sample-holder-fixed:
+    kind: design
+    category: sample
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          x: -x
+      translation:
+        offset-grid:
+          y: 8
+          z: 3
+    design: designs/user.cube.sample_holder_fixed
+  galvo-mirror-0:
+    kind: primitive
+    primitive:
+      static-models:
+        gltf: user.cube.galvo_mirror
+    category: mirror
+    optics:
+      fragment:
+        surfaces:
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: .inf
+            conic: 0
+          interaction_model:
+            type: refractive_reflective
+            is_reflective: true
+          semi_aperture: 5
+      frames:
+        optical:
+          z-mm: 0.0
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: -y
+          x: +z
+        offset-deg:
+          y: -45.0
+      translation:
+        offset-grid:
+          y: 1
+        offset-mm: {}
+  galvo-mirror-1:
+    kind: primitive
+    category: mirror
+    optics:
+      fragment:
+        surfaces:
+        - type: standard
+          geometry:
+            type: StandardGeometry
+            radius: .inf
+            conic: 0
+          interaction_model:
+            type: refractive_reflective
+            is_reflective: true
+          semi_aperture: 5
+      frames:
+        optical:
+          z-mm: 0.0
+    pose:
+      translation:
+        offset-mm:
+          z: 7.0
+        offset-grid:
+          y: 1
+      rotation:
+        kind: grid
+        grid:
+          z: +x
+          x: +z
+        offset-deg:
+          y: 45.0
+paths:
+  from-laser-galvo:
+    from: laser-galvo
+    to: camera-basic
+instantiation: {}

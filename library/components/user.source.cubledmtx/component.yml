@@ -1,0 +1,33 @@
+kind: optical_component
+id: user.source.cubledmtx
+version: 0.1.1
+title: LED matrix 8×8 (ESP32-S3)
+category: source
+description: Cube (1x1x1) with LED matrix (ASS - 2046 - CUBLEDMTX - V04)
+tags:
+  - authored
+  - led
+  - matrix
+  - illumination
+  - source
+  - rgb
+  - esp32
+  - electronics
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+  price: 120
+  currency: EUR
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  emission:
+    spectrum:
+      - wavelength_um: 0.532
+        weight: 1
+    spatial:
+      type: point
+    angular:
+      type: collimated

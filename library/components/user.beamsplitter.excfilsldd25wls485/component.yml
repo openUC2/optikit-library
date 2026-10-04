@@ -1,0 +1,47 @@
+kind: optical_component
+id: user.beamsplitter.excfilsldd25wls485
+version: 0.1.1
+title: Dichroic splitter 45°, kinematic, 485 nm
+category: beamsplitter
+description: Cube (1x1x1) with kinematic dicroic splitter 45° 25x25x1 (ASS - 2078 - CUBKINDICSPL45° 
+  - V04)
+tags:
+  - authored
+  - dichroic
+  - splitter
+  - beamsplitter
+  - kinematic
+  - 45°
+  - 485nm
+  - emission-filter
+  - fluorescence
+  - flim
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0
+        material_post:
+          type: Material
+          name: N-BK7
+        thickness: 1
+        interaction_model:
+          type: refractive_reflective
+          is_reflective: true
+        semi_aperture: 12.7
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0
+        semi_aperture: 12.7

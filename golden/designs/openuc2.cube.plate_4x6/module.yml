@@ -1,0 +1,15 @@
+kind: cube_module
+id: openuc2.cube.plate_4x6
+version: 0.1.2
+description: 4x6 optical-module base plate (V04 aluminium sandwich)
+tags:
+  - carrier
+  - miniframe
+  - plate
+component: openuc2.mechanics.plate_4x6@^0.1
+template: openuc2.tpl.plate_4x6@^0.1
+footprint_grid:
+  - 4
+  - 6
+  - 1
+locked: true

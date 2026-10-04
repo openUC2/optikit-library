@@ -1,0 +1,12 @@
+kind: cube_module
+id: user.cube.lens_to_cubify_holder
+version: 0.1.0
+description: user.lens.lens_to_cubify in a generated holder
+tags:
+- generated
+template: user.tpl.cube_base@^0.1
+footprint_grid:
+- 1
+- 1
+- 1
+component: user.lens.lens_to_cubify@^0.1
