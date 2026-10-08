@@ -1,0 +1,39 @@
+kind: optical_component
+id: openuc2.filter.p00006---optical-path-el3
+version: 0.1.0
+category: filter
+description: Optiland setup 'p00006---optical-path', element 3 (FELH0550)
+tags:
+  - imported
+  - optiland
+  - plate
+optics:
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: Plane
+          radius: .inf
+        material_post:
+          type: Material
+          name: fused_silica
+        thickness: 3.5000000000000058
+        semi_aperture: 12.7
+      - type: standard
+        geometry:
+          type: Plane
+          radius: .inf
+        semi_aperture: 12.7
+  frames:
+    optical:
+      z-mm: 0.0
+    exit:
+      z-mm: 3.5
+    mount:
+      z-mm: 1.75
+vendor:
+  name: thorlabs
+  mpn: FELH0550
+  url: https://www.thorlabs.com/hard-coated-edgepass-filters?pn=FELH0550
+  price: 169.26
+  currency: USD

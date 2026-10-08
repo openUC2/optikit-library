@@ -3,7 +3,7 @@ id: openuc2.tpl.cubeccadjfibhol_shlfillckver
 version: 0.1.1
 title: Fiber holder, eccentric adjustable + filter slot
 class: fixed
-description: mount for openuc2.source.cubeccadjfibhol_shlfillckver (bound from ASS - 2084 - 
+description: mount for openuc2.source.cubeccadjfibhol_shlfillckver (bound from ASS - 2084 -
   CUBECCADJFIBHOL+SHLFILLCKVER - V04.stp)
 tags:
   - bound
@@ -37,15 +37,15 @@ insert-pose:
   rotation:
     kind: grid
     grid:
-      z: +y
+      z: -y
       x: +z
   translation:
     offset-mm:
-      y: 45
-      z: -7.5
+      y: -45
+      z: 7.5
 provenance: whole-module
 frames:
   optical:
     x-mm: 0
-    y-mm: 45
-    z-mm: -7.5
+    y-mm: -45
+    z-mm: 7.5

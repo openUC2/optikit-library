@@ -2,10 +2,6 @@ optikit-version: v0.0.0-alpha.1
 design:
   name: miniFLIM
   description: Small laser scanning setup that works with flimlabs cards
-  tags:
-    - FLIM
-    - laserscanning
-    - microscopy
 components:
   cubmanstgr10:
     kind: design
@@ -41,6 +37,8 @@ components:
     pose:
       rotation:
         kind: grid
+        grid:
+          x: +y
       translation:
         offset-grid:
           x: 2
@@ -53,10 +51,10 @@ components:
       rotation:
         kind: grid
         grid:
-          x: -x
+          x: +y
       translation:
         offset-grid:
-          x: 1
+          x: 3
           y: 3
   cubeccadjfibhol-shlfillckver:
     kind: design
@@ -69,7 +67,7 @@ components:
           x: -y
       translation:
         offset-grid:
-          x: -1
+          x: 5
           y: 3
   cubeccadjfibhol-shlfillckver-3:
     kind: design
@@ -78,11 +76,9 @@ components:
     pose:
       rotation:
         kind: grid
-        grid:
-          x: -x
       translation:
         offset-grid:
-          x: 1
+          x: 3
           y: 5
   cublend25f50:
     kind: design

@@ -1,0 +1,51 @@
+kind: optical_component
+id: openuc2.lens.p00006---optical-path-el7
+version: 0.1.0
+category: lens
+description: Optiland setup 'p00006---optical-path', element 7 (AC254-050-A)
+tags:
+  - imported
+  - optiland
+  - lens
+optics:
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: 291.07000000000244
+          conic: 0.0
+        material_post:
+          type: Material
+          name: N-SF10
+        thickness: 2.5
+        semi_aperture: 12.7
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: 22.27999999999998
+          conic: 0.0
+        material_post:
+          type: Material
+          name: N-BAF10
+        thickness: 9.0
+        semi_aperture: 12.7
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: -33.34000000000005
+          conic: 0.0
+        semi_aperture: 12.7
+  frames:
+    optical:
+      z-mm: 0.0
+    exit:
+      z-mm: 11.5
+    mount:
+      z-mm: 5.75
+vendor:
+  name: thorlabs
+  mpn: AC254-050-A
+  url: https://www.thorlabs.com/unmounted-achromatic-doublets-ar-coated-400---700-nm?pn=AC254-050-A
+  price: 95.34
+  currency: USD

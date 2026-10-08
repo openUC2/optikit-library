@@ -1,0 +1,27 @@
+kind: optical_component
+id: openuc2.lens.p00006---optical-path-el9
+version: 0.1.0
+category: lens
+description: Optiland setup 'p00006---optical-path', element 9 (NMV-50M23-a.zbb)
+tags:
+  - imported
+  - optiland
+  - lens
+optics:
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: Plane
+          radius: .inf
+        interaction_model:
+          type: thin_lens
+          focal_length: 50.0
+        semi_aperture: 10.85
+  frames:
+    optical:
+      z-mm: 0.0
+    exit:
+      z-mm: 0.0
+    mount:
+      z-mm: 0.0

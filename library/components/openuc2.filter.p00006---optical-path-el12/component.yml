@@ -1,0 +1,33 @@
+kind: optical_component
+id: openuc2.filter.p00006---optical-path-el12
+version: 0.1.0
+category: filter
+description: Optiland setup 'p00006---optical-path', element 12 (window)
+tags:
+  - imported
+  - optiland
+  - plate
+optics:
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: Plane
+          radius: .inf
+        material_post:
+          type: Material
+          name: B270
+        thickness: 0.4999999999999988
+        semi_aperture: 12.7
+      - type: standard
+        geometry:
+          type: Plane
+          radius: .inf
+        semi_aperture: 12.7
+  frames:
+    optical:
+      z-mm: 0.0
+    exit:
+      z-mm: 0.5
+    mount:
+      z-mm: 0.25
