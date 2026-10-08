@@ -1,10 +1,15 @@
 kind: optical_component
 id: user.sample.cubsamhol
-version: 0.1.0
+version: 0.1.1
+title: Sample holder
 category: sample
-description: ASS - 2024 - CUBSAMHOL - V04
+description: Cube (1x1x1) with sample holder (ASS - 2024 - CUBSAMHOL - V04)
 tags:
   - authored
+  - sample
+  - holder
+  - magnet
+  - core
 vendor:
   name: ""
   mpn: ""

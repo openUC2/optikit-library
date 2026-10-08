@@ -1,10 +1,14 @@
 kind: optical_component
 id: openuc2.mechanics.cube_1x1
-version: 0.1.0
+version: 0.1.1
+title: Empty cube
 category: mechanics
-description: empty cube skeleton (ASS - 2000 - CUB - V04)
+description: Cube (1x1x1) (ASS - 2000 - CUB - V04)
 tags:
   - authored
+  - cube
+  - empty
+  - skeleton
 vendor:
   name: ""
   mpn: ""

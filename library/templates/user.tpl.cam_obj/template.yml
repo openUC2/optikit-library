@@ -1,10 +1,18 @@
 kind: mechanical_template
 id: user.tpl.cam_obj
-version: 0.1.0
+version: 0.1.1
+title: Camera CE060 + objective CLENS-100TEL
 class: fixed
 description: mount for user.detector.cam_obj (bound from ASS - 4003 - CAM+OBJ.stp)
 tags:
   - bound
+  - camera
+  - detector
+  - objective
+  - hikrobot
+  - mv-ce060
+  - infinity
+  - frame
 envelope:
   x-mm: 49.8
   y-mm: 107.96

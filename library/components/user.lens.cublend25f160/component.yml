@@ -1,10 +1,15 @@
 kind: optical_component
 id: user.lens.cublend25f160
-version: 0.1.0
+version: 0.1.1
+title: Lens Ø25, f = 160 mm
 category: lens
-description: ASS - 2074 - CUBLEND25F160 - V04
+description: Cube (1x1x1) with lens diameter 25, f = 160 mm (ASS - 2074 - CUBLEND25F160 - V04)
 tags:
   - authored
+  - lens
+  - d25
+  - f160
+  - flim
 vendor:
   name: ""
   mpn: ""

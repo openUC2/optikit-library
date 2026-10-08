@@ -1,9 +1,21 @@
 kind: cube_module
 id: openuc2.cube.cubeccadjfibhol_shlfillckver
-version: 0.1.0
-description: cubeccadjfibhol_shlfillckver in a 1x2 cube (bound)
+version: 0.1.1
+title: Fiber holder, eccentric adjustable + filter slot
+description: Cube (1x1x1) with eccentric adjustable fiber holder and shell removable filter locked 
+  vertical (ASS - 2084 - CUBECCADJFIBHOL+SHLFILLCKVER - V04)
 tags:
   - bound
+  - fiber
+  - collimator
+  - laser
+  - source
+  - fc-pc
+  - eccentric
+  - adjustable
+  - filter
+  - removable
+  - flim
 component: openuc2.source.cubeccadjfibhol_shlfillckver@^0.1
 template: openuc2.tpl.cubeccadjfibhol_shlfillckver@^0.1
 footprint_grid:

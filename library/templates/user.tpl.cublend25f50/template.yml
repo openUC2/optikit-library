@@ -1,10 +1,15 @@
 kind: mechanical_template
 id: user.tpl.cublend25f50
-version: 0.1.0
+version: 0.1.1
+title: Lens Ø25, f = 50 mm
 class: fixed
 description: mount for user.lens.cublend25f50 (bound from ASS - 2073 - CUBLEND25F50 - V04.stp)
 tags:
   - bound
+  - lens
+  - d25
+  - f50
+  - flim
 envelope:
   x-mm: 49.8
   y-mm: 49.8

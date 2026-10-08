@@ -1,10 +1,20 @@
 kind: optical_component
 id: user.lens.cubmanstgr10
-version: 0.1.0
+version: 0.1.1
+title: Manual stage, 10 mm travel
 category: lens
-description: ASS - 3004 - CUBMANSTGR10 - V04
+description: Cube (1x1x1) with manuell stage with setting range 10 mm (ASS - 3004 - CUBMANSTGR10 - 
+  V04)
 tags:
   - authored
+  - stage
+  - manual
+  - linear
+  - focus
+  - objective
+  - rms
+  - 10mm
+  - core
 vendor:
   name: ""
   mpn: ""

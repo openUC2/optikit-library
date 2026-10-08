@@ -1,10 +1,21 @@
 kind: mechanical_template
 id: user.tpl.excfilsldd25wls485
-version: 0.1.0
+version: 0.1.1
+title: Dichroic splitter 45°, kinematic, 485 nm
 class: fixed
-description: mount for user.beamsplitter.excfilsldd25wls485 (bound from ASS - 2078 - CUBKINDICSPL45° - V04.stp)
+description: mount for user.beamsplitter.excfilsldd25wls485 (bound from ASS - 2078 - CUBKINDICSPL45°
+  - V04.stp)
 tags:
   - bound
+  - dichroic
+  - splitter
+  - beamsplitter
+  - kinematic
+  - 45°
+  - 485nm
+  - emission-filter
+  - fluorescence
+  - flim
 envelope:
   x-mm: 49.8
   y-mm: 63.9

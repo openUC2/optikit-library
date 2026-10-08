@@ -1,9 +1,17 @@
 kind: cube_module
 id: user.cube.cubledmtx
-version: 0.1.0
-description: cubledmtx in a 1x1 cube (bound)
+version: 0.1.1
+title: LED matrix 8×8 (ESP32-S3)
+description: Cube (1x1x1) with LED matrix (ASS - 2046 - CUBLEDMTX - V04)
 tags:
   - bound
+  - led
+  - matrix
+  - illumination
+  - source
+  - rgb
+  - esp32
+  - electronics
 component: user.source.cubledmtx@^0.1
 template: user.tpl.cubledmtx@^0.1
 footprint_grid:
