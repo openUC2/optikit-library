@@ -1,0 +1,37 @@
+kind: mechanical_template
+id: openuc2.tpl.cubmir45_th3ver
+version: 0.1.0
+title: Mirror 45°, 3 mm, vertical fold
+class: fixed
+description: mount for openuc2.mirror.cubmir45_th3 (ASS - 9408 - CUBMIR45°TH3VER - V04, 
+  openUC2-CAD-new)
+tags:
+  - mirror
+  - 45°
+  - fold
+  - vertical
+  - flat
+  - opm
+envelope:
+  x-mm: 49.8
+  y-mm: 49.8
+  z-mm: 53.8
+step: ASS - 9408 - CUBMIR45°TH3VER - V04.stp
+glb: ASS - 9408 - CUBMIR45°TH3VER - V04.glb
+footprint_grid:
+  - 1
+  - 1
+  - 1
+insert-pose:
+  rotation:
+    kind: euler
+    euler:
+      x: -45.0
+      y: -180.0
+      z: -180.0
+provenance: whole-module
+frames:
+  optical:
+    x-mm: 0.0
+    y-mm: 0.0
+    z-mm: 0.0

@@ -1,0 +1,23 @@
+kind: mechanical_template
+id: openuc2.tpl.cubtbshold28_5
+version: 0.1.0
+title: Tube holder Ø28.5 (C-mount tube)
+class: fixed
+description: mount for openuc2.mechanics.cubtbshold28_5 (ASS - 2058 - CUBTBSHOLD28.5 - V04, 
+  openUC2-CAD-new)
+tags:
+  - mechanics
+  - tube-holder
+  - c-mount
+  - opm
+envelope:
+  x-mm: 49.8
+  y-mm: 49.8
+  z-mm: 53.8
+step: ASS - 2058 - CUBTBSHOLD28.5 - V04.stp
+glb: ASS - 2058 - CUBTBSHOLD28.5 - V04.glb
+footprint_grid:
+  - 1
+  - 1
+  - 1
+provenance: whole-module

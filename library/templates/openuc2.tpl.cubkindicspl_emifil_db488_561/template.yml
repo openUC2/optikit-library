@@ -1,0 +1,43 @@
+kind: mechanical_template
+id: openuc2.tpl.cubkindicspl_emifil_db488_561
+version: 0.1.0
+title: Dichroic 488/561 + emission filter, kinematic
+class: fixed
+description: mount for openuc2.dichroic.cubkindicspl_db488_561 (ASS - 9404 - 
+  CUBKINDICSPL+EMIFIL_DB488-561 - V04, openUC2-CAD-new)
+tags:
+  - dichroic
+  - kinematic
+  - 45°
+  - 488nm
+  - 561nm
+  - emission-filter
+  - fluorescence
+  - opm
+envelope:
+  x-mm: 49.8
+  y-mm: 49.8
+  z-mm: 53.8
+step: ASS - 9404 - CUBKINDICSPL+EMIFIL_DB488-561 - V04.stp
+glb: ASS - 9404 - CUBKINDICSPL+EMIFIL_DB488-561 - V04.glb
+footprint_grid:
+  - 1
+  - 1
+  - 1
+insert-pose:
+  rotation:
+    kind: euler
+    euler:
+      x: 45.0
+      y: -180.0
+      z: -180.0
+  translation:
+    offset-mm:
+      y: 0.389
+      z: 0.389
+provenance: whole-module
+frames:
+  optical:
+    x-mm: 0.0
+    y-mm: 0.389
+    z-mm: 0.389

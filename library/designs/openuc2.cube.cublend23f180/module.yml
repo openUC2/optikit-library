@@ -1,0 +1,17 @@
+kind: cube_module
+id: openuc2.cube.cublend23f180
+version: 0.1.0
+title: Lens Ø23, f = 180 mm (tube lens)
+description: Cube (1x1x1) with plano-convex lens Ø23, f = 180 mm (ASS - 2068 - CUBLEND23F180 - V04)
+tags:
+  - lens
+  - d23
+  - f180
+  - tube-lens
+  - opm
+component: openuc2.lens.cublend23f180@^0.1
+template: openuc2.tpl.cublend23f180@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1

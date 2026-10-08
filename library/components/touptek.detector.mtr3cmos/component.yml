@@ -1,0 +1,35 @@
+kind: optical_component
+id: touptek.detector.mtr3cmos
+version: 0.1.0
+title: ToupTek MTR3CMOS (cooled)
+category: detector
+description: TEC-cooled mono camera, 80 x 80 mm body, C-mount (00_Toupcam_MTR3CMO.._C)
+tags:
+  - camera
+  - detector
+  - touptek
+  - mtr3cmos
+  - cooled
+  - mono
+vendor:
+  name: ToupTek
+  mpn: MTR3CMOS
+  url: ''
+optics:
+  frames:
+    optical:
+      z-mm: -8.87
+detector:
+  sensor: Sony IMX533 (1"), assumed
+  pixel_pitch_um: 3.76
+  resolution:
+    - 3008
+    - 3008
+  sensor_size_mm:
+    - 11.3
+    - 11.3
+  mount: C-mount
+  cooled: true
+review:
+  - the CAD is the MTR3CMOS housing; the sensor variant (IMX533 here) is an assumption
+  - sensor plane taken as the C-mount flange + 17.526 mm (part z -8.87)

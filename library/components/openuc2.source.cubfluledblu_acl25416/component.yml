@@ -1,0 +1,33 @@
+kind: optical_component
+id: openuc2.source.cubfluledblu_acl25416
+version: 0.1.0
+title: Blue LED 488 nm
+category: source
+description: LED star 488 nm (BUY - LED Starboard - 488nm) on a D28 cooling star; ~1 mm² emitter
+tags:
+  - source
+  - led
+  - 488nm
+  - blue
+  - fluorescence
+vendor:
+  name: ''
+  mpn: ''
+  url: ''
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  emission:
+    spectrum:
+      - wavelength_um: 0.488
+        weight: 1.0
+    spatial:
+      type: disc
+      radius_mm: 0.56
+    angular:
+      type: cone
+      half_angle_deg: 60.0
+review:
+  - emitter size and spectrum are nominal; the angular model is a 60° cone standing in for 
+    Lambertian

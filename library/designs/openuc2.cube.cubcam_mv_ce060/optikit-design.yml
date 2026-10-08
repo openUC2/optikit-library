@@ -1,0 +1,65 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: Hikrobot MV-CE060 on a 40 mm C-mount tube (tube holder + cube)
+  tags:
+    - composition/cube-mounted
+components:
+  holder:
+    kind: primitive
+    primitive:
+      static-models:
+        gltf: templates/openuc2.tpl.cubtbshold28_5/ASS - 2058 - CUBTBSHOLD28.5 - V04.glb
+        step: templates/openuc2.tpl.cubtbshold28_5/ASS - 2058 - CUBTBSHOLD28.5 - V04.stp
+    pose:
+      rotation:
+        kind: grid
+  cube:
+    kind: primitive
+    primitive:
+      static-models:
+        gltf: templates/openuc2.tpl.cube_1x1/ASS - 2000 - CUB - V04.glb
+        step: templates/openuc2.tpl.cube_1x1/ASS - 2000 - CUB - V04.stp
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-mm:
+          y: 50.0
+  tube-40:
+    kind: primitive
+    primitive:
+      static-models:
+        gltf: BUY - Tubus - 40 mm IG+AG C-mount.glb
+        step: BUY - Tubus - 40 mm IG+AG C-mount.stp
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          x: -y
+      translation:
+        offset-mm:
+          y: 13.86
+    tags:
+      - procurement/buy
+  camera:
+    kind: primitive
+    category: detector
+    primitive:
+      static-models:
+        gltf: BUY - HIKROBOT - Camera - MV-CE060-10UM.glb
+        step: BUY - HIKROBOT - Camera - MV-CE060-10UM.stp
+    optics:
+      frames:
+        optical:
+          z-mm: 0
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +y
+      translation:
+        offset-mm:
+          y: 31.52
+    tags:
+      - optical/detector/camera
+      - procurement/buy

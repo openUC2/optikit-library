@@ -1,0 +1,33 @@
+kind: optical_component
+id: hikrobot.detector.mv_ce060_10um
+version: 0.1.0
+title: Hikrobot MV-CE060-10UM
+category: detector
+description: 6 MP mono USB3 camera, C-mount (BUY - HIKROBOT - Camera - MV-CE060-10UM)
+tags:
+  - camera
+  - detector
+  - hikrobot
+  - mv-ce060
+  - mono
+vendor:
+  name: Hikrobot
+  mpn: MV-CE060-10UM
+  url: ''
+optics:
+  frames:
+    optical:
+      z-mm: 0
+detector:
+  sensor: Sony IMX178, rolling shutter
+  pixel_pitch_um: 2.4
+  resolution:
+    - 3072
+    - 2048
+  sensor_size_mm:
+    - 7.37
+    - 4.92
+  mount: C-mount
+  cooled: false
+review:
+  - sensor facts from the vendor family table; confirm against the datasheet

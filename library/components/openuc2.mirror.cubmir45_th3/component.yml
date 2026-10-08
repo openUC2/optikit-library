@@ -1,0 +1,40 @@
+kind: optical_component
+id: openuc2.mirror.cubmir45_th3
+version: 0.1.0
+title: Mirror 40 × 30 × 3
+category: mirror
+description: Flat mirror 40 x 30 x 3 mm on a 45° insert (BUY - Mirror - 40x30x3)
+tags:
+  - mirror
+  - flat
+  - 45°
+  - fold
+vendor:
+  name: ''
+  mpn: ''
+  url: ''
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0
+        material_post:
+          type: Material
+          name: N-BK7
+        thickness: 3.0
+        semi_aperture: 15.0
+        interaction_model:
+          type: refractive_reflective
+          is_reflective: true
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0
+        semi_aperture: 15.0

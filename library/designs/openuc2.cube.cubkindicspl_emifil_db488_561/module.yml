@@ -1,0 +1,27 @@
+kind: cube_module
+id: openuc2.cube.cubkindicspl_emifil_db488_561
+version: 0.1.0
+title: Dichroic 488/561 + emission filter, kinematic
+description: Kinematic cube (ASS-2032 base) with a 35.6 x 25.2 dual-band dichroic 488/561 reflecting
+  +y to +z and an emission filter 520/620 under it (-z port); excitation enters from +y. The 
+  kinematic insert with its ZJB mount sticks 14 mm out of the -y face (ASS - 9404 - 
+  CUBKINDICSPL+EMIFIL_DB488-561 - V04, provisional number)
+tags:
+  - dichroic
+  - kinematic
+  - 45°
+  - 488nm
+  - 561nm
+  - emission-filter
+  - fluorescence
+  - opm
+component: openuc2.dichroic.cubkindicspl_db488_561@^0.1
+template: openuc2.tpl.cubkindicspl_emifil_db488_561@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
+review:
+  - emission filter pass bands (500-545, 575-650 nm) are nominal for DB520-620
+  - the kinematic insert (PRT-2033/2034, ZJB mount, adjusting screws) leaves the cell by 14 mm on 
+    -y; it is the design's own part so that the cube mesh fits its cell - keep that face free

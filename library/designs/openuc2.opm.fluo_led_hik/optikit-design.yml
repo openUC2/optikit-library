@@ -1,0 +1,649 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: 'FRAME OPM, LED fluorescence: blue LED + ACL25416U-A condenser (critical illumination)
+    and a 488/561 kinematic dichroic in the upper layer; folded f180 detection to a Hikrobot MV-CE060
+    inside the 3x3 (OPM-9005 with one LED)'
+  tags:
+    - opm
+components:
+  dichroic:
+    kind: design
+    design: designs/openuc2.cube.cubkindicspl_emifil_db488_561
+    category: dichroic
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          x: -x
+      translation:
+        offset-grid:
+          x: 0
+          y: 0
+          z: 1
+    tags:
+      - interface/axis
+  led:
+    kind: design
+    design: designs/openuc2.cube.cubfluledblu_acl25416
+    category: source
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 0
+          y: -2
+          z: 1
+  fold-down:
+    kind: design
+    design: designs/openuc2.cube.cubmir45_th3ver
+    category: mirror
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 0
+          y: 0
+          z: 0
+  tube-lens:
+    kind: design
+    design: designs/openuc2.cube.cublend23f180
+    category: lens
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 0
+          y: -1
+          z: 0
+  fold-1:
+    kind: design
+    design: designs/openuc2.cube.cubmir45_th3
+    category: mirror
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          x: +y
+      translation:
+        offset-grid:
+          x: 0
+          y: -2
+          z: 0
+  fold-2:
+    kind: design
+    design: designs/openuc2.cube.cubmir45_th3
+    category: mirror
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          x: -x
+      translation:
+        offset-grid:
+          x: 1
+          y: -2
+          z: 0
+  camera:
+    kind: design
+    design: designs/openuc2.cube.cubcam_mv_ce060
+    category: detector
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 1
+          y: -1
+          z: 0
+  cube-m1-0-0:
+    kind: design
+    design: designs/openuc2.cube.cube_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: -1
+          y: 0
+          z: 0
+  cube-m1-m1-0:
+    kind: design
+    design: designs/openuc2.cube.cube_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: -1
+          y: -1
+          z: 0
+  cube-m1-m2-0:
+    kind: design
+    design: designs/openuc2.cube.cube_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: -1
+          y: -2
+          z: 0
+  cube-m1-0-1:
+    kind: design
+    design: designs/openuc2.cube.cube_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: -1
+          y: 0
+          z: 1
+  cube-1-0-1:
+    kind: design
+    design: designs/openuc2.cube.cube_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 1
+          y: 0
+          z: 1
+  cube-m1-m1-1:
+    kind: design
+    design: designs/openuc2.cube.cube_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: -1
+          y: -1
+          z: 1
+  cube-0-m1-1:
+    kind: design
+    design: designs/openuc2.cube.cube_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 0
+          y: -1
+          z: 1
+  cube-1-m1-1:
+    kind: design
+    design: designs/openuc2.cube.cube_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 1
+          y: -1
+          z: 1
+  cube-m1-m2-1:
+    kind: design
+    design: designs/openuc2.cube.cube_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: -1
+          y: -2
+          z: 1
+  cube-1-m2-1:
+    kind: design
+    design: designs/openuc2.cube.cube_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 1
+          y: -2
+          z: 1
+  plate-bottom:
+    kind: design
+    design: designs/openuc2.cube.plate_3x3
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: -1
+          y: -2
+          z: 0
+  plate-top:
+    kind: design
+    design: designs/openuc2.cube.plate_3x3_port_1_2_top
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: -1
+          y: -2
+          z: 2
+  joint--1-0-0:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: -1
+          y: 0
+          z: 0
+  joint-0-0-0:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 0
+          y: 0
+          z: 0
+  joint-1-0-0:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 1
+          y: 0
+          z: 0
+  joint--1--1-0:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: -1
+          y: -1
+          z: 0
+  joint-0--1-0:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 0
+          y: -1
+          z: 0
+  joint-1--1-0:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 1
+          y: -1
+          z: 0
+  joint--1--2-0:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: -1
+          y: -2
+          z: 0
+  joint-0--2-0:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 0
+          y: -2
+          z: 0
+  joint-1--2-0:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 1
+          y: -2
+          z: 0
+  joint--1-0-1:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: -1
+          y: 0
+          z: 1
+  joint-0-0-1:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 0
+          y: 0
+          z: 1
+  joint-1-0-1:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 1
+          y: 0
+          z: 1
+  joint--1--1-1:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: -1
+          y: -1
+          z: 1
+  joint-0--1-1:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 0
+          y: -1
+          z: 1
+  joint-1--1-1:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 1
+          y: -1
+          z: 1
+  joint--1--2-1:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: -1
+          y: -2
+          z: 1
+  joint-0--2-1:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 0
+          y: -2
+          z: 1
+  joint-1--2-1:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 1
+          y: -2
+          z: 1
+  joint--1-0-2:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: -1
+          y: 0
+          z: 2
+  joint-0-0-2:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 0
+          y: 0
+          z: 2
+  joint-1-0-2:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 1
+          y: 0
+          z: 2
+  joint--1--1-2:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: -1
+          y: -1
+          z: 2
+  joint-0--1-2:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 0
+          y: -1
+          z: 2
+  joint-1--1-2:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 1
+          y: -1
+          z: 2
+  joint--1--2-2:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: -1
+          y: -2
+          z: 2
+  joint-0--2-2:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 0
+          y: -2
+          z: 2
+  joint-1--2-2:
+    kind: design
+    design: designs/openuc2.cube.puzzle_1x1
+    category: mechanics
+    pose:
+      rotation:
+        kind: grid
+      translation:
+        offset-grid:
+          x: 1
+          y: -2
+          z: 2
+  tie-rod-1:
+    kind: primitive
+    primitive:
+      kind: static
+      static-models:
+        bom: hardware/iso-4762-m3-x-115-cylinder-head-screw-tie-rod.bom.yml
+    tags:
+      - structure/fastener/threaded
+      - procurement/buy
+  tie-rod-2:
+    kind: primitive
+    primitive:
+      kind: static
+      static-models:
+        bom: hardware/iso-4762-m3-x-115-cylinder-head-screw-tie-rod.bom.yml
+    tags:
+      - structure/fastener/threaded
+      - procurement/buy
+  tie-rod-3:
+    kind: primitive
+    primitive:
+      kind: static
+      static-models:
+        bom: hardware/iso-4762-m3-x-115-cylinder-head-screw-tie-rod.bom.yml
+    tags:
+      - structure/fastener/threaded
+      - procurement/buy
+  tie-rod-4:
+    kind: primitive
+    primitive:
+      kind: static
+      static-models:
+        bom: hardware/iso-4762-m3-x-115-cylinder-head-screw-tie-rod.bom.yml
+    tags:
+      - structure/fastener/threaded
+      - procurement/buy
+  sleeve-nut-1:
+    kind: primitive
+    primitive:
+      kind: static
+      static-models:
+        bom: hardware/sleeve-nut-with-flat-head-m3-x-8-shank-4.bom.yml
+    tags:
+      - structure/fastener/threaded
+      - procurement/buy
+  sleeve-nut-2:
+    kind: primitive
+    primitive:
+      kind: static
+      static-models:
+        bom: hardware/sleeve-nut-with-flat-head-m3-x-8-shank-4.bom.yml
+    tags:
+      - structure/fastener/threaded
+      - procurement/buy
+  sleeve-nut-3:
+    kind: primitive
+    primitive:
+      kind: static
+      static-models:
+        bom: hardware/sleeve-nut-with-flat-head-m3-x-8-shank-4.bom.yml
+    tags:
+      - structure/fastener/threaded
+      - procurement/buy
+  sleeve-nut-4:
+    kind: primitive
+    primitive:
+      kind: static
+      static-models:
+        bom: hardware/sleeve-nut-with-flat-head-m3-x-8-shank-4.bom.yml
+    tags:
+      - structure/fastener/threaded
+      - procurement/buy
+  retaining-ring-1:
+    kind: primitive
+    primitive:
+      kind: static
+      static-models:
+        bom: hardware/retaining-ring-m37-x-0-5.bom.yml
+    tags:
+      - structure/fastener/threaded
+      - procurement/buy

@@ -1,0 +1,16 @@
+kind: cube_module
+id: openuc2.cube.cubtbshold28_5
+version: 0.1.0
+title: Tube holder Ø28.5 (C-mount tube)
+description: Cube (1x1x1) clamping a Ø28.5 C-mount tube along y (ASS - 2058 - CUBTBSHOLD28.5 - V04)
+tags:
+  - mechanics
+  - tube-holder
+  - c-mount
+  - opm
+component: openuc2.mechanics.cubtbshold28_5@^0.1
+template: openuc2.tpl.cubtbshold28_5@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1

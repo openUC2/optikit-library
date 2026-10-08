@@ -1,0 +1,41 @@
+kind: optical_component
+id: openuc2.lens.cublend23f180
+version: 0.1.0
+title: Lens Ø23, f = 180 mm
+category: lens
+description: Plano-convex lens Ø23, f = 180 mm, edge 6.0 mm (BUY - Lens - f180 D23 Te 6.0 pl-cx)
+tags:
+  - lens
+  - d23
+  - f180
+  - plano-convex
+  - tube-lens
+vendor:
+  name: ''
+  mpn: ''
+  url: ''
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: 93.02
+          conic: 0
+        material_post:
+          type: Material
+          name: N-BK7
+        thickness: 6.73
+        semi_aperture: 11.5
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0
+        semi_aperture: 11.5
+effective_focal_length_mm: 180.0
+review:
+  - radius from the nominal f = 180 mm in N-BK7; glass and radius of the bought lens unknown

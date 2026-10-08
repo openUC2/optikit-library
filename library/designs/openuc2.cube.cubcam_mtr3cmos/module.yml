@@ -1,0 +1,22 @@
+kind: cube_module
+id: openuc2.cube.cubcam_mtr3cmos
+version: 0.1.0
+title: ToupTek MTR3CMOS on 140 mm of C-mount tube, hanging out of the module
+description: Tube holder ASS-2058 clamping a 40 mm + 100 mm C-mount tube; the ToupTek MTR3CMOS sits 
+  on the tube in front of the module (-y), outside the grid. Beam enters from +y; sensor 131.2 mm in
+  front of the holder centre (f180 lens one cell behind)
+tags:
+  - camera
+  - detector
+  - touptek
+  - mtr3cmos
+  - cooled
+  - c-mount
+  - overhang
+  - opm
+component: touptek.detector.mtr3cmos@^0.1
+template: openuc2.tpl.cubtbshold28_5@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1

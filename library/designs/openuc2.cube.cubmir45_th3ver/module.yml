@@ -1,0 +1,19 @@
+kind: cube_module
+id: openuc2.cube.cubmir45_th3ver
+version: 0.1.0
+title: Mirror 45°, 3 mm, vertical fold
+description: 'Cube (1x1x1) with the ASS-2026 mirror insert turned: folds a beam coming down (-z) to -y,
+  the cube stays upright (ASS - 9408 - CUBMIR45°TH3VER - V04, provisional number)'
+tags:
+  - mirror
+  - 45°
+  - fold
+  - vertical
+  - flat
+  - opm
+component: openuc2.mirror.cubmir45_th3@^0.1
+template: openuc2.tpl.cubmir45_th3ver@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1

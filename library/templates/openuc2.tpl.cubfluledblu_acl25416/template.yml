@@ -1,0 +1,40 @@
+kind: mechanical_template
+id: openuc2.tpl.cubfluledblu_acl25416
+version: 0.1.0
+title: Blue LED + ACL25416U-A condenser (critical illumination)
+class: fixed
+description: mount for openuc2.source.cubfluledblu_acl25416 (ASS - 9401 - CUBFLULEDBLU+ACL25416 - 
+  V04, openUC2-CAD-new)
+tags:
+  - source
+  - led
+  - 488nm
+  - blue
+  - condenser
+  - asphere
+  - fluorescence
+  - opm
+envelope:
+  x-mm: 49.8
+  y-mm: 49.8
+  z-mm: 53.8
+step: ASS - 9401 - CUBFLULEDBLU+ACL25416 - V04.stp
+glb: ASS - 9401 - CUBFLULEDBLU+ACL25416 - V04.glb
+footprint_grid:
+  - 1
+  - 1
+  - 1
+insert-pose:
+  rotation:
+    kind: grid
+    grid:
+      z: +y
+  translation:
+    offset-mm:
+      y: -8.7
+provenance: whole-module
+frames:
+  optical:
+    x-mm: 0.0
+    y-mm: -8.7
+    z-mm: 0.0

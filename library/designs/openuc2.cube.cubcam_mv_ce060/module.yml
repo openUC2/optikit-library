@@ -1,0 +1,20 @@
+kind: cube_module
+id: openuc2.cube.cubcam_mv_ce060
+version: 0.1.0
+title: Hikrobot MV-CE060 on a 40 mm C-mount tube (tube holder + cube)
+description: Tube holder ASS-2058 with a 40 mm C-mount tube and the Hikrobot MV-CE060-10UM; the 
+  camera body sits in the empty cube behind (+y). Beam enters from -y; sensor 31.5 mm behind the 
+  holder centre (FRAME OPM, OPM-9005)
+tags:
+  - camera
+  - detector
+  - hikrobot
+  - mv-ce060
+  - c-mount
+  - opm
+component: hikrobot.detector.mv_ce060_10um@^0.1
+template: openuc2.tpl.cubtbshold28_5@^0.1
+footprint_grid:
+  - 1
+  - 2
+  - 1

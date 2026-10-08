@@ -1,0 +1,49 @@
+kind: optical_component
+id: openuc2.dichroic.cubkindicspl_db488_561
+version: 0.1.0
+title: Dichroic 488/561, 35.6 x 25.2
+category: dichroic
+description: Dual-band dichroic 35.6 x 25.2 x 1.1 (BUY - Dichroic filter - 35.6x25.2x1.1 DB488-561)
+tags:
+  - dichroic
+  - dual-band
+  - 488nm
+  - 561nm
+vendor:
+  name: ''
+  mpn: ''
+  url: ''
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0
+        material_post:
+          type: Material
+          name: N-BK7
+        thickness: 1.1
+        semi_aperture: 8.5
+        interaction_model:
+          type: refractive_reflective
+          is_reflective: true
+        response:
+          kind: dichroic
+          reflect-bands-um:
+            -   - 0.47
+                - 0.495
+            -   - 0.55
+                - 0.568
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: .inf
+          conic: 0
+        semi_aperture: 8.5
+review:
+  - reflect bands are nominal for a 488/561 dual-band dichroic; set from the datasheet

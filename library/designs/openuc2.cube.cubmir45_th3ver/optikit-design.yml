@@ -1,0 +1,55 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: Mirror 45°, 3 mm, vertical fold (ASS - 9408 - CUBMIR45°TH3VER - V04)
+  tags:
+    - composition/cube-mounted
+components:
+  body:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: templates/openuc2.tpl.cubmir45_th3ver/ASS - 9408 - CUBMIR45°TH3VER - V04.glb
+        step: templates/openuc2.tpl.cubmir45_th3ver/ASS - 9408 - CUBMIR45°TH3VER - V04.stp
+    pose:
+      rotation:
+        kind: grid
+  optic:
+    kind: primitive
+    category: mirror
+    optics:
+      frames:
+        optical:
+          z-mm: 0
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0
+            material_post:
+              type: Material
+              name: N-BK7
+            thickness: 3.0
+            semi_aperture: 15.0
+            interaction_model:
+              type: refractive_reflective
+              is_reflective: true
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0
+            semi_aperture: 15.0
+    pose:
+      rotation:
+        kind: euler
+        euler:
+          x: -45.0
+          y: -180.0
+          z: -180.0
+    tags:
+      - optical/mirror/flat
+      - optical/mirror/single-sided
+      - procurement/buy

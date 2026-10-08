@@ -1,0 +1,120 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: Dichroic 488/561 + emission filter, kinematic (ASS - 9404 - 
+    CUBKINDICSPL+EMIFIL_DB488-561 - V04)
+  tags:
+    - composition/cube-mounted
+components:
+  body:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: templates/openuc2.tpl.cubkindicspl_emifil_db488_561/ASS - 9404 - 
+          CUBKINDICSPL+EMIFIL_DB488-561 - V04.glb
+        step: templates/openuc2.tpl.cubkindicspl_emifil_db488_561/ASS - 9404 - 
+          CUBKINDICSPL+EMIFIL_DB488-561 - V04.stp
+    pose:
+      rotation:
+        kind: grid
+  dichroic:
+    kind: primitive
+    category: dichroic
+    optics:
+      frames:
+        optical:
+          z-mm: 0
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0
+            material_post:
+              type: Material
+              name: N-BK7
+            thickness: 1.1
+            semi_aperture: 8.5
+            interaction_model:
+              type: refractive_reflective
+              is_reflective: true
+            response:
+              kind: dichroic
+              reflect-bands-um:
+                -   - 0.47
+                    - 0.495
+                -   - 0.55
+                    - 0.568
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0
+            semi_aperture: 8.5
+    pose:
+      rotation:
+        kind: euler
+        euler:
+          x: 45.0
+          y: -180.0
+          z: -180.0
+      translation:
+        offset-mm:
+          y: 0.389
+          z: 0.389
+    tags:
+      - procurement/buy
+  emission-filter:
+    kind: primitive
+    category: filter
+    optics:
+      frames:
+        optical:
+          z-mm: 0
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0
+            material_post:
+              type: Material
+              name: N-BK7
+            thickness: 1.0
+            semi_aperture: 12.5
+            response:
+              kind: absorptive
+              transmit-bands-um:
+                -   - 0.5
+                    - 0.545
+                -   - 0.575
+                    - 0.65
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: .inf
+              conic: 0
+            semi_aperture: 12.5
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: -z
+      translation:
+        offset-mm:
+          z: -21.7
+    tags:
+      - procurement/buy
+  kinematic-insert:
+    kind: primitive
+    primitive:
+      static-models:
+        gltf: ASS - 9404 - CUBKINDICSPL+EMIFIL_DB488-561 - V04 - kinematic insert.glb
+        step: ASS - 9404 - CUBKINDICSPL+EMIFIL_DB488-561 - V04 - kinematic insert.stp
+    pose:
+      rotation:
+        kind: grid
+    tags:
+      - structure/insert

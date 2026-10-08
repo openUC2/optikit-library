@@ -1,0 +1,16 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: Tube holder Ø28.5 (C-mount tube) (ASS - 2058 - CUBTBSHOLD28.5 - V04)
+  tags:
+    - composition/cube-mounted
+components:
+  body:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: templates/openuc2.tpl.cubtbshold28_5/ASS - 2058 - CUBTBSHOLD28.5 - V04.glb
+        step: templates/openuc2.tpl.cubtbshold28_5/ASS - 2058 - CUBTBSHOLD28.5 - V04.stp
+    pose:
+      rotation:
+        kind: grid

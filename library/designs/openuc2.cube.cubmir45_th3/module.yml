@@ -1,0 +1,18 @@
+kind: cube_module
+id: openuc2.cube.cubmir45_th3
+version: 0.1.0
+title: Mirror 45°, 3 mm
+description: Cube (1x1x1) with mirror 45°, 40 x 30 x 3, folding in the horizontal plane (ASS - 2026 
+  - CUBMIR45°TH3 - V04)
+tags:
+  - mirror
+  - 45°
+  - fold
+  - flat
+  - opm
+component: openuc2.mirror.cubmir45_th3@^0.1
+template: openuc2.tpl.cubmir45_th3@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
