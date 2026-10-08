@@ -1,0 +1,10 @@
+kind: optical_component
+id: user.lens.bind-test
+version: 0.1.0
+category: lens
+description: written by the binding workbench test
+optics:
+  frames:
+    optical: {z-mm: 0.0}
+  ports:
+    front: {frame: optical, direction: -z}

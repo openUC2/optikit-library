@@ -1,0 +1,25 @@
+kind: optical_component
+id: user.source.cubledmtx
+version: 0.1.0
+category: source
+description: ASS - 2046 - CUBLEDMTX - V04
+tags:
+  - authored
+vendor:
+  name: ""
+  mpn: ""
+  url: ""
+  price: 120
+  currency: EUR
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  emission:
+    spectrum:
+      - wavelength_um: 0.532
+        weight: 1
+    spatial:
+      type: point
+    angular:
+      type: collimated

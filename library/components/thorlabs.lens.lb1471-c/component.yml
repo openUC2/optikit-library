@@ -1,0 +1,46 @@
+kind: optical_component
+id: thorlabs.lens.lb1471-c
+version: 0.1.0
+category: lens
+description: 'LB1471-C: Bi-Convex N-BK7 Lens, Ø25.4 mm, f = 50 mm, AR Coating: 1050 - 1700 nm'
+tags:
+  - imported
+  - catalog
+  - catalog/optics-catalog-2026-09-09
+vendor:
+  name: Thorlabs
+  mpn: LB1471-C
+  url: https://www.thorlabs.com/n-bk7-bi-convex-lenses-ar-coating-1050---1700-nm?pn=LB1471-C
+  price: 47.03
+  currency: USD
+optics:
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: 50.6
+          conic: 0.0
+        thickness: 5.2
+        material_post:
+          type: Material
+          name: N-BK7
+        semi_aperture: 12.6237870704476
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: -50.6
+          conic: 0.0
+        semi_aperture: 12.6237870704476
+  frames:
+    optical:
+      z-mm: 0.0
+    exit:
+      z-mm: 5.2
+    mount:
+      z-mm: 2.6
+review:
+  - prescription derived from the catalog row (confidence derived), not from a vendor .zmx
+  - 'vendor zmx not used (E_CATALOG_FETCH: 3c6c14a3bee6467c-4726-s02.zar: not a zip archive) — derived
+    from the table instead'
+effective_focal_length_mm: 50.0

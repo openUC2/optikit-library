@@ -1,0 +1,11 @@
+kind: optical_component
+id: openuc2.mechanics.puzzle_1x1
+version: 0.1.0
+category: mechanics
+description: inter-layer puzzle piece (PRT - 1004 - PUZ11 - V04 - A)
+tags:
+  - authored
+vendor:
+  name: ""
+  mpn: ""
+  url: ""

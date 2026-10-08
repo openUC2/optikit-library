@@ -1,0 +1,67 @@
+kind: optical_component
+id: thorlabs.lens.ac254-050-ab
+version: 0.1.0
+category: lens
+description: AC254-050-AB
+tags:
+  - imported
+  - zmx
+  - catalog
+  - catalog/optics-catalog-2026-05-20
+vendor:
+  name: Thorlabs
+  mpn: AC254-050-AB
+  url: 
+    https://www.thorlabs.com/unmounted-achromatic-doublets-ar-coated-400---1100-nm?pn=AC254-050-AB
+  price: 121.0
+  currency: USD
+optics:
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: 34.92998606355697
+          conic: 0.0
+        material_post:
+          type: Material
+          name: N-BAF10
+        thickness: 9.0
+        is_stop: true
+        semi_aperture: 12.7
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: -28.765972504938613
+          conic: 0.0
+        material_post:
+          type: Material
+          name: N-SF6
+        thickness: 3.5
+        semi_aperture: 12.7
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: -137.53457132648708
+          conic: 0.0
+        semi_aperture: 12.7
+  frames:
+    optical:
+      z-mm: 0.0
+    exit:
+      z-mm: 12.5
+    mount:
+      z-mm: 7.151474
+  ports:
+    front:
+      frame: optical
+      direction: -z
+    back:
+      frame: exit
+      direction: +z
+      after-surface: 2
+effective_focal_length_mm: 50.000045
+review:
+  - prescription from the vendor zmx 
+    https://media.thorlabs.com/globalassets/items/a/ac/ac2/ac254-050-ab/ttn157595-s03.zmx?v=0116101855
+    (sha256 1667eb61f3eb…, retrieved 2026-09-17T07:17:32+00:00)

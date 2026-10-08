@@ -1,0 +1,33 @@
+kind: mechanical_template
+id: user.tpl.thorlabs_led
+version: 0.1.0
+class: fixed
+description: housing for user.source.thorlabs_led (attached from M300L4-Step.step)
+tags:
+  - bound
+envelope:
+  x-mm: 60.1
+  y-mm: 30.491
+  z-mm: 50.175
+step: M300L4-Step.step
+glb: M300L4-Step.glb
+mesh-frame: cube
+optical_ports:
+  out:
+    frame: optical
+    direction: +x
+footprint_grid: null
+insert-pose:
+  rotation:
+    type: grid
+    grid:
+      z: +x
+      x: -z
+  translation:
+    offset-mm: {}
+component: user.source.thorlabs_led@^0.1
+frames:
+  optical:
+    x-mm: 0
+    y-mm: 0
+    z-mm: 0

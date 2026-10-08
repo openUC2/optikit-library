@@ -1,0 +1,16 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: Inter-layer puzzle piece (miniFRAME sandwich joint)
+  tags:
+    - cube-module
+components:
+  body:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: templates/openuc2.tpl.puzzle_1x1/PRT - 1004 - PUZ11 - V04 - A.glb
+        step: templates/openuc2.tpl.puzzle_1x1/PRT - 1004 - PUZ11 - V04 - A.stp
+    pose:
+      rotation:
+        kind: grid

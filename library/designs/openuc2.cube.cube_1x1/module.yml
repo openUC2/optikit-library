@@ -1,0 +1,12 @@
+kind: cube_module
+id: openuc2.cube.cube_1x1
+version: 0.1.0
+description: empty cube (skeleton only, for stiffening)
+tags:
+  - bound
+component: openuc2.mechanics.cube_1x1@^0.1
+template: openuc2.tpl.cube_1x1@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1
