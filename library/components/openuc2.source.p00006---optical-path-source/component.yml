@@ -1,0 +1,22 @@
+kind: optical_component
+id: openuc2.source.p00006---optical-path-source
+version: 0.1.0
+category: source
+description: Optiland setup 'p00006---optical-path', source
+tags:
+  - imported
+  - optiland
+optics:
+  frames:
+    optical:
+      z-mm: 0.0
+  emission:
+    spectrum:
+      - wavelength_um: 0.54
+      - wavelength_um: 0.61
+      - wavelength_um: 0.68
+    spatial:
+      type: point
+    angular:
+      type: cone
+      half_angle_deg: 4.588566

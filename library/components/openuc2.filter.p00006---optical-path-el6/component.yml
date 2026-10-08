@@ -1,0 +1,30 @@
+kind: optical_component
+id: openuc2.filter.p00006---optical-path-el6
+version: 0.1.0
+category: filter
+description: Optiland setup 'p00006---optical-path', element 6
+tags:
+  - imported
+  - optiland
+  - plate
+optics:
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: Plane
+          radius: .inf
+        thickness: 0.0
+        semi_aperture: 12.7
+      - type: standard
+        geometry:
+          type: Plane
+          radius: .inf
+        semi_aperture: 12.7
+  frames:
+    optical:
+      z-mm: 0.0
+    exit:
+      z-mm: 0.0
+    mount:
+      z-mm: 0.0

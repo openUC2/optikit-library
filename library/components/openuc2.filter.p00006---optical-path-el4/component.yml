@@ -1,0 +1,33 @@
+kind: optical_component
+id: openuc2.filter.p00006---optical-path-el4
+version: 0.1.0
+category: filter
+description: Optiland setup 'p00006---optical-path', element 4 (WG11050-A)
+tags:
+  - imported
+  - optiland
+  - plate
+optics:
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: Plane
+          radius: .inf
+        material_post:
+          type: Material
+          name: N-BK7
+        thickness: 4.999999999999994
+        semi_aperture: 12.7
+      - type: standard
+        geometry:
+          type: Plane
+          radius: .inf
+        semi_aperture: 12.7
+  frames:
+    optical:
+      z-mm: 0.0
+    exit:
+      z-mm: 5.0
+    mount:
+      z-mm: 2.5

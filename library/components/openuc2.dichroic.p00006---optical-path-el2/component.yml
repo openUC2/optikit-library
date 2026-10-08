@@ -1,0 +1,39 @@
+kind: optical_component
+id: openuc2.dichroic.p00006---optical-path-el2
+version: 0.1.0
+category: dichroic
+description: Optiland setup 'p00006---optical-path', element 2 (DMLP550 (T))
+tags:
+  - imported
+  - optiland
+  - plate
+optics:
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: Plane
+          radius: .inf
+        material_post:
+          type: Material
+          name: fused_silica
+        thickness: 3.200000000000002
+        semi_aperture: 12.7
+      - type: standard
+        geometry:
+          type: Plane
+          radius: .inf
+        semi_aperture: 12.7
+  frames:
+    optical:
+      z-mm: 0.0
+    exit:
+      z-mm: 3.2
+    mount:
+      z-mm: 1.6
+vendor:
+  name: thorlabs
+  mpn: DMLP550
+  url: https://www.thorlabs.com/longpass-dichroic-mirrorsbeamsplitters?pn=DMLP550
+  price: 214.81
+  currency: USD

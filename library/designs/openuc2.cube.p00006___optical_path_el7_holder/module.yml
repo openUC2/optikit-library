@@ -1,0 +1,12 @@
+kind: cube_module
+id: openuc2.cube.p00006___optical_path_el7_holder
+version: 0.1.0
+description: openuc2.lens.p00006---optical-path-el7 in a generated holder
+tags:
+  - generated
+component: openuc2.lens.p00006---optical-path-el7@^0.1
+template: openuc2.tpl.cube_1x1@^0.1
+footprint_grid:
+  - 1
+  - 1
+  - 1

@@ -1,0 +1,30 @@
+kind: optical_component
+id: openuc2.mirror.p00006---optical-path-el8
+version: 0.1.0
+category: mirror
+description: Optiland setup 'p00006---optical-path', element 8
+tags:
+  - imported
+  - optiland
+  - grating
+optics:
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: PlaneGrating
+          radius: .inf
+          order: -1.0
+          period: 0.8333333333333334
+          angle: -0.0
+        interaction_model:
+          type: diffractive
+          is_reflective: true
+        semi_aperture: 12.7
+  frames:
+    optical:
+      z-mm: 0.0
+    exit:
+      z-mm: 0.0
+    mount:
+      z-mm: 0.0

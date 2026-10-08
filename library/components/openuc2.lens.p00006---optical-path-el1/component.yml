@@ -1,0 +1,51 @@
+kind: optical_component
+id: openuc2.lens.p00006---optical-path-el1
+version: 0.1.0
+category: lens
+description: Optiland setup 'p00006---optical-path', element 1 (AC127-019-A)
+tags:
+  - imported
+  - optiland
+  - lens
+optics:
+  fragment:
+    surfaces:
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: 59.259999999999955
+          conic: 0.0
+        material_post:
+          type: Material
+          name: N-SF6HT
+        thickness: 1.5
+        semi_aperture: 6.35
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: 11.039999999999992
+          conic: 0.0
+        material_post:
+          type: Material
+          name: N-BAF10
+        thickness: 4.5
+        semi_aperture: 6.35
+      - type: standard
+        geometry:
+          type: StandardGeometry
+          radius: -12.940000000000007
+          conic: 0.0
+        semi_aperture: 6.35
+  frames:
+    optical:
+      z-mm: 0.0
+    exit:
+      z-mm: 6.0
+    mount:
+      z-mm: 3.0
+vendor:
+  name: thorlabs
+  mpn: AC127-019-A
+  url: https://www.thorlabs.com/unmounted-achromatic-doublets-ar-coated-400---700-nm?pn=AC127-019-A
+  price: 64.83
+  currency: USD
