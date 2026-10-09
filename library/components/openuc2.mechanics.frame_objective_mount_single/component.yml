@@ -1,0 +1,15 @@
+kind: optical_component
+id: openuc2.mechanics.frame_objective_mount_single
+version: 0.1.0
+title: Single objective mount
+category: mechanics
+description: single objective mount for the FRAME stage — one objective on the kinematic mount
+tags:
+  - frame
+  - mechanics
+review:
+  - "price as Bene stated it on 2026-10-08 (single objective mount 200 €); the pricing sheet says 500 €"
+vendor:
+  name: openUC2
+  price: 200.0
+  currency: EUR

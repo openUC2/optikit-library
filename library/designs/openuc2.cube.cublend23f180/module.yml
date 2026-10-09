@@ -1,6 +1,6 @@
 kind: cube_module
 id: openuc2.cube.cublend23f180
-version: 0.1.0
+version: 0.1.1
 title: Lens Ø23, f = 180 mm (tube lens)
 description: Cube (1x1x1) with plano-convex lens Ø23, f = 180 mm (ASS - 2068 - CUBLEND23F180 - V04)
 tags:
@@ -15,3 +15,4 @@ footprint_grid:
   - 1
   - 1
   - 1
+price: 500.0

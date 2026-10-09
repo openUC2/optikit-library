@@ -1,0 +1,34 @@
+kind: optical_component
+id: openuc2.source.cubfluled405_acl25416
+version: 0.1.0
+title: LED 405 nm (violet)
+category: source
+description: LED star 405 nm on a D28 cooling star; ~1 mm² emitter — DAPI/Hoechst
+tags:
+  - source
+  - led
+  - 405nm
+  - violet
+  - fluorescence
+vendor:
+  name: ''
+  mpn: ''
+  url: ''
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  emission:
+    spectrum:
+      - wavelength_um: 0.405
+        weight: 1.0
+    spatial:
+      type: disc
+      radius_mm: 0.56
+    angular:
+      type: cone
+      half_angle_deg: 60.0
+review:
+  - "cloned from the blue LED cube (cubfluledblu_acl25416): same holder, condenser and mesh; LED star 405 nm not in CAD-new yet"
+  - emitter size and spectrum are nominal; the angular model is a 60° cone standing in for 
+    Lambertian

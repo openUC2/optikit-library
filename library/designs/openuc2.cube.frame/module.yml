@@ -1,0 +1,11 @@
+kind: cube_module
+id: openuc2.cube.frame
+version: 0.1.3
+description: FRAME body — the substructure with the miniFRAME rail bay; stage, arm and electronics dock on its mounts. The price is the base FRAME's list price — body, electronics and Raspberry Pi plus 40 h assembly
+tags: [carrier, frame]
+component: openuc2.mechanics.frame@^0.1
+template: openuc2.tpl.frame@^0.1
+# Informational for a carrier: its origin is the axis cube and the body extends both ways.
+footprint_grid: [7, 7, 3]
+price: 12200.0
+locked: true

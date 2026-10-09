@@ -1,0 +1,17 @@
+kind: optical_component
+id: openuc2.mechanics.frame_wellplate_holder
+version: 0.1.0
+title: Well-plate holder (SLAS/ANSI)
+category: mechanics
+description: insert for one SLAS/ANSI microplate (127.76 x 85.48 mm) on a 3 mm ledge, finger notches
+  at the ends
+tags:
+  - frame
+  - mechanics
+  - sample-holder
+vendor:
+  name: openUC2
+  price: 1000.0
+  currency: EUR
+review:
+  - priced as the sheet's 'Microtiter Plates (SLAS/ANSI)' row

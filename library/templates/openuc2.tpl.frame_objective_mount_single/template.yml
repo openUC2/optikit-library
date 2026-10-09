@@ -1,0 +1,33 @@
+kind: mechanical_template
+id: openuc2.tpl.frame_objective_mount_single
+version: 0.1.0
+class: fixed
+description: single objective mount for the FRAME stage (one seat)
+tags:
+- frame
+glb: model.glb
+envelope:
+  x-mm: 66.0
+  y-mm: 36.0
+  z-mm: 5.0
+carrier: true
+footprint_grid:
+fits: openuc2.frame.objectives
+component: openuc2.mechanics.frame_objective_mount_single@^0.1
+review:
+- "the mesh is the 2-position mount's (stand-in) — the single mount has no CAD yet; its one seat is the 2-position mount's working seat 1"
+mounts:
+  objectives-1:
+    pose:
+      translation:
+        offset-mm:
+          x: -14.9
+          y: 0.0
+          z: 28.9
+      rotation:
+        kind: grid
+        grid:
+          z: -z
+          x: +x
+    accepts: openuc2.frame.objective
+locked: true

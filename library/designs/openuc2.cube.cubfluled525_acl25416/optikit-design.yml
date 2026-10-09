@@ -1,0 +1,98 @@
+optikit-version: v0.0.0-alpha.1
+design:
+  description: LED 525 nm + ACL25416U-A condenser (critical illumination), cloned from ASS - 9401 - CUBFLULEDBLU+ACL25416 - V04
+  tags:
+    - composition/cube-mounted
+components:
+  body:
+    kind: primitive
+    category: mechanics
+    primitive:
+      static-models:
+        gltf: templates/openuc2.tpl.cubfluledblu_acl25416/ASS - 9401 - CUBFLULEDBLU+ACL25416 - 
+          V04.glb
+        step: templates/openuc2.tpl.cubfluledblu_acl25416/ASS - 9401 - CUBFLULEDBLU+ACL25416 - 
+          V04.stp
+    pose:
+      rotation:
+        kind: grid
+  led:
+    kind: primitive
+    category: source
+    optics:
+      frames:
+        optical:
+          z-mm: 0
+      emission:
+        spectrum:
+          - wavelength_um: 0.525
+            weight: 1.0
+        spatial:
+          type: disc
+          radius_mm: 0.56
+        angular:
+          type: cone
+          half_angle_deg: 60.0
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +y
+      translation:
+        offset-mm:
+          y: -8.7
+    tags:
+      - procurement/buy
+  condenser:
+    kind: primitive
+    category: lens
+    optics:
+      frames:
+        optical:
+          z-mm: 0
+      fragment:
+        surfaces:
+          - type: standard
+            geometry:
+              type: StandardGeometry
+              radius: 70.0
+              conic: 0
+            material_post:
+              type: Material
+              name: B270
+            thickness: 14.0
+            semi_aperture: 12.4
+          - type: standard
+            geometry:
+              type: EvenAsphere
+              radius: -8.818301479983722
+              conic: -0.9351219317436663
+              coefficients:
+                - 0.0
+                - -7.52057041226122e-05
+                - -5.733934554254134e-08
+                - -2.418807465355524e-09
+                - 1.723528298313667e-11
+            semi_aperture: 12.4
+    pose:
+      rotation:
+        kind: grid
+        grid:
+          z: +y
+      translation:
+        offset-mm:
+          y: -0.2
+    tags:
+      - optical/lens/convex
+      - procurement/buy
+  cooling-star:
+    kind: primitive
+    primitive:
+      static-models:
+        gltf: BUY - Cooling star D28.glb
+        step: BUY - Cooling star D28.stp
+    pose:
+      rotation:
+        kind: grid
+    tags:
+      - procurement/buy

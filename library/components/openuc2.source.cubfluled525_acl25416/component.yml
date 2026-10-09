@@ -1,0 +1,34 @@
+kind: optical_component
+id: openuc2.source.cubfluled525_acl25416
+version: 0.1.0
+title: LED 525 nm (green)
+category: source
+description: LED star 525 nm on a D28 cooling star; ~1 mm² emitter — Cy3/mCherry
+tags:
+  - source
+  - led
+  - 525nm
+  - green
+  - fluorescence
+vendor:
+  name: ''
+  mpn: ''
+  url: ''
+optics:
+  frames:
+    optical:
+      z-mm: 0
+  emission:
+    spectrum:
+      - wavelength_um: 0.525
+        weight: 1.0
+    spatial:
+      type: disc
+      radius_mm: 0.56
+    angular:
+      type: cone
+      half_angle_deg: 60.0
+review:
+  - "cloned from the blue LED cube (cubfluledblu_acl25416): same holder, condenser and mesh; LED star 525 nm not in CAD-new yet"
+  - emitter size and spectrum are nominal; the angular model is a 60° cone standing in for 
+    Lambertian

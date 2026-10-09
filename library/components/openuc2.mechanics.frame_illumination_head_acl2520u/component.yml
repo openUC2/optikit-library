@@ -1,0 +1,17 @@
+kind: optical_component
+id: openuc2.mechanics.frame_illumination_head_acl2520u
+version: 0.1.2
+title: Illumination head, LED + condenser + overview camera
+category: mechanics
+description: transmission illumination head — ACL2520U condenser and a lit overview camera
+tags:
+  - frame
+  - mechanics
+review:
+  - "priced as the sheet's 'Single LED + Condenser' row — confirm the mapping"
+  - 'measured from FRAME #0008 - Microscope incl accessories.stp (exported 2026-09-10)'
+vendor:
+  name: openUC2
+  price: 750.0
+  currency: EUR
+locked: true

@@ -1,0 +1,16 @@
+kind: optical_component
+id: openuc2.mechanics.frame_petri60_holder
+version: 0.1.0
+title: Petri dish holder, 60 mm
+category: mechanics
+description: insert for one 60 mm dish on a 3 mm ledge
+tags:
+  - frame
+  - mechanics
+  - sample-holder
+vendor:
+  name: openUC2
+  price: 1000.0
+  currency: EUR
+review:
+  - "priced as the sheet's 'Petri Dishes' row (status: to be tested)"

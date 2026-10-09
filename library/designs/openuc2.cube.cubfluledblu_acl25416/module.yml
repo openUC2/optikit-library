@@ -1,6 +1,6 @@
 kind: cube_module
 id: openuc2.cube.cubfluledblu_acl25416
-version: 0.1.0
+version: 0.1.1
 title: Blue LED + ACL25416U-A condenser (critical illumination)
 description: Cube (1x1x1) with the kit's blue LED star (SUB-0044) and an ACL25416U-A asphere 8.5 mm 
   in front of the emitter in a printed holder (PRT-9405/9406); beam along +y (ASS - 9401 - 
@@ -21,8 +21,10 @@ footprint_grid:
   - 1
   - 1
 review:
+  - "priced as the sheet's 'openUC2 LED 470nm - GFP/FITC set' row"
   - LED wire models (2 x 25 cm strands + plug) removed; the D28 cooling star, 6 mm out of the -y 
     face, is the design's own part so that the cube mesh fits its cell
   - condenser 8.5 mm from the emitter as built; ray-traced into the FRAME (Nikon 4x) the best 
     emitter to R70 distance is 7.0-8.0 mm, and 8.5 mm gives about 2/3 of that at 4x - reprint the 
     holder for 7.5 mm
+price: 100.0

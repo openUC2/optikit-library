@@ -1,0 +1,17 @@
+kind: optical_component
+id: openuc2.mechanics.frame_petri35_holder
+version: 0.1.0
+title: Petri dish holder, 3 x 35 mm
+category: mechanics
+description: insert for three 35 mm dishes (glass-bottom live-cell dishes) in a row, each on a 3 mm 
+  ledge
+tags:
+  - frame
+  - mechanics
+  - sample-holder
+vendor:
+  name: openUC2
+  price: 1000.0
+  currency: EUR
+review:
+  - "priced as the sheet's 'Petri Dishes' row (status: to be tested)"
